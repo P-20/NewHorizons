@@ -15,11 +15,12 @@ import mods.nei.NEI;
 
 
 
-val CopperPlate = <Railcraft:part.plate:3>;
+val CopperPlate = <gregtech:gt.metaitem.01:17035>;
 val DoubleCopperPlate = <gregtech:gt.metaitem.01:18035>;
-val IronPlate = <Railcraft:part.plate>;
+val IronPlate = <gregtech:gt.metaitem.01:17032>;
 val DoubleIronPlate = <gregtech:gt.metaitem.01:18032>;
-val SteelPlate = <Railcraft:part.plate:1>;
+val SteelPlate = <gregtech:gt.metaitem.01:17305>;
+val EmeraldPlate = <gregtech:gt.metaitem.01:17501>;
 val DoubleSteelPlate = <gregtech:gt.metaitem.01:18305>;
 val GoldPlate = <gregtech:gt.metaitem.01:17086>;
 val DoubleGoldPlate = <gregtech:gt.metaitem.01:18086>;
@@ -37,6 +38,7 @@ val ObsidianRod = <RandomThings:ingredient:1>;
 
 val CopperScrew = <ore:screwCopper>;
 val IronScrew = <ore:screwIron>;
+val EmeraldScrew = <ore:screwEmerald>;
 val SteelScrew = <ore:screwSteel>;
 val GoldScrew = <ore:screwGold>;
 val DiamondScrew = <ore:screwDiamond>;
@@ -74,6 +76,9 @@ recipes.remove(<irontank:copperTank>);
 // --- Silver Tank
 recipes.remove(<irontank:silverTank>);
 
+// --- Emerald Tank
+recipes.remove(<irontank:emeraldTank>);
+
 // --- Iron to Gold Tank Upgrade
 recipes.remove(<irontank:ironGoldUpgrade>);
 
@@ -101,6 +106,9 @@ recipes.remove(<irontank:diamondObsidianUpgrade>);
 // --- Silver to Diamond Tank Upgrade
 recipes.remove(<irontank:silverDiamondUpgrade>);
 
+// --- Diamond to Emerald Tank Upgrade
+recipes.remove(<irontank:diamondEmeraldUpgrade>);
+
 
 
 
@@ -116,16 +124,52 @@ recipes.addShaped(<irontank:ironTank>, [
 [ClearPane, Tank, ClearPane],
 [Hammer, DoubleIronPlate, Screwdriver]]);
 
+// --- Upgrade Glass to Iron Tank
+recipes.addShaped(<irontank:glassIronUpgrade>, [
+[IronScrew, DoubleIronPlate, IronScrew],
+[ClearPane, GlassPlate, ClearPane],
+[Hammer, DoubleIronPlate, Screwdriver]]);
+
+// --- Upgrade Copper to Iron Tank
+recipes.addShaped(<irontank:copperIronUpgrade>, [
+[IronScrew, IronPlate, IronScrew],
+[ClearPane, GlassPlate, ClearPane],
+[Hammer, IronPlate, Screwdriver]]);
+
 // --- Gold Tank
 recipes.addShaped(<irontank:goldTank>, [
 [GoldScrew, DoubleGoldPlate, GoldScrew],
 [ClearPane, Tank, ClearPane],
 [Hammer, DoubleGoldPlate, Screwdriver]]);
 
+// --- Upgrade Iron to Gold Tank
+recipes.addShaped(<irontank:ironGoldUpgrade>, [
+[GoldScrew, GoldPlate, GoldScrew],
+[ClearPane, IronPlate, ClearPane],
+[Hammer, GoldPlate, Screwdriver]]);
+
+// --- Upgrade Steel to Gold Tank
+recipes.addShaped(<irontank:silverGoldUpgrade>, [
+[GoldScrew, GoldPlate, GoldScrew],
+[ClearPane, SteelPlate, ClearPane],
+[Hammer, GoldPlate, Screwdriver]]);
+
 // --- Diamond Tank
 recipes.addShaped(<irontank:diamondTank>, [
 [DiamondScrew, DiamondPlate, DiamondScrew],
 [ClearPane, Tank, ClearPane],
+[Hammer, DiamondPlate, Screwdriver]]);
+
+// --- Upgrade Gold to Diamond Tank
+recipes.addShaped(<irontank:goldDiamondUpgrade>, [
+[DiamondScrew, DiamondPlate, DiamondScrew],
+[ClearPane, GoldPlate, ClearPane],
+[Hammer, DiamondPlate, Screwdriver]]);
+
+// --- Upgrade Steel to Diamond Tank
+recipes.addShaped(<irontank:silverDiamondUpgrade>, [
+[DiamondScrew, DiamondPlate, DiamondScrew],
+[ClearPane, SteelPlate, ClearPane],
 [Hammer, DiamondPlate, Screwdriver]]);
 
 // --- Obsidian Tank
@@ -134,10 +178,22 @@ recipes.addShaped(<irontank:obsidianTank>, [
 [ClearPane, Tank, ClearPane],
 [Hammer, DenseObsidianPlate, Screwdriver]]);
 
+// --- Upgrade Diamond to Obsidian Tsnk
+recipes.addShaped(<irontank:diamondObsidianUpgrade>, [
+[DiamondScrew, DenseObsidianPlate, DiamondScrew],
+[ClearPane, GlassPlate, ClearPane],
+[Hammer, DenseObsidianPlate, Screwdriver]]);
+
 // --- Copper Tank
 recipes.addShaped(<irontank:copperTank>, [
 [CopperScrew, DoubleCopperPlate, CopperScrew],
 [ClearPane, Tank, ClearPane],
+[Hammer, DoubleCopperPlate, Screwdriver]]);
+
+// --- Glass to Copper Upgrade
+recipes.addShaped(<irontank:glassCopperUpgrade>, [
+[CopperScrew, DoubleCopperPlate, CopperScrew],
+[ClearPane, GlassPlate, ClearPane],
 [Hammer, DoubleCopperPlate, Screwdriver]]);
 
 // --- Steel Tank
@@ -146,7 +202,23 @@ recipes.addShaped(<irontank:silverTank>, [
 [ClearPane, Tank, ClearPane],
 [Hammer, DoubleSteelPlate, Screwdriver]]);
 
+// --- Upgrade Copper to Steel Tank
+recipes.addShaped(<irontank:copperSilverUpgrade>, [
+[SteelScrew, SteelPlate, SteelScrew],
+[ClearPane, CopperPlate, ClearPane],
+[Hammer, SteelPlate, Screwdriver]]);
 
+// --- Emerald Tank
+recipes.addShaped(<irontank:emeraldTank>, [
+[EmeraldScrew, EmeraldPlate, EmeraldScrew],
+[ClearPane, Tank, ClearPane],
+[Hammer, EmeraldPlate, Screwdriver]]);
+
+// --- Upgrade Diamond to Emerald Tank
+recipes.addShaped(<irontank:diamondEmeraldUpgrade>, [
+[EmeraldScrew, EmeraldPlate, EmeraldScrew],
+[ClearPane, DiamondPlate, ClearPane],
+[Hammer, EmeraldPlate, Screwdriver]]);
 
 
 
@@ -156,27 +228,54 @@ recipes.addShaped(<irontank:silverTank>, [
 
 
 // --- Copper Tank
-Assembler.addRecipe(<irontank:copperTank>, Tank, DoubleCopperPlate, <liquid:molten.glass> * 144, 100, 8);
+Assembler.addRecipe(<irontank:copperTank>, [Tank, DoubleCopperPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 144, 300, 30);
+
+// --- Upgrade Glass to Copper Tank
+Assembler.addRecipe(<irontank:glassCopperUpgrade>, [GlassPlate, DoubleCopperPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 72, 300, 30);
 
 // --- Iron Tank
-Assembler.addRecipe(<irontank:ironTank>, Tank, DoubleIronPlate, <liquid:molten.glass> * 144, 150, 16);
+Assembler.addRecipe(<irontank:ironTank>, [Tank, DoubleIronPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 144, 400, 30);
+
+// --- Upgrade Glass to Iron Tank
+Assembler.addRecipe(<irontank:glassIronUpgrade>, [GlassPlate, DoubleIronPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 72, 400, 30);
+
+// --- Upgrade Copper to Iron Tank
+Assembler.addRecipe(<irontank:copperIronUpgrade>, [CopperPlate, IronPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 72, 500, 30);
 
 // --- Steel Tank
-Assembler.addRecipe(<irontank:silverTank>, Tank, DoubleSteelPlate, <liquid:molten.glass> * 144, 200, 30);
+Assembler.addRecipe(<irontank:silverTank>, [Tank, DoubleSteelPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 144, 500, 30);
+
+// --- Upgrade Copper to Steel Tank
+Assembler.addRecipe(<irontank:copperSilverUpgrade>, [CopperPlate, SteelPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 72, 600, 30);
 
 // --- Gold Tank
-Assembler.addRecipe(<irontank:goldTank>, Tank, DoubleGoldPlate, <liquid:molten.glass> * 144, 250, 64);
+Assembler.addRecipe(<irontank:goldTank>, [Tank, DoubleGoldPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 144, 600, 30);
+
+// --- Upgrade Iron to Gold Tank
+Assembler.addRecipe(<irontank:ironGoldUpgrade>, [IronPlate, GoldPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 72, 700, 30);
+
+// --- Upgrade Steel to Gold Tank
+Assembler.addRecipe(<irontank:silverGoldUpgrade>, [SteelPlate, GoldPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 72, 700,30);
 
 // --- Diamond Tank
-Assembler.addRecipe(<irontank:diamondTank>, Tank, DiamondPlate, <liquid:molten.glass> * 144, 300, 120);
+Assembler.addRecipe(<irontank:diamondTank>, [Tank, DiamondPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 144, 800, 30);
+
+// --- Upgrade Steel to Diamond Tank
+Assembler.addRecipe(<irontank:silverDiamondUpgrade>, [SteelPlate, DiamondPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 72, 800, 30);
 
 // --- Obsidian Tank
-Assembler.addRecipe(<irontank:obsidianTank>, Tank, DenseObsidianPlate, <liquid:molten.glass> * 144, 400, 256);
+Assembler.addRecipe(<irontank:obsidianTank>, [Tank, DenseObsidianPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 144, 900, 30);
+
+// --- Upgrade Diamond to Obsidian
+Assembler.addRecipe(<irontank:diamondObsidianUpgrade>, [GlassPlate, DenseObsidianPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 72, 900, 30);
+
+// --- Emerald Tank
+Assembler.addRecipe(<irontank:emeraldTank>, [Tank, EmeraldPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 144, 1000, 30);
+
+// --- Upgrade Diamond to Emerald Tank
+Assembler.addRecipe(<irontank:diamondEmeraldUpgrade>, [DiamondPlate, EmeraldPlate, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.glass> * 72, 1000, 30);
 
 
 
-// --- Renaming Stuff ---
 
 
-// --- Steel Tank
-NEI.overrideName(<irontank:silverTank>, "Steel Tank");

@@ -7,14 +7,12 @@
 import mods.gregtech.ArcFurnace;
 import mods.gregtech.Assembler;
 import mods.gregtech.BlastFurnace;
-import mods.gregtech.Brewery;
 import mods.gregtech.Canner;
 import mods.ic2.Compressor;
 import mods.gregtech.Extruder;
 import mods.gregtech.FluidCanner;
 import mods.gregtech.Fuels;
-import mods.gregtech.ImplosionCompressor;
-import mods.ic2.Macerator;
+import mods.gregtech.Pulverizer;
 import mods.gregtech.PlasmaArcFurnace;
 import mods.gregtech.PlateBender;
 import mods.ic2.SemiFluidGenerator;
@@ -30,6 +28,7 @@ val CompressedBronze = <ore:compressedBronze>;
 val CompressedTin = <ore:compressedTin>;
 val CompressedCopper = <ore:compressedCopper>;
 val CompressedTi = <ore:compressedTitanium>;
+val CompressedDesh = <ore:compressedDesh>;
 
 val BWafer = <ore:waferBasic>;
 val AdvWafer = <ore:waferAdvanced>;
@@ -54,8 +53,10 @@ val DeshRing = <ore:ringDesh>;
 val AlFoil = <ore:foilAluminium>;
 
 val MVConveyor = <gregtech:gt.metaitem.01:32631>;
+val HVConveyor = <gregtech:gt.metaitem.01:32632>;
 val SolarPanel = <gregtech:gt.metaitem.01:32750>;
 val LVPump = <gregtech:gt.metaitem.01:32610>;
+val HVPump = <gregtech:gt.metaitem.01:32612>;
 val SteelRotor = <gregtech:gt.metaitem.02:21305>;
 val RubberBlock = <IC2:blockRubber>;
 
@@ -529,6 +530,14 @@ furnace.remove(<*>, <GalacticraftMars:tile.asteroidsBlock:4>);
 // --- Ambiete Thermal Controller
 recipes.remove(<GalacticraftCore:item.basicItem:20>);
 
+// --- Raw meteoric Iron
+furnace.remove(<ore:ingotMeteoricIron>, <GalacticraftCore:item.meteoricIronRaw>);
+
+// --- Parachute
+recipes.remove(<GalacticraftCore:item.parachute>);
+
+// --- Desh smelting
+furnace.remove(<*>, <GalacticraftMars:item.null>);
 
 
 
@@ -551,19 +560,19 @@ recipes.addShaped(<GalacticraftCore:tile.landingPad:1> * 3, [
 // --- Oxygen Collector
 recipes.addShaped(<GalacticraftCore:tile.oxygenCollector>, [
 [CompressedAl, <GalacticraftCore:item.oxygenConcentrator>, CompressedAl],
-[AirVent, <GalacticraftCore:item.airFan>, <gregtech:gt.metaitem.01:32600>],
+[AirVent, <GalacticraftCore:item.airFan>, <gregtech:gt.metaitem.01:32602>],
 [CompressedSteel, <ore:cableGt02Aluminium>, CompressedSteel]]);
 
 // --- Oxygen Compressor
 recipes.addShaped(<GalacticraftCore:tile.oxygenCompressor>, [
 [CompressedAl, <GalacticraftCore:item.oxygenConcentrator>, CompressedAl],
-[<gregtech:gt.metaitem.01:32641>, <GalacticraftCore:item.oilCanisterPartial:1001>, <gregtech:gt.metaitem.01:32601>],
+[<gregtech:gt.metaitem.01:32642>, <GalacticraftCore:item.oilCanisterPartial:1001>, <gregtech:gt.metaitem.01:32602>],
 [CompressedSteel, CompressedBronze, CompressedSteel]]);
 
 // --- Oxygen Decompressor
 recipes.addShaped(<GalacticraftCore:tile.oxygenCompressor:4>, [
 [CompressedAl, <GalacticraftCore:item.oxygenConcentrator>, CompressedAl],
-[<gregtech:gt.metaitem.01:32600>, <GalacticraftCore:item.oilCanisterPartial:1001>, <GalacticraftCore:item.airFan>],
+[<gregtech:gt.metaitem.01:32602>, <GalacticraftCore:item.oilCanisterPartial:1001>, <GalacticraftCore:item.airFan>],
 [CompressedSteel, CompressedBronze, CompressedSteel]]);
 
 // --- Oxygen Storage Module
@@ -575,44 +584,44 @@ recipes.addShaped(<GalacticraftCore:tile.machine2:8>, [
 // --- Oxygen Bubble Distributor
 recipes.addShaped(<GalacticraftCore:tile.distributor>, [
 [CompressedAl, <GalacticraftCore:item.airFan>, CompressedAl],
-[AirVent, <gregtech:gt.metaitem.01:32600>, AirVent],
+[AirVent, <gregtech:gt.metaitem.01:32602>, AirVent],
 [CompressedSteel, <GalacticraftCore:item.airFan>, CompressedSteel]]);
 
 // --- Oxygen Sealer
 recipes.addShaped(<GalacticraftCore:tile.sealer>, [
 [CompressedAl, AirVent, CompressedAl],
 [AirVent, <GalacticraftCore:tile.distributor>, AirVent],
-[CompressedSteel, <GalacticraftCore:tile.oxygenDetector>, CompressedSteel]]);
+[CompressedDesh, <GalacticraftCore:tile.oxygenDetector>, CompressedDesh]]);
 
 // --- Oxygen Detector
 recipes.addShaped(<GalacticraftCore:tile.oxygenDetector>, [
-[CompressedSteel, CompressedSteel, CompressedSteel],
-[AirVent, <gregtech:gt.metaitem.01:32690>, AirVent],
+[CompressedDesh, CompressedSteel, CompressedDesh],
+[AirVent, <gregtech:gt.metaitem.01:32692>, AirVent],
 [CompressedAl, <gregtech:gt.blockmachines:2000>, CompressedAl]]);
 
 // --- Fuel Loader
 recipes.addShaped(<GalacticraftCore:tile.fuelLoader>, [
 [CompressedSteel, BWafer, CompressedSteel],
-[<gregtech:gt.metaitem.01:32611>, <gregtech:gt.metaitem.01:32405>, <gregtech:gt.metaitem.01:32601>],
+[<gregtech:gt.metaitem.01:32612>, <gregtech:gt.metaitem.01:32405>, <gregtech:gt.metaitem.01:32602>],
 [CompressedAl, <ore:pipeMediumSteel>, CompressedAl]]);
 
 // --- Cargo Loader
 recipes.addShaped(<GalacticraftCore:tile.cargo>, [
 [CompressedAl, <minecraft:hopper>, CompressedAl],
-[MVConveyor, <gregtech:gt.blockmachines:9232>, MVConveyor],
-[CompressedSteel, <ore:pipeMediumBrass>, CompressedSteel]]);
+[HVConveyor, <gregtech:gt.blockmachines:9233>, HVConveyor],
+[CompressedDesh, <ore:pipeMediumBrass>, CompressedDesh]]);
 
 // --- Cargo Unloader
 recipes.addShaped(<GalacticraftCore:tile.cargo:4>, [
-[CompressedSteel, <ore:pipeMediumBrass>, CompressedSteel],
-[MVConveyor, <gregtech:gt.blockmachines:9232>, MVConveyor],
+[CompressedDesh, <ore:pipeMediumBrass>, CompressedDesh],
+[HVConveyor, <gregtech:gt.blockmachines:9233>, HVConveyor],
 [CompressedAl, <minecraft:hopper>, CompressedAl]]);
 
 // --- Nasa Workbench
 //recipes.addShaped(<GalacticraftCore:tile.rocketWorkbench>, [
 //[<gregtech:gt.metaitem.01:32652>, <gregtech:gt.metaitem.01:32740>, <gregtech:gt.metaitem.01:32652>],
 //[<ore:waferAdvanced>, <ore:circuitElite>, <ore:waferAdvanced>],
-//[<dreamcraft:item.StainlessSteelItemCasing>, <gregtech:gt.blockcasings:3>, <dreamcraft:item.StainlessSteelItemCasing>]]);
+//[<ore:itemCasingStainlessSteel>, <gregtech:gt.blockcasings:3>, <ore:itemCasingStainlessSteel>]]);
 
 // --- Tin Decoration Block
 recipes.addShaped(TinDecoBlock, [
@@ -627,13 +636,13 @@ recipes.addShaped(<GalacticraftCore:tile.gcBlockCore:3>, [
 
 // --- Air Lock Frame
 recipes.addShaped(<GalacticraftCore:tile.airLockFrame> * 2, [
-[<ore:compressedMeteoricIron>, <ore:screwStainlessSteel>, <ore:compressedMeteoricIron>],
+[CompressedDesh, <ore:screwStainlessSteel>, CompressedDesh],
 [AirVent, <ore:craftingToolScrewdriver>, AirVent],
 [CompressedAl, <ore:screwStainlessSteel>, CompressedAl]]);
 
 // --- Air Lock Controller
 recipes.addShaped(<GalacticraftCore:tile.airLockFrame:1>, [
-[<ore:compressedMeteoricIron>, <GalacticraftCore:item.oxygenConcentrator>, <ore:compressedMeteoricIron>],
+[CompressedDesh, <GalacticraftCore:item.oxygenConcentrator>, CompressedDesh],
 [AirVent, <gregtech:gt.metaitem.01:32740>, AirVent],
 [AdvWafer, <ore:wireGt01RedAlloy>, AdvWafer]]);
 
@@ -702,15 +711,15 @@ recipes.addShaped(<GalacticraftCore:item.basicItem:1>, [
 
 // --- Energy Storage Module
 recipes.addShaped(<GalacticraftCore:tile.machineTiered>, [
-[CompressedSteel, <IC2:itemBatChargeRE:*>, CompressedSteel],
-[<ore:cableGt01AnyCopper>, <gregtech:gt.blockmachines:11>, <ore:cableGt01AnyCopper>],
-[BWafer, <IC2:itemBatChargeRE:*>, BWafer]]);
+[CompressedSteel, <IC2:itemBatChargeRE:26>, CompressedSteel],
+[<ore:cableGt01AnyCopper>, <gregtech:gt.blockmachines:12>, <ore:cableGt01AnyCopper>],
+[BWafer, <IC2:itemBatChargeRE:26>, BWafer]]);
 
 // --- Energy Storage Cluster
 recipes.addShaped(<GalacticraftCore:tile.machineTiered:8>, [
-[CompressedTi, <IC2:itemBatChargeAdv:*>, CompressedTi],
-[<ore:cableGt02Gold>, <gregtech:gt.blockmachines:12>, <ore:cableGt02Gold>],
-[AdvWafer, <IC2:itemBatChargeAdv:*>, AdvWafer]]);
+[CompressedTi, <IC2:itemBatChargeAdv:26>, CompressedTi],
+[<ore:cableGt02Gold>, <gregtech:gt.blockmachines:13>, <ore:cableGt02Gold>],
+[AdvWafer, <IC2:itemBatChargeAdv:26>, AdvWafer]]);
 
 // --- Spin Truster
 recipes.addShaped(<GalacticraftCore:tile.spinThruster>, [
@@ -726,7 +735,7 @@ recipes.addShaped(<GalacticraftCore:tile.viewScreen>, [
 
 // --- Telemetry Unit
 recipes.addShaped(<GalacticraftCore:tile.telemetry>, [
-[<GalacticraftCore:item.basicItem:19>,CompressedTin,<gregtech:gt.metaitem.01:32680>],
+[<GalacticraftCore:item.basicItem:19>,CompressedTin,<gregtech:gt.metaitem.01:32682>],
 [BWafer, CompressedTin, BWafer],
 [CompressedTin, CompressedCopper, CompressedTin]]);
 
@@ -739,8 +748,8 @@ recipes.addShaped(<GalacticraftCore:tile.arclamp>, [
 // --- Oxygen Gear
 recipes.addShaped(<GalacticraftCore:item.oxygenGear>, [
 [OxygenPipe,OxygenPipe,OxygenPipe],
-[LVPump, <GalacticraftCore:item.oxygenConcentrator>, LVPump],
-[OxygenPipe, <gregtech:gt.metaitem.01:32600>, OxygenPipe]]);
+[HVPump, <GalacticraftCore:item.oxygenConcentrator>, HVPump],
+[OxygenPipe, <gregtech:gt.metaitem.01:32602>, OxygenPipe]]);
 
 // --- Light Oxygen Tak
 recipes.addShaped(<GalacticraftCore:item.oxygenTankLightFull:900>, [
@@ -765,9 +774,9 @@ recipes.addShaped(<GalacticraftCore:item.oxygenTankLightFull:900>, [
 
 // --- Medium Oxygen Tank
 recipes.addShaped(<GalacticraftCore:item.oxygenTankMedFull:1800>, [
-[CompressedSteel, OxygenPipe,CompressedSteel],
-[CompressedSteel, <gregtech:gt.metaitem.01:32405>, CompressedSteel],
-[CompressedSteel, CompressedSteel, CompressedSteel]]);
+[MeteorPlate, OxygenPipe,MeteorPlate],
+[MeteorPlate, <gregtech:gt.metaitem.01:32405>, MeteorPlate],
+[MeteorPlate, MeteorPlate, MeteorPlate]]);
 
 // --- Heavy Oxygen Tank
 recipes.addShaped(<GalacticraftCore:item.oxygenTankHeavyFull:2700>, [
@@ -783,7 +792,7 @@ recipes.addShaped(SensorLens, [
 
 // --- Sensor Glasses
 recipes.addShaped(<GalacticraftCore:item.sensorGlasses>, [
-[<ore:circuitElite>, MeteorScrew,<ore:circuitElite>],
+[<ore:circuitData>, MeteorScrew,<ore:circuitData>],
 [DeshRing, <ore:boltDesh>, DeshRing],
 [SensorLens, <ore:craftingToolScrewdriver>, SensorLens]]);
 
@@ -965,11 +974,11 @@ recipes.addShaped(<GalacticraftCore:item.airFan>, [
 recipes.addShaped(<GalacticraftCore:item.oxygenConcentrator>, [
 [CompressedSteel, AirVent, CompressedSteel],
 [CompressedSteel, <GalacticraftCore:item.airFan>, CompressedSteel],
-[<GalacticraftCore:item.canister>, LVPump, <GalacticraftCore:item.canister>]]);
+[<GalacticraftCore:item.canister>, HVPump, <GalacticraftCore:item.canister>]]);
 
 // --- Tier 1 Rocket Engine
 recipes.addShaped(<GalacticraftCore:item.engine>, [
-[<GalaxySpace:item.CompressedSDHD120>, <GalacticraftCore:item.fuelCanisterPartial:1>, <GalaxySpace:item.CompressedSDHD120>],
+[<GalaxySpace:item.CompressedSDHD120>, <GalacticraftCore:item.oilCanisterPartial:1001>, <GalaxySpace:item.CompressedSDHD120>],
 [HeavyPlating, <gregtech:gt.blockcasings3:14>, HeavyPlating],
 [HeavyPlating, <gregtech:gt.metaitem.01:32731>, HeavyPlating]]);
 
@@ -1005,9 +1014,9 @@ recipes.addShaped(<GalacticraftCore:item.oilExtractor>, [
 
 // --- Buggy Wheel
 recipes.addShaped(<GalacticraftCore:item.buggymat>, [
-[CompressedSteel, <ore:plateRubber>, CompressedSteel],
-[<ore:plateRubber>, CompressedTi, <ore:plateRubber>],
-[CompressedSteel, <ore:plateRubber>, CompressedSteel]]);
+[CompressedSteel, <ore:plateAnyRubber>, CompressedSteel],
+[<ore:plateAnyRubber>, CompressedTi, <ore:plateAnyRubber>],
+[CompressedSteel, <ore:plateAnyRubber>, CompressedSteel]]);
 
 // --- Buggy Seat
 recipes.addShaped(<GalacticraftCore:item.buggymat:1>, [
@@ -1023,7 +1032,12 @@ recipes.addShaped(<GalacticraftCore:item.buggymat:2>, [
 
 // --- Frequencey Module
 recipes.addShaped(<GalacticraftCore:item.basicItem:19>, [
-[CompressedAl, <gregtech:gt.metaitem.01:32690>, CompressedAl],
+[CompressedAl, <gregtech:gt.metaitem.01:32692>, CompressedAl],
+[BWafer, <gregtech:gt.metaitem.01:32740>, BWafer],
+[CompressedTin, <GalacticraftCore:item.battery>, CompressedTin]]);
+// -
+recipes.addShaped(<GalacticraftCore:item.basicItem:19>, [
+[CompressedAl, <gregtech:gt.metaitem.01:32692>, CompressedAl],
 [BWafer, <gregtech:gt.metaitem.01:32740>, BWafer],
 [CompressedTin, <GalacticraftCore:item.battery:*>, CompressedTin]]);
 
@@ -1032,12 +1046,6 @@ recipes.addShaped(<GalacticraftMars:tile.walkway> * 2, [
 [DeshPlate, DeshPlate, DeshPlate],
 [null, <ore:blockDesh>, null],
 [DeshPlate, DeshPlate, DeshPlate]]);
-
-// --- Thermal Cloth
-recipes.addShaped(<GalacticraftMars:item.itemBasicAsteroids:7> , [
-[AlFoil, <dreamcraft:item.MeteoricIronString>, AlFoil],
-[<dreamcraft:item.MeteoricIronString>, <Thaumcraft:ItemResource:7>, <dreamcraft:item.MeteoricIronString>],
-[AlFoil, <dreamcraft:item.MeteoricIronString>, AlFoil]]);
 
 // --- Desh Sticks
 recipes.addShapeless(<GalacticraftMars:item.null:1>, [<gregtech:gt.metaitem.01:23884>]);
@@ -1105,32 +1113,32 @@ recipes.addShaped(<GalacticraftMars:tile.marsMachine>, [
 // --- Launch Controller
 recipes.addShaped(<GalacticraftMars:tile.marsMachine:8>, [
 [AdvWafer, <GalacticraftCore:item.basicItem:19>, AdvWafer],
-[DeshPlate, <gregtech:gt.blockmachines:11>, DeshPlate],
+[DeshPlate, <gregtech:gt.blockmachines:13>, DeshPlate],
 [<ore:cableGt02Aluminium>, DeshPlate, <ore:cableGt02Aluminium>]]);
 
 // --- Grappler
 recipes.addShaped(<GalacticraftMars:item.grapple>, [
 [null, null, <ore:toolHeadArrowMeteoricSteel>],
-[String, String, String],
+[<dreamcraft:item.MeteoricIronString>, <dreamcraft:item.MeteoricIronString>, <dreamcraft:item.MeteoricIronString>],
 [<ore:ringMeteoricSteel>, null, null]]);
 
 // --- Astro Miner Base
 recipes.addShaped(<GalacticraftMars:tile.minerBase> * 4, [
 [<ore:compressedTitanium>, <ore:chestSteel>, <ore:compressedTitanium>],
 [<GalacticraftMars:item.itemBasicAsteroids:8>, <ore:frameGtTungsten>, <GalacticraftMars:item.itemBasicAsteroids:8>],
-[<ore:compressedSteel>, <GalacticraftCore:tile.machineTiered>, <ore:compressedSteel>]]);
+[<ore:compressedDesh>, <GalacticraftCore:tile.machineTiered>, <ore:compressedDesh>]]);
 
 // --- Orion Drive
 recipes.addShaped(<GalacticraftMars:item.orionDrive>, [
 [<ore:compressedTitanium>, <GalacticraftMars:item.itemBasicAsteroids:8>, <ore:compressedTitanium>],
-[<dreamcraft:item.HighEnergyFlowCircuit>, <ore:oc:hdd3>, <dreamcraft:item.HighEnergyFlowCircuit>],
+[<ore:circuitMaster>, <ore:oc:hdd3>, <ore:circuitMaster>],
 [<ore:compressedSteel>, <GalacticraftMars:item.itemBasicAsteroids:8>, <ore:compressedSteel>]]);
 
 // --- Canvas
 recipes.addShaped(<GalacticraftCore:item.canvas>,  [
-[null, <ore:platePaper>, <ore:stickWood>],
-[<ore:platePaper>, <minecraft:string>, <ore:platePaper>],
-[<ore:stickWood>, <ore:platePaper>, null]]);
+[null, <harvestcraft:wovencottonItem>, <ore:stickPlastic>],
+[<harvestcraft:wovencottonItem>, <ore:stickPlastic>, <harvestcraft:wovencottonItem>],
+[<ore:stickPlastic>, <harvestcraft:wovencottonItem>, null]]);
 
 // --- Ambiete Thermal Controller
 recipes.addShaped(<GalacticraftCore:item.basicItem:20>,  [
@@ -1146,24 +1154,45 @@ recipes.addShapeless(<GalacticraftCore:item.schematic:1>, [<GalacticraftCore:ite
 
 // --- Schematics Tier 3 Rocket
 recipes.addShaped(<GalacticraftMars:item.schematic:1>, [
-[<GalacticraftMars:item.schematic>]]);
+[<GalacticraftMars:item.schematic>, null, null],
+[null, null, null],
+[null, null, null]]);
 // -
 recipes.addShaped(<GalacticraftMars:item.schematic:2>, [
-[null, <GalacticraftMars:item.schematic>]]);
+[null, <GalacticraftMars:item.schematic>, null],
+[null, null, null],
+[null, null, null]]);
 
 // --- Schematics Cargo Rocket
 recipes.addShaped(<GalacticraftMars:item.schematic>, [
-[<GalacticraftMars:item.schematic:1>]]);
+[<GalacticraftMars:item.schematic:1>, null, null],
+[null, null, null],
+[null, null, null]]);
 // -
 recipes.addShaped(<GalacticraftMars:item.schematic:2>, [
-[null, <GalacticraftMars:item.schematic:1>]]);
+[null, <GalacticraftMars:item.schematic:1>, null],
+[null, null, null],
+[null, null, null]]);
 
 // --- Schematics Astro Miner
 recipes.addShaped(<GalacticraftMars:item.schematic>, [
-[<GalacticraftMars:item.schematic:2>]]);
+[<GalacticraftMars:item.schematic:2>, null, null],
+[null, null, null],
+[null, null, null]]);
 // -
 recipes.addShaped(<GalacticraftMars:item.schematic:1>, [
-[null, <GalacticraftMars:item.schematic:2>]]);
+[null, <GalacticraftMars:item.schematic:2>, null],
+[null, null, null],
+[null, null, null]]);
+
+// --- Parachute
+recipes.addShaped(<GalacticraftCore:item.parachute>, [
+[<GalacticraftCore:item.canvas>, <GalacticraftCore:item.canvas>, <GalacticraftCore:item.canvas>],
+[<ore:wireFineSteel>, null, <ore:wireFineSteel>],
+[<ore:wireFineSteel>, <ore:wireFineSteel>, <ore:wireFineSteel>]]);
+
+// --- Raw Meteoric Iron
+recipes.addShapeless(<GalacticraftCore:item.meteoricIronRaw>, [<GalacticraftCore:item.meteoricIronRaw:*>]);
 
 // --- Rocket Tier 1
 mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:item.spaceship>,[
@@ -1176,42 +1205,8 @@ mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:item.spaceship>,[
 [null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftCore:item.heavyPlating>, null, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.rocketFins>, null, null],
 [null, null, <GalacticraftCore:item.rocketFins>, <ore:compressedSteel>, <GalacticraftCore:item.engine>, <ore:compressedSteel>, <GalacticraftCore:item.rocketFins>, null, null],
 [null, null, null, null, null, null, null, null, null]]);
-
-// --- Rocket Tier 1 Cargo 1
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:item.spaceship:1>,[
-[<dreamcraft:item.SchematicsTier1>, null, null, null, null, null, null, null, null],
-[null, null, null, null, <GalacticraftCore:item.noseCone>, null, null, null, null],
-[null, null, null, null, <ore:compressedSteel>, null, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalaxySpace:item.ModuleLander>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftCore:item.heavyPlating>, <ore:chestCopper>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <ore:compressedSteel>, <GalacticraftCore:item.engine>, <ore:compressedSteel>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, null, null, null, null, null, null, null]]);
-
-// --- Rocket Tier 1 Cargo 2
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:item.spaceship:2>,[
-[<dreamcraft:item.SchematicsTier1>, null, null, null, null, null, null, null, null],
-[null, null, null, null, <GalacticraftCore:item.noseCone>, null, null, null, null],
-[null, null, null, null, <ore:compressedSteel>, null, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalaxySpace:item.ModuleLander>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftCore:item.heavyPlating>, <ore:chestIron>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <ore:compressedSteel>, <GalacticraftCore:item.engine>, <ore:compressedSteel>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, null, null, null, null, null, null, null]]);
-
-// --- Rocket Tier 1 Cargo 3
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:item.spaceship:3>, [
-[<dreamcraft:item.SchematicsTier1>, null, null, null, null, null, null, null, null],
-[null, null, null, null, <GalacticraftCore:item.noseCone>, null, null, null, null],
-[null, null, null, null, <ore:compressedSteel>, null, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalaxySpace:item.ModuleLander>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftCore:item.heavyPlating>, <ore:chestGold>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <ore:compressedSteel>, <GalacticraftCore:item.engine>, <ore:compressedSteel>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, null, null, null, null, null, null, null]]);
+// -
+recipes.addShapeless(<GalacticraftCore:item.spaceship>, [<GalacticraftCore:item.spaceship:*>]);
 
 // --- Moon Buggy
 mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:item.buggy>, [
@@ -1224,42 +1219,8 @@ mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:item.buggy>, [
 [null, <GalacticraftCore:item.buggymat>,  <ore:stickStainlessSteel>, <ore:compressedMeteoricIron>, <ore:compressedMeteoricIron>, <ore:compressedMeteoricIron>,  <ore:stickStainlessSteel>, <GalacticraftCore:item.buggymat>, null],
 [null, null, null, null, null, null, null, null, null],
 [null, null, null, null, null, null, null, null, null]]);
-
-// --- Moon Buggy Cargo 1
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:item.buggy:1>, [
-[<dreamcraft:item.SchematicsMoonBuggy>, null, null, null, null, null, null, null, null],
-[null, <GalacticraftCore:item.buggymat>, <ore:stickStainlessSteel>, <GalacticraftCore:item.basicItem:19>, <ore:compressedMeteoricIron>, <ore:compressedMeteoricIron>,  <ore:stickStainlessSteel>, <GalacticraftCore:item.buggymat>, null],
-[null, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.buggymat:1>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, null],
-[null, <GalacticraftCore:item.buggymat>,  <ore:stickStainlessSteel>, <ore:compressedMeteoricIron>, <ore:compressedMeteoricIron>, <ore:compressedMeteoricIron>,  <ore:stickStainlessSteel>, <GalacticraftCore:item.buggymat>, null],
-[null, null, null, null, <GalacticraftCore:item.buggymat:2>, null, null, null, null],
-[null, null, null, null, null, null, null, null, null]]);
-
-// --- Moon Buggy Cargo 2
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:item.buggy:2>, [
-[<dreamcraft:item.SchematicsMoonBuggy>, null, null, null, null, null, null, null, null],
-[null, <GalacticraftCore:item.buggymat>, <ore:stickStainlessSteel>, <GalacticraftCore:item.basicItem:19>, <ore:compressedMeteoricIron>, <ore:compressedMeteoricIron>,  <ore:stickStainlessSteel>, <GalacticraftCore:item.buggymat>, null],
-[null, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.buggymat:1>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, null],
-[null, <GalacticraftCore:item.buggymat>,  <ore:stickStainlessSteel>, <ore:compressedMeteoricIron>, <ore:compressedMeteoricIron>, <ore:compressedMeteoricIron>,  <ore:stickStainlessSteel>, <GalacticraftCore:item.buggymat>, null],
-[null, null, null, <GalacticraftCore:item.buggymat:2>, null, <GalacticraftCore:item.buggymat:2>, null, null, null],
-[null, null, null, null, null, null, null, null, null]]);
-
-// --- Moon Buggy Cargo 3
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:item.buggy:3>, [
-[<dreamcraft:item.SchematicsMoonBuggy>, null, null, null, null, null, null, null, null],
-[null, <GalacticraftCore:item.buggymat>, <ore:stickStainlessSteel>, <GalacticraftCore:item.basicItem:19>, <ore:compressedMeteoricIron>, <ore:compressedMeteoricIron>,  <ore:stickStainlessSteel>, <GalacticraftCore:item.buggymat>, null],
-[null, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.buggymat:1>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, null, null, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, null, null, null],
-[null, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.heavyPlating>, <ore:screwStainlessSteel>, <ore:screwStainlessSteel>, null],
-[null, <GalacticraftCore:item.buggymat>,  <ore:stickStainlessSteel>, <ore:compressedMeteoricIron>, <ore:compressedMeteoricIron>, <ore:compressedMeteoricIron>,  <ore:stickStainlessSteel>, <GalacticraftCore:item.buggymat>, null],
-[null, null, null, <GalacticraftCore:item.buggymat:2>, <GalacticraftCore:item.buggymat:2>, <GalacticraftCore:item.buggymat:2>, null, null, null],
-[null, null, null, null, null, null, null, null, null]]);
+// -
+recipes.addShapeless(<GalacticraftCore:item.buggy>, [<GalacticraftCore:item.buggy:*>]);
 
 // --- Rocket Tier 2
 mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.spaceshipTier2>, [
@@ -1272,90 +1233,24 @@ mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.spaceshipTier2>, 
 [null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftMars:item.null:3>, null, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.rocketFins>, null, null],
 [null, null, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.engine>, <GalacticraftCore:item.engine:1>, null, null],
 [null, null, null, null, null, null, null, null, null]]);
-
-// --- Rocket Tier 2 Cargo 1
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.spaceshipTier2:1>, [
-[<dreamcraft:item.SchematicsTier2>, null, null, null, <GalacticraftCore:item.noseCone>, null, null, null, null],
-[null, null, null, null, <GalacticraftCore:item.heavyPlating>, null, null, null, null],
-[null, null, null, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleLander2>, <GalacticraftMars:item.null:3>, null, null, null],
-[null, null, null, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.null:3>, null, null, null],
-[null, null, null, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.null:3>, null, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftMars:item.null:3>, <ore:chestCopper>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.engine>, <GalacticraftCore:item.engine:1>, null, null],
-[null, null, null, null, null, null, null, null, null]]);
-
-// --- Rocket Tier 2 Cargo 2
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.spaceshipTier2:2>, [
-[<dreamcraft:item.SchematicsTier2>, null, null, null, <GalacticraftCore:item.noseCone>, null, null, null, null],
-[null, null, null, null, <GalacticraftCore:item.heavyPlating>, null, null, null, null],
-[null, null, null, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleLander2>, <GalacticraftMars:item.null:3>, null, null, null],
-[null, null, null, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.null:3>, null, null, null],
-[null, null, null, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.null:3>, null, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftMars:item.null:3>, <ore:chestIron>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.engine>, <GalacticraftCore:item.engine:1>, null, null],
-[null, null, null, null, null, null, null, null, null]]);
-
-// --- Rocket Tier 2 Cargo 3
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.spaceshipTier2:3>, [
-[<dreamcraft:item.SchematicsTier2>, null, null, null, <GalacticraftCore:item.noseCone>, null, null, null, null],
-[null, null, null, null, <GalacticraftCore:item.heavyPlating>, null, null, null, null],
-[null, null, null, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleLander2>, <GalacticraftMars:item.null:3>, null, null, null],
-[null, null, null, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.null:3>, null, null, null],
-[null, null, null, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.null:3>, null, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftMars:item.null:3>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftMars:item.null:3>, <ore:chestGold>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.rocketFins>, null, null],
-[null, null, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine>, <GalacticraftCore:item.heavyPlating>, <GalacticraftCore:item.engine>, <GalacticraftCore:item.engine:1>, null, null],
-[null, null, null, null, null, null, null, null, null]]);
+// -
+recipes.addShapeless(<GalacticraftMars:item.spaceshipTier2>, [<GalacticraftMars:item.spaceshipTier2:1>]);
+// -
+recipes.addShapeless(<GalacticraftMars:item.spaceshipTier2>, [<GalacticraftMars:item.spaceshipTier2:2>]);
 
 // --- Rocket Tier 3
 mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.itemTier3Rocket>, [
 [<dreamcraft:item.SchematicsTier3>, null, null, null, <GalacticraftMars:item.heavyNoseCone>, null, null, null, null],
 [null, null, null, null, <GalacticraftMars:item.null:3>, null, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleLander2>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
+[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleLander3>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
 [null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
 [null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
 [null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <dreamcraft:item.MediumFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
 [null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, <dreamcraft:item.MediumFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
 [null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
 [null, null, <GalacticraftCore:item.engine:1>, <GalacticraftMars:item.null:3>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.engine:1>, null, null]]);
-
-// --- Rocket Tier 3 Cargo 1
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.itemTier3Rocket:1>, [
-[<dreamcraft:item.SchematicsTier3>, null, null, null, <GalacticraftMars:item.heavyNoseCone>, null, null, null, null],
-[null, null, null, null, <GalacticraftMars:item.null:3>, null, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleLander2>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <dreamcraft:item.MediumFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, <dreamcraft:item.MediumFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, <ore:chestCopper>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, null, <GalacticraftCore:item.engine:1>, <GalacticraftMars:item.null:3>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.engine:1>, null, null]]);
-
-// --- Rocket Tier 3 Cargo 2
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.itemTier3Rocket:2>, [
-[<dreamcraft:item.SchematicsTier3>, null, null, null, <GalacticraftMars:item.heavyNoseCone>, null, null, null, null],
-[null, null, null, null, <GalacticraftMars:item.null:3>, null, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleLander2>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <dreamcraft:item.MediumFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, <dreamcraft:item.MediumFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, <ore:chestIron>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, null, <GalacticraftCore:item.engine:1>, <GalacticraftMars:item.null:3>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.engine:1>, null, null]]);
-
-// --- Rocket Tier 3 Cargo 3
-mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.itemTier3Rocket:3>, [
-[<dreamcraft:item.SchematicsTier3>, null, null, null, <GalacticraftMars:item.heavyNoseCone>, null, null, null, null],
-[null, null, null, null, <GalacticraftMars:item.null:3>, null, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleLander2>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <GalaxySpace:item.ModuleSmallFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids>, <dreamcraft:item.MediumFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, null, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, <dreamcraft:item.MediumFuelCanister>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, <ore:chestGold>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, null, <GalacticraftCore:item.engine:1>, <GalacticraftMars:item.null:3>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.engine:1>, null, null]]);
+// -
+recipes.addShapeless(<GalacticraftMars:item.itemTier3Rocket>, [<GalacticraftMars:item.itemTier3Rocket:*>]);
 
 // --- Cargo Rocket 1
 mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.spaceshipTier2:11>, [
@@ -1368,6 +1263,10 @@ mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.spaceshipTier2:11
 [null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftMars:item.null:3>, <ore:chestCopper>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.rocketFins>, null, null],
 [null, null, null, null, <GalacticraftCore:item.engine>, null, null, null, null],
 [null, null, null, null, null, null, null, null, null]]);
+// -
+recipes.addShapeless(<GalacticraftMars:item.spaceshipTier2:11>, [<GalacticraftMars:item.spaceshipTier2:12>]);
+// -
+recipes.addShapeless(<GalacticraftMars:item.spaceshipTier2:11>, [<GalacticraftMars:item.spaceshipTier2:13>]);
 
 // --- Cargo Rocket 2
 mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.spaceshipTier2:12>, [
@@ -1380,6 +1279,8 @@ mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.spaceshipTier2:12
 [null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftMars:item.null:3>, <ore:chestIron>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.rocketFins>, null, null],
 [null, null, null, null, <GalacticraftCore:item.engine>, null, null, null, null],
 [null, null, null, null, null, null, null, null, null]]);
+// -
+recipes.addShapeless(<GalacticraftMars:item.spaceshipTier2:12>, [<GalacticraftMars:item.spaceshipTier2:11>, <ore:chestIron>]);
 
 // --- Cargo Rocket 3
 mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.spaceshipTier2:13>, [
@@ -1392,6 +1293,8 @@ mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.spaceshipTier2:13
 [null, null, <GalacticraftCore:item.rocketFins>, <GalacticraftMars:item.null:3>, <ore:chestGold>, <GalacticraftMars:item.null:3>, <GalacticraftCore:item.rocketFins>, null, null],
 [null, null, null, null, <GalacticraftCore:item.engine>, null, null, null, null],
 [null, null, null, null, null, null, null, null, null]]);
+// -
+recipes.addShapeless(<GalacticraftMars:item.spaceshipTier2:13>, [<GalacticraftMars:item.spaceshipTier2:11>, <ore:chestGold>]);
 
 // --- Astro Miner
 mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.itemAstroMiner>, [
@@ -1405,7 +1308,17 @@ mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftMars:item.itemAstroMiner>, 
 [null, null, null, null, null, null, null, null, null],
 [null, null, null, null, null, null, null, null, null]]);
 
-
+// --- Infinite Oxygen Supply
+mods.avaritia.ExtremeCrafting.addShaped(<GalacticraftCore:item.infiniteOxygen>, [
+[null, null, <ore:ingotInfinity>, <ore:plateNeutronium>, <ore:plateNeutronium>, <ore:plateNeutronium>, <ore:ingotInfinity>, null, null],
+[null, <ore:ingotInfinity>, <ore:plateNeutronium>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <ore:plateNeutronium>, <ore:ingotInfinity>, null],
+[null, <ore:plateNeutronium>, <dreamcraft:item.HeavyDutyPlateTier8>, <GalacticraftCore:item.oxygenTankHeavyFull>, <gregtech:gt.metaitem.01:32616>, <GalacticraftCore:item.oxygenTankHeavyFull>, <dreamcraft:item.HeavyDutyPlateTier8>, <ore:plateNeutronium>, null],
+[null, <ore:plateNeutronium>, <dreamcraft:item.HeavyDutyPlateTier8>, <gregtech:gt.metaitem.03:32105>, <ore:pipeSmallInfinity>, <gregtech:gt.metaitem.03:32105>, <dreamcraft:item.HeavyDutyPlateTier8>, <ore:plateNeutronium>, null],
+[null, <ore:plateNeutronium>, <dreamcraft:item.HeavyDutyPlateTier8>, <GalacticraftCore:item.oxygenTankHeavyFull>, <gregtech:gt.blockmachines:122>, <GalacticraftCore:item.oxygenTankHeavyFull>, <dreamcraft:item.HeavyDutyPlateTier8>, <ore:plateNeutronium>, null],
+[null, <ore:plateNeutronium>, <dreamcraft:item.HeavyDutyPlateTier8>, <gregtech:gt.metaitem.03:32105>, <ore:pipeSmallInfinity>, <gregtech:gt.metaitem.03:32105>, <dreamcraft:item.HeavyDutyPlateTier8>, <ore:plateNeutronium>, null],
+[null, <ore:plateNeutronium>, <dreamcraft:item.HeavyDutyPlateTier8>, <GalacticraftCore:item.oxygenTankHeavyFull>, <gregtech:gt.metaitem.01:32616>, <GalacticraftCore:item.oxygenTankHeavyFull>, <dreamcraft:item.HeavyDutyPlateTier8>, <ore:plateNeutronium>, null],
+[null, <ore:ingotInfinity>, <ore:plateNeutronium>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <ore:plateNeutronium>, <ore:ingotInfinity>, null],
+[null, null, <ore:ingotInfinity>, <ore:plateNeutronium>, <ore:plateNeutronium>, <ore:plateNeutronium>, <ore:ingotInfinity>, null, null]]);
 
 
 
@@ -1521,56 +1434,81 @@ ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:32462> * 11, <gregtech:gt.metaite
 
 
 
+// --- Thermal Cloth
+Assembler.addRecipe(<GalacticraftMars:item.itemBasicAsteroids:7>, [<harvestcraft:wovencottonItem> * 8, <gregtech:gt.metaitem.01:29019> * 8, <dreamcraft:item.MeteoricIronString> * 8, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.silicone> * 144, 300, 480);
+
 // --- Glowstone Torch
-Assembler.addRecipe(<GalacticraftCore:tile.glowstoneTorch>, <minecraft:redstone_torch>, <minecraft:glowstone_dust>, 200, 16);
+Assembler.addRecipe(<GalacticraftCore:tile.glowstoneTorch>, <gregtech:gt.metaitem.01:23010>, <minecraft:glowstone_dust>, 100, 16);
 
 // --- Canister
 Assembler.addRecipe(<GalacticraftCore:item.oilCanisterPartial:1001>, <GalacticraftCore:item.basicItem:9> * 4, <gregtech:gt.metaitem.01:28305> * 4, 200, 64);
-
-// --- Basic Wafer
-Assembler.addRecipe(<GalacticraftCore:item.basicItem:13>, <gregtech:gt.metaitem.01:17500> * 2, <gregtech:gt.metaitem.01:32710> * 4, <liquid:molten.tin> * 288, 1600, 64);
-// -
-Assembler.addRecipe(<GalacticraftCore:item.basicItem:13>, <gregtech:gt.metaitem.01:17500> * 2, <gregtech:gt.metaitem.01:32710> * 4, <liquid:molten.solderingalloy> * 144, 1600, 64);
-// -
-Assembler.addRecipe(<GalacticraftCore:item.basicItem:13>, <gregtech:gt.metaitem.01:17500> * 2, <gregtech:gt.metaitem.01:32710> * 4, <liquid:molten.lead> * 576, 1600, 64);
-
-// --- Advanced Wafer
-Assembler.addRecipe(<GalacticraftCore:item.basicItem:14>, <gregtech:gt.metaitem.01:17500> * 4, <gregtech:gt.metaitem.01:32711> * 8, <liquid:molten.tin> * 576, 3200, 256);
-// -
-Assembler.addRecipe(<GalacticraftCore:item.basicItem:14>, <gregtech:gt.metaitem.01:17500> * 4, <gregtech:gt.metaitem.01:32711> * 8, <liquid:molten.solderingalloy> * 288, 3200, 256);
-// -
-Assembler.addRecipe(<GalacticraftCore:item.basicItem:14>, <gregtech:gt.metaitem.01:17500> * 4, <gregtech:gt.metaitem.01:32711> * 8, <liquid:molten.lead> * 1440, 3200, 256);
 
 // --- Hydrogen Pipe
 Assembler.addRecipe(<GalacticraftMars:tile.hydrogenPipe>, OxygenPipe, <gregtech:gt.metaitem.01:28035> * 4, 400, 16);
 
 // --- Thermal Padding Helm
-Assembler.addRecipe(<GalacticraftMars:item.thermalPadding>, <GalacticraftMars:item.itemBasicAsteroids:7> * 5, <gregtech:gt.integrated_circuit:5> * 0, 750, 1024);
+Assembler.addRecipe(<GalacticraftMars:item.thermalPadding>, [<GalacticraftMars:item.itemBasicAsteroids:7> * 5,  <dreamcraft:item.MeteoricIronString> * 5, <gregtech:gt.integrated_circuit:5> * 0], <liquid:molten.silicone> * 720, 750, 1024);
 // -
 Assembler.addRecipe(<GalacticraftMars:item.itemBasicAsteroids:7> * 5, <GalacticraftMars:item.thermalPadding>, <gregtech:gt.integrated_circuit:1> * 0, 180, 256);
 
 // --- Thermal Padding Chestpiece
-Assembler.addRecipe(<GalacticraftMars:item.thermalPadding:1>, <GalacticraftMars:item.itemBasicAsteroids:7> * 8, <gregtech:gt.integrated_circuit:8> * 0, 1200, 1024);
+Assembler.addRecipe(<GalacticraftMars:item.thermalPadding:1>, [<GalacticraftMars:item.itemBasicAsteroids:7> * 8, <dreamcraft:item.MeteoricIronString> * 8, <gregtech:gt.integrated_circuit:8> * 0], <liquid:molten.silicone> * 1152, 1200, 1024);
 // -
 Assembler.addRecipe(<GalacticraftMars:item.itemBasicAsteroids:7> * 8, <GalacticraftMars:item.thermalPadding:1>, <gregtech:gt.integrated_circuit:1> * 0, 300, 256);
 
 // --- Thermal Padding Leggings
-Assembler.addRecipe(<GalacticraftMars:item.thermalPadding:2>, <GalacticraftMars:item.itemBasicAsteroids:7> * 7, <gregtech:gt.integrated_circuit:7> * 0, 1050, 1024);
+Assembler.addRecipe(<GalacticraftMars:item.thermalPadding:2>, [<GalacticraftMars:item.itemBasicAsteroids:7> * 7, <dreamcraft:item.MeteoricIronString> * 7, <gregtech:gt.integrated_circuit:7> * 0], <liquid:molten.silicone> * 1008, 1050, 1024);
 // -
 Assembler.addRecipe(<GalacticraftMars:item.itemBasicAsteroids:7> * 7, <GalacticraftMars:item.thermalPadding:2>, <gregtech:gt.integrated_circuit:1> * 0, 260, 256);
 
 // --- Thermal Padding Boots
-Assembler.addRecipe(<GalacticraftMars:item.thermalPadding:3>, <GalacticraftMars:item.itemBasicAsteroids:7> * 4, <gregtech:gt.integrated_circuit:4> * 0, 600, 1024);
+Assembler.addRecipe(<GalacticraftMars:item.thermalPadding:3>, [<GalacticraftMars:item.itemBasicAsteroids:7> * 4, <dreamcraft:item.MeteoricIronString> * 4, <gregtech:gt.integrated_circuit:4> * 0], <liquid:molten.silicone> * 576, 600, 1024);
 // -
 Assembler.addRecipe(<GalacticraftMars:item.itemBasicAsteroids:7> * 4, <GalacticraftMars:item.thermalPadding:3>, <gregtech:gt.integrated_circuit:1> * 0, 150, 256);
 
 // --- Oxygen Mask
 Assembler.addRecipe(<GalacticraftCore:item.oxygenMask>, <IC2:itemArmorHazmatHelmet>, <dreamcraft:item.ReinforcedGlassPlate> * 16, <liquid:glue> * 144, 400, 120);
+// -
+Assembler.addRecipe(<GalacticraftCore:item.oxygenMask>, <IC2:itemArmorHazmatHelmet>, <dreamcraft:item.ReinforcedGlassPlate> * 16, <liquid:refinedglue> * 144, 400, 120);
+// -
+Assembler.addRecipe(<GalacticraftCore:item.oxygenMask>, <IC2:itemArmorHazmatHelmet>, <dreamcraft:item.ReinforcedGlassPlate> * 16, <liquid:molten.rubber> * 72, 400, 120);
 
 // --- Solar Panel
 Assembler.addRecipe(<GalacticraftCore:item.basicItem>, SolarPanel, <GalacticraftCore:item.basicItem:9>, 200, 120);
 
+// --- Canvas
+Assembler.addRecipe(<GalacticraftCore:item.canvas>,  <harvestcraft:wovencottonItem> * 2, <gregtech:gt.metaitem.01:23874> * 2, 300, 480);
 
+// --- Parachute
+Assembler.addRecipe(<GalacticraftCore:item.parachute>, <GalacticraftCore:item.canvas> * 2, <gregtech:gt.metaitem.02:19305> * 3, 300, 480);
+
+// --- Rocket Tier 1 with Chest
+Assembler.addRecipe(<GalacticraftCore:item.spaceship:1>, <GalacticraftCore:item.spaceship>, <ore:chestCopper>, 100, 480);
+// -
+Assembler.addRecipe(<GalacticraftCore:item.spaceship:2>, <GalacticraftCore:item.spaceship>, <ore:chestIron>, 100, 480);
+// -
+Assembler.addRecipe(<GalacticraftCore:item.spaceship:3>, <GalacticraftCore:item.spaceship>, <ore:chestGold>, 100, 480);
+
+// --- Rocket Tier 2 with Chest
+Assembler.addRecipe(<GalacticraftMars:item.spaceshipTier2:1>, <GalacticraftMars:item.spaceshipTier2>, <ore:chestCopper>, 100, 1024);
+// -
+Assembler.addRecipe(<GalacticraftMars:item.spaceshipTier2:2>, <GalacticraftMars:item.spaceshipTier2>, <ore:chestIron>, 100, 1024);
+// -
+Assembler.addRecipe(<GalacticraftMars:item.spaceshipTier2:3>, <GalacticraftMars:item.spaceshipTier2>, <ore:chestGold>, 100, 1024);
+
+// --- Rocket Tier 3 with Chest 
+Assembler.addRecipe(<GalacticraftMars:item.itemTier3Rocket:1>, <GalacticraftMars:item.itemTier3Rocket>, <ore:chestCopper>, 100, 1920);
+// -
+Assembler.addRecipe(<GalacticraftMars:item.itemTier3Rocket:2>, <GalacticraftMars:item.itemTier3Rocket>, <ore:chestIron>, 100, 1920);
+// -
+Assembler.addRecipe(<GalacticraftMars:item.itemTier3Rocket:3>, <GalacticraftMars:item.itemTier3Rocket>, <ore:chestGold>, 100, 1920);
+
+// --- Moon Buggy with Chest
+Assembler.addRecipe(<GalacticraftCore:item.buggy:1>, <GalacticraftCore:item.buggy>, <ore:chestCopper>, 100, 480);
+// -
+Assembler.addRecipe(<GalacticraftCore:item.buggy:1>, <GalacticraftCore:item.buggy>, <ore:chestIron>, 100, 480);
+// -
+Assembler.addRecipe(<GalacticraftCore:item.buggy:1>, <GalacticraftCore:item.buggy>, <ore:chestGold>, 100, 480);
 
 
 // --- Blast Furnace Recipes --- 
@@ -1580,14 +1518,12 @@ Assembler.addRecipe(<GalacticraftCore:item.basicItem>, SolarPanel, <Galacticraft
 // --- Titan Ingot
 BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:11028>], [<GalacticraftMars:item.itemBasicAsteroids:4> * 2], 1500, 120, 1500);
 
+// --- Raw meteoric Iron
+BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:11340>], [<GalacticraftCore:item.meteoricIronRaw>], 1200, 120, 1000);
 
+// --- Small fallen meteor
+BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:11340> * 2], [<GalacticraftCore:tile.fallenMeteor>], 1200, 120, 1000);
 
-
-// --- Brewery Recipes ---
-
-
-// --- Bacterial Sludge dublication
-Brewery.addRecipe(<liquid:binnie.bacteria> * 750, <gregtech:gt.metaitem.01:2398>, <liquid:bacterialsludge> * 500, false);
 
 
 
@@ -1615,7 +1551,8 @@ Canner.addRecipe(<GalacticraftCore:item.basicItem:18>, <minecraft:potato> * 16, 
 // --- Solid Meteoric Iron
 Compressor.addRecipe(<GalacticraftCore:tile.gcBlockCore:12>, <gregtech:gt.metaitem.01:11340> * 9);
 
-
+// --- Cheese Ore ---
+Compressor.addRecipe(<GalacticraftCore:tile.moonBlock:2>,<GalacticraftCore:item.cheeseCurd> * 9);
 
 
 
@@ -1648,25 +1585,27 @@ FluidCanner.addRecipe(<GalacticraftCore:item.fuelCanisterPartial:1>, <Galacticra
 
 
 
-// --- Macerator Recipes ---
+// --- Pulverizer Recipes ---
+
+
 
 
 // --- Meteoric Iron Dust
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2340> * 9, <GalacticraftCore:tile.gcBlockCore:12>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2340> * 9], <GalacticraftCore:tile.gcBlockCore:12>, [10000], 300, 2);
 
 // --- Desh Shards
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2884>, <GalacticraftMars:item.null>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2884>], <GalacticraftMars:item.null>, [10000], 300, 2);
 // -
-Macerator.addRecipe(<GalacticraftMars:item.null> * 2, <GalacticraftMars:tile.mars:2>);
+Pulverizer.addRecipe([<GalacticraftMars:item.null> * 2], <GalacticraftMars:tile.mars:2>, [10000], 300, 2);
 
 // --- Raw Meteoric Iron
-Macerator.addRecipe(<GalacticraftCore:item.meteoricIronRaw> * 2, <GalacticraftCore:tile.fallenMeteor>);
+Pulverizer.addRecipe([<GalacticraftCore:item.meteoricIronRaw> * 2], <GalacticraftCore:tile.fallenMeteor>, [10000], 300, 2);
 
 // --- Titanium Shards
-Macerator.addRecipe(<GalacticraftMars:item.itemBasicAsteroids:4> * 2, <GalacticraftMars:tile.asteroidsBlock:4>);
+Pulverizer.addRecipe([<GalacticraftMars:item.itemBasicAsteroids:4> * 2], <GalacticraftMars:tile.asteroidsBlock:4>, [10000], 300, 2);
 
 // --- Raw Silicon Dust
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2020>, <GalacticraftCore:item.basicItem:2>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2020>], <GalacticraftCore:item.basicItem:2>, [10000], 300, 2);
 
 
 
@@ -1853,15 +1792,3 @@ PlateBender.addRecipe(<GalacticraftCore:item.canister> , <GalacticraftCore:item.
 
 // --- Copper Canister
 PlateBender.addRecipe(<GalacticraftCore:item.canister:1> , <GalacticraftCore:item.basicItem:6> * 2, 200, 8);
-
-
-
-// --- Vacuum Freezer Recipes ---
-
-
-
-// --- Fluid Oxygen
-VacuumFreezer.addRecipe(<IC2:itemFluidCell>.withTag({Fluid: {Amount: 1000, FluidName: "liquidoxygen"}}), <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "compressedoxygen", Amount: 1000}}), 2400);
-
-// --- Fluid Nitrogen
-VacuumFreezer.addRecipe(<IC2:itemFluidCell>.withTag({Fluid: {Amount: 1000, FluidName: "liquidnitrogen"}}), <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "compressednitrogen", Amount: 1000}}), 2400);

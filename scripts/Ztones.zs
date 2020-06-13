@@ -47,16 +47,20 @@ recipes.remove(<Ztones:minicoal>);
 recipes.remove(<Ztones:ofanix>);
 
 // --- Diamond Zane
-recipes.remove(<Ztones:diamondZane>);
+//recipes.remove(<Ztones:diamondZane>);
 
 // --- Splat Axe
-recipes.remove(<Ztones:splatAxe>);
+//recipes.remove(<Ztones:splatAxe>);
 
 // --- Terrain Eater
-recipes.remove(<Ztones:terrainEater>);
+//recipes.remove(<Ztones:terrainEater>);
 
+// --- Cobblestone
+recipes.removeShapeless(<minecraft:cobblestone>, [<Ztones:ofanix>]);
 
+// --- Myst Block
 
+recipes.remove(<Ztones:tile.mystBlock>);
 
 // --- Adding Recipes ---
 
@@ -69,12 +73,12 @@ recipes.addShaped(<Ztones:stoneTile> * 8, [
 [<minecraft:stone_slab>, <minecraft:stone_slab>, <minecraft:stone_slab>]]);
 
 // --- Mine Charcoal
-recipes.addShaped(<Ztones:minicharcoal>, [
+recipes.addShaped(<Ztones:minicharcoal> * 7, [
 [<ore:craftingToolSoftHammer>, null, null],
 [<ore:gemCharcoal>, null, null]]);
 
 // --- Mine Coal
-recipes.addShaped(<Ztones:minicoal>, [
+recipes.addShaped(<Ztones:minicoal> * 7, [
 [<ore:craftingToolSoftHammer>, null, null],
 [<ore:gemCoal>, null, null]]);
 
@@ -84,6 +88,15 @@ recipes.addShaped(<Ztones:auroraBlock> * 8, [
 [<ore:blockGlass>, <ore:dye>, <ore:blockGlass>],
 [<ore:blockGlass>, <ore:blockGlass>, <ore:blockGlass>]]);
 
+// --- Myst Block
+
+val blockMushroom = <ore:blockMushroom>;
+blockMushroom.add(<minecraft:brown_mushroom_block:*>);
+blockMushroom.add(<minecraft:red_mushroom_block:*>);
+recipes.addShaped(<Ztones:tile.mystBlock:0> * 8, [
+  [blockMushroom, blockMushroom, blockMushroom],
+  [blockMushroom, <Ztones:auroraBlock>, blockMushroom],
+  [blockMushroom, blockMushroom, blockMushroom]]);
 
 
 

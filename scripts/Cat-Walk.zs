@@ -6,6 +6,7 @@
 
 
 import mods.gregtech.Assembler;
+import mods.gregtech.Pulverizer;
 
 
 
@@ -109,13 +110,13 @@ Assembler.addRecipe(<catwalks:steelgrate> * 10, <gregtech:gt.metaitem.01:23305> 
 Assembler.addRecipe(<catwalks:support_column> * 4, <gregtech:gt.metaitem.01:23305> * 6, <catwalks:steelgrate> * 4, 300, 30);
 
 // --- Catwalk
-Assembler.addRecipe(<catwalks:catwalk_unlit> * 3, <catwalks:steelgrate> * 3, <gregtech:gt.metaitem.01:27305> * 2, <liquid:molten.steel> * 144, 300, 30);
+Assembler.addRecipe(<catwalks:catwalk_unlit> * 6, <catwalks:steelgrate> * 3, <gregtech:gt.metaitem.01:27305> * 2, 300, 30);
 
 // --- Scaffold
 Assembler.addRecipe(<catwalks:scaffold>, <gregtech:gt.blockmachines:4401>, <catwalks:steelgrate>, 100, 30);
 
 // --- Caged Ladda
-Assembler.addRecipe(<catwalks:cagedLadder_north_unlit> * 3, <catwalks:steelgrate> * 3, <minecraft:ladder>, <liquid:molten.steel> * 216, 300, 30);
+Assembler.addRecipe(<catwalks:cagedLadder_north_unlit> * 6, <catwalks:steelgrate> * 4, <minecraft:ladder>, 300, 30);
 
 // --- Sturdy Rail
 Assembler.addRecipe(<catwalks:sturdy_rail>, <minecraft:rail>, <catwalks:steelgrate>, 150, 30);
@@ -131,3 +132,25 @@ Assembler.addRecipe(<catwalks:sturdy_rail_powered>, <minecraft:golden_rail>, <ca
 
 // --- Rope Light
 Assembler.addRecipe(<catwalks:ropeLight> * 8, <gregtech:gt.metaitem.02:19305> * 2, <minecraft:glowstone_dust>, 100, 16);
+
+
+// --- Pulverizer Recipes ---
+
+
+// --- Support Column
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:305> * 6], <catwalks:support_column>, [10000], 300, 2);
+
+// --- Scaffold
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2305> * 2, <gregtech:gt.metaitem.01:305> * 2], <catwalks:scaffold>, [10000, 10000], 300, 2);
+
+// --- Builders Scaffold
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2305> * 2, <gregtech:gt.metaitem.01:305> * 2], <catwalks:scaffold:1>, [10000, 10000], 300, 2);
+
+// --- Catwalk
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2305> * 2, <gregtech:gt.metaitem.01:305> * 2], <catwalks:catwalk_unlit>, [10000, 10000], 300, 2);
+
+// --- Caged Ladder
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2305> * 1], <catwalks:cagedLadder_north_unlit>, [10000], 300, 2);
+
+// --- Steelgrate
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:305> * 2], <catwalks:steelgrate>, [10000], 300, 2);

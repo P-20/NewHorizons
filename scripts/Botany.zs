@@ -38,11 +38,6 @@ recipes.remove(<Botany:soilMeter>);
 // --- Mortar
 //recipes.remove(<Botany:misc:6>);
 
-// --- Florits Encyclopedaedia
-recipes.remove(<Botany:encylopedia>);
-
-// --- Reinforeced Florits Encyclopedaedia
-recipes.remove(<Botany:encylopediaIron>);
 
 
 
@@ -51,11 +46,11 @@ recipes.remove(<Botany:encylopediaIron>);
 
 
 // --- Botanis Database
-mods.forestry.Carpenter.addRecipe(60, <liquid:molten.redstone> * 1440, 
-[<gregtech:gt.metaitem.01:27500>, <gregtech:gt.metaitem.01:17500>, <gregtech:gt.metaitem.01:27500>, 
-<IC2:itemCasing:3>, <IC2:itemPartCircuitAdv>, <IC2:itemCasing:3>, 
-<gregtech:gt.metaitem.01:27500>, <gregtech:gt.metaitem.01:17501>, <gregtech:gt.metaitem.01:27500>], 
-<dreamcraft:item.Display>, <Botany:database>);
+mods.forestry.Carpenter.addRecipe(<Botany:database>, [[<gregtech:gt.metaitem.01:27500>, <gregtech:gt.metaitem.01:17500>, <gregtech:gt.metaitem.01:27500>],
+													 [<ore:itemCasingGold>, <ore:circuitAdvanced>, <ore:itemCasingGold>], 
+                                                     [<gregtech:gt.metaitem.01:27500>, <gregtech:gt.metaitem.01:17501>, <gregtech:gt.metaitem.01:27500>]], <liquid:molten.redstone> * 1440, 60, <dreamcraft:item.Display>);
+// -
+recipes.addShapeless(<Botany:database>, [<Botany:database>]);
 
 // --- Wooden Trowel
 recipes.addShaped(<Botany:trowelWood>, [
@@ -65,7 +60,7 @@ recipes.addShaped(<Botany:trowelWood>, [
 
 // --- Stone Trowel
 recipes.addShaped(<Botany:trowelStone>, [
-[<dreamcraft:item.StonePlate>, <ore:craftingToolHardHammer>, null],
+[<ore:plateStone>, <ore:craftingToolHardHammer>, null],
 [<ore:craftingToolFile>, <ore:stickWood>, null],
 [null, null, <ore:stickWood>]]);
 
@@ -184,13 +179,3 @@ Assembler.addRecipe(<Botany:insulatedTube:643>, <minecraft:sandstone> * 4, <Fore
 
 // --- Soil Meter
 Assembler.addRecipe(<Botany:soilMeter>, <gregtech:gt.metaitem.01:23305>, <gregtech:gt.metaitem.01:17086> * 4, <liquid:molten.redstone> * 144, 1200, 64);
-
-// --- Florits Encyclopedaedia
-Assembler.addRecipe(<Botany:encylopedia>, <minecraft:book>, <minecraft:yellow_flower:*> * 8, <liquid:water> * 100, 200, 64);
-//-
-Assembler.addRecipe(<Botany:encylopedia>, <minecraft:book>, <minecraft:red_flower:*> * 8, <liquid:water> * 100, 200, 64);
-//-
-Assembler.addRecipe(<Botany:encylopedia>, <minecraft:book>, <minecraft:double_plant:*> * 8, <liquid:water> * 100, 200, 64);
-
-// --- Reinforeced Florits Encyclopedaedia
-Assembler.addRecipe(<Botany:encylopediaIron>, <Botany:encylopedia>, <Railcraft:part.plate:1>, null, 400, 64);

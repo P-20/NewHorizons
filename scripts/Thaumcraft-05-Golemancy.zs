@@ -30,21 +30,21 @@ mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockCosmeticSolid:9>);
 // --- All Golems
 mods.thaumcraft.Crucible.removeRecipe(<Thaumcraft:ItemGolemPlacer:*>);
 // -
-mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer>);
+//mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:*>.withTag({advanced: 1 as byte}));
 // -
-mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:1>);
+//mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:1>.withTag({advanced: 1 as byte}));
 // -
-mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:2>);
+//mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:2>.withTag({advanced: 1 as byte}));
 // -
-mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:3>);
+//mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:3>.withTag({advanced: 1 as byte}));
 // -
-mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:4>);
+//mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:4>.withTag({advanced: 1 as byte}));
 // -
-mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:5>);
+//mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:5>.withTag({advanced: 1 as byte}));
 // -
-mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:6>);
+//mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:6>.withTag({advanced: 1 as byte}));
 // -
-mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:7>);
+//mods.thaumcraft.Infusion.removeRecipe(<Thaumcraft:ItemGolemPlacer:7>.withTag({advanced: 1 as byte}));
 
 // --- Golem Animation Core Empty
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:ItemGolemCore:100>);
@@ -277,7 +277,7 @@ mods.thaumcraft.Research.setComplexity("COREGUARD", 3);
 
 // --- Golem Animation Core Use
 mods.thaumcraft.Infusion.addRecipe("COREUSE", <Thaumcraft:ItemGolemCore:1>,
-[<minecraft:nether_star>, <ProjRed|Integration:projectred.integration.gate:26>, <minecraft:lever>, <minecraft:flint_and_steel>, <minecraft:stone_pressure_plate>, <minecraft:shears>],
+[<minecraft:nether_star>, <ProjRed|Integration:projectred.integration.gate:26>, <minecraft:lever>, <minecraft:flint_and_steel:*>, <minecraft:stone_pressure_plate>, <minecraft:shears>],
 "humanus 20, instrumentum 20, machina 20, lucrum 20", <Thaumcraft:ItemGolemCore:8>, 4);
 // -
 mods.thaumcraft.Research.setAspects("COREUSE", "humanus 12, instrumentum 12, machina 9, permutatio 9, motus 6, praecantatio 3");
@@ -313,7 +313,7 @@ mods.thaumcraft.Research.setComplexity("COREALCHEMY", 3);
 
 // --- Golem Animation Core Butcher
 mods.thaumcraft.Research.clearPages("COREBUTCHER");
-mods.thaumcraft.Research.addPage("COREBUTCHER", "tc.research_page.CORELIQUID.1");
+mods.thaumcraft.Research.addPage("COREBUTCHER", "tc.research_page.COREBUTCHER.1");
 mods.thaumcraft.Infusion.addRecipe("COREBUTCHER", <Thaumcraft:ItemGolemCore:3>,
 [<minecraft:nether_star>, <gregtech:gt.metatool.01:36>, <minecraft:iron_sword>, <Thaumcraft:ItemZombieBrain>, <minecraft:bow>, <minecraft:arrow>],
 "bestia 32, corpus 32, mortuus 32, telum 32", <Thaumcraft:ItemGolemCore:9>, 7);

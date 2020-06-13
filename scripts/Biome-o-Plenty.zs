@@ -7,10 +7,12 @@
 import mods.gregtech.Assembler;
 import mods.ic2.Compressor;
 import mods.gregtech.Centrifuge;
+import mods.gregtech.Extractor;
 import mods.gregtech.FluidExtractor;
 import mods.gregtech.FluidCanner;
 import mods.gregtech.FluidSolidifier;
-import mods.ic2.Macerator;
+import mods.gregtech.Pulverizer;
+import mods.nei.NEI;
 
 
 
@@ -25,7 +27,7 @@ recipes.remove(<BiomesOPlenty:gemOre:11>);
 recipes.remove(<BiomesOPlenty:gems:5>);
 
 // --- Emty Jar
-recipes.remove(<BiomesOPlenty:jar Empty>);
+recipes.remove(<BiomesOPlenty:jarEmpty>);
 
 // --- Dart Blower
 recipes.remove(<BiomesOPlenty:dartBlower>);
@@ -76,6 +78,11 @@ recipes.addShapeless(<BiomesOPlenty:jarEmpty>, [<ore:bottleEmpty>]);
 // --- Glass Bottle
 recipes.addShapeless(<minecraft:glass_bottle>, [<BiomesOPlenty:jarEmpty>]);
 
+// --- Mud Ball
+recipes.addShapeless(<BiomesOPlenty:mudball> * 2, [<minecraft:dirt>, <minecraft:water_bucket>.giveBack(<minecraft:bucket>)]);
+// -
+recipes.addShapeless(<BiomesOPlenty:mudball> * 2, [<minecraft:dirt>, <IguanaTweaksTConstruct:clayBucketWater>.giveBack(<IguanaTweaksTConstruct:clayBucketFired>)]);
+
 // --- Dart Blower
 recipes.addShaped(<BiomesOPlenty:dartBlower>, [
 [<BiomesOPlenty:plants:8>, <ore:ringWood>, <BiomesOPlenty:plants:8>],
@@ -105,16 +112,40 @@ recipes.addShapeless(<BiomesOPlenty:planks:14> * 2, [<BiomesOPlenty:logs4:3>]);
 // --- Barley
 recipes.removeShaped(<minecraft:wheat>, [[<BiomesOPlenty:plants:6>, <BiomesOPlenty:plants:6>, <BiomesOPlenty:plants:6>]]);
 
-// --- Lime Stone
-recipes.addShaped(<BiomesOPlenty:rocks> * 8, [
-[<minecraft:stone>, <minecraft:stone>, <minecraft:stone>],
-[<minecraft:stone>, <minecraft:dye:10>, <minecraft:stone>],
-[<minecraft:stone>, <minecraft:stone>, <minecraft:stone>]]);
-// -
+// --- Bucket Glitch
+recipes.addShapeless(<minecraft:bucket>, [<BiomesOPlenty:bopBucket>]); 
+
+// --- Limestone
 recipes.addShapeless(<BiomesOPlenty:rocks:1>, [<BiomesOPlenty:rocks>]);
 
 // --- Polish Lime Stone
 recipes.addShapeless(<BiomesOPlenty:rocks>, [<BiomesOPlenty:rocks:1>]);
+
+// --- Glowing Coral
+recipes.addShapeless(<BiomesOPlenty:coral1:15>, [<BiomesOPlenty:coral2:8>, <ore:dustGlowstone>]);
+
+// --- Pink Coral
+recipes.addShapeless(<BiomesOPlenty:coral1:12>, [<BiomesOPlenty:coral2:8>, <ore:dustGlowstone>, <ore:dyePink>]);
+
+// --- Orange Coral
+recipes.addShapeless(<BiomesOPlenty:coral1:13>, [<BiomesOPlenty:coral2:8>, <ore:dustGlowstone>, <ore:dyeOrange>]);
+
+// --- Blue Coral
+recipes.addShapeless(<BiomesOPlenty:coral1:14>, [<BiomesOPlenty:coral2:8>, <ore:dustGlowstone>, <ore:dyeBlue>]);
+
+// --- Dirt
+furnace.addRecipe(<minecraft:dirt>, <BiomesOPlenty:driedDirt>);
+
+
+
+
+
+// --- Burn Values ---
+
+
+// --- Baboo Sticks
+furnace.setFuel(<BiomesOPlenty:bamboo>, 100);
+
 
 
 
@@ -127,6 +158,10 @@ Assembler.addRecipe(<BiomesOPlenty:misc:2>, <Forestry:beeswax> * 2, <gregtech:gt
 // --- Hive Block
 Assembler.addRecipe(<BiomesOPlenty:hive:1>, <Forestry:propolis> * 2, <gregtech:gt.integrated_circuit:2> * 0, 400, 40);
 
+// --- Lime Stone
+Assembler.addRecipe(<BiomesOPlenty:rocks>, <minecraft:stone>, <gregtech:gt.metaitem.01:2823> * 4, 50, 2);
+
+
 
 
 
@@ -137,13 +172,13 @@ Assembler.addRecipe(<BiomesOPlenty:hive:1>, <Forestry:propolis> * 2, <gregtech:g
 mods.gregtech.Centrifuge.addRecipe([<Forestry:honeyDrop> * 7, <Forestry:honeyDrop>, <Forestry:honeyDrop>, <Forestry:honeyDrop>], null, <BiomesOPlenty:honeyBlock>, null, null, [10000, 5000, 2500, 1200], 4000, 8);
 
 // --- Bees Wax
-mods.gregtech.Centrifuge.addRecipe([<Forestry:beeswax>], null, <BiomesOPlenty:misc:2>, null, null, [10000], 120, 5);
+Centrifuge.addRecipe([<Forestry:beeswax>], null, <BiomesOPlenty:misc:2>, null, null, [10000], 120, 5);
 // -
-mods.gregtech.Centrifuge.addRecipe([<Forestry:beeswax>], null, <harvestcraft:waxcombItem>, null, null, [10000], 120, 5);
+Centrifuge.addRecipe([<Forestry:beeswax>], null, <harvestcraft:waxcombItem>, null, null, [10000], 120, 5);
 // -
-mods.gregtech.Centrifuge.addRecipe([<Forestry:beeswax>, <Forestry:honeyDrop>], null, <BiomesOPlenty:food:9>, null, null, [10000, 9000], 120, 5);
+Centrifuge.addRecipe([<Forestry:beeswax>, <Forestry:honeyDrop>], null, <BiomesOPlenty:food:9>, null, null, [10000, 9000], 120, 5);
 // -
-mods.gregtech.Centrifuge.addRecipe([<Forestry:beeswax>, <Forestry:honeyDrop>], null, <harvestcraft:honeycombItem>, null, null, [10000, 9000], 120, 5);
+Centrifuge.addRecipe([<Forestry:beeswax>, <Forestry:honeyDrop>], null, <harvestcraft:honeycombItem>, null, null, [10000, 9000], 120, 5);
 
 
 // --- Compressor Recipes ---
@@ -151,10 +186,89 @@ mods.gregtech.Centrifuge.addRecipe([<Forestry:beeswax>, <Forestry:honeyDrop>], n
 
 
 // --- Hardened Ice
-
 Compressor.addRecipe(<BiomesOPlenty:hardIce>, <minecraft:packed_ice> * 16);
 
+// --- Medium Bone Segment
+Compressor.addRecipe(<BiomesOPlenty:bones:1>, <BiomesOPlenty:bones> * 2);
 
+// --- Large Bone Segment
+Compressor.addRecipe(<BiomesOPlenty:bones:2>, <BiomesOPlenty:bones:1> * 2);
+
+// --- Dyes Recipes ---
+
+// --- Cyan Dye
+Extractor.addRecipe(<minecraft:dye:6> * 2, <BiomesOPlenty:flowers:1>, 300, 2);
+
+// --- Black Dye
+NEI.hide(<BiomesOPlenty:misc:9>);
+recipes.removeShapeless(<BiomesOPlenty:misc:9>, [<BiomesOPlenty:flowers:2>]);
+recipes.addShapeless(<gregtech:gt.metaitem.02:32414>, [<BiomesOPlenty:flowers:2>]);
+Extractor.addRecipe(<gregtech:gt.metaitem.02:32414> * 2, <BiomesOPlenty:flowers:2>, 300, 2);
+
+// --- Light Blue Dye
+Extractor.addRecipe(<minecraft:dye:12> * 2, <BiomesOPlenty:flowers:4>, 300, 2);
+Extractor.addRecipe(<minecraft:dye:12> * 2, <BiomesOPlenty:flowers2:7>, 300, 2);
+
+// --- Orange Dye
+Extractor.addRecipe(<minecraft:dye:14> * 2, <BiomesOPlenty:flowers:5>, 300, 2);
+Extractor.addRecipe(<minecraft:dye:14> * 2, <BiomesOPlenty:flowers2:2>, 300, 2);
+
+// --- Pink Dye
+Extractor.addRecipe(<minecraft:dye:9> * 2, <BiomesOPlenty:flowers:6>, 300, 2);
+Extractor.addRecipe(<minecraft:dye:9> * 2, <BiomesOPlenty:flowers2:0>, 300, 2);
+
+// --- Magenta Dye
+Extractor.addRecipe(<minecraft:dye:13> * 2, <BiomesOPlenty:flowers:7>, 300, 2);
+
+// --- Purple Dye
+Extractor.addRecipe(<minecraft:dye:5> * 2, <BiomesOPlenty:flowers:8>, 300, 2);
+Extractor.addRecipe(<minecraft:dye:5> * 2, <BiomesOPlenty:flowers2:3>, 300, 2);
+
+// --- White Dye
+NEI.hide(<BiomesOPlenty:misc:8>);
+recipes.removeShapeless(<BiomesOPlenty:misc:8>, [<BiomesOPlenty:flowers:9>]);
+recipes.addShapeless(<gregtech:gt.metaitem.02:32429>, [<BiomesOPlenty:flowers:9>]);
+recipes.removeShapeless(<BiomesOPlenty:misc:8>, [<BiomesOPlenty:flowers2:1>]);
+recipes.addShapeless(<gregtech:gt.metaitem.02:32429>, [<BiomesOPlenty:flowers2:1>]);
+
+Extractor.addRecipe(<gregtech:gt.metaitem.02:32429> * 2, <BiomesOPlenty:flowers:9>, 300, 2);
+Extractor.addRecipe(<gregtech:gt.metaitem.02:32429> * 2, <BiomesOPlenty:flowers2:1>, 300, 2);
+
+// --- Light Gray Dye
+Extractor.addRecipe(<minecraft:dye:7> * 2, <BiomesOPlenty:flowers:15>, 300, 2);
+
+// --- Yellow Dye
+Extractor.addRecipe(<minecraft:dye:11> * 2, <BiomesOPlenty:flowers2:4>, 300, 2);
+
+// --- Blue Dye
+NEI.hide(<BiomesOPlenty:misc:5>);
+recipes.removeShapeless(<BiomesOPlenty:misc:5>, [<BiomesOPlenty:flowers2:5>]);
+recipes.addShapeless(<gregtech:gt.metaitem.02:32418>, [<BiomesOPlenty:flowers2:5>]);
+recipes.removeShapeless(<BiomesOPlenty:misc:5>, [<BiomesOPlenty:mushrooms:2>]);
+recipes.addShapeless(<gregtech:gt.metaitem.02:32418>, [<BiomesOPlenty:mushrooms:2>]);
+
+Extractor.addRecipe(<gregtech:gt.metaitem.02:32418> * 2, <BiomesOPlenty:flowers2:5>, 300, 2);
+Extractor.addRecipe(<gregtech:gt.metaitem.02:32418> * 2, <BiomesOPlenty:mushrooms:2>, 300, 2);
+
+// --- Red Dye
+Extractor.addRecipe(<minecraft:dye:1> * 2, <BiomesOPlenty:flowers2:8>, 300, 2);
+
+// --- Green Dye
+NEI.hide(<BiomesOPlenty:misc:7>);
+recipes.removeShapeless(<BiomesOPlenty:misc:7>, [<BiomesOPlenty:moss>]);
+recipes.addShapeless(<gregtech:gt.metaitem.02:32416>, [<BiomesOPlenty:moss>]);
+
+Extractor.addRecipe(<gregtech:gt.metaitem.02:32416> * 2, <BiomesOPlenty:moss>, 300, 2);
+
+// --- Brown Dye
+NEI.hide(<BiomesOPlenty:misc:6>);
+recipes.removeShapeless(<BiomesOPlenty:misc:6>, [<BiomesOPlenty:mushrooms:4>]);
+recipes.addShapeless(<gregtech:gt.metaitem.02:32417>, [<BiomesOPlenty:mushrooms:4>]);
+recipes.removeShapeless(<BiomesOPlenty:misc:6>, [<BiomesOPlenty:plants:7>]);
+recipes.addShapeless(<gregtech:gt.metaitem.02:32417>, [<BiomesOPlenty:plants:7>]);
+
+Extractor.addRecipe(<gregtech:gt.metaitem.02:32417> * 2, <BiomesOPlenty:mushrooms:4>, 300, 2);
+Extractor.addRecipe(<gregtech:gt.metaitem.02:32417> * 2, <BiomesOPlenty:plants:7>, 300, 2);
 
 // --- Fluid Extractor Recipes ---
 
@@ -171,7 +285,7 @@ FluidExtractor.addRecipe(null, <BiomesOPlenty:honeyBlock> , <liquid:for.honey> *
 
 
 // --- Filled Combs
-mods.gregtech.FluidCanner.addRecipe(<BiomesOPlenty:food:9>, <BiomesOPlenty:misc:2>, null, <liquid:for.honey> * 100);
+FluidCanner.addRecipe(<BiomesOPlenty:food:9>, <BiomesOPlenty:misc:2>, null, <liquid:for.honey> * 100);
 
 
 
@@ -187,15 +301,21 @@ FluidSolidifier.addRecipe(<BiomesOPlenty:honeyBlock>, <gregtech:gt.metaitem.01:3
 
 
 
-// --- Macerator Recipes ---
+// --- Pulverizer Recipes ---
 
 
 
 // --- Small Bone Segment
-Macerator.addRecipe(<minecraft:dye:15> * 5, <BiomesOPlenty:bones>);
+Pulverizer.addRecipe([<minecraft:dye:15> * 8], <BiomesOPlenty:bones>, [10000], 300, 2);
 
 // --- Medium Bone Segment
-Macerator.addRecipe(<minecraft:dye:15> * 10, <BiomesOPlenty:bones:1>);
+Pulverizer.addRecipe([<minecraft:dye:15> * 12], <BiomesOPlenty:bones:1>, [10000], 300, 2);
 
 // --- Large Bone Segment
-Macerator.addRecipe(<minecraft:dye:15> * 15, <BiomesOPlenty:bones:2>);
+Pulverizer.addRecipe([<minecraft:dye:15> * 24], <BiomesOPlenty:bones:2>, [10000], 300, 2);
+
+// --- Hardened Sand to Quartz Sand dust and flint
+Pulverizer.addRecipe([<dreamcraft:item.SandDust> * 2, <gregtech:gt.metaitem.01:1802>, <gregtech:gt.metaitem.01:1937>, <gregtech:gt.metaitem.01:1833>], <BiomesOPlenty:hardSand>, [10000, 5000, 1000, 500], 200, 8);
+
+// --- Hardened Dirt to Clay, Quicklime Gypsum and Calcite
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:1805> * 2, <gregtech:gt.metaitem.01:1622>, <gregtech:gt.metaitem.01:1934>, <gregtech:gt.metaitem.01:1823>], <BiomesOPlenty:hardDirt>, [10000, 7500, 2500, 2500], 200, 8);

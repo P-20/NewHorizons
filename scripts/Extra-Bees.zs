@@ -4,8 +4,11 @@
 
 // --- Imports ---
 
-
-import mods.ic2.Macerator;
+import mods.forestry.Squeezer;
+import mods.gregtech.Pulverizer;
+import mods.gregtech.Extractor;
+import mods.gregtech.FluidExtractor;
+import mods.nei.NEI;
 
 
 
@@ -59,18 +62,24 @@ recipes.remove(<ExtraBees:hiveFrame.soul>);
 // --- Scented Gear
 mods.forestry.Carpenter.removeRecipe(<ExtraBees:misc>);
 
-
-
+// --- Dyes
+Squeezer.removeRecipe(<liquid:for.honey> * 200, [<ExtraBees:honeyDrop:8>]);
+Squeezer.removeRecipe(<liquid:for.honey> * 200, [<ExtraBees:honeyDrop:9>]);
+Squeezer.removeRecipe(<liquid:for.honey> * 200, [<ExtraBees:honeyDrop:10>]);
+Squeezer.removeRecipe(<liquid:for.honey> * 200, [<ExtraBees:honeyDrop:11>]);
+Squeezer.removeRecipe(<liquid:for.honey> * 200, [<ExtraBees:honeyDrop:12>]);
+Squeezer.removeRecipe(<liquid:for.honey> * 200, [<ExtraBees:honeyDrop:13>]);
+Squeezer.removeRecipe(<liquid:for.honey> * 200, [<ExtraBees:honeyDrop:14>]);
 
 // --- Add Recipes ---
 
 
 // --- Apiarist Database
-mods.forestry.Carpenter.addRecipe(60, <liquid:molten.redstone> * 1440, 
-[<gregtech:gt.metaitem.01:27500>, <gregtech:gt.metaitem.01:17501>, <gregtech:gt.metaitem.01:27500>, 
-<IC2:itemCasing:3>, <IC2:itemPartCircuitAdv>, <IC2:itemCasing:3>, 
-<gregtech:gt.metaitem.01:27500>, <gregtech:gt.metaitem.01:17500>, <gregtech:gt.metaitem.01:27500>], 
-<Forestry:beealyzer>, <ExtraBees:dictionary>);
+mods.forestry.Carpenter.addRecipe(<ExtraBees:dictionary>, [[<gregtech:gt.metaitem.01:27500>, <gregtech:gt.metaitem.01:17501>, <gregtech:gt.metaitem.01:27500>],
+														  [<ore:itemCasingGold>, <ore:circuitAdvanced>, <ore:itemCasingGold>], 
+                                                          [<gregtech:gt.metaitem.01:27500>, <gregtech:gt.metaitem.01:17500>, <gregtech:gt.metaitem.01:27500>]], <liquid:molten.redstone> * 1440, 60, <Forestry:beealyzer:*>);
+// -
+recipes.addShapeless(<ExtraBees:dictionary>, [<ExtraBees:dictionary>]);
 
 // --- Mutator
 mods.forestry.Carpenter.addRecipe(60, <liquid:for.honey> * 7500, 
@@ -100,7 +109,6 @@ mods.forestry.Carpenter.addRecipe(60, <liquid:for.honey> * 7500,
 <Forestry:thermionicTubes:2>, <minecraft:stained_glass:*>, <Forestry:thermionicTubes:2>], 
 <Forestry:alveary>, <ExtraBees:alveary:3>);
 
-
 // --- Electrical Stimulator
 mods.forestry.Carpenter.addRecipe(60, <liquid:for.honey> * 7500, 
 [<Forestry:thermionicTubes:1>, <gregtech:gt.blockmachines:1460>, <Forestry:thermionicTubes:1>, 
@@ -116,11 +124,9 @@ mods.forestry.Carpenter.addRecipe(60, <liquid:for.honey> * 7500,
 <Forestry:alveary>, <ExtraBees:alveary:5>);
 
 // --- Alveary Transmission
-mods.forestry.Carpenter.addRecipe(60, <liquid:for.honey> * 7500, 
-[<Forestry:thermionicTubes>, <IC2:itemPartCircuitAdv>, <Forestry:thermionicTubes>, 
-<gregtech:gt.blockmachines:1587>, <gregtech:gt.blockmachines:13>, <gregtech:gt.blockmachines:1587>, 
-<Forestry:thermionicTubes>, <gregtech:gt.blockmachines:1587>, <Forestry:thermionicTubes>], 
-<Forestry:alveary>, <ExtraBees:alveary:6>);
+mods.forestry.Carpenter.addRecipe(<ExtraBees:alveary:6>, [[<Forestry:thermionicTubes>, <ore:circuitAdvanced>, <Forestry:thermionicTubes>],
+														  [<gregtech:gt.blockmachines:1587>, <gregtech:gt.blockmachines:13>, <gregtech:gt.blockmachines:1587>], 
+                                                          [<Forestry:thermionicTubes>, <gregtech:gt.blockmachines:1587>, <Forestry:thermionicTubes>]], <liquid:for.honey> * 7500, 60, <Forestry:alveary>);
 
 // --- Scented Gear
 mods.forestry.Carpenter.addRecipe(20, <liquid:for.honey> * 1000, 
@@ -131,10 +137,10 @@ mods.forestry.Carpenter.addRecipe(20, <liquid:for.honey> * 1000,
 
 // --- Healing Frame
 recipes.remove(<ExtraBees:hiveFrame.clay>);
-mods.thaumcraft.Research.addResearch("HEALINGFRAME", "MAGICBEES", "praecantatio 15, fabrico 12, cognitio 9, victus 6", -3, 6, 4, <ExtraBees:hiveFrame.clay>);
+mods.thaumcraft.Research.addResearch("HEALINGFRAME", "MAGICBEES", "praecantatio 15, fabrico 12, cognitio 9, victus 6", 7,  -2 as int, 4, <ExtraBees:hiveFrame.clay>);
 game.setLocalization("tc.research_name.HEALINGFRAME", "Healing Frame");
 game.setLocalization("tc.research_text.HEALINGFRAME", "[EB] The Bees will never die ?");
-mods.thaumcraft.Research.addPrereq("HEALINGFRAME", "MB_DimensionalSingularity", false);
+mods.thaumcraft.Research.addPrereq("HEALINGFRAME", "MB_EssenceLife", false);
 mods.thaumcraft.Research.setConcealed("HEALINGFRAME", true);
 mods.thaumcraft.Research.addPage("HEALINGFRAME", "ExtraBees.research_page.HEALINGFRAME");
 game.setLocalization("ExtraBees.research_page.HEALINGFRAME", "The Healing Frame is an Item used in an Apiary, which increases a Queens lifespan at the cost of a lesser productivity and a decreased mutation rate. It increases a bees lifespan 50% while reducing its productivity to 75% and the chance of mutation to only 50%. It is constructed using Clay and an Impregnated Frame. In an Alveary structure, the Frame Housing can be added to make use of the Frame.");
@@ -146,10 +152,10 @@ mods.thaumcraft.Research.addArcanePage("HEALINGFRAME", <ExtraBees:hiveFrame.clay
 
 // --- Chocolate Frame
 recipes.remove(<ExtraBees:hiveFrame.cocoa>);
-mods.thaumcraft.Research.addResearch("CHOCOLATEFRAME", "MAGICBEES", "praecantatio 15, fabrico 12, cognitio 9, fames 6", 1, 6, 4, <ExtraBees:hiveFrame.cocoa>);
+mods.thaumcraft.Research.addResearch("CHOCOLATEFRAME", "MAGICBEES", "praecantatio 15, fabrico 12, cognitio 9, fames 6", 7, 2, 4, <ExtraBees:hiveFrame.cocoa>);
 game.setLocalization("tc.research_name.CHOCOLATEFRAME", "Chocolate Frame");
 game.setLocalization("tc.research_text.CHOCOLATEFRAME", "[EB] Feeding the Bees");
-mods.thaumcraft.Research.addPrereq("CHOCOLATEFRAME", "MB_DimensionalSingularity", false);
+mods.thaumcraft.Research.addPrereq("CHOCOLATEFRAME", "MB_EssenceUnstable", false);
 mods.thaumcraft.Research.setConcealed("CHOCOLATEFRAME", true);
 mods.thaumcraft.Research.addPage("CHOCOLATEFRAME", "ExtraBees.research_page.CHOCOLATEFRAME_1");
 mods.thaumcraft.Research.addPage("CHOCOLATEFRAME", "ExtraBees.research_page.CHOCOLATEFRAME_2");
@@ -163,7 +169,7 @@ mods.thaumcraft.Research.addArcanePage("CHOCOLATEFRAME", <ExtraBees:hiveFrame.co
 
 // --- Restraint Frame
 recipes.remove(<ExtraBees:hiveFrame.cage>);
-mods.thaumcraft.Research.addResearch("RESTRAINTFRAME", "MAGICBEES", "praecantatio 15, fabrico 12, cognitio 9, metallum 6", -1, 8, 4, <ExtraBees:hiveFrame.cage>);
+mods.thaumcraft.Research.addResearch("RESTRAINTFRAME", "MAGICBEES", "praecantatio 15, fabrico 12, cognitio 9, metallum 6", 9, 0, 4, <ExtraBees:hiveFrame.cage>);
 game.setLocalization("tc.research_name.RESTRAINTFRAME", "Restraint Frame");
 game.setLocalization("tc.research_text.RESTRAINTFRAME", "[EB] A Bee Cage ?");
 mods.thaumcraft.Research.addPrereq("RESTRAINTFRAME", "PROVENFRAME", false);
@@ -180,7 +186,7 @@ mods.thaumcraft.Research.addArcanePage("RESTRAINTFRAME", <ExtraBees:hiveFrame.ca
 
 // --- Soul Frame
 recipes.remove(<ExtraBees:hiveFrame.soul>);
-mods.thaumcraft.Research.addResearch("SOULFRAME", "MAGICBEES", "praecantatio 15, fabrico 12, cognitio 9, spiritus 6", -1, 10, 4, <ExtraBees:hiveFrame.soul>);
+mods.thaumcraft.Research.addResearch("SOULFRAME", "MAGICBEES", "praecantatio 15, fabrico 12, cognitio 9, spiritus 6", 11, 0, 4, <ExtraBees:hiveFrame.soul>);
 game.setLocalization("tc.research_name.SOULFRAME", "Soul Frame");
 game.setLocalization("tc.research_text.SOULFRAME", "[EB] Feeding the Bees");
 mods.thaumcraft.Research.addPrereq("SOULFRAME", "RESTRAINTFRAME", false);
@@ -197,20 +203,60 @@ mods.thaumcraft.Warp.addToResearch("SOULFRAME", 1);
 
 
 
-// --- Macerator Recipes ---
+// --- Pulverizer Recipes ---
 
 
 // --- Small Emerald Dust
-Macerator.addRecipe(<gregtech:gt.metaitem.01:500>, <ExtraBees:misc:1>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:500>], <ExtraBees:misc:1>, [10000], 300, 2);
 
 // --- Small Diamond Dust
-Macerator.addRecipe(<gregtech:gt.metaitem.01:501>, <ExtraBees:misc:2>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:501>], <ExtraBees:misc:2>, [10000], 300, 2);
 
 // --- Small Ruby Dust
-Macerator.addRecipe(<gregtech:gt.metaitem.01:502>, <ExtraBees:misc:3>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:502>], <ExtraBees:misc:3>, [10000], 300, 2);
 
 // --- Small Sapphire Dust
-Macerator.addRecipe(<gregtech:gt.metaitem.01:503>, <ExtraBees:misc:4>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:503>], <ExtraBees:misc:4>, [10000], 300, 2);
 
 // --- Small Lapis Dust
-Macerator.addRecipe(<gregtech:gt.metaitem.01:526>, <ExtraBees:misc:5>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:526>], <ExtraBees:misc:5>, [10000], 300, 2);
+
+
+// --- Dyes Recipes
+
+// --- Red Dye
+Squeezer.addRecipe(<liquid:for.honey> * 200, <gregtech:gt.metaitem.02:32415> % 100, [<ExtraBees:honeyDrop:8>], 20);
+FluidExtractor.addRecipe(<gregtech:gt.metaitem.02:32415>, <ExtraBees:honeyDrop:8>, <liquid:for.honey> * 200, 32, 7, 1000);
+
+// --- Yellow Dye
+Squeezer.addRecipe(<liquid:for.honey> * 200, <gregtech:gt.metaitem.02:32425> % 100, [<ExtraBees:honeyDrop:9>], 20);
+FluidExtractor.addRecipe(<gregtech:gt.metaitem.02:32425>, <ExtraBees:honeyDrop:9>, <liquid:for.honey> * 200, 32, 7, 1000);
+
+// --- Blue Dye
+Squeezer.addRecipe(<liquid:for.honey> * 200, <gregtech:gt.metaitem.02:32418> % 100, [<ExtraBees:honeyDrop:10>], 20);
+FluidExtractor.addRecipe(<gregtech:gt.metaitem.02:32418>, <ExtraBees:honeyDrop:10>, <liquid:for.honey> * 200, 32, 7, 1000);
+
+// --- Green Dye
+Squeezer.addRecipe(<liquid:for.honey> * 200, <gregtech:gt.metaitem.02:32416> % 100, [<ExtraBees:honeyDrop:11>], 20);
+FluidExtractor.addRecipe(<gregtech:gt.metaitem.02:32416>, <ExtraBees:honeyDrop:11>, <liquid:for.honey> * 200, 32, 7, 1000);
+
+// --- White Dye
+Squeezer.addRecipe(<liquid:for.honey> * 200, <gregtech:gt.metaitem.02:32429> % 100, [<ExtraBees:honeyDrop:13>], 20);
+FluidExtractor.addRecipe(<gregtech:gt.metaitem.02:32429>, <ExtraBees:honeyDrop:13>, <liquid:for.honey> * 200, 32, 7, 1000);
+
+// --- Black Dye
+Squeezer.addRecipe(<liquid:for.honey> * 200, <gregtech:gt.metaitem.02:32414> % 100, [<ExtraBees:honeyDrop:12>], 20);
+FluidExtractor.addRecipe(<gregtech:gt.metaitem.02:32414>, <ExtraBees:honeyDrop:12>, <liquid:for.honey> * 200, 32, 7, 1000);
+
+// --- White Dye
+Squeezer.addRecipe(<liquid:for.honey> * 200, <gregtech:gt.metaitem.02:32417> % 100, [<ExtraBees:honeyDrop:14>], 20);
+FluidExtractor.addRecipe(<gregtech:gt.metaitem.02:32417>, <ExtraBees:honeyDrop:14>, <liquid:for.honey> * 200, 32, 7, 1000);
+
+
+
+// --- Hiding Stuff ---
+
+// Dyes
+for meta in [19, 20, 21, 22, 23, 24, 25] as int[] {
+	NEI.hide(<ExtraBees:misc>.definition.makeStack(meta));
+}

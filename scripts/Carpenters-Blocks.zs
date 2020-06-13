@@ -26,6 +26,8 @@ val WoodScrew = <gregtech:gt.metaitem.01:27809>;
 val IronScrew = <gregtech:gt.metaitem.01:27032>;
 val SteelScrew = <gregtech:gt.metaitem.01:27305>;
 val AluminiumScrew = <gregtech:gt.metaitem.01:27019>;
+val StainlessSteelScrew = <gregtech:gt.metaitem.01:27306>;
+val TitaniumScrew = <gregtech:gt.metaitem.01:27028>;
 val Frame = <ore:frameGtWood>;
 val Plank = <ore:plankWood>;
 val Log = <ore:logWood>;
@@ -112,15 +114,35 @@ recipes.remove(<CarpentersBlocks:itemCarpentersDoor>);
 
 
 // --- Carpenters Block
-recipes.addShaped(CarpentersBlock * 4, [
+recipes.addShaped(CarpentersBlock * 2, [
 [Frame,WoodScrew, Frame],
 [WoodScrew, Screwdriver, WoodScrew],
 [Frame, WoodScrew, Frame]]);
 // -
-recipes.addShaped(CarpentersBlock * 6, [
+recipes.addShaped(CarpentersBlock * 8, [
 [Frame, IronScrew, Frame],
 [Frame, Screwdriver, Frame],
 [Frame, IronScrew, Frame]]);
+// -
+recipes.addShaped(CarpentersBlock * 12, [
+[Frame, SteelScrew, Frame],
+[Frame, Screwdriver, Frame],
+[Frame, SteelScrew, Frame]]);
+// -
+recipes.addShaped(CarpentersBlock * 16, [
+[Frame, AluminiumScrew, Frame],
+[Frame, Screwdriver, Frame],
+[Frame, AluminiumScrew, Frame]]);
+// -
+recipes.addShaped(CarpentersBlock * 20, [
+[Frame, StainlessSteelScrew, Frame],
+[Frame, Screwdriver, Frame],
+[Frame, StainlessSteelScrew, Frame]]);
+// -
+recipes.addShaped(CarpentersBlock * 24, [
+[Frame, TitaniumScrew, Frame],
+[Frame, Screwdriver, Frame],
+[Frame, TitaniumScrew, Frame]]);
 
 // --- Collapsible Block
 recipes.addShaped(CollapsibleBlock, [
@@ -175,11 +197,14 @@ recipes.addShaped(<CarpentersBlocks:blockCarpentersLadder>, [
 
 // --- Carpenters Barrier
 recipes.addShaped(<CarpentersBlocks:blockCarpentersBarrier>, [
-[CarpentersBlock, <minecraft:fence>, CarpentersBlock],
+[CarpentersBlock, <ore:fenceWood>, CarpentersBlock],
 [WoodScrew, Screwdriver, WoodScrew]]);
 
 // --- Carpenters Pressure Plate
-recipes.addShapeless(<CarpentersBlocks:blockCarpentersPressurePlate> * 2, [Saw, CarpentersBlock]);
+recipes.addShaped(<CarpentersBlocks:blockCarpentersPressurePlate> * 2, [
+[WoodScrew, Hammer, WoodScrew],
+[CarpentersBlock, <ore:springAnyIron>, CarpentersBlock],
+[WoodScrew, Screwdriver, WoodScrew]]);
 
 // --- Carpenters Button
 recipes.addShapeless(<CarpentersBlocks:blockCarpentersButton>, [Saw, <CarpentersBlocks:blockCarpentersPressurePlate>]);
@@ -205,10 +230,7 @@ recipes.addShaped(<CarpentersBlocks:blockCarpentersLever>,  [
 [null, Screwdriver, null]]);
 
 // --- CarpentersBlock Wedge Slope
-recipes.addShaped(<CarpentersBlocks:blockCarpentersSlope> * 3, [
-[null, null, IronScrew],
-[null, Screwdriver, <CarpentersBlocks:blockCarpentersPressurePlate>],
-[IronScrew, <CarpentersBlocks:blockCarpentersPressurePlate>, <CarpentersBlocks:blockCarpentersPressurePlate>]]);
+recipes.addShapeless(<CarpentersBlocks:blockCarpentersSlope> * 2, [<CarpentersBlocks:blockCarpentersBlock>, Saw]);
 
 // --- Carpenters Stairs
 recipes.addShapeless(<CarpentersBlocks:blockCarpentersStairs>, [Saw, <CarpentersBlocks:blockCarpentersSlope>]);
@@ -229,13 +251,17 @@ recipes.addShaped(<CarpentersBlocks:itemCarpentersDoor>, [
 
 
 // --- Carpenters Block
-Assembler.addRecipe(CarpentersBlock * 4, <gregtech:gt.blockmachines:4905> * 2, WoodScrew, 100, 16);
+Assembler.addRecipe(CarpentersBlock * 4, <gregtech:gt.blockmachines:4905> * 2, WoodScrew * 2, 100, 16);
 // -
-Assembler.addRecipe(CarpentersBlock * 6, <gregtech:gt.blockmachines:4905> * 3, IronScrew, 100, 16);
+Assembler.addRecipe(CarpentersBlock * 8, <gregtech:gt.blockmachines:4905> * 3, IronScrew, 100, 30);
 // -
-Assembler.addRecipe(CarpentersBlock * 8, <gregtech:gt.blockmachines:4905> * 4, SteelScrew, 100, 16);
+Assembler.addRecipe(CarpentersBlock * 12, <gregtech:gt.blockmachines:4905> * 3, SteelScrew, 100, 48);
 // -
-Assembler.addRecipe(CarpentersBlock * 16, <gregtech:gt.blockmachines:4905> * 8, AluminiumScrew, 100, 16);
+Assembler.addRecipe(CarpentersBlock * 16, <gregtech:gt.blockmachines:4905> * 3, AluminiumScrew, 100, 64);
+// -
+Assembler.addRecipe(CarpentersBlock * 20, <gregtech:gt.blockmachines:4905> * 3, StainlessSteelScrew, 100, 64);
+// -
+Assembler.addRecipe(CarpentersBlock * 24, <gregtech:gt.blockmachines:4905> * 3, TitaniumScrew, 100, 64);
 
 // --- Carpenters Barrier
 Assembler.addRecipe(<CarpentersBlocks:blockCarpentersBarrier> * 2, <minecraft:fence>, CarpentersBlock, 200, 16);
@@ -264,10 +290,7 @@ Assembler.addRecipe(<CarpentersBlocks:blockCarpentersLadder>, CarpentersBlock, <
 Assembler.addRecipe(<CarpentersBlocks:blockCarpentersLever>,  CarpentersBlock, <minecraft:lever>, 50, 16);
 
 // --- Carpenters Safe
-Assembler.addRecipe(Safe, CollapsibleBlock * 4, IC2Safe, 300, 30);
-
-// --- CarpentersBlock Wedge Slope
-Assembler.addRecipe(<CarpentersBlocks:blockCarpentersSlope> * 2, <CarpentersBlocks:blockCarpentersPressurePlate>, IronScrew, 100, 16);
+Assembler.addRecipe(Safe, CollapsibleBlock * 3, IC2Safe, 300, 30);
 
 // --- Carpenters Torch
 Assembler.addRecipe(<CarpentersBlocks:blockCarpentersTorch> * 10, CarpentersBlock, <minecraft:torch> * 10, 100, 16);
@@ -284,6 +307,12 @@ Assembler.addRecipe(<CarpentersBlocks:itemCarpentersTile> * 2, <CarpentersBlocks
 // ---  Carpenters Door
 Assembler.addRecipe(<CarpentersBlocks:itemCarpentersDoor>, CarpentersBlock, <minecraft:wooden_door>, 150, 16);
 
+// --- Carpenters Pressure Plate
+Assembler.addRecipe(<CarpentersBlocks:blockCarpentersPressurePlate> * 2, CarpentersBlock * 2, <gregtech:gt.metaitem.02:24032>, 100, 8);
+// -
+Assembler.addRecipe(<CarpentersBlocks:blockCarpentersPressurePlate> * 2, CarpentersBlock * 2, <gregtech:gt.metaitem.02:24304>, 100, 8);
+
+
 
 
 
@@ -292,18 +321,17 @@ Assembler.addRecipe(<CarpentersBlocks:itemCarpentersDoor>, CarpentersBlock, <min
 
 
 
-// --- Carpenters Pressure Plate
-CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersPressurePlate> * 4, null, CarpentersBlock, <liquid:water> * 20, 100, 30);
-CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersPressurePlate> * 4, null, CarpentersBlock, <liquid:ic2distilledwater> * 10, 100, 30);
-CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersPressurePlate> * 4, null, CarpentersBlock, <liquid:lubricant> * 2, 50, 30);
-
-
 // --- Carpenters Button
 CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersButton> * 4, null, <CarpentersBlocks:blockCarpentersPressurePlate>, <liquid:water> * 20, 100, 30);
 CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersButton> * 4, null, <CarpentersBlocks:blockCarpentersPressurePlate>, <liquid:ic2distilledwater> * 10, 100, 30);
-CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersButton> * 4, null, <CarpentersBlocks:blockCarpentersPressurePlate>, <liquid:lubricant> * 2, 100, 30);
+CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersButton> * 4, null, <CarpentersBlocks:blockCarpentersPressurePlate>, <liquid:lubricant> * 2, 50, 30);
 
 // --- Carpenters Stairs
 CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersStairs> * 4, null, <CarpentersBlocks:blockCarpentersSlope>, <liquid:water> * 20, 100, 30);
 CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersStairs> * 4, null, <CarpentersBlocks:blockCarpentersSlope>, <liquid:ic2distilledwater> * 10, 100, 30);
 CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersStairs> * 4, null, <CarpentersBlocks:blockCarpentersSlope>, <liquid:lubricant> * 2, 50, 30);
+
+// --- CarpentersBlock Wedge Slope
+CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersSlope> * 4, null, <CarpentersBlocks:blockCarpentersBlock>, <liquid:water> * 20, 100, 16);
+CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersSlope> * 4, null, <CarpentersBlocks:blockCarpentersBlock>, <liquid:ic2distilledwater> * 10, 100, 16);
+CuttingSaw.addRecipe(<CarpentersBlocks:blockCarpentersSlope> * 4, null, <CarpentersBlocks:blockCarpentersBlock>, <liquid:lubricant> * 2, 50, 16);

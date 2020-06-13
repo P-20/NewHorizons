@@ -54,6 +54,45 @@
         <itemStack modID="EnderIO" itemName="itemFrankenSkull" itemMeta="3" />
       </output>
     </recipe>
+	<recipe name="Skeletal Contractor" energyCost="200000" >
+      <input>
+        <itemStack oreDictionary="plateSoularium" slot="0" />
+        <itemStack modID="minecraft" itemName="skull" itemMeta="0" slot="1" />
+        <itemStack oreDictionary="plateSoularium" slot="2" />
+        <itemStack modID="minecraft" itemName="rotten_flesh" itemMeta="0" slot="3" />
+        <itemStack oreDictionary="plateSilicon" slot="4" />
+        <itemStack modID="minecraft" itemName="rotten_flesh" itemMeta="0" slot="5" />
+      </input>
+      <output>
+        <itemStack modID="EnderIO" itemName="itemFrankenSkull" itemMeta="5" />
+      </output>
+    </recipe>	
+	<recipe name="Guardian Diode" energyCost="500000" >
+      <input>
+        <itemStack oreDictionary="plateEnergeticAlloy" slot="0" />
+        <itemStack oreDictionary="gemDiamond" slot="1" />
+        <itemStack oreDictionary="plateEnergeticAlloy" slot="2" />
+        <itemStack modID="EnderIO" itemName="itemMaterial" itemMeta="5" slot="3" />
+        <itemStack oreDictionary="plateSilicon" slot="4" />
+        <itemStack modID="EnderIO" itemName="itemMaterial" itemMeta="5" slot="5" />
+      </input>
+      <output>
+        <itemStack modID="EnderIO" itemName="itemFrankenSkull" itemMeta="6" />
+      </output>
+    </recipe>
+     <recipe name="Totemic Capacitor" energyCost="2000000" >
+      <input>
+        <itemStack oreDictionary="plateStellarAlloy" slot="0" />
+        <itemStack modID="EnderIO" itemName="itemFrankenSkull" itemMeta="5" slot="1" />
+        <itemStack oreDictionary="plateStellarAlloy" slot="2" />
+        <itemStack oreDictionary="plateMelodicAlloy" slot="3" />
+        <itemStack modID="EnderIO" itemName="itemBasicCapacitor" itemMeta="5" slot="4" />
+        <itemStack oreDictionary="plateMelodicAlloy" slot="5" />
+      </input>
+      <output>
+        <itemStack modID="EnderIO" itemName="itemBasicCapacitor" itemMeta="6" />
+      </output>
+    </recipe>
   </recipeGroup>
   
 </SliceAndSpliceRecipes>

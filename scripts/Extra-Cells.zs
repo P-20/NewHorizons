@@ -5,7 +5,6 @@
 // --- Importing Stuff ---
 
 
-import mods.gregtech.AlloySmelter;
 import mods.gregtech.Assembler;
 
 
@@ -50,12 +49,16 @@ val UFluidStorageHousing = <extracells:storage.casing:1>;
 val CertusCircuit = <appliedenergistics2:item.ItemMultiMaterial:23>;
 val GoldCircuit = <appliedenergistics2:item.ItemMultiMaterial:22>;
 val DiamondCircuit = <appliedenergistics2:item.ItemMultiMaterial:24>;
-val NANDChip = <gregtech:gt.metaitem.01:32700>;
+val PrimitiveCircuit = <ore:circuitPrimitive>;
 val BasicCircuit = <ore:circuitBasic>;
 val GoodCircuit = <ore:circuitGood>;
 val AdvCircuit = <ore:circuitAdvanced>;
-val DataCircuit = <gregtech:gt.metaitem.01:32704>;
-val DataControlCircuit = <gregtech:gt.metaitem.01:32705>;
+val DataCircuit = <ore:circuitData>;
+val EliteCircuit = <ore:circuitElite>;
+val MasterCircuit = <ore:circuitMaster>;
+val UltimateCircuit = <ore:circuitUltimate>;
+val SuperconductorCircuits = <ore:circuitSuperconductor>;
+val InfinityCircuits = <ore:circuitInfinite>;
 val EFlow = <gregtech:gt.metaitem.01:32706>;
 val DataOrb = <gregtech:gt.metaitem.01:32707>;
 
@@ -282,6 +285,17 @@ recipes.remove(<extracells:storage.component:17>);
 // --- Gas Storage Housing
 recipes.remove(<extracells:storage.casing:2>);
 
+// --- Crafing Storage 256K
+recipes.remove(<extracells:craftingstorage>);
+
+// --- Crafing Storage 1024K
+recipes.remove(<extracells:craftingstorage:1>);
+
+// --- Crafing Storage 4096K
+recipes.remove(<extracells:craftingstorage:2>);
+
+// --- Crafing Storage 16384K
+recipes.remove(<extracells:craftingstorage:3>);
 
 
 
@@ -343,27 +357,27 @@ recipes.addShapeless(<extracells:storage.physical:3>, [<extracells:storage.compo
 
 // --- Storage Cell Component - 256K
 recipes.addShaped(StorageComponent256K, [
-[DataControlCircuit, StorageComponent64K, DataControlCircuit],
+[DataCircuit, StorageComponent64K, DataCircuit],
 [StorageComponent64K, <dreamcraft:item.EngineeringProcessorItemEmeraldCore>, StorageComponent64K],
-[DataControlCircuit, StorageComponent64K, DataControlCircuit]]);
+[DataCircuit, StorageComponent64K, DataCircuit]]);
 
 // --- Storage Cell Component - 1024K
 recipes.addShaped(StorageComponent1024K, [
-[<dreamcraft:item.NanoCircuit>, StorageComponent256K, <dreamcraft:item.NanoCircuit>],
+[EliteCircuit, StorageComponent256K, EliteCircuit],
 [StorageComponent256K, <dreamcraft:item.EngineeringProcessorItemEmeraldCore>, StorageComponent256K],
-[<dreamcraft:item.NanoCircuit>, StorageComponent256K, <dreamcraft:item.NanoCircuit>]]);
+[EliteCircuit, StorageComponent256K, EliteCircuit]]);
 
 // --- Storage Cell Component - 4096K
 recipes.addShaped(StorageComponent4096K, [
-[<dreamcraft:item.PikoCircuit>, StorageComponent1024K, <dreamcraft:item.PikoCircuit>],
+[MasterCircuit, StorageComponent1024K, MasterCircuit],
 [StorageComponent1024K, <dreamcraft:item.EngineeringProcessorItemAdvEmeraldCore>, StorageComponent1024K],
-[<dreamcraft:item.PikoCircuit>, StorageComponent1024K, <dreamcraft:item.PikoCircuit>]]);
+[MasterCircuit, StorageComponent1024K, MasterCircuit]]);
 
 // --- Storage Cell Component - 16384K
 recipes.addShaped(StorageComponent16384K, [
-[<dreamcraft:item.QuantumCircuit>, StorageComponent4096K, <dreamcraft:item.QuantumCircuit>],
+[SuperconductorCircuits, StorageComponent4096K, SuperconductorCircuits],
 [StorageComponent4096K, <dreamcraft:item.EngineeringProcessorItemAdvEmeraldCore>, StorageComponent4096K],
-[<dreamcraft:item.QuantumCircuit>, StorageComponent4096K, <dreamcraft:item.QuantumCircuit>]]);
+[SuperconductorCircuits, StorageComponent4096K, SuperconductorCircuits]]);
 
 // --- Universal Advanced Storage Housing
 recipes.addShaped(UAdvStorageHousing, [
@@ -469,9 +483,9 @@ recipes.addShapeless(<extracells:storage.fluid:6>, [<extracells:storage.componen
 
 // --- Fluid Storage Cell Component - 1K
 recipes.addShaped(FluidSComponent1K, [
-[NANDChip, <appliedenergistics2:item.ItemMultiMaterial:8>, NANDChip],
+[PrimitiveCircuit, <appliedenergistics2:item.ItemMultiMaterial:8>, PrimitiveCircuit],
 [<appliedenergistics2:item.ItemMultiMaterial:8>, <dreamcraft:item.EngineeringProcessorFluidDiamondCore>, <appliedenergistics2:item.ItemMultiMaterial:8>],
-[NANDChip, <appliedenergistics2:item.ItemMultiMaterial:8>, NANDChip]]);
+[PrimitiveCircuit, <appliedenergistics2:item.ItemMultiMaterial:8>, PrimitiveCircuit]]);
 
 // --- Fluid Storage Cell Component - 4K
 recipes.addShaped(FluidSComponent4K, [
@@ -493,21 +507,21 @@ recipes.addShaped(FluidSComponent64K, [
 
 // --- Fluid Storage Cell Component - 256K
 recipes.addShaped(FluidSComponent256K, [
-[DataControlCircuit, FluidSComponent64K, DataControlCircuit],
+[DataCircuit, FluidSComponent64K, DataCircuit],
 [FluidSComponent64K, <dreamcraft:item.EngineeringProcessorFluidEmeraldCore>, FluidSComponent64K],
-[DataControlCircuit, FluidSComponent64K, DataControlCircuit]]);
+[DataCircuit, FluidSComponent64K, DataCircuit]]);
 
 // --- Fluid Storage Cell Component - 1024K
 recipes.addShaped(FluidSComponent1024K, [
-[<dreamcraft:item.NanoCircuit>, FluidSComponent256K, <dreamcraft:item.NanoCircuit>],
+[EliteCircuit, FluidSComponent256K, EliteCircuit],
 [FluidSComponent256K, <dreamcraft:item.EngineeringProcessorFluidEmeraldCore>, FluidSComponent256K],
-[<dreamcraft:item.NanoCircuit>, FluidSComponent256K, <dreamcraft:item.NanoCircuit>]]);
+[EliteCircuit, FluidSComponent256K, EliteCircuit]]);
 
 // --- Fluid Storage Cell Component - 4096K
 recipes.addShaped(FluidSComponent4096K, [
-[<dreamcraft:item.PikoCircuit>, FluidSComponent1024K, <dreamcraft:item.PikoCircuit>],
+[MasterCircuit, FluidSComponent1024K, MasterCircuit],
 [FluidSComponent1024K, <dreamcraft:item.EngineeringProcessorFluidEmeraldCore>, FluidSComponent1024K],
-[<dreamcraft:item.PikoCircuit>, FluidSComponent1024K, <dreamcraft:item.PikoCircuit>]]);
+[MasterCircuit, FluidSComponent1024K, MasterCircuit]]);
 
 // --- Universal Fluid Storage Housing
 recipes.addShaped(UFluidStorageHousing, [
@@ -537,6 +551,8 @@ recipes.addShaped(<extracells:ecbaseblock>, [
 [<ore:plateLapis>, <appliedenergistics2:item.ItemMultiPart:16>, <ore:plateLapis>],
 [<extracells:storage.component:4>, <appliedenergistics2:tile.BlockInterface>, <extracells:storage.component:4>],
 [<ore:plateLapis>, <appliedenergistics2:item.ItemMultiPart:16>, <ore:plateLapis>]]);
+// -
+recipes.addShapeless(<extracells:ecbaseblock>, [<extracells:part.base:9>]);
 
 // --- ME Fluid Auto Filler
 recipes.addShaped(<extracells:ecbaseblock:1>, [
@@ -568,39 +584,16 @@ recipes.addShaped(<extracells:storage.fluid.portable>, [
 [<ore:screwTitanium>, <appliedenergistics2:tile.BlockChest>, <ore:screwTitanium>],
 [<ore:craftingToolScrewdriver>, <appliedenergistics2:tile.BlockEnergyCell>, <ore:craftingToolWrench>]]);
 
-// --- ME Upgrade Tier 1
-recipes.addShaped(<extracells:oc.upgrade:2>, [
-[<ore:plateTitanium>, <appliedenergistics2:item.ItemMultiMaterial:41>, <ore:plateTitanium>],
-[<OpenComputers:item:24>, <OpenComputers:item:13>, <OpenComputers:item:24>],
-[<ore:plateTitanium>, <OpenComputers:item:32>, <ore:plateTitanium>]]);
-
-// --- ME Upgrade Tier 2
-recipes.addShaped(<extracells:oc.upgrade:1>, [
-[<ore:plateTungstenSteel>, <appliedenergistics2:item.ItemMultiMaterial:41>, <ore:plateTungstenSteel>],
-[<OpenComputers:item:25>, <OpenComputers:item:13>, <OpenComputers:item:25>],
-[<ore:plateTungstenSteel>, <OpenComputers:item:32>, <ore:plateTungstenSteel>]]);
-
-// --- ME Upgrade Tier 3
-recipes.addShaped(<extracells:oc.upgrade>, [
-[<ore:plateChrome>, <appliedenergistics2:item.ItemMultiMaterial:41>, <ore:plateChrome>],
-[<OpenComputers:item:26>, <OpenComputers:item:13>, <OpenComputers:item:26>],
-[<ore:plateChrome>, <OpenComputers:item:32>, <ore:plateChrome>]]);
-
-
-// --- Alloy Smelter Recipes ---
-
-
-
-// --- Quartz Tank
-AlloySmelter.addRecipe(<extracells:certustank>, <appliedenergistics2:tile.BlockQuartzGlass> * 8, <gregtech:gt.metaitem.01:32308> * 0, 800, 30);
-
-
+// PCB conversion recipe for Computronics
+recipes.addShapeless(<OpenComputers:item:32>,[<gregtech:gt.metaitem.01:32720>]);
 
 
 // --- Assembler Recipes ---
 
 
 
+// --- Quartz Tank
+Assembler.addRecipe(<extracells:certustank>, <appliedenergistics2:tile.BlockQuartzGlass> * 8, <gregtech:gt.integrated_circuit:8> * 0, 800, 30);
 
 // --- ME Fluid Export Bus
 Assembler.addRecipe(<extracells:part.base>, <appliedenergistics2:item.ItemMultiPart:260>, <gregtech:gt.metaitem.01:17526> * 3, 300, 120);
@@ -637,6 +630,21 @@ Assembler.addRecipe(<extracells:pattern.fluid>, <extracells:storage.casing:1>, <
 
 // --- Wireless Fluid ME Terminal
 Assembler.addRecipe(<extracells:terminal.fluid.wireless>, <appliedenergistics2:item.ToolWirelessTerminal:*>, <extracells:part.base:3>, 600, 120);
+
+// --- Crafing Storage 256K
+Assembler.addRecipe(<extracells:craftingstorage>, <appliedenergistics2:tile.BlockCraftingUnit>, <extracells:storage.component>, 400, 1920);
+
+// --- Crafing Storage 1024K
+Assembler.addRecipe(<extracells:craftingstorage:1>, <appliedenergistics2:tile.BlockCraftingUnit>, <extracells:storage.component:1>, 400, 1920);
+
+// --- Crafing Storage 4096K
+Assembler.addRecipe(<extracells:craftingstorage:2>, <appliedenergistics2:tile.BlockCraftingUnit>, <extracells:storage.component:2>, 400, 1920);
+
+// --- Crafing Storage 16384K
+Assembler.addRecipe(<extracells:craftingstorage:3>, <appliedenergistics2:tile.BlockCraftingUnit>, <extracells:storage.component:3>, 400, 1920);
+
+// --- 64 K Crafting  Storage
+Assembler.addRecipe(<appliedenergistics2:tile.BlockCraftingStorage:3>, <appliedenergistics2:tile.BlockCraftingUnit>, <appliedenergistics2:item.ItemMultiMaterial:38>, 400, 480);
 
 
 

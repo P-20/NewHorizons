@@ -1,4 +1,5 @@
 // --- Created by DreamMasterXXL ---
+// --- Created by DreamMasterXXL ---
 
 
 
@@ -44,7 +45,7 @@ val Piston = <minecraft:piston>;
 val DiamondGrindingHead = <gregtech:gt.metaitem.01:32722>;
 val Obsidian = <ore:stoneObsidian>;
 val Stone = <ore:stone>;
-val Leather = <minecraft:leather>;
+val Leather = <ore:itemLeather>;
 val BGuide = <OpenBlocks:guide>;
 val BlockPlacer = <OpenBlocks:blockPlacer>;
 val BlockBreaker = <OpenBlocks:blockbreaker>;
@@ -226,6 +227,9 @@ recipes.remove(<OpenBlocks:tastyClay>);
 // --- Golden Eye
 recipes.removeShaped(<OpenBlocks:goldenEye:*>);
 
+// --- Cursor
+recipes.remove(<OpenBlocks:cursor>);
+
 
 
 
@@ -288,14 +292,14 @@ recipes.addShaped(<OpenBlocks:elevator_rotating>, [
 // --- Vacuum Hopper
 recipes.addShaped(<OpenBlocks:vacuumhopper>, [
 [<ore:plateObsidian>, Hopper, <ore:plateObsidian>],
-[Hopper, <ore:plateEnderEye>, Hopper],
+[Hopper, <ore:plateEnderPearl>, Hopper],
 [<ore:plateObsidian>, Hopper, <ore:plateObsidian>]]);
 
 // --- Sprinkler
 recipes.addShaped(<OpenBlocks:sprinkler>, [
-[<dreamcraft:item.SteelBars>, <ore:stickGold>, <dreamcraft:item.SteelBars>],
-[<ore:pipeSmallSteel>, <ore:pipeSmallSteel>, <ore:pipeSmallSteel>],
-[<dreamcraft:item.SteelBars>, <ore:stickGold>, <dreamcraft:item.SteelBars>]]);
+[<dreamcraft:item.AluminiumBars>, <ore:stickGold>, <dreamcraft:item.AluminiumBars>],
+[<ore:pipeSmallDarkSteel>, <ore:rotorDarkSteel>, <ore:pipeSmallDarkSteel>],
+[<dreamcraft:item.AluminiumBars>, <ore:stickGold>, <dreamcraft:item.AluminiumBars>]]);
 
 // --- Building Guide
 recipes.addShaped(BGuide, [
@@ -314,14 +318,6 @@ recipes.addShaped(ItemDropper, [
 [<ore:plateStone>, <ore:wireGt01RedAlloy>, <ore:plateStone>],
 [<ore:gearGtSmallSteel>, <minecraft:dropper>, <ore:gearGtSmallSteel>],
 [<ore:plateStone>, <minecraft:hopper>, <ore:plateStone>]]);
-
-// --- Sleeping Back
-recipes.addShaped(<OpenBlocks:sleepingBag>, [
-[Carpet, Carpet, Carpet],
-[Wool, Wool, Wool],
-[TannedLeather, TannedLeather, TannedLeather]]);
-// -
-recipes.addShapeless(<OpenBlocks:sleepingBag>, [<adventurebackpack:backpackComponent:1>]);
 
 // --- Bear Trap
 recipes.addShaped(<OpenBlocks:beartrap>, [
@@ -366,8 +362,8 @@ recipes.addShaped(<OpenBlocks:drawingtable>, [
 
 // --- XP Shower
 recipes.addShaped(<OpenBlocks:xpshower>, [
-[<IC2:itemCasing:4>, <ore:pipeSmallSteel>, <IC2:itemCasing:4>],
-[<IC2:itemCasing:4>, <ore:pipeSmallSteel>, <IC2:itemCasing:4>],
+[<ore:itemCasingAnyIron>, <ore:pipeSmallSteel>, <ore:itemCasingAnyIron>],
+[<ore:itemCasingAnyIron>, <ore:pipeSmallSteel>, <ore:itemCasingAnyIron>],
 [<ore:pipeSmallSteel>, <ore:pipeSmallSteel>, <ore:pipeSmallSteel>]]);
 
 // --- Scaffolding
@@ -382,7 +378,7 @@ recipes.addShaped(<OpenBlocks:generic:9>, [
 // --- Slime Alyzer
 recipes.addShaped(<OpenBlocks:slimalyzer>, [
 [<ore:screwIron>, <ore:circuitBasic>, <ore:screwIron>],
-[<IC2:itemCasing:4>, <TConstruct:materials:1>, <IC2:itemCasing:4>],
+[<ore:itemCasingAnyIron>, <TConstruct:materials:1>, <ore:itemCasingAnyIron>],
 [<ore:craftingToolScrewdriver>, <ore:circuitBasic>, <ore:craftingToolFile>]]);
 
 // --- Paint Brush
@@ -393,6 +389,7 @@ recipes.addShaped(<OpenBlocks:sonicglasses>, [
 [<ore:wireGt01RedAlloy>, <GalacticraftCore:item.basicItem:19>, <ore:wireGt01RedAlloy>],
 [<ore:circuitBasic>, <minecraft:iron_helmet> * 1, <ore:circuitBasic>],
 [<ore:screwAluminium>, <ore:craftingToolScrewdriver>, <ore:screwAluminium>]]);
+
 
 
 
@@ -411,13 +408,13 @@ Assembler.addRecipe(<OpenBlocks:ladder>, <minecraft:trapdoor>, <minecraft:ladder
 Assembler.addRecipe(<OpenBlocks:sky:1>, <OpenBlocks:sky>, <gregtech:gt.integrated_circuit:1> * 0, <liquid:molten.redstone> * 144, 200, 16);
 
 // --- Paint Mixer
-Assembler.addRecipe(<OpenBlocks:paintmixer>, <gregtech:gt.blockmachines:581>, <IC2:itemCasing:4> * 4, 600, 30);
+Assembler.addRecipe(<OpenBlocks:paintmixer>, <gregtech:gt.blockmachines:581>, <ore:itemCasingAnyIron> * 4, 600, 30);
 
 // --- Xp Bottler
-Assembler.addRecipe(<OpenBlocks:xpbottler>, <Forestry:factory>, <IC2:itemCasing:4> * 4, 600, 30);
+Assembler.addRecipe(<OpenBlocks:xpbottler>, <Forestry:factory>, <ore:itemCasingAnyIron> * 4, 600, 30);
 
 // --- Unprepared Stencil
-Assembler.addRecipe(<OpenBlocks:generic:10>, <TConstruct:blankPattern>, <Railcraft:part.plate>, 200, 16);
+Assembler.addRecipe(<OpenBlocks:generic:10>, <TConstruct:blankPattern>, <gregtech:gt.metaitem.01:17032>, 200, 16);
 
 // --- Pencil
 Assembler.addRecipe(<OpenBlocks:generic:11>, <minecraft:stick>, <gregtech:gt.metaitem.01:1865>, <liquid:molten.rubber> * 144, 100, 8);
@@ -426,31 +423,28 @@ Assembler.addRecipe(<OpenBlocks:generic:11>, <minecraft:stick>, <gregtech:gt.met
 Assembler.addRecipe(<OpenBlocks:imaginary>.withTag({Uses: 10.0 as float}), <OpenBlocks:generic:11>, <gregtech:gt.metaitem.01:17533>, 100, 16);
 
 // --- Map Controller Module
-Assembler.addRecipe(<OpenBlocks:generic:6>, <OpenComputers:item:32>, <dreamcraft:item.SimpleCircuitBoard>, <liquid:molten.redstone> * 144, 300, 30);
+Assembler.addRecipe(<OpenBlocks:generic:6>, <OpenComputers:item:32>, <IC2:itemPartCircuit>, <liquid:molten.redstone> * 144, 300, 30);
 
 // --- Map Memory Module
-Assembler.addRecipe(<OpenBlocks:generic:7>, <OpenBlocks:generic:6>, <gregtech:gt.metaitem.01:32700> * 4, <liquid:molten.redstone> * 144, 400, 30);
+Assembler.addRecipe(<OpenBlocks:generic:7>, <OpenBlocks:generic:6>, <IC2:itemPartCircuit>, <liquid:molten.redstone> * 144, 400, 30);
 
 // --- Empty Map 1:1
 Assembler.addRecipe(<OpenBlocks:emptyMap>.withTag({Scale: 0 as byte}), <OpenBlocks:generic:6>, <OpenBlocks:generic:7> * 4, 600, 30);
 
 // --- Empty Map 1:2
-Assembler.addRecipe(<OpenBlocks:emptyMap>.withTag({Scale: 1 as byte}), <OpenBlocks:emptyMap>.withTag({Scale: 0 as byte}), <gregtech:gt.metaitem.01:32700> * 4, <liquid:molten.tin> * 144, 600, 30);
+Assembler.addRecipe(<OpenBlocks:emptyMap>.withTag({Scale: 1 as byte}), <OpenBlocks:emptyMap>.withTag({Scale: 0 as byte}), <IC2:itemPartCircuit>, <liquid:molten.tin> * 144, 600, 30);
 
 // --- Empty Map 1:4
-Assembler.addRecipe(<OpenBlocks:emptyMap>.withTag({Scale: 2 as byte}), <OpenBlocks:emptyMap>.withTag({Scale: 1 as byte}), <IC2:itemPartCircuit> * 3, <liquid:molten.redstone> * 144, 800, 30);
+Assembler.addRecipe(<OpenBlocks:emptyMap>.withTag({Scale: 2 as byte}), <OpenBlocks:emptyMap>.withTag({Scale: 1 as byte}), <IC2:itemPartCircuit> * 2, <liquid:molten.redstone> * 144, 800, 30);
 
 // --- Empty Map 1:8
-Assembler.addRecipe(<OpenBlocks:emptyMap>.withTag({Scale: 3 as byte}), <OpenBlocks:emptyMap>.withTag({Scale: 2 as byte}), <gregtech:gt.metaitem.01:32702> * 3, <liquid:molten.redalloy> * 144, 1000, 30);
+Assembler.addRecipe(<OpenBlocks:emptyMap>.withTag({Scale: 3 as byte}), <OpenBlocks:emptyMap>.withTag({Scale: 2 as byte}), <gregtech:gt.metaitem.01:32702> * 2, <liquid:molten.redalloy> * 144, 1000, 30);
 
 // --- Empty Map 1:16
-Assembler.addRecipe(<OpenBlocks:emptyMap>.withTag({Scale: 4 as byte}), <OpenBlocks:emptyMap>.withTag({Scale: 3 as byte}), <IC2:itemPartCircuitAdv> * 3, <liquid:molten.glowstone> * 144, 1200, 30);
+Assembler.addRecipe(<OpenBlocks:emptyMap>.withTag({Scale: 4 as byte}), <OpenBlocks:emptyMap>.withTag({Scale: 3 as byte}), <IC2:itemPartCircuitAdv> * 2, <liquid:molten.glowstone> * 144, 1200, 30);
 
 // --- Catographer
 Assembler.addRecipe(<OpenBlocks:cartographer>, <OpenBlocks:generic:9>, <minecraft:ender_eye>, <liquid:ender> * 1000, 600, 120);
-
-// --- Dev/Null
-Assembler.addRecipe(<OpenBlocks:devnull>, <ExtraUtilities:trashcan>, <gregtech:gt.integrated_circuit:1> * 0, <liquid:ender> * 250, 300, 30);
 
 // --- Pedometer
 Assembler.addRecipe(<OpenBlocks:pedometer>, <minecraft:clock>, <IC2:itemPartCircuit> * 2, <liquid:molten.redstone> * 144, 200, 30);
@@ -639,7 +633,7 @@ Mixer.addRecipe(<OpenBlocks:tastyClay>, null, [<minecraft:clay_ball>, <minecraft
 
 
 // --- Golden Egg
-mods.thaumcraft.Research.addResearch("GOLDENEGG", "MAGICBEES", "alienis 15, bestia 12, victus 9, humanus 6", -6, 4, 4, <OpenBlocks:goldenegg>);
+mods.thaumcraft.Research.addResearch("GOLDENEGG", "MAGICBEES", "alienis 15, bestia 12, victus 9, humanus 6", -4 as int, 5, 4, <OpenBlocks:goldenegg>);
 game.setLocalization("tc.research_name.GOLDENEGG", "Golden Egg");
 game.setLocalization("tc.research_text.GOLDENEGG", "[OB] Make A MiniMe");
 mods.thaumcraft.Research.addPrereq("GOLDENEGG", "MB_DimensionalSingularity", false);

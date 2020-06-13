@@ -47,16 +47,16 @@ mods.thaumcraft.Research.addArcanePage("BLOODALTAR", <AWWayofTime:Altar>);
 mods.thaumcraft.Warp.addToResearch("BLOODALTAR", 2);
 
 // --- Life Infuser
-mods.thaumcraft.Research.addResearch("LIFEINFUSER", "BLOODMAGIC", "victus 18, alienis 15, praecantatio 12, auram 9, fames 6, terra 3", -2, 2, 3, <BloodArsenal:life_infuser>);
+mods.thaumcraft.Research.addResearch("LIFEINFUSER", "BLOODMAGIC", "victus 18, alienis 15, praecantatio 12, auram 9, fames 6, terra 3", -2 as int, 2, 3, <BloodArsenal:life_infuser>);
 game.setLocalization("tc.research_name.LIFEINFUSER", "Life Infuser");
-game.setLocalization("tc.research_text.LIFEINFUSER", "[BA] Transfer you Life Essence");
+game.setLocalization("tc.research_text.LIFEINFUSER", "[BA] Transfer your Life Essence");
 mods.thaumcraft.Research.addPrereq("LIFEINFUSER", "BLOODALTAR", false);
 mods.thaumcraft.Research.addPrereq("LIFEINFUSER", "INFUSION", false);
 mods.thaumcraft.Research.setConcealed("LIFEINFUSER", false);
 mods.thaumcraft.Research.addPage("LIFEINFUSER", "bloodmagic.research_page.LIFEINFUSER");
-game.setLocalization("bloodmagic.research_page.LIFEINFUSER", "The Life Infuser is a Block Added by Blood Arsenal. It takes in life essence and gradually repairs a tool using 500 LE each damage point repaired. Once an orb is inserted into this the Life Essence Materializer, it will suck out LP from the orb's owner converting it to Life Essence which can then be pumped out. (converts 150 - 100)");
+game.setLocalization("bloodmagic.research_page.LIFEINFUSER", "The Life Infuser is a Block Added by Blood Arsenal. It takes in life essence and gradually repairs a tool using 500 LE each damage point repaired. Once an orb is inserted into the Life Essence Materializer, it will suck out LP from the orb's owner converting it to Life Essence which can then be pumped out. (converts 150 - 100)");
 mods.thaumcraft.Infusion.addRecipe("LIFEINFUSER", <AWWayofTime:Altar>, 
-[<minecraft:nether_star>, <gregtech:gt.metaitem.02:22977>, <gregtech:gt.metaitem.02:22977>, <AWWayofTime:imbuedSlate>, <TConstruct:heavyPlate:251>, <TConstruct:heavyPlate:251>, <TConstruct:heavyPlate:251>, <AWWayofTime:imbuedSlate>, <gregtech:gt.metaitem.02:22977>, <gregtech:gt.metaitem.02:22977>], 
+[<minecraft:nether_star>, <gregtech:gt.metaitem.02:22977>, <gregtech:gt.metaitem.02:22977>, <AWWayofTime:imbuedSlate>, <TConstruct:heavyPlate:251>, <TConstruct:heavyPlate:501>, <TConstruct:heavyPlate:251>, <AWWayofTime:imbuedSlate>, <gregtech:gt.metaitem.02:22977>, <gregtech:gt.metaitem.02:22977>], 
 "victus 32, alienis 32, praecantatio 24, auram 16, fames 8, terra 8", <BloodArsenal:life_infuser>, 5);
 mods.thaumcraft.Research.addInfusionPage("LIFEINFUSER", <BloodArsenal:life_infuser>);
 mods.thaumcraft.Warp.addToResearch("LIFEINFUSER", 3);
@@ -69,7 +69,7 @@ mods.thaumcraft.Arcane.addShaped("LIFEINFUSER", <BloodArsenal:lp_materializer>, 
 mods.thaumcraft.Research.addArcanePage("LIFEINFUSER", <BloodArsenal:lp_materializer>);
 
 // --- Soul Compacter
-mods.thaumcraft.Research.addResearch("SOULCOMPACTER", "BLOODMAGIC", "spiritus 18, praecantatio 15, alienis 12, lucrum 9, vacuos 6, cognitio 3", 0, -6, 4, <BloodArsenal:compacter>);
+mods.thaumcraft.Research.addResearch("SOULCOMPACTER", "BLOODMAGIC", "spiritus 18, praecantatio 15, alienis 12, lucrum 9, vacuos 6, cognitio 3", 0, -6 as int, 4, <BloodArsenal:compacter>);
 game.setLocalization("tc.research_name.SOULCOMPACTER", "Soul Compacter");
 game.setLocalization("tc.research_text.SOULCOMPACTER", "[BA] Packing your Ritual");
 mods.thaumcraft.Research.addPrereq("SOULCOMPACTER", "MASTERRITUALSTONE", false);
@@ -84,7 +84,7 @@ mods.thaumcraft.Research.addArcanePage("SOULCOMPACTER", <BloodArsenal:compacter>
 mods.thaumcraft.Warp.addToResearch("SOULCOMPACTER", 3);
 
 // --- Sacrificial Knife
-mods.thaumcraft.Research.addResearch("SACRIFICIALKNIFE", "BLOODMAGIC", "telum 15, lucrum 12, instrumentum 9, fames 6, fabrico 3", 2, -2, 3, <AWWayofTime:sacrificialKnife>);
+mods.thaumcraft.Research.addResearch("SACRIFICIALKNIFE", "BLOODMAGIC", "telum 15, lucrum 12, instrumentum 9, fames 6, fabrico 3", 2, -2 as int, 3, <AWWayofTime:sacrificialKnife>);
 game.setLocalization("tc.research_name.SACRIFICIALKNIFE", "Sacrificial Knife");
 game.setLocalization("tc.research_text.SACRIFICIALKNIFE", "[BM] Ouch! that hurts.");
 mods.thaumcraft.Research.addPrereq("SACRIFICIALKNIFE", "BLOODALTAR", false);
@@ -98,14 +98,14 @@ mods.thaumcraft.Arcane.addShaped("SACRIFICIALKNIFE", <AWWayofTime:sacrificialKni
 mods.thaumcraft.Research.addArcanePage("SACRIFICIALKNIFE", <AWWayofTime:sacrificialKnife>);
 
 // --- Alchemic Chemistry Set
-mods.thaumcraft.Research.addResearch("ALCHEMICCHEMSTRYSET", "BLOODMAGIC", "fabrico 15, ignis 12, instrumentum 9, praecantatio 6, victus 3", 4, -4, 3, <AWWayofTime:blockWritingTable>);
+mods.thaumcraft.Research.addResearch("ALCHEMICCHEMSTRYSET", "BLOODMAGIC", "fabrico 15, ignis 12, instrumentum 9, praecantatio 6, victus 3", 4, -4 as int, 3, <AWWayofTime:blockWritingTable>);
 game.setLocalization("tc.research_name.ALCHEMICCHEMSTRYSET", "Alchemic Chemistry Set");
 game.setLocalization("tc.research_text.ALCHEMICCHEMSTRYSET", "[BM] Blub, blub.....OH");
 mods.thaumcraft.Research.addPrereq("ALCHEMICCHEMSTRYSET", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("ALCHEMICCHEMSTRYSET", "SACRIFICIALKNIFE", false);
 mods.thaumcraft.Research.setConcealed("ALCHEMICCHEMSTRYSET", true);
 mods.thaumcraft.Research.addPage("ALCHEMICCHEMSTRYSET", "bloodmagic.research_page.ALCHEMICCHEMSTRYSET");
-game.setLocalization("bloodmagic.research_page.ALCHEMICCHEMSTRYSET", "The Alchemic Chemistry Set is a block added by Blood Magic. This is a Chemistry set used for the mod mentioned above. It's main purpose is to, you guessed it, brew potions! It's an essential part of this mod; as this block is used to brew things that can be the base of many others. Along with the many other such things, you will need LP to actually use and make things with this block. LP, the basic power of this mod, will be explained in a later thread.");
+game.setLocalization("bloodmagic.research_page.ALCHEMICCHEMSTRYSET", "The Alchemic Chemistry Set is a block added by Blood Magic. This is a Chemistry set used for the mod mentioned above. It's main purpose is to, you guessed it, brew potions! It's an essential part of this mod; as this block is used to brew things that can be the base of many others. Along with the many other such things, you will need LP to actually use and make things with this block. LP, the basic power of this mod, will be explained in another thread.");
 mods.thaumcraft.Infusion.addRecipe("ALCHEMICCHEMSTRYSET", <minecraft:brewing_stand>, 
 [<IC2:itemFluidCell>.withTag({Fluid: {FluidName: "lifeessence", Amount: 1000}}), <AWWayofTime:blankSlate>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "lifeessence", Amount: 1000}}), <AWWayofTime:blankSlate>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "lifeessence", Amount: 1000}}), <AWWayofTime:blankSlate>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "lifeessence", Amount: 1000}}), <AWWayofTime:blankSlate>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "lifeessence", Amount: 1000}}), <AWWayofTime:blankSlate>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "lifeessence", Amount: 1000}}), <AWWayofTime:blankSlate>], 
 "fabrico 24, instrumentum 24, praecantatio 18, victus 12, ignis 12", <AWWayofTime:blockWritingTable>, 5);
@@ -113,24 +113,39 @@ mods.thaumcraft.Research.addInfusionPage("ALCHEMICCHEMSTRYSET", <AWWayofTime:blo
 mods.thaumcraft.Warp.addToResearch("ALCHEMICCHEMSTRYSET", 3);
 
 // --- Amorphic Catalyst
-mods.thaumcraft.Research.addResearch("AMORPHICCATALYST", "BLOODMAGIC", "aqua 18, ignis 15, terra 12, aer 9, ordo 6, perditio 3", 6, -4, 3, <BloodArsenal:amorphic_catalyst>);
+mods.thaumcraft.Research.addResearch("AMORPHICCATALYST", "BLOODMAGIC", "aqua 18, ignis 15, terra 12, aer 9, ordo 6, perditio 3", 6, -4 as int, 3, <BloodArsenal:amorphic_catalyst>);
 game.setLocalization("tc.research_name.AMORPHICCATALYST", "Amorphic Catalyst");
 game.setLocalization("tc.research_text.AMORPHICCATALYST", "[BA] Mixed Catalyst");
 mods.thaumcraft.Research.addPrereq("AMORPHICCATALYST", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("AMORPHICCATALYST", "ALCHEMICCHEMSTRYSET", false);
 mods.thaumcraft.Research.setConcealed("AMORPHICCATALYST", true);
 mods.thaumcraft.Research.addPage("AMORPHICCATALYST", "bloodmagic.research_page.AMORPHICCATALYST");
-game.setLocalization("bloodmagic.research_page.AMORPHICCATALYST", "Take a Reinforced Slate and infused it with all magical Ingredients you can made. Now you get a very Powerful Catalyst.");
+game.setLocalization("bloodmagic.research_page.AMORPHICCATALYST", "Take a Reinforced Slate and infuse it with all magical ingredients you can make. Now you have a very powerful catalyst.");
 mods.thaumcraft.Infusion.addRecipe("AMORPHICCATALYST", <AWWayofTime:reinforcedSlate>, 
 [<AWWayofTime:simpleCatalyst>, <AWWayofTime:aether>, <AWWayofTime:terrae>, <AWWayofTime:crystallos>, <AWWayofTime:sanctus>, <AWWayofTime:magicales>, <AWWayofTime:crepitous>, <AWWayofTime:incendium>, <AWWayofTime:aquasalus>, <AWWayofTime:tennebrae>], 
 "aqua 16, ignis 16, terra 16, aer 16, ordo 16, perditio 16", <BloodArsenal:amorphic_catalyst>, 5);
 mods.thaumcraft.Research.addInfusionPage("AMORPHICCATALYST", <BloodArsenal:amorphic_catalyst>);
 mods.thaumcraft.Warp.addToResearch("AMORPHICCATALYST", 2);
 
+// --- Blood Infused Diamond Block
+mods.thaumcraft.Research.addResearch("BIDIAMONDBLOCK", "BLOODMAGIC", "aqua 18, ignis 15, victus 12, ignis 9, ira 6, perditio 3", 8, -4 as int, 3, <BloodArsenal:blood_infused_diamond_block>);
+game.setLocalization("tc.research_name.BIDIAMONDBLOCK", "Blood Infused Diamond Block");
+game.setLocalization("tc.research_text.BIDIAMONDBLOCK", "[BA] A Blood Diamond Block");
+mods.thaumcraft.Research.addPrereq("BIDIAMONDBLOCK", "INFUSION", false);
+mods.thaumcraft.Research.addPrereq("BIDIAMONDBLOCK", "AMORPHICCATALYST", false);
+mods.thaumcraft.Research.setConcealed("BIDIAMONDBLOCK", true);
+mods.thaumcraft.Research.addPage("BIDIAMONDBLOCK", "bloodmagic.research_page.BIDIAMONDBLOCK");
+game.setLocalization("bloodmagic.research_page.BIDIAMONDBLOCK", "The Blood Infused Diamond Block is made out of 9 Blood Diamonds in the Infusion Process. It is requiered for the Blood Infused Diamond Tools");
+mods.thaumcraft.Infusion.addRecipe("BIDIAMONDBLOCK", <minecraft:diamond_block>, 
+[<BloodArsenal:blood_infused_diamond_bound>, <BloodArsenal:blood_infused_diamond_bound>, <BloodArsenal:blood_infused_diamond_bound>, <BloodArsenal:blood_infused_diamond_bound>, <BloodArsenal:blood_infused_diamond_bound>, <BloodArsenal:blood_infused_diamond_bound>, <BloodArsenal:blood_infused_diamond_bound>, <BloodArsenal:blood_infused_diamond_bound>, <BloodArsenal:blood_infused_diamond_bound>], 
+"ira 32, alienis 16, victus 24, ignis 48, aqua 64, perditio 16", <BloodArsenal:blood_infused_diamond_block>, 7);
+mods.thaumcraft.Research.addInfusionPage("BIDIAMONDBLOCK", <BloodArsenal:blood_infused_diamond_block>);
+mods.thaumcraft.Warp.addToResearch("BIDIAMONDBLOCK", 3);
+
 // --- Divination Sigil
 mods.thaumcraft.Research.addResearch("DIVINATIONSIGIL", "BLOODMAGIC", "vitreus 15, terra 12, instrumentum 9, praecantatio 6, metallum 3", 0, 2, 3, <AWWayofTime:divinationSigil>);
 game.setLocalization("tc.research_name.DIVINATIONSIGIL", "Divination Sigil");
-game.setLocalization("tc.research_text.DIVINATIONSIGIL", "[BM] How much Essence you have?");
+game.setLocalization("tc.research_text.DIVINATIONSIGIL", "[BM] How much Essence do you have?");
 mods.thaumcraft.Research.addPrereq("DIVINATIONSIGIL", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("DIVINATIONSIGIL", "NITOR", false);
 mods.thaumcraft.Research.addPrereq("DIVINATIONSIGIL", "BLOODALTAR", false);
@@ -143,21 +158,21 @@ mods.thaumcraft.Infusion.addRecipe("DIVINATIONSIGIL", <AWWayofTime:blankSlate>,
 mods.thaumcraft.Research.addInfusionPage("DIVINATIONSIGIL", <AWWayofTime:divinationSigil>);
 
 // --- Speed Rune
-mods.thaumcraft.Research.addResearch("SPEEDRUNE", "BLOODMAGIC", "motus 15, volatus 12, potentia 9, aer 6, fames 3", -2, 0, 3, <AWWayofTime:speedRune>);
+mods.thaumcraft.Research.addResearch("SPEEDRUNE", "BLOODMAGIC", "motus 15, volatus 12, potentia 9, aer 6, fames 3", -2 as int, 0, 3, <AWWayofTime:speedRune>);
 game.setLocalization("tc.research_name.SPEEDRUNE", "Speed Rune");
 game.setLocalization("tc.research_text.SPEEDRUNE", "[BM] How fast is your Altar?");
 mods.thaumcraft.Research.addPrereq("SPEEDRUNE", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("SPEEDRUNE", "BLOODALTAR", false);
 mods.thaumcraft.Research.setConcealed("SPEEDRUNE", true);
 mods.thaumcraft.Research.addPage("SPEEDRUNE", "bloodmagic.research_page.SPEEDRUNE");
-game.setLocalization("bloodmagic.research_page.SPEEDRUNE", "The Speed Rune is a block added by Blood Magic that is used for upgrading the tier of the Blood Altar. The Speed Rune can be used interchangeably with any other rune. The Speed Rune does what its name implies, and provides an additive 20% increase to the processing speed of the Blood Altar.");
+game.setLocalization("bloodmagic.research_page.SPEEDRUNE", "The Speed Rune is a block added by Blood Magic that is used for upgrading the tier of the Blood Altar. The Speed Rune can be used interchangeably with any other rune. The Speed Rune does what its name implies, and provides a 20% increase to the processing speed of the Blood Altar.");
 mods.thaumcraft.Infusion.addRecipe("SPEEDRUNE", <AWWayofTime:AlchemicalWizardrybloodRune>, 
 [<AWWayofTime:aether>, <AWWayofTime:reinforcedSlate>, <AWWayofTime:reinforcedSlate>, <AWWayofTime:aether>, <AWWayofTime:reinforcedSlate>, <AWWayofTime:reinforcedSlate>], 
 "motus 24, volatus 24, potentia 18, aer 12, fames 4", <AWWayofTime:speedRune>, 4);
 mods.thaumcraft.Research.addInfusionPage("SPEEDRUNE", <AWWayofTime:speedRune>);
 
 // --- Imperfect Ritual Stone
-mods.thaumcraft.Research.addResearch("IMPERFECTRITUALSTONE", "BLOODMAGIC", "auram 12, praecantatio 9, terra 6, tenebrae 3", -2, -2, 3, <AWWayofTime:imperfectRitualStone>);
+mods.thaumcraft.Research.addResearch("IMPERFECTRITUALSTONE", "BLOODMAGIC", "auram 12, praecantatio 9, terra 6, tenebrae 3", -2 as int, -2 as int, 3, <AWWayofTime:imperfectRitualStone>);
 game.setLocalization("tc.research_name.IMPERFECTRITUALSTONE", "Imperfect Ritual Stone");
 game.setLocalization("tc.research_text.IMPERFECTRITUALSTONE", "[BM] Basic but oho.");
 mods.thaumcraft.Research.addPrereq("IMPERFECTRITUALSTONE", "BLOODALTAR", false);
@@ -166,10 +181,10 @@ mods.thaumcraft.Research.addPage("IMPERFECTRITUALSTONE", "bloodmagic.research_pa
 game.setLocalization("bloodmagic.research_page.IMPERFECTRITUALSTONE.1", "Imperfect Ritual Stone is a block from Blood Magic used in the construction of Rituals. The Imperfect Ritual Stone is used in weaker rituals, such as the Water Ritual. 
 A weak ritual is simple but can be useful. Each is created by placing a specific block on top of an Imperfect Ritual Stone, then activated by Right-clicking the Stone. Each cost 5,000 Life Essence.");
 mods.thaumcraft.Research.addPage("IMPERFECTRITUALSTONE", "bloodmagic.research_page.IMPERFECTRITUALSTONE.2");
-game.setLocalization("bloodmagic.research_page.IMPERFECTRITUALSTONE.2", "1. Water Source Block Creates a Thunderstorm.
-2. Block of Coal Summons a strong Zombie.
-3. Lapis Lazuli Block Lapis Lazuli Block Makes it night time.
-4. Bedrock above Grants Resistance II for 1 minute.");
+game.setLocalization("bloodmagic.research_page.IMPERFECTRITUALSTONE.2", "1. Water source block creates a thunderstorm.
+2. Block of coal summons a strong zombie.
+3. Lapis lazuli block makes it night time.
+4. Bedrock above grants Resistance II for 1 minute.");
 mods.thaumcraft.Arcane.addShaped("IMPERFECTRITUALSTONE", <AWWayofTime:imperfectRitualStone>, "aer 15, ignis 15, aqua 15, terra 15, ordo 15, perditio 15", [
 [<minecraft:obsidian>, <AWWayofTime:blankSlate>, <minecraft:obsidian>],
 [<AWWayofTime:blankSlate>, <BloodArsenal:blood_stone>, <AWWayofTime:blankSlate>],
@@ -177,7 +192,7 @@ mods.thaumcraft.Arcane.addShaped("IMPERFECTRITUALSTONE", <AWWayofTime:imperfectR
 mods.thaumcraft.Research.addArcanePage("IMPERFECTRITUALSTONE", <AWWayofTime:imperfectRitualStone>);
 
 // --- Ritual Stone
-mods.thaumcraft.Research.addResearch("RITUALSTONE", "BLOODMAGIC", "terra 15, ignis 12, tenebrae 9, praecantatio 6, aer 3", -2, -4, 3, <AWWayofTime:ritualStone>);
+mods.thaumcraft.Research.addResearch("RITUALSTONE", "BLOODMAGIC", "terra 15, ignis 12, tenebrae 9, praecantatio 6, aer 3", -2 as int, -4 as int, 3, <AWWayofTime:ritualStone>);
 game.setLocalization("tc.research_name.RITUALSTONE", "Ritual Stone");
 game.setLocalization("tc.research_text.RITUALSTONE", "[BM] Rituals");
 mods.thaumcraft.Research.addPrereq("RITUALSTONE", "INFUSION", false);
@@ -192,7 +207,7 @@ mods.thaumcraft.Research.addInfusionPage("RITUALSTONE", <AWWayofTime:ritualStone
 mods.thaumcraft.Warp.addToResearch("RITUALSTONE", 1);
 
 // --- Spell Table
-mods.thaumcraft.Research.addResearch("SPELLTABLE", "BLOODMAGIC", "terra 18, ignis 15, tenebrae 12, praecantatio 9, aer 6, infernus 3", -4, -4, 3, <AWWayofTime:blockHomHeart>);
+mods.thaumcraft.Research.addResearch("SPELLTABLE", "BLOODMAGIC", "terra 18, ignis 15, tenebrae 12, praecantatio 9, aer 6, infernus 3", -4 as int, -4 as int, 3, <AWWayofTime:blockHomHeart>);
 game.setLocalization("tc.research_name.SPELLTABLE", "Spell Table");
 game.setLocalization("tc.research_text.SPELLTABLE", "[BM] Abrakadabra.....");
 mods.thaumcraft.Research.addPrereq("SPELLTABLE", "INFUSION", false);
@@ -208,9 +223,9 @@ mods.thaumcraft.Research.addArcanePage("SPELLTABLE", <AWWayofTime:blockHomHeart>
 mods.thaumcraft.Warp.addToResearch("SPELLTABLE", 4);
 
 // --- Master Ritual Stone
-mods.thaumcraft.Research.addResearch("MASTERRITUALSTONE", "BLOODMAGIC", "terra 18, ignis 15, tenebrae 12, praecantatio 9, aer 6, cognitio", -2, -6, 3, <AWWayofTime:masterStone>);
+mods.thaumcraft.Research.addResearch("MASTERRITUALSTONE", "BLOODMAGIC", "terra 18, ignis 15, tenebrae 12, praecantatio 9, aer 6, cognitio", -2 as int, -6 as int, 3, <AWWayofTime:masterStone>);
 game.setLocalization("tc.research_name.MASTERRITUALSTONE", "Master Ritual Stone");
-game.setLocalization("tc.research_text.MASTERRITUALSTONE", "[BM] Lets Start some Rituals");
+game.setLocalization("tc.research_text.MASTERRITUALSTONE", "[BM] Let's start some Rituals");
 mods.thaumcraft.Research.addPrereq("MASTERRITUALSTONE", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("MASTERRITUALSTONE", "RITUALSTONE", false);
 mods.thaumcraft.Research.setConcealed("MASTERRITUALSTONE", true);
@@ -240,7 +255,7 @@ mods.thaumcraft.Warp.addToResearch("WATERSIGIL", 2);
 // --- Lava Sigil
 mods.thaumcraft.Research.addResearch("LAVASIGIL", "BLOODMAGIC", "ignis 15, terra 12, instrumentum 9, praecantatio 6, metallum 3", 0, 8, 3, <AWWayofTime:lavaSigil>);
 game.setLocalization("tc.research_name.LAVASIGIL", "Lava Sigil");
-game.setLocalization("tc.research_text.LAVASIGIL", "[BM] Contac with Liquid is highly uncommon");
+game.setLocalization("tc.research_text.LAVASIGIL", "[BM] Contact with Liquid is highly uncommon");
 mods.thaumcraft.Research.addPrereq("LAVASIGIL", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("LAVASIGIL", "SIGILOFTHEBLOODLAMP", false);
 mods.thaumcraft.Research.setConcealed("LAVASIGIL", true);
@@ -253,9 +268,9 @@ mods.thaumcraft.Research.addInfusionPage("LAVASIGIL", <AWWayofTime:lavaSigil>);
 mods.thaumcraft.Warp.addToResearch("LAVASIGIL", 4);
 
 // --- Empty Core
-mods.thaumcraft.Research.addResearch("EMPTYCORE", "BLOODMAGIC", "vitreus 15, terra 12, lucrum 9, metallum 6, praecantatio 3", 0, -2, 3, <AWWayofTime:bloodMagicBaseItems:1>);
+mods.thaumcraft.Research.addResearch("EMPTYCORE", "BLOODMAGIC", "vitreus 15, terra 12, lucrum 9, metallum 6, praecantatio 3", 0, -2 as int, 3, <AWWayofTime:bloodMagicBaseItems:1>);
 game.setLocalization("tc.research_name.EMPTYCORE", "Empty Core");
-game.setLocalization("tc.research_text.EMPTYCORE", "[BM] All you need is a Core");
+game.setLocalization("tc.research_text.EMPTYCORE", "[BM] All you need is a core");
 mods.thaumcraft.Research.addPrereq("EMPTYCORE", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("EMPTYCORE", "BLOODALTAR", false);
 mods.thaumcraft.Research.setConcealed("EMPTYCORE", true);
@@ -268,7 +283,7 @@ mods.thaumcraft.Arcane.addShaped("EMPTYCORE", <AWWayofTime:bloodMagicBaseItems:1
 mods.thaumcraft.Research.addArcanePage("EMPTYCORE", <AWWayofTime:bloodMagicBaseItems:1>);
 
 // --- Lava Crystal
-mods.thaumcraft.Research.addResearch("BMLAVACRYSTAL", "BLOODMAGIC", "ignis 15, infernus 12, terra 9, praecantatio 6, aer 3", 0, -4, 3, <AWWayofTime:lavaCrystal>);
+mods.thaumcraft.Research.addResearch("BMLAVACRYSTAL", "BLOODMAGIC", "ignis 15, infernus 12, terra 9, praecantatio 6, aer 3", 0, -4 as int, 3, <AWWayofTime:lavaCrystal>);
 game.setLocalization("tc.research_name.BMLAVACRYSTAL", "Lava Crystal");
 game.setLocalization("tc.research_text.BMLAVACRYSTAL", "[BM] TC Lava Crystal, Warded Glass...");
 mods.thaumcraft.Research.addPrereq("BMLAVACRYSTAL", "INFUSION", false);
@@ -284,28 +299,28 @@ mods.thaumcraft.Infusion.addRecipe("BMLAVACRYSTAL", <AWWayofTime:bloodMagicBaseI
 mods.thaumcraft.Research.addInfusionPage("BMLAVACRYSTAL", <AWWayofTime:lavaCrystal>);
 
 // --- Rune of Sacrifice
-mods.thaumcraft.Research.addResearch("RUNESACRIFICE", "BLOODMAGIC", "fames 15, infernus 12, potentia 9, praecantatio 6, terra 3", -4, 0, 3, <AWWayofTime:runeOfSacrifice>);
+mods.thaumcraft.Research.addResearch("RUNESACRIFICE", "BLOODMAGIC", "fames 15, infernus 12, potentia 9, praecantatio 6, terra 3", -4 as int, 0, 3, <AWWayofTime:runeOfSacrifice>);
 game.setLocalization("tc.research_name.RUNESACRIFICE", "Rune of Sacrifice");
 game.setLocalization("tc.research_text.RUNESACRIFICE", "[BM] Very bloody");
 mods.thaumcraft.Research.addPrereq("RUNESACRIFICE", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("RUNESACRIFICE", "SPEEDRUNE", false);
 mods.thaumcraft.Research.setConcealed("RUNESACRIFICE", true);
 mods.thaumcraft.Research.addPage("RUNESACRIFICE", "bloodmagic.research_page.RUNESACRIFICE");
-game.setLocalization("bloodmagic.research_page.RUNESACRIFICE", "The Rune of Sacrifice is a rune added by Blood Magic that is used in upgrading the tier of the Blood Altar. This rune can be used in place of other runes, and can work along side each rune in the upgrade process. The Rune of Sacrifice will increase the total amount of LP gained by sacrificing mobs with a Dagger of Sacrifice by an additive 10%.");
+game.setLocalization("bloodmagic.research_page.RUNESACRIFICE", "The Rune of Sacrifice is a rune added by Blood Magic that is used in upgrading the tier of the Blood Altar. This rune can be used in place of other runes, and can work alongside each rune in the upgrade process. The Rune of Sacrifice will increase the total amount of LP gained by sacrificing mobs with a Dagger of Sacrifice by 10%.");
 mods.thaumcraft.Infusion.addRecipe("RUNESACRIFICE", <BloodArsenal:blood_stone:1>, 
 [<AWWayofTime:tennebrae>, <AWWayofTime:imbuedSlate>, <AWWayofTime:incendium>, <AWWayofTime:imbuedSlate>, <AWWayofTime:tennebrae>, <AWWayofTime:imbuedSlate>, <AWWayofTime:incendium>, <AWWayofTime:imbuedSlate>], 
 "fames 24, infernus 24, potentia 18, praecantatio 12, terra 4", <AWWayofTime:runeOfSacrifice>, 5);
 mods.thaumcraft.Research.addInfusionPage("RUNESACRIFICE", <AWWayofTime:runeOfSacrifice>);
 
 // --- Rune of Self Sacrifice
-mods.thaumcraft.Research.addResearch("RUNESELFSACRIFICE", "BLOODMAGIC", "fames 15, infernus 12, lucrum 9, praecantatio 6, terra 3", -4, 2, 3, <AWWayofTime:runeOfSelfSacrifice>);
+mods.thaumcraft.Research.addResearch("RUNESELFSACRIFICE", "BLOODMAGIC", "fames 15, infernus 12, lucrum 9, praecantatio 6, terra 3", -4 as int, 2, 3, <AWWayofTime:runeOfSelfSacrifice>);
 game.setLocalization("tc.research_name.RUNESELFSACRIFICE", "Rune of Self Sacrifice");
 game.setLocalization("tc.research_text.RUNESELFSACRIFICE", "[BM] Even more bloody");
 mods.thaumcraft.Research.addPrereq("RUNESELFSACRIFICE", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("RUNESELFSACRIFICE", "SPEEDRUNE", false);
 mods.thaumcraft.Research.setConcealed("RUNESELFSACRIFICE", true);
 mods.thaumcraft.Research.addPage("RUNESELFSACRIFICE", "bloodmagic.research_page.RUNESELFSACRIFICE");
-game.setLocalization("bloodmagic.research_page.RUNESELFSACRIFICE", "The Rune of Self-Sacrifice is a rune added by Blood Magic that is used in upgrading the tier of the Blood Altar. This rune can be used in place of other runes, and can work along side each rune in the upgrade process. The Rune of Sacrifice will increase the total amount of LP gained by using a Sacrificial Dagger by an additive 10%.");
+game.setLocalization("bloodmagic.research_page.RUNESELFSACRIFICE", "The Rune of Self-Sacrifice is a rune added by Blood Magic that is used in upgrading the tier of the Blood Altar. This rune can be used in place of other runes, and can work alongside each rune in the upgrade process. The Rune of Sacrifice will increase the total amount of LP gained by using a Sacrificial Dagger by 10%.");
 mods.thaumcraft.Infusion.addRecipe("RUNESELFSACRIFICE", <BloodArsenal:blood_stone:1>, 
 [<AWWayofTime:tennebrae>, <AWWayofTime:imbuedSlate>, <AWWayofTime:sanctus>, <AWWayofTime:imbuedSlate>, <AWWayofTime:tennebrae>, <AWWayofTime:imbuedSlate>, <AWWayofTime:sanctus>, <AWWayofTime:imbuedSlate>], 
 "fames 24, infernus 24, lucrum 18, praecantatio 12, terra 4", <AWWayofTime:runeOfSelfSacrifice>, 5);
@@ -314,7 +329,7 @@ mods.thaumcraft.Research.addInfusionPage("RUNESELFSACRIFICE", <AWWayofTime:runeO
 // --- Air Sigil
 mods.thaumcraft.Research.addResearch("AIRSIGIL", "BLOODMAGIC", "volatus 21, aer 18, motus 15, praecantatio 12, iter 9, potentia 6, cognitio 3", 0, 10, 4, <AWWayofTime:airSigil>);
 game.setLocalization("tc.research_name.AIRSIGIL", "Air Sigil");
-game.setLocalization("tc.research_text.AIRSIGIL", "[BM] Fly like a Bird but not look down.");
+game.setLocalization("tc.research_text.AIRSIGIL", "[BM] Fly like a bird but don't look down.");
 mods.thaumcraft.Research.addPrereq("AIRSIGIL", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("AIRSIGIL", "LAVASIGIL", false);
 mods.thaumcraft.Research.setConcealed("AIRSIGIL", true);
@@ -327,9 +342,9 @@ mods.thaumcraft.Research.addInfusionPage("AIRSIGIL", <AWWayofTime:airSigil>);
 mods.thaumcraft.Warp.addToResearch("AIRSIGIL", 6);
 
 // --- Sigil of faster Mining
-mods.thaumcraft.Research.addResearch("FASTERMINING", "BLOODMAGIC", "instrumentum 15, perfodio 12, praecantatio 9, metallum 6, motus 3", -2, 4, 3, <AWWayofTime:sigilOfTheFastMiner>);
-game.setLocalization("tc.research_name.FASTERMINING", "Sigil of faster mining");
-game.setLocalization("tc.research_text.FASTERMINING", "[BM] Hast II and you?");
+mods.thaumcraft.Research.addResearch("FASTERMINING", "BLOODMAGIC", "instrumentum 15, perfodio 12, praecantatio 9, metallum 6, motus 3", -2 as int, 4, 3, <AWWayofTime:sigilOfTheFastMiner>);
+game.setLocalization("tc.research_name.FASTERMINING", "Sigil of Faster Mining");
+game.setLocalization("tc.research_text.FASTERMINING", "[BM] Haste II and you?");
 mods.thaumcraft.Research.addPrereq("FASTERMINING", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("FASTERMINING", "DIVINATIONSIGIL", false);
 mods.thaumcraft.Research.setConcealed("FASTERMINING", true);
@@ -344,7 +359,7 @@ mods.thaumcraft.Warp.addToResearch("FASTERMINING", 2);
 // --- Sigil of the Green Grow
 mods.thaumcraft.Research.addResearch("GREENGROW", "BLOODMAGIC", "instrumentum 15, terra 12, herba 9, arbor 6, victus 3", 2, 4, 3, <AWWayofTime:growthSigil>);
 game.setLocalization("tc.research_name.GREENGROW", "Sigil of the Green Grow");
-game.setLocalization("tc.research_text.GREENGROW", "[BM] Who needs a green Thumb?");
+game.setLocalization("tc.research_text.GREENGROW", "[BM] Who needs a green thumb?");
 mods.thaumcraft.Research.addPrereq("GREENGROW", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("GREENGROW", "DIVINATIONSIGIL", false);
 mods.thaumcraft.Research.setConcealed("GREENGROW", true);
@@ -357,9 +372,9 @@ mods.thaumcraft.Research.addInfusionPage("GREENGROW", <AWWayofTime:growthSigil>)
 mods.thaumcraft.Warp.addToResearch("GREENGROW", 2);
 
 // --- Void Sigil
-mods.thaumcraft.Research.addResearch("VOIDSIGIL", "BLOODMAGIC", "vacuos 15, terra 12, auram 9, praecantatio 6, metallum 3", -2, 6, 3, <AWWayofTime:voidSigil>);
+mods.thaumcraft.Research.addResearch("VOIDSIGIL", "BLOODMAGIC", "vacuos 15, terra 12, auram 9, praecantatio 6, metallum 3", -2 as int, 6, 3, <AWWayofTime:voidSigil>);
 game.setLocalization("tc.research_name.VOIDSIGIL", "Void Sigil");
-game.setLocalization("tc.research_text.VOIDSIGIL", "[BM] Better than a Swiffer!");
+game.setLocalization("tc.research_text.VOIDSIGIL", "[BM] Better than a swiffer!");
 mods.thaumcraft.Research.addPrereq("VOIDSIGIL", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("VOIDSIGIL", "WATERSIGIL", false);
 mods.thaumcraft.Research.setConcealed("VOIDSIGIL", true);
@@ -372,7 +387,7 @@ mods.thaumcraft.Research.addInfusionPage("VOIDSIGIL", <AWWayofTime:voidSigil>);
 mods.thaumcraft.Warp.addToResearch("VOIDSIGIL", 4);
 
 // --- Sigil of Swimming
-mods.thaumcraft.Research.addResearch("SIGILOFSWIMMING", "BLOODMAGIC", "aer 21, aqua 18, vacuos 15, terra 12, auram 9, praecantatio 6, metallum 3", -4, 8, 3, <BloodArsenal:sigil_of_swimming>);
+mods.thaumcraft.Research.addResearch("SIGILOFSWIMMING", "BLOODMAGIC", "aer 21, aqua 18, vacuos 15, terra 12, auram 9, praecantatio 6, metallum 3", -4 as int, 8, 3, <BloodArsenal:sigil_of_swimming>);
 game.setLocalization("tc.research_name.SIGILOFSWIMMING", "Sigil of Swimming");
 game.setLocalization("tc.research_text.SIGILOFSWIMMING", "[BA] Like a fish");
 mods.thaumcraft.Research.addPrereq("SIGILOFSWIMMING", "INFUSION", false);
@@ -381,15 +396,15 @@ mods.thaumcraft.Research.setConcealed("SIGILOFSWIMMING", true);
 mods.thaumcraft.Research.addPage("SIGILOFSWIMMING", "bloodmagic.research_page.SIGILOFSWIMMING");
 game.setLocalization("bloodmagic.research_page.SIGILOFSWIMMING", "The Sigil of Swimming allows the player to move faster, break faster, and breath underwater! So you are able now to rebuild Atlantis.");
 mods.thaumcraft.Infusion.addRecipe("SIGILOFSWIMMING", <AWWayofTime:voidSigil>, 
-[<AWWayofTime:demonicSlate>, <gregtech:gt.metaitem.01:30711>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "compressedoxygen", Amount: 1000}}), <gregtech:gt.metaitem.01:30711>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "compressedoxygen", Amount: 1000}}), <AWWayofTime:demonicSlate>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "compressedoxygen", Amount: 1000}}), <gregtech:gt.metaitem.01:30711>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "compressedoxygen", Amount: 1000}}), <gregtech:gt.metaitem.01:30711>], 
+[<AWWayofTime:demonicSlate>, <gregtech:gt.metaitem.01:30711>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "liquidoxygen", Amount: 1000}}), <gregtech:gt.metaitem.01:30711>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "liquidoxygen", Amount: 1000}}), <AWWayofTime:demonicSlate>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "liquidoxygen", Amount: 1000}}), <gregtech:gt.metaitem.01:30711>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "liquidoxygen", Amount: 1000}}), <gregtech:gt.metaitem.01:30711>], 
 "aer 64, aqua 64, vacuos 64, terra 48, praecantatio 32, auram 24, metallum 16", <BloodArsenal:sigil_of_swimming>, 12);
 mods.thaumcraft.Research.addInfusionPage("SIGILOFSWIMMING", <BloodArsenal:sigil_of_swimming>);
 mods.thaumcraft.Warp.addToResearch("SIGILOFSWIMMING", 6);
 
 // --- Blood Letters Pack
-mods.thaumcraft.Research.addResearch("BLOODLETTERSPACK", "BLOODMAGIC", "telum 15, sano 12, lucrum 9, tutamen 6, pannus 3",  2, -4, 3, <AWWayofTime:itemBloodPack>);
+mods.thaumcraft.Research.addResearch("BLOODLETTERSPACK", "BLOODMAGIC", "telum 15, sano 12, lucrum 9, tutamen 6, pannus 3",  2, -4 as int, 3, <AWWayofTime:itemBloodPack>);
 game.setLocalization("tc.research_name.BLOODLETTERSPACK", "Blood Letters Pack");
-game.setLocalization("tc.research_text.BLOODLETTERSPACK", "[BM] This Pack really chaffs...");
+game.setLocalization("tc.research_text.BLOODLETTERSPACK", "[BM] This pack really chaffs...");
 mods.thaumcraft.Research.addPrereq("BLOODLETTERSPACK", "SACRIFICIALKNIFE", false);
 mods.thaumcraft.Research.setConcealed("BLOODLETTERSPACK", true);
 mods.thaumcraft.Research.addPage("BLOODLETTERSPACK", "bloodmagic.research_page.BLOODLETTERSPACK");
@@ -401,9 +416,9 @@ mods.thaumcraft.Arcane.addShaped("BLOODLETTERSPACK", <AWWayofTime:itemBloodPack>
 mods.thaumcraft.Research.addArcanePage("BLOODLETTERSPACK", <AWWayofTime:itemBloodPack>);
 
 // --- Life Imbued Helm
-mods.thaumcraft.Research.addResearch("IMBUEARMOR", "BLOODMAGIC", "sano 15 , tutamen 12, praecantatio 9, metallum 6, potentia 3",  4, -6, 3, <BloodArsenal:life_imbued_chestplate>.withTag({LPStored: 0}));
+mods.thaumcraft.Research.addResearch("IMBUEARMOR", "BLOODMAGIC", "sano 15 , tutamen 12, praecantatio 9, metallum 6, potentia 3",  4, -6 as int, 3, <BloodArsenal:life_imbued_chestplate>.withTag({LPStored: 0}));
 game.setLocalization("tc.research_name.IMBUEARMOR", "Life Imbue Armor");
-game.setLocalization("tc.research_text.IMBUEARMOR", "[BM] Life for Blood");
+game.setLocalization("tc.research_text.IMBUEARMOR", "[BM] Life for blood");
 mods.thaumcraft.Research.addPrereq("IMBUEARMOR", "BLOODLETTERSPACK", false);
 mods.thaumcraft.Research.setConcealed("IMBUEARMOR", true);
 mods.thaumcraft.Research.addPage("IMBUEARMOR", "bloodmagic.research_page.IMBUEARMOR");
@@ -443,7 +458,7 @@ game.setLocalization("tc.research_text.WEAKORB", "[BM] Orb transformation Tier I
 mods.thaumcraft.Research.addPrereq("WEAKORB", "BLOODALTAR", false);
 mods.thaumcraft.Research.setConcealed("WEAKORB", true);
 mods.thaumcraft.Research.addPage("WEAKORB", "bloodmagic.research_page.WEAKORB");
-game.setLocalization("bloodmagic.research_page.WEAKORB", "After you createt a raw Orb Tier 1 out of Gregtech materials you have to thinking about how it can becomes a Blood Orb. Now you adding Magic to The Orb in the Fist step. After this you need to fill it with the Blood of the Blood Altar to get an Weak Blood Orb");
+game.setLocalization("bloodmagic.research_page.WEAKORB", "When you have created a Raw Orb Tier 1 out of Gregtech materials you have to think about how it can become a Blood Orb. The first step is adding magic to the orb. After that you need to fill it with the Blood from the Blood Altar to get a Weak Blood Orb");
 mods.thaumcraft.Arcane.addShaped("WEAKORB", <dreamcraft:item.WeakOrb>, "aer 20, aqua 20, ignis 20, terra 20, perditio 20, ordo 20", [
 [null, <ore:gemDiamond>, null],
 [<AWWayofTime:blankSlate>, <dreamcraft:item.RawOrbTier1>, <AWWayofTime:blankSlate>],
@@ -458,7 +473,7 @@ game.setLocalization("tc.research_text.APPRENTICEORB", "[BM] Orb transformation 
 mods.thaumcraft.Research.addPrereq("APPRENTICEORB", "WEAKORB", false);
 mods.thaumcraft.Research.setConcealed("APPRENTICEORB", true);
 mods.thaumcraft.Research.addPage("APPRENTICEORB", "bloodmagic.research_page.APPRENTICEORB");
-game.setLocalization("bloodmagic.research_page.APPRENTICEORB", "After you createt a raw Orb Tier 2 out of Gregtech materials you have to thinking about how it can becomes a Blood Orb. Now you adding Magic to The Orb in the Fist step. After this you need to fill it with the Blood of the Blood Altar to get an Apprentice Blood Orb");
+game.setLocalization("bloodmagic.research_page.APPRENTICEORB", "When you have created a Raw Orb Tier 2 out of Gregtech materials you have to think about how it can become a Blood Orb. The first step is adding magic to the orb. After that you need to fill it with the Blood from the Blood Altar to get an Apprentice Blood Orb.");
 mods.thaumcraft.Arcane.addShaped("APPRENTICEORB", <dreamcraft:item.ApprenticeOrb>, "aer 40, aqua 40, ignis 40, terra 40, perditio 40, ordo 40", [
 [null, <ore:gemFlawlessEmerald>, null],
 [<AWWayofTime:reinforcedSlate>, <dreamcraft:item.RawOrbTier2>, <AWWayofTime:reinforcedSlate>],
@@ -466,14 +481,14 @@ mods.thaumcraft.Arcane.addShaped("APPRENTICEORB", <dreamcraft:item.ApprenticeOrb
 mods.thaumcraft.Research.addArcanePage("APPRENTICEORB", <dreamcraft:item.ApprenticeOrb>);
 mods.thaumcraft.Warp.addToResearch("APPRENTICEORB", 2);
 
-// --- Magican Orb
+// --- Magician's Orb
 mods.thaumcraft.Research.addResearch("MAGICANORB", "BLOODMAGIC", "vitreus 15, potentia 12, praecantatio 9, cognitio 6, sano 3", 6, 0, 3, <dreamcraft:item.MagicianOrb>);
-game.setLocalization("tc.research_name.MAGICANORB", "Magican Orb");
+game.setLocalization("tc.research_name.MAGICANORB", "Magician's Orb");
 game.setLocalization("tc.research_text.MAGICANORB", "[BM] Orb transformation Tier III");
 mods.thaumcraft.Research.addPrereq("MAGICANORB", "APPRENTICEORB", false);
 mods.thaumcraft.Research.setConcealed("MAGICANORB", true);
 mods.thaumcraft.Research.addPage("MAGICANORB", "bloodmagic.research_page.MAGICANORB");
-game.setLocalization("bloodmagic.research_page.MAGICANORB", "After you createt a raw Orb Tier 3 out of Gregtech materials you have to thinking about how it can becomes a Blood Orb. Now you adding Magic to The Orb in the Fist step. After this you need to fill it with the Blood of the Blood Altar to get an Magican Blood Orb");
+game.setLocalization("bloodmagic.research_page.MAGICANORB", "When you have created a Raw Orb Tier 3 out of Gregtech materials you have to think about how it can become a Blood Orb. The first step is adding magic to the orb. After that you need to fill it with the Blood from the Blood Altar to get a Magician's Blood Orb.");
 mods.thaumcraft.Arcane.addShaped("MAGICANORB", <dreamcraft:item.MagicianOrb>, "aer 60, aqua 60, ignis 60, terra 60, perditio 60, ordo 60", [
 [null, <ore:blockGold>, null],
 [<AWWayofTime:imbuedSlate>, <dreamcraft:item.RawOrbTier3>, <AWWayofTime:imbuedSlate>],
@@ -488,7 +503,7 @@ game.setLocalization("tc.research_text.MASTERORB", "[BM] Orb transformation Tier
 mods.thaumcraft.Research.addPrereq("MASTERORB", "MAGICANORB", false);
 mods.thaumcraft.Research.setConcealed("MASTERORB", true);
 mods.thaumcraft.Research.addPage("MASTERORB", "bloodmagic.research_page.MASTERORB");
-game.setLocalization("bloodmagic.research_page.MASTERORB", "After you createt a raw Orb Tier 4 out of Gregtech materials you have to thinking about how it can becomes a Blood Orb. Now you adding Magic to The Orb in the Fist step. After this you need to fill it with the Blood of the Blood Altar to get an Master Blood Orb");
+game.setLocalization("bloodmagic.research_page.MASTERORB", "When you have created a Raw Orb Tier 4 out of Gregtech materials you have to think about how it can become a Blood Orb. The first step is adding magic to the orb. After that you need to fill it with the Blood from the Blood Altar to get a Master Blood Orb.");
 mods.thaumcraft.Arcane.addShaped("MASTERORB", <dreamcraft:item.MasterOrb>, "aer 80, aqua 80, ignis 80, terra 80, perditio 80, ordo 80", [
 [null, <AWWayofTime:weakBloodShard>, null],
 [<AWWayofTime:demonicSlate>, <dreamcraft:item.RawOrbTier4>, <AWWayofTime:demonicSlate>],
@@ -496,14 +511,14 @@ mods.thaumcraft.Arcane.addShaped("MASTERORB", <dreamcraft:item.MasterOrb>, "aer 
 mods.thaumcraft.Research.addArcanePage("MASTERORB", <dreamcraft:item.MasterOrb>);
 mods.thaumcraft.Warp.addToResearch("MASTERORB", 4);
 
-// --- Archmage Orb
+// --- Archmage's Orb
 mods.thaumcraft.Research.addResearch("ARCHMAGEORB", "BLOODMAGIC", "vitreus 21, potentia 18, praecantatio 15, cognitio 12, sano 9, aqua 6, infernus 3", 10, 0, 4, <dreamcraft:item.ArchmageOrb>);
-game.setLocalization("tc.research_name.ARCHMAGEORB", "Archmage Orb");
+game.setLocalization("tc.research_name.ARCHMAGEORB", "Archmage's Orb");
 game.setLocalization("tc.research_text.ARCHMAGEORB", "[BM] Orb transformation Tier V");
 mods.thaumcraft.Research.addPrereq("ARCHMAGEORB", "MASTERORB", false);
 mods.thaumcraft.Research.setConcealed("ARCHMAGEORB", true);
 mods.thaumcraft.Research.addPage("ARCHMAGEORB", "bloodmagic.research_page.ARCHMAGEORB");
-game.setLocalization("bloodmagic.research_page.ARCHMAGEORB", "After you createt a raw Orb Tier 5 out of Gregtech materials you have to thinking about how it can becomes a Blood Orb. Now you adding Magic to The Orb in the Fist step. After this you need to fill it with the Blood of the Blood Altar to get an Archmage Blood Orb");
+game.setLocalization("bloodmagic.research_page.ARCHMAGEORB", "When you have created a Raw Orb Tier 5 out of Gregtech materials you have to think about how it can become a Blood Orb. The first step is adding magic to the orb. After that you need to fill it with the Blood from the Blood Altar to get an Archmage's Blood Orb.");
 mods.thaumcraft.Arcane.addShaped("ARCHMAGEORB", <dreamcraft:item.ArchmageOrb>, "aer 100, aqua 100, ignis 100, terra 100, perditio 100, ordo 100", [
 [null, <AWWayofTime:demonBloodShard>, null],
 [<AWWayofTime:bloodMagicBaseItems:27>, <dreamcraft:item.RawOrbTier5>, <AWWayofTime:bloodMagicBaseItems:27>],
@@ -518,7 +533,7 @@ game.setLocalization("tc.research_text.TRANSCENDENTORB", "[BM] Orb transformatio
 mods.thaumcraft.Research.addPrereq("TRANSCENDENTORB", "ARCHMAGEORB", false);
 mods.thaumcraft.Research.setConcealed("TRANSCENDENTORB", true);
 mods.thaumcraft.Research.addPage("TRANSCENDENTORB", "bloodmagic.research_page.TRANSCENDENTORB");
-game.setLocalization("bloodmagic.research_page.TRANSCENDENTORB", "After you createt a raw Orb Tier 6 out of Gregtech materials you have to thinking about how it can becomes a Blood Orb. Now you adding Magic to The Orb in the Fist step. After this you need to fill it with the Blood of the Blood Altar to get an Transcendent Blood Orb");
+game.setLocalization("bloodmagic.research_page.TRANSCENDENTORB", "When you have created a Raw Orb Tier 6 out of Gregtech materials you have to think about how it can become a Blood Orb. The first step is adding magic to the orb. After that you need to fill it with the Blood from the Blood Altar to get an Transcendent Blood Orb.");
 mods.thaumcraft.Arcane.addShaped("TRANSCENDENTORB", <dreamcraft:item.TranscendentOrb>, "aer 150, aqua 150, ignis 150, terra 150, perditio 150, ordo 150", [
 [null, <AWWayofTime:blockCrystal>, null],
 [<BloodArsenal:sigil_of_lightning:1>, <dreamcraft:item.RawOrbTier6>, <BloodArsenal:sigil_of_lightning:1>],
@@ -529,7 +544,7 @@ mods.thaumcraft.Warp.addToResearch("TRANSCENDENTORB", 6);
 // --- Transparent Orb
 mods.thaumcraft.Research.addResearch("TRANSPARENTORB", "BLOODMAGIC", "vitreus 27, potentia 24, praecantatio 21, cognitio 18, sano 15, aqua 12, infernus 9, electrum 6, alienis 3", 14, 0, 4, <BloodArsenal:transparent_orb>);
 game.setLocalization("tc.research_name.TRANSPARENTORB", "Transparent Orb");
-game.setLocalization("tc.research_text.TRANSPARENTORB", "[BM] How much Liefe Points are in your Orb?");
+game.setLocalization("tc.research_text.TRANSPARENTORB", "[BM] How much Life Points are in your Orb?");
 mods.thaumcraft.Research.addPrereq("TRANSPARENTORB", "TRANSCENDENTORB", false);
 mods.thaumcraft.Research.setConcealed("TRANSPARENTORB", true);
 mods.thaumcraft.Research.addPage("TRANSPARENTORB", "bloodmagic.research_page.TRANSPARENTORB");
@@ -542,9 +557,9 @@ mods.thaumcraft.Research.addArcanePage("TRANSPARENTORB", <BloodArsenal:transpare
 mods.thaumcraft.Warp.addToResearch("TRANSPARENTORB", 7);
 
 // --- Empty Socket
-mods.thaumcraft.Research.addResearch("EMPTYSOCKET", "BLOODMAGIC", "terra 15, tutamen 12, praecantatio 9, tenebrae 6, sano 3", 2, -6, 3, <AWWayofTime:emptySocket>);
+mods.thaumcraft.Research.addResearch("EMPTYSOCKET", "BLOODMAGIC", "terra 15, tutamen 12, praecantatio 9, tenebrae 6, sano 3", 2, -6 as int, 3, <AWWayofTime:emptySocket>);
 game.setLocalization("tc.research_name.EMPTYSOCKET", "Empty Socket");
-game.setLocalization("tc.research_text.EMPTYSOCKET", "[BM] Mh this smees not to work...");
+game.setLocalization("tc.research_text.EMPTYSOCKET", "[BM] Hmm, this does not seem to work...");
 mods.thaumcraft.Research.addPrereq("EMPTYSOCKET", "BLOODLETTERSPACK", false);
 mods.thaumcraft.Research.setConcealed("EMPTYSOCKET", true);
 mods.thaumcraft.Research.addPage("EMPTYSOCKET", "bloodmagic.research_page.EMPTYSOCKET");
@@ -557,7 +572,7 @@ mods.thaumcraft.Research.addArcanePage("EMPTYSOCKET", <AWWayofTime:emptySocket>)
 mods.thaumcraft.Warp.addToResearch("EMPTYSOCKET", 2);
 
 // --- Soul Armor Forge
-mods.thaumcraft.Research.addResearch("SOULARMORFORGE", "BLOODMAGIC", "tutamen 18, metallum 15, praecantatio 12, praecantatio 9, tenebrae 6, exanimis 3", 2, -8, 3, <AWWayofTime:armourForge>);
+mods.thaumcraft.Research.addResearch("SOULARMORFORGE", "BLOODMAGIC", "tutamen 18, metallum 15, praecantatio 12, praecantatio 9, tenebrae 6, exanimis 3", 2, -8 as int, 3, <AWWayofTime:armourForge>);
 game.setLocalization("tc.research_name.SOULARMORFORGE", "Soul Armor Forge");
 game.setLocalization("tc.research_text.SOULARMORFORGE", "[BM] Demonic Armor");
 mods.thaumcraft.Research.addPrereq("SOULARMORFORGE", "INFUSION", false);
@@ -574,28 +589,28 @@ mods.thaumcraft.Research.addInfusionPage("SOULARMORFORGE", <AWWayofTime:armourFo
 mods.thaumcraft.Warp.addToResearch("SOULARMORFORGE", 4);
 
 // --- Rune of Argumented Capacity
-mods.thaumcraft.Research.addResearch("RUNEOFARGUMENTEDCAPACITY", "BLOODMAGIC", "aqua 18, fames 15, lucrum 12, praecantatio 9, terra 6, vacuos 3", -6, 0, 3, <AWWayofTime:AlchemicalWizardrybloodRune:1>);
-game.setLocalization("tc.research_name.RUNEOFARGUMENTEDCAPACITY", "Rune of Argumented Capacity");
+mods.thaumcraft.Research.addResearch("RUNEOFARGUMENTEDCAPACITY", "BLOODMAGIC", "aqua 18, fames 15, lucrum 12, praecantatio 9, terra 6, vacuos 3", -6 as int, 0, 3, <AWWayofTime:AlchemicalWizardrybloodRune:1>);
+game.setLocalization("tc.research_name.RUNEOFARGUMENTEDCAPACITY", "Rune of Augmented Capacity");
 game.setLocalization("tc.research_text.RUNEOFARGUMENTEDCAPACITY", "[BM] Pimp my Altar");
 mods.thaumcraft.Research.addPrereq("RUNEOFARGUMENTEDCAPACITY", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("RUNEOFARGUMENTEDCAPACITY", "RUNESACRIFICE", false);
 mods.thaumcraft.Research.setConcealed("RUNEOFARGUMENTEDCAPACITY", true);
 mods.thaumcraft.Research.addPage("RUNEOFARGUMENTEDCAPACITY", "bloodmagic.research_page.RUNEOFARGUMENTEDCAPACITY");
-game.setLocalization("bloodmagic.research_page.RUNEOFARGUMENTEDCAPACITY", "The Rune of Augmented Capacity is a rune added by Blood Magic that is used in upgrading the tier of the Blood Altar. This rune can be used in place of other runes, and can work along side each rune in the upgrade process. The Rune of Augmented Capacity adds an additional 2,000 LP storage potential to the Blood Altar. This also increases the tank's internal buffer as it is always 10% of the altar's capacity.");
+game.setLocalization("bloodmagic.research_page.RUNEOFARGUMENTEDCAPACITY", "The Rune of Augmented Capacity is a rune added by Blood Magic that is used in upgrading the tier of the Blood Altar. This rune can be used in place of other runes, and can work alongside each rune in the upgrade process. The Rune of Augmented Capacity adds an additional 2,000 LP storage potential to the Blood Altar. This also increases the tank's internal buffer as it is always 10% of the altar's capacity.");
 mods.thaumcraft.Infusion.addRecipe("RUNEOFARGUMENTEDCAPACITY", <BloodArsenal:blood_stone:1>, 
 [<BuildCraft|Factory:tankBlock>, <AWWayofTime:bloodMagicBaseAlchemyItems:8>, <AWWayofTime:imbuedSlate>, <AWWayofTime:bloodMagicBaseAlchemyItems:8>, <AWWayofTime:imbuedSlate>, <BuildCraft|Factory:tankBlock>, <AWWayofTime:bloodMagicBaseAlchemyItems:8>, <AWWayofTime:imbuedSlate>, <AWWayofTime:bloodMagicBaseAlchemyItems:8>, <AWWayofTime:imbuedSlate>], 
 "aqua 32, lucrum 24, fames 18, praecantatio 12, terra 8, vacuos 4", <AWWayofTime:AlchemicalWizardrybloodRune:1>, 7);
 mods.thaumcraft.Research.addInfusionPage("RUNEOFARGUMENTEDCAPACITY", <AWWayofTime:AlchemicalWizardrybloodRune:1>);
 
 // --- Rune of Dislocation
-mods.thaumcraft.Research.addResearch("RUNEOFDISLOCATION", "BLOODMAGIC", "aqua 18, praecantatio 15, motus 12 tempus 9, terra 9, cognitio 3", -6, 2, 3, <AWWayofTime:AlchemicalWizardrybloodRune:2>);
+mods.thaumcraft.Research.addResearch("RUNEOFDISLOCATION", "BLOODMAGIC", "aqua 18, praecantatio 15, motus 12 tempus 9, terra 9, cognitio 3", -6 as int, 2, 3, <AWWayofTime:AlchemicalWizardrybloodRune:2>);
 game.setLocalization("tc.research_name.RUNEOFDISLOCATION", "Rune of Dislocation");
 game.setLocalization("tc.research_text.RUNEOFDISLOCATION", "[BM] That was quick");
 mods.thaumcraft.Research.addPrereq("RUNEOFDISLOCATION", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("RUNEOFDISLOCATION", "RUNESACRIFICE", false);
 mods.thaumcraft.Research.setConcealed("RUNEOFDISLOCATION", true);
 mods.thaumcraft.Research.addPage("RUNEOFDISLOCATION", "bloodmagic.research_page.RUNEOFDISLOCATION");
-game.setLocalization("bloodmagic.research_page.RUNEOFDISLOCATION", "The Rune of Dislocation is a rune added by Blood Magic that is used in upgrading the tier of the Blood Altar. This rune can be used in place of other runes, and can work along side each rune in the upgrade process. The Rune of Dislocation increases the speed by which LP can be pumped into and out of the Blood Altar at a multiplicative 20% rate.");
+game.setLocalization("bloodmagic.research_page.RUNEOFDISLOCATION", "The Rune of Dislocation is a rune added by Blood Magic that is used in upgrading the tier of the Blood Altar. This rune can be used in place of other runes, and can work alongside each rune in the upgrade process. The Rune of Dislocation increases the speed by which LP can be pumped into and out of the Blood Altar at a multiplicative 20% rate.");
 mods.thaumcraft.Infusion.addRecipe("RUNEOFDISLOCATION", <BloodArsenal:blood_stone:1>, 
 [<gregtech:gt.metaitem.01:32613>, <AWWayofTime:aquasalus>, <AWWayofTime:imbuedSlate>, <AWWayofTime:aquasalus>, <AWWayofTime:imbuedSlate>, <gregtech:gt.metaitem.01:32613>, <AWWayofTime:aquasalus>, <AWWayofTime:imbuedSlate>, <AWWayofTime:aquasalus>, <AWWayofTime:imbuedSlate>], 
 "aqua 32, praecantatio 24, motus 18, tempus 12, terra 8, cognitio 4", <AWWayofTime:AlchemicalWizardrybloodRune:2>, 7);
@@ -604,7 +619,7 @@ mods.thaumcraft.Research.addInfusionPage("RUNEOFDISLOCATION", <AWWayofTime:Alche
 // --- Sigil of Elemental Affinity
 mods.thaumcraft.Research.addResearch("SIGILOFELEMENTALAFFINITY", "BLOODMAGIC", "volatus 27, ignis 24, aqua 21, aer 18, motus 15, praecantatio 12, iter 9, potentia 6, cognitio 3", 0, 12, 4, <AWWayofTime:sigilOfElementalAffinity>);
 game.setLocalization("tc.research_name.SIGILOFELEMENTALAFFINITY", "Sigil of Elemental Affinity");
-game.setLocalization("tc.research_text.SIGILOFELEMENTALAFFINITY", "[BM] Burned, drowned or falling to death not anymore");
+game.setLocalization("tc.research_text.SIGILOFELEMENTALAFFINITY", "[BM] Burned, drowned or falling to death no more");
 mods.thaumcraft.Research.addPrereq("SIGILOFELEMENTALAFFINITY", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("SIGILOFELEMENTALAFFINITY", "AIRSIGIL", false);
 mods.thaumcraft.Research.setConcealed("SIGILOFELEMENTALAFFINITY", true);
@@ -662,7 +677,7 @@ mods.thaumcraft.Research.addInfusionPage("SIGILOFAUGMENTETHOLDING", <BloodArsena
 mods.thaumcraft.Warp.addToResearch("SIGILOFAUGMENTETHOLDING", 4);
 
 // --- Sigil of Phantom Bridge
-mods.thaumcraft.Research.addResearch("SIGILOFPHANTOMBRIDGE", "BLOODMAGIC", "terra 18, alienis 15, iter 12, vitreus 9, potentia 6, praecantatio 3", -4, 6, 3, <AWWayofTime:sigilOfTheBridge>);
+mods.thaumcraft.Research.addResearch("SIGILOFPHANTOMBRIDGE", "BLOODMAGIC", "terra 18, alienis 15, iter 12, vitreus 9, potentia 6, praecantatio 3", -4 as int, 6, 3, <AWWayofTime:sigilOfTheBridge>);
 game.setLocalization("tc.research_name.SIGILOFPHANTOMBRIDGE", "Sigil of Phantom Bridge");
 game.setLocalization("tc.research_text.SIGILOFPHANTOMBRIDGE", "[BM] Air Walker");
 mods.thaumcraft.Research.addPrereq("SIGILOFPHANTOMBRIDGE", "INFUSION", false);
@@ -693,8 +708,8 @@ mods.thaumcraft.Warp.addToResearch("SIGILOFMAGNETISM", 2);
 
 // --- Sigil of the Blood Lamp
 mods.thaumcraft.Research.addResearch("SIGILOFTHEBLOODLAMP", "BLOODMAGIC", "lux 18, ignis 15, aer 12, potentia 9, sensus 6, praecantatio 3, ", 0, 6, 3, <AWWayofTime:itemBloodLightSigil>);
-game.setLocalization("tc.research_name.SIGILOFTHEBLOODLAMP", "Sigil of Sight");
-game.setLocalization("tc.research_text.SIGILOFTHEBLOODLAMP", "[BM] Blood Altar Infos for free");
+game.setLocalization("tc.research_name.SIGILOFTHEBLOODLAMP", "Sigil of the Blood Lamp");
+game.setLocalization("tc.research_text.SIGILOFTHEBLOODLAMP", "[BM] Bloody light all around");
 mods.thaumcraft.Research.addPrereq("SIGILOFTHEBLOODLAMP", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("SIGILOFTHEBLOODLAMP", "WATERSIGIL", false);
 mods.thaumcraft.Research.setConcealed("SIGILOFTHEBLOODLAMP", true);
@@ -721,7 +736,7 @@ mods.thaumcraft.Infusion.addRecipe("SIGILOFSIGHT", <AWWayofTime:divinationSigil>
 mods.thaumcraft.Research.addInfusionPage("SIGILOFSIGHT", <AWWayofTime:seerSigil>);
 
 // --- Ritual Diviner Tier 1
-mods.thaumcraft.Research.addResearch("RITUALDIVINER", "BLOODMAGIC", "aer 18, ignis 15, terra 12, aqua 9, perditio 6, ordo 3", -2, -8, 3, <AWWayofTime:itemRitualDiviner>);
+mods.thaumcraft.Research.addResearch("RITUALDIVINER", "BLOODMAGIC", "aer 18, ignis 15, terra 12, aqua 9, perditio 6, ordo 3", -2 as int, -8 as int, 3, <AWWayofTime:itemRitualDiviner>);
 game.setLocalization("tc.research_name.RITUALDIVINER", "Ritual Diviner");
 game.setLocalization("tc.research_text.RITUALDIVINER", "[BM] New Rituals");
 mods.thaumcraft.Research.addPrereq("RITUALDIVINER", "INFUSION", false);
@@ -751,7 +766,7 @@ mods.thaumcraft.Infusion.addRecipe("RITUALDIVINER", <AWWayofTime:itemRitualDivin
 mods.thaumcraft.Research.addInfusionPage("RITUALDIVINER", <AWWayofTime:itemRitualDiviner:2>);
 
 // --- Rune of the Orb
-mods.thaumcraft.Research.addResearch("RUNEOFTHEORB", "BLOODMAGIC", "potentia 15, victus 12, motus 9, lucrum 6, praecantatio 3", -6, -2, 3, <AWWayofTime:AlchemicalWizardrybloodRune:3>);
+mods.thaumcraft.Research.addResearch("RUNEOFTHEORB", "BLOODMAGIC", "potentia 15, victus 12, motus 9, lucrum 6, praecantatio 3", -6 as int, -2 as int, 3, <AWWayofTime:AlchemicalWizardrybloodRune:3>);
 game.setLocalization("tc.research_name.RUNEOFTHEORB", "Rune of the Orb");
 game.setLocalization("tc.research_text.RUNEOFTHEORB", "[BM] More Runes");
 mods.thaumcraft.Research.addPrereq("RUNEOFTHEORB", "INFUSION", false);
@@ -766,7 +781,7 @@ mods.thaumcraft.Infusion.addRecipe("RUNEOFTHEORB", <BloodArsenal:blood_stone:3>,
 mods.thaumcraft.Research.addInfusionPage("RUNEOFTHEORB", <AWWayofTime:AlchemicalWizardrybloodRune:3>);
 
 // --- Rune of Superior Capacity
-mods.thaumcraft.Research.addResearch("RUNEOFSUPERIORCAPACITY", "BLOODMAGIC", "potentia 18, aqua 15, cognitio 12, lucrum 9, praecantatio 6, alienis 3", -8, -2, 3, <AWWayofTime:AlchemicalWizardrybloodRune:4>);
+mods.thaumcraft.Research.addResearch("RUNEOFSUPERIORCAPACITY", "BLOODMAGIC", "potentia 18, aqua 15, cognitio 12, lucrum 9, praecantatio 6, alienis 3", -8 as int, -2 as int, 3, <AWWayofTime:AlchemicalWizardrybloodRune:4>);
 game.setLocalization("tc.research_name.RUNEOFSUPERIORCAPACITY", "Rune of Superior Capacity");
 game.setLocalization("tc.research_text.RUNEOFSUPERIORCAPACITY", "[BM] More Blood");
 mods.thaumcraft.Research.addPrereq("RUNEOFSUPERIORCAPACITY", "INFUSION", false);
@@ -783,7 +798,7 @@ mods.thaumcraft.Infusion.addRecipe("RUNEOFSUPERIORCAPACITY", <BloodArsenal:blood
 mods.thaumcraft.Research.addInfusionPage("RUNEOFSUPERIORCAPACITY", <AWWayofTime:AlchemicalWizardrybloodRune:4>);
 
 // --- Rune of Acceleration
-mods.thaumcraft.Research.addResearch("RUNEOFACCELERATION", "BLOODMAGIC", "potentia 21, tempus 18, cognitio 15, aqua 12, motus 9, praecantatio 6, terra 3", -8, 0, 3, <AWWayofTime:AlchemicalWizardrybloodRune:5>);
+mods.thaumcraft.Research.addResearch("RUNEOFACCELERATION", "BLOODMAGIC", "potentia 21, tempus 18, cognitio 15, aqua 12, motus 9, praecantatio 6, terra 3", -8 as int, 0, 3, <AWWayofTime:AlchemicalWizardrybloodRune:5>);
 game.setLocalization("tc.research_name.RUNEOFACCELERATION", "Rune of Acceleration");
 game.setLocalization("tc.research_text.RUNEOFACCELERATION", "[BM] More Speed");
 mods.thaumcraft.Research.addPrereq("RUNEOFACCELERATION", "INFUSION", false);
@@ -798,9 +813,9 @@ mods.thaumcraft.Infusion.addRecipe("RUNEOFACCELERATION", <BloodArsenal:blood_sto
 mods.thaumcraft.Research.addInfusionPage("RUNEOFACCELERATION", <AWWayofTime:AlchemicalWizardrybloodRune:5>);
 
 // --- Arcane Pedestal
-mods.thaumcraft.Research.addResearch("ARCANEPEDESTALANDPLINTH", "BLOODMAGIC", "ignis 15, terra 12, tenebrae 9, alienis 6, praecantatio 3", -4, -6, 3, <AWWayofTime:blockPedestal>);
+mods.thaumcraft.Research.addResearch("ARCANEPEDESTALANDPLINTH", "BLOODMAGIC", "ignis 15, terra 12, tenebrae 9, alienis 6, praecantatio 3", -4 as int, -6 as int, 3, <AWWayofTime:blockPedestal>);
 game.setLocalization("tc.research_name.ARCANEPEDESTALANDPLINTH", "Arcane Pedestal");
-game.setLocalization("tc.research_text.ARCANEPEDESTALANDPLINTH", "[BM] Lets summon some Demonds");
+game.setLocalization("tc.research_text.ARCANEPEDESTALANDPLINTH", "[BM] Let's summon some Demons");
 mods.thaumcraft.Research.addPrereq("ARCANEPEDESTALANDPLINTH", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("ARCANEPEDESTALANDPLINTH", "MASTERRITUALSTONE", false);
 mods.thaumcraft.Research.setConcealed("ARCANEPEDESTALANDPLINTH", true);
@@ -826,7 +841,7 @@ game.setLocalization("bloodmagic.research_page.ARCANEPEDESTALANDPLINTH.4", "The 
 mods.thaumcraft.Warp.addToResearch("ARCANEPEDESTALANDPLINTH", 2);
 
 // --- Alchemic Calcinator
-mods.thaumcraft.Research.addResearch("ALCHEMICCALCINATOR", "BLOODMAGIC", "praecantatio 18, vitreus 15, terra 12, perditio 9, aqua 6, ignis 3", -4, -8, 3, <AWWayofTime:blockAlchemicCalcinator>);
+mods.thaumcraft.Research.addResearch("ALCHEMICCALCINATOR", "BLOODMAGIC", "praecantatio 18, vitreus 15, terra 12, perditio 9, aqua 6, ignis 3", -4 as int, -8 as int, 3, <AWWayofTime:blockAlchemicCalcinator>);
 game.setLocalization("tc.research_name.ALCHEMICCALCINATOR", "Alchemic Calcinator");
 game.setLocalization("tc.research_text.ALCHEMICCALCINATOR", "[BM] Brewing some magical things");
 mods.thaumcraft.Research.addPrereq("ALCHEMICCALCINATOR", "ARCANEPEDESTALANDPLINTH", false);
@@ -841,9 +856,9 @@ mods.thaumcraft.Research.addArcanePage("ALCHEMICCALCINATOR", <AWWayofTime:blockA
 mods.thaumcraft.Warp.addToResearch("ALCHEMICCALCINATOR", 3);
 
 // --- Alchemic Router
-mods.thaumcraft.Research.addResearch("ALCHEMICTOOLS", "BLOODMAGIC", "terra 15, praecantatio 12, instrumentum 9, potentia 6, aer 3", -4, -12, 3, <AWWayofTime:itemAttunedCrystal>);
+mods.thaumcraft.Research.addResearch("ALCHEMICTOOLS", "BLOODMAGIC", "terra 15, praecantatio 12, instrumentum 9, potentia 6, aer 3", -4 as int, -12 as int, 3, <AWWayofTime:itemAttunedCrystal>);
 game.setLocalization("tc.research_name.ALCHEMICTOOLS", "Alchemic Tools");
-game.setLocalization("tc.research_text.ALCHEMICTOOLS", "[BM] Lets link it");
+game.setLocalization("tc.research_text.ALCHEMICTOOLS", "[BM] Let's link it");
 mods.thaumcraft.Research.addPrereq("ALCHEMICTOOLS", "ALCHEMICCALCINATOR", false);
 mods.thaumcraft.Research.setConcealed("ALCHEMICTOOLS", true);
 mods.thaumcraft.Research.addPage("ALCHEMICTOOLS", "bloodmagic.research_page.ALCHEMICTOOLS.1");
@@ -873,7 +888,7 @@ mods.thaumcraft.Arcane.addShaped("ALCHEMICTOOLS", <AWWayofTime:itemTankSegmenter
 mods.thaumcraft.Research.addArcanePage("ALCHEMICTOOLS", <AWWayofTime:itemTankSegmenter>);
 
 // --- Bell Jar
-mods.thaumcraft.Research.addResearch("BELLJAR", "BLOODMAGIC", "vitreus 18, aer 15, terra 12, ordo 9, lucrum 6, arbor 3", -6, -12, 3, <AWWayofTime:blockCrystalBelljar>);
+mods.thaumcraft.Research.addResearch("BELLJAR", "BLOODMAGIC", "vitreus 18, aer 15, terra 12, ordo 9, lucrum 6, arbor 3", -6 as int, -12 as int, 3, <AWWayofTime:blockCrystalBelljar>);
 game.setLocalization("tc.research_name.BELLJAR", "Bell Jar");
 game.setLocalization("tc.research_text.BELLJAR", "[BM] Demon Lamps");
 mods.thaumcraft.Research.addPrereq("BELLJAR", "ALCHEMICCALCINATOR", false);
@@ -887,9 +902,9 @@ mods.thaumcraft.Arcane.addShaped("BELLJAR", <AWWayofTime:blockCrystalBelljar>, "
 mods.thaumcraft.Research.addArcanePage("BELLJAR", <AWWayofTime:blockCrystalBelljar>);
 
 // --- Alchemy Relay
-mods.thaumcraft.Research.addResearch("ALCHEMYRELAY", "BLOODMAGIC", "metallum 18, bestia 15, pannus 12, praecantatio 9, alienis 6, potentia 3", -2, -12, 3, <AWWayofTime:blockReagentConduit>);
+mods.thaumcraft.Research.addResearch("ALCHEMYRELAY", "BLOODMAGIC", "metallum 18, bestia 15, pannus 12, praecantatio 9, alienis 6, potentia 3", -2 as int, -12 as int, 3, <AWWayofTime:blockReagentConduit>);
 game.setLocalization("tc.research_name.ALCHEMYRELAY", " Alchemy Relay");
-game.setLocalization("tc.research_text.ALCHEMYRELAY", "[BM] More the one Calcinator");
+game.setLocalization("tc.research_text.ALCHEMYRELAY", "[BM] More than one Calcinator");
 mods.thaumcraft.Research.addPrereq("ALCHEMYRELAY", "ALCHEMICCALCINATOR", false);
 mods.thaumcraft.Research.setConcealed("ALCHEMYRELAY", true);
 mods.thaumcraft.Research.addPage("ALCHEMYRELAY", "bloodmagic.research_page.ALCHEMYRELAY");
@@ -901,7 +916,7 @@ mods.thaumcraft.Arcane.addShaped("ALCHEMYRELAY", <AWWayofTime:blockReagentCondui
 mods.thaumcraft.Research.addArcanePage("ALCHEMYRELAY", <AWWayofTime:blockReagentConduit>);
 
 // --- Crystal Cluster
-mods.thaumcraft.Research.addResearch("CRYSTALCLUSTER", "BLOODMAGIC", "victus 21, spiritus 18, alienis 15, potentia 12, praecantatio 9, tenebrae 6, cognitio 3", -10, 0, 4, <AWWayofTime:blockCrystal>);
+mods.thaumcraft.Research.addResearch("CRYSTALCLUSTER", "BLOODMAGIC", "victus 21, spiritus 18, alienis 15, potentia 12, praecantatio 9, tenebrae 6, cognitio 3", -10 as int, 0, 4, <AWWayofTime:blockCrystal>);
 game.setLocalization("tc.research_name.CRYSTALCLUSTER", "Crystal CLuster");
 game.setLocalization("tc.research_text.CRYSTALCLUSTER", "[BM] Tier 6. Ready set go!");
 mods.thaumcraft.Research.addPrereq("CRYSTALCLUSTER", "INFUSION", false);
@@ -916,7 +931,7 @@ mods.thaumcraft.Research.addInfusionPage("CRYSTALCLUSTER", <AWWayofTime:blockCry
 mods.thaumcraft.Warp.addToResearch("CRYSTALCLUSTER", 5);
 
 // --- Ichorium Block
-mods.thaumcraft.Research.addResearch("ICHORIUMBLOCK", "BLOODMAGIC", "victus 21, fames 18, praecantatio 15, infernus 12, alienis 9, superbia 6, terra 3", -10, 2, 4, <gregtech:gt.blockmetal8:13>);
+mods.thaumcraft.Research.addResearch("ICHORIUMBLOCK", "BLOODMAGIC", "victus 21, fames 18, praecantatio 15, infernus 12, alienis 9, superbia 6, terra 3", -10 as int, 2, 4, <gregtech:gt.blockmetal8:13>);
 game.setLocalization("tc.research_name.ICHORIUMBLOCK", "Tier 6 Pillar");
 game.setLocalization("tc.research_text.ICHORIUMBLOCK", "[BM] The final Tier");
 mods.thaumcraft.Research.addPrereq("ICHORIUMBLOCK", "INFUSION", false);
@@ -925,13 +940,13 @@ mods.thaumcraft.Research.setConcealed("ICHORIUMBLOCK", true);
 mods.thaumcraft.Research.addPage("ICHORIUMBLOCK", "bloodmagic.research_page.ICHORIUMBLOCK");
 game.setLocalization("bloodmagic.research_page.ICHORIUMBLOCK", "The sixth and final tier of your Blood Magic altar will require 76 additional Blood Runes, and 4 seven block pillars made of Blood-Soaked Ichorium Blocks capped with Crystal Clusters. The Tier 6 Altar allows you to unlock the full potential of your Blood Magic endeavors by way of unlocking even more and more powerful transfusion recipes. Like previous tier, the sixth ring of runes requires a two-block gap outward from the previous ring. The Ichorium Blocks need to be placed in a Tier 5 Altar to soak up the Blood and be Transformed in a Blood Soaked Ichorium Block");
 mods.thaumcraft.Infusion.addRecipe("ICHORIUMBLOCK", <dreamcraft:tile.Mytryl>, 
-[<ThaumicTinkerer:kamiResource:2>, <AWWayofTime:bloodMagicBaseItems:28>, <ThaumicTinkerer:kamiResource>, <AWWayofTime:standardBindingAgent>, <ThaumicTinkerer:kamiResource:2>, <AWWayofTime:bloodMagicBaseItems:29>, <ThaumicTinkerer:kamiResource>, <AWWayofTime:bloodMagicBaseAlchemyItems:4>], 
+[<gregtech:gt.metaitem.01:11978>, <AWWayofTime:bloodMagicBaseItems:28>, <ThaumicTinkerer:kamiResource>, <AWWayofTime:standardBindingAgent>, <gregtech:gt.metaitem.01:11978>, <AWWayofTime:bloodMagicBaseItems:29>, <ThaumicTinkerer:kamiResource>, <AWWayofTime:bloodMagicBaseAlchemyItems:4>], 
 "victus 64, fames 48, praecantatio 32, infernus 24, alienis 16, superbia 16, terra 8", <gregtech:gt.blockmetal8:13>, 12);
 mods.thaumcraft.Research.addInfusionPage("ICHORIUMBLOCK", <gregtech:gt.blockmetal8:13>);
 mods.thaumcraft.Warp.addToResearch("ICHORIUMBLOCK", 3);
 
 // --- Glyph of Rigit Stability
-mods.thaumcraft.Research.addResearch("GLYPHSTONE", "BLOODMAGIC", "terra 21, superbia 18, ordo 15, cognitio 12, auram 9, praecantatio 6, alienis 3", 2, -10, 4, <AWWayofTime:blockStabilityGlyph>);
+mods.thaumcraft.Research.addResearch("GLYPHSTONE", "BLOODMAGIC", "terra 21, superbia 18, ordo 15, cognitio 12, auram 9, praecantatio 6, alienis 3", 2, -10 as int, 4, <AWWayofTime:blockStabilityGlyph>);
 game.setLocalization("tc.research_name.GLYPHSTONE", "Glyph Stone");
 game.setLocalization("tc.research_text.GLYPHSTONE", "[BM] Omega.... What?");
 mods.thaumcraft.Research.addPrereq("GLYPHSTONE", "INFUSION", false);
@@ -967,7 +982,7 @@ mods.thaumcraft.Arcane.addShaped("GLYPHSTONE", <AWWayofTime:blockEnchantmentGlyp
 mods.thaumcraft.Research.addArcanePage("GLYPHSTONE", <AWWayofTime:blockEnchantmentGlyph:1>);
 
 // --- Key of Binding
-mods.thaumcraft.Research.addResearch("KEYOFBINDING", "BLOODMAGIC", "vitreus 15, lucrum 12, metallum 9, terra 6, praecantatio 3", 4, -2, 3, <AWWayofTime:itemKeyOfDiablo>);
+mods.thaumcraft.Research.addResearch("KEYOFBINDING", "BLOODMAGIC", "vitreus 15, lucrum 12, metallum 9, terra 6, praecantatio 3", 4, -2 as int, 3, <AWWayofTime:itemKeyOfDiablo>);
 game.setLocalization("tc.research_name.KEYOFBINDING", "Key of Binding");
 game.setLocalization("tc.research_text.KEYOFBINDING", "[BM] Binding all the Stuff");
 mods.thaumcraft.Research.addPrereq("KEYOFBINDING", "SACRIFICIALKNIFE", false);
@@ -981,9 +996,9 @@ mods.thaumcraft.Arcane.addShaped("KEYOFBINDING", <AWWayofTime:itemKeyOfDiablo>, 
 mods.thaumcraft.Research.addArcanePage("KEYOFBINDING", <AWWayofTime:itemKeyOfDiablo>);
 
 // --- Armor Inhibitor
-mods.thaumcraft.Research.addResearch("ARMORINHIBITOR", "BLOODMAGIC", "metallum 15, lucrum 12, spiritus 9, alienis 6, praecantatio 3", 4, -8, 3, <AWWayofTime:armourInhibitor>);
+mods.thaumcraft.Research.addResearch("ARMORINHIBITOR", "BLOODMAGIC", "metallum 15, lucrum 12, spiritus 9, alienis 6, praecantatio 3", 4, -8 as int, 3, <AWWayofTime:armourInhibitor>);
 game.setLocalization("tc.research_name.ARMORINHIBITOR", "Armor Inhibitor");
-game.setLocalization("tc.research_text.ARMORINHIBITOR", "[BM] Used to supress a souls");
+game.setLocalization("tc.research_text.ARMORINHIBITOR", "[BM] Used to suppress the souls");
 mods.thaumcraft.Research.addPrereq("ARMORINHIBITOR", "SOULARMORFORGE", false);
 mods.thaumcraft.Research.setConcealed("ARMORINHIBITOR", true);
 mods.thaumcraft.Research.addPage("ARMORINHIBITOR", "bloodmagic.research_page.ARMORINHIBITOR");
@@ -995,7 +1010,7 @@ mods.thaumcraft.Arcane.addShaped("ARMORINHIBITOR", <AWWayofTime:armourInhibitor>
 mods.thaumcraft.Research.addArcanePage("ARMORINHIBITOR", <AWWayofTime:armourInhibitor>);
 
 // --- Sigil of Hast
-mods.thaumcraft.Research.addResearch("SIGILOFHASTE", "BLOODMAGIC", "iter 21, motus 18, aer 15, potentia 12, praecantatio 9, alienis 6, cognitio 3", -2, 12, 4, <AWWayofTime:sigilOfHaste>);
+mods.thaumcraft.Research.addResearch("SIGILOFHASTE", "BLOODMAGIC", "iter 21, motus 18, aer 15, potentia 12, praecantatio 9, alienis 6, cognitio 3", -2 as int, 12, 4, <AWWayofTime:sigilOfHaste>);
 game.setLocalization("tc.research_name.SIGILOFHASTE", "Sigil of Haste");
 game.setLocalization("tc.research_text.SIGILOFHASTE", "[BM] You are on speed?");
 mods.thaumcraft.Research.addPrereq("SIGILOFHASTE", "INFUSION", false);
@@ -1012,7 +1027,7 @@ mods.thaumcraft.Warp.addToResearch("SIGILOFHASTE", 3);
 // --- Sigil of Whirl Wind
 mods.thaumcraft.Research.addResearch("SIGILOFWHIRLWIND", "BLOODMAGIC", "aer 24, tutamen 21, potentia 18, victus 15, sano 12, cognitio 9, superbia 6, nebrisum 3", 2, 12, 4, <AWWayofTime:sigilOfWind>);
 game.setLocalization("tc.research_name.SIGILOFWHIRLWIND", "Sigil of Whirlwind");
-game.setLocalization("tc.research_text.SIGILOFWHIRLWIND", "[BM] Just blow away those Arrows");
+game.setLocalization("tc.research_text.SIGILOFWHIRLWIND", "[BM] Just blow away those arrows");
 mods.thaumcraft.Research.addPrereq("SIGILOFWHIRLWIND", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("SIGILOFWHIRLWIND", "AIRSIGIL", false);
 mods.thaumcraft.Research.setConcealed("SIGILOFWHIRLWIND", true);
@@ -1025,7 +1040,7 @@ mods.thaumcraft.Research.addInfusionPage("SIGILOFWHIRLWIND", <AWWayofTime:sigilO
 mods.thaumcraft.Warp.addToResearch("SIGILOFWHIRLWIND", 4);
 
 // --- Sigil of Supression
-mods.thaumcraft.Research.addResearch("SIGILOFSUPRESSION", "BLOODMAGIC", "vacuos 21, auram 18, aqua 15, metallum 12, praecantatio 9, terra 6, motus 3", -2, 8, 4, <AWWayofTime:sigilOfSupression>);
+mods.thaumcraft.Research.addResearch("SIGILOFSUPRESSION", "BLOODMAGIC", "vacuos 21, auram 18, aqua 15, metallum 12, praecantatio 9, terra 6, motus 3", -2 as int, 8, 4, <AWWayofTime:sigilOfSupression>);
 game.setLocalization("tc.research_name.SIGILOFSUPRESSION", "Sigil of Supression");
 game.setLocalization("tc.research_text.SIGILOFSUPRESSION", "[BM] Walk just like Jesus");
 mods.thaumcraft.Research.addPrereq("SIGILOFSUPRESSION", "INFUSION", false);
@@ -1042,7 +1057,7 @@ mods.thaumcraft.Warp.addToResearch("SIGILOFSUPRESSION", 5);
 // --- Sigil of Ender Serverance
 mods.thaumcraft.Research.addResearch("SIGILOFENDERSEVERANCE", "BLOODMAGIC", "alienis 21, cognitio 18, humanus 15, potentia 12, vinculum 9, limus 6, nebrisum 3", 0, 14, 4, <AWWayofTime:sigilOfEnderSeverance>);
 game.setLocalization("tc.research_name.SIGILOFENDERSEVERANCE", "Sigil of Ender Serverance");
-game.setLocalization("tc.research_text.SIGILOFENDERSEVERANCE", "[BM] Put those Enderman in a Dire Situation");
+game.setLocalization("tc.research_text.SIGILOFENDERSEVERANCE", "[BM] Put those Endermen in a dire situation");
 mods.thaumcraft.Research.addPrereq("SIGILOFENDERSEVERANCE", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("SIGILOFENDERSEVERANCE", "SIGILOFELEMENTALAFFINITY", false);
 mods.thaumcraft.Research.addPrereq("SIGILOFENDERSEVERANCE", "OCULUS", false);
@@ -1056,9 +1071,9 @@ mods.thaumcraft.Research.addInfusionPage("SIGILOFENDERSEVERANCE", <AWWayofTime:s
 mods.thaumcraft.Warp.addToResearch("SIGILOFENDERSEVERANCE", 6);
 
 // --- Ender Sigil
-mods.thaumcraft.Research.addResearch("ENDERSIGIL", "BLOODMAGIC", "vacuos 24, alienis 21, cognitio 18, humanus 15, potentia 12, vinculum 9, limus 6, nebrisum 3", -2, 16, 4, <BloodArsenal:sigil_of_ender>);
+mods.thaumcraft.Research.addResearch("ENDERSIGIL", "BLOODMAGIC", "vacuos 24, alienis 21, cognitio 18, humanus 15, potentia 12, vinculum 9, limus 6, nebrisum 3", -2 as int, 16, 4, <BloodArsenal:sigil_of_ender>);
 game.setLocalization("tc.research_name.ENDERSIGIL", "Ender Sigil");
-game.setLocalization("tc.research_text.ENDERSIGIL", "[BA] Stick your Hand into the End");
+game.setLocalization("tc.research_text.ENDERSIGIL", "[BA] Stick your hand into the End");
 mods.thaumcraft.Research.addPrereq("ENDERSIGIL", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("ENDERSIGIL", "SIGILOFENDERSEVERANCE", false);
 mods.thaumcraft.Research.setConcealed("ENDERSIGIL", true);
@@ -1103,12 +1118,12 @@ mods.thaumcraft.Warp.addToResearch("HARVESTGODDESSSIGIL", 7);
 // --- Sigil of Compression
 mods.thaumcraft.Research.addResearch("SIGILOFCOMPRESSION", "BLOODMAGIC", "metallum 15, potentia 12, machina 9, lucrum 6, superbia 3", 2, 8, 3, <AWWayofTime:itemCompressionSigil>);
 game.setLocalization("tc.research_name.SIGILOFCOMPRESSION", "Sigil of Compression");
-game.setLocalization("tc.research_text.SIGILOFCOMPRESSION", "[BM] Are you try to be the Hulk?");
+game.setLocalization("tc.research_text.SIGILOFCOMPRESSION", "[BM] Are you trying to be the Hulk?");
 mods.thaumcraft.Research.addPrereq("SIGILOFCOMPRESSION", "INFUSION", false);
 mods.thaumcraft.Research.addPrereq("SIGILOFCOMPRESSION", "SIGILOFMAGNETISM", false);
 mods.thaumcraft.Research.setConcealed("SIGILOFCOMPRESSION", true);
 mods.thaumcraft.Research.addPage("SIGILOFCOMPRESSION", "bloodmagic.research_page.SIGILOFCOMPRESSION");
-game.setLocalization("bloodmagic.research_page.SIGILOFCOMPRESSION", "The Sigil of Compression is an item added by the Blood Magic mod. This Sigil compresses any item picked-up into its block form if possible. Sadly it not works for Gregtech Ingots which makes the Sigil very useless. Activating this Sigil costs 250 LP every 10 seconds while active.");
+game.setLocalization("bloodmagic.research_page.SIGILOFCOMPRESSION", "The Sigil of Compression is an item added by the Blood Magic mod. This Sigil compresses any item picked-up into its block form if possible. Sadly this does not work for Gregtech ingots. Activating this Sigil costs 250 LP every 10 seconds while active.");
 mods.thaumcraft.Infusion.addRecipe("SIGILOFCOMPRESSION", <AWWayofTime:demonicSlate>, 
 [<AWWayofTime:demonicSlate>, <gregtech:gt.metaitem.01:32644>, <gregtech:gt.metaitem.01:32744>, <gregtech:gt.metaitem.01:32604>, <AWWayofTime:demonicSlate>, <gregtech:gt.metaitem.01:32604>, <gregtech:gt.metaitem.01:32744>, <gregtech:gt.metaitem.01:32644>], 
 "metallum 32, potentia 24, machina 16, lucrum 16, superbia 8", <AWWayofTime:itemCompressionSigil>, 10);
@@ -1116,7 +1131,7 @@ mods.thaumcraft.Research.addInfusionPage("SIGILOFCOMPRESSION", <AWWayofTime:item
 mods.thaumcraft.Warp.addToResearch("SIGILOFCOMPRESSION", 2);
 
 // --- Energy Bazooka I
-mods.thaumcraft.Research.addResearch("ENERGYBAZOOKAI", "BLOODMAGIC", "potentia 21, instrumentum 18, telum 15 , superbia 12, fames 9, nebrisum 6, ira 3", -12, 0, 4, <AWWayofTime:energyBazooka>);
+mods.thaumcraft.Research.addResearch("ENERGYBAZOOKAI", "BLOODMAGIC", "potentia 21, instrumentum 18, telum 15 , superbia 12, fames 9, nebrisum 6, ira 3", -12 as int, 0, 4, <AWWayofTime:energyBazooka>);
 game.setLocalization("tc.research_name.ENERGYBAZOOKAI", "Energy Bazooka I");
 game.setLocalization("tc.research_text.ENERGYBAZOOKAI", "[BM] Boooom I");
 mods.thaumcraft.Research.addPrereq("ENERGYBAZOOKAI", "CRYSTALCLUSTER", false);
@@ -1126,14 +1141,14 @@ mods.thaumcraft.Research.setConcealed("ENERGYBAZOOKAI", true);
 mods.thaumcraft.Research.addPage("ENERGYBAZOOKAI", "bloodmagic.research_page.ENERGYBAZOOKAI");
 game.setLocalization("bloodmagic.research_page.ENERGYBAZOOKAI", "The Energy Bazooka I is a stronger version of the Energy Blaster. This weapon uses 2,000 LP to fire a two-staged projectile. The primary projectile explodes into 20 secondary projectiles when it hits something. The secondary projectiles will rebound and explode on impact. Damage 200, Secondary Damage 250");
 mods.thaumcraft.Arcane.addShaped("ENERGYBAZOOKAI", <AWWayofTime:energyBazooka>, "aqua 150, ignis 150, terra 150, aer 150, perditio 150, ordo 150", [
-[<ThaumicTinkerer:kamiResource:2>, <Thaumcraft:ItemEldritchObject:3>, <ThaumicTinkerer:kamiResource:2>],
+[<gregtech:gt.metaitem.01:11978>, <Thaumcraft:ItemEldritchObject:3>, <gregtech:gt.metaitem.01:11978>],
 [<BloodArsenal:blood_infused_diamond_block>,  <AWWayofTime:energyBlasterThirdTier>, <BloodArsenal:blood_infused_diamond_block>],
-[<ThaumicTinkerer:kamiResource:2>, <AWWayofTime:demonicTelepositionFocus>, <ThaumicTinkerer:kamiResource:2>]]);
+[<gregtech:gt.metaitem.01:11978>, <AWWayofTime:demonicTelepositionFocus>, <gregtech:gt.metaitem.01:11978>]]);
 mods.thaumcraft.Research.addArcanePage("ENERGYBAZOOKAI", <AWWayofTime:energyBazooka>);
 mods.thaumcraft.Warp.addToResearch("ENERGYBAZOOKAI", 5);
 
 // --- Energy Bazooka II
-mods.thaumcraft.Research.addResearch("ENERGYBAZOOKAII", "BLOODMAGIC", "potentia 24, instrumentum 21, telum 18 , infernus 15, superbia 12, fames 9, nebrisum 6, ira 3", -14, 0, 4, <AWWayofTime:energyBazookaSecondTier>);
+mods.thaumcraft.Research.addResearch("ENERGYBAZOOKAII", "BLOODMAGIC", "potentia 24, instrumentum 21, telum 18 , infernus 15, superbia 12, fames 9, nebrisum 6, ira 3", -14 as int, 0, 4, <AWWayofTime:energyBazookaSecondTier>);
 game.setLocalization("tc.research_name.ENERGYBAZOOKAII", "Energy Bazooka II");
 game.setLocalization("tc.research_text.ENERGYBAZOOKAII", "[BM] Boooom II");
 mods.thaumcraft.Research.addPrereq("ENERGYBAZOOKAII", "INFUSION", false);
@@ -1148,7 +1163,7 @@ mods.thaumcraft.Research.addInfusionPage("ENERGYBAZOOKAII", <AWWayofTime:energyB
 mods.thaumcraft.Warp.addToResearch("ENERGYBAZOOKAII", 10);
 
 // --- Energy Bazooka III
-mods.thaumcraft.Research.addResearch("ENERGYBAZOOKAIII", "BLOODMAGIC", "potentia 27, instrumentum 24, telum 21 , terminus 18, infernus 15, superbia 12, fames 9, nebrisum 6, ira 3", -16, 0, 4, <AWWayofTime:energyBazookaThirdTier>);
+mods.thaumcraft.Research.addResearch("ENERGYBAZOOKAIII", "BLOODMAGIC", "potentia 27, instrumentum 24, telum 21 , terminus 18, infernus 15, superbia 12, fames 9, nebrisum 6, ira 3", -16 as int, 0, 4, <AWWayofTime:energyBazookaThirdTier>);
 game.setLocalization("tc.research_name.ENERGYBAZOOKAIII", "Energy Bazooka III");
 game.setLocalization("tc.research_text.ENERGYBAZOOKAIII", "[BM] Boooom III");
 mods.thaumcraft.Research.addPrereq("ENERGYBAZOOKAIII", "INFUSION", false);
@@ -1165,10 +1180,10 @@ mods.thaumcraft.Warp.addToResearch("ENERGYBAZOOKAIII", 20);
 // --- Blood Infused Wand Cap
 mods.thaumcraft.Research.clearPages("CAP_blood_iron");
 mods.thaumcraft.Research.addPage("CAP_blood_iron", "blood_arsenal.research_page.CAP_blood_iron.1");
-mods.thaumcraft.Infusion.addRecipe("CAP_blood_iron", <dreamcraft:item.WandCapAlchemical>, 
+mods.thaumcraft.Infusion.addRecipe("CAP_blood_iron", <ForbiddenMagic:WandCaps>, 
 [<BloodArsenal:amorphic_catalyst>, <BloodArsenal:blood_infused_glowstone_dust>, <gregtech:gt.metaitem.01:17977>, <gregtech:gt.metaitem.01:28977>, <gregtech:gt.metaitem.01:17977>, <BloodArsenal:blood_infused_glowstone_dust>, <BloodArsenal:amorphic_catalyst>, <BloodArsenal:blood_infused_glowstone_dust>, <gregtech:gt.metaitem.01:17977>, <gregtech:gt.metaitem.01:28977>, <gregtech:gt.metaitem.01:17977>, <BloodArsenal:blood_infused_glowstone_dust>],
-"aqua 32, praecantatio 24, victus 24, metallum 16, ignis 8", <dreamcraft:item.WandCapBloodIron>, 10);
-mods.thaumcraft.Research.addInfusionPage("CAP_blood_iron", <dreamcraft:item.WandCapBloodIron>);
+"aqua 32, praecantatio 24, victus 24, metallum 16, ignis 8", <BloodArsenal:wand_caps>, 10);
+mods.thaumcraft.Research.addInfusionPage("CAP_blood_iron", <BloodArsenal:wand_caps>);
 // -
 mods.thaumcraft.Research.setAspects("CAP_blood_iron", "victus 18, aqua 15 , praecantatio 12, tenebrae 9, metallum 6, tenebrae 3");
 mods.thaumcraft.Research.setComplexity("CAP_blood_iron", 3);
@@ -1190,489 +1205,20 @@ mods.thaumcraft.Warp.addToResearch("ROD_blood_wood", 5);
 // --- Blood Infused Wodden Staff of Doom
 mods.thaumcraft.Research.orphanResearch("ROD_blood_wood_staff");
 mods.thaumcraft.Research.removeResearch("ROD_blood_wood_staff");
-mods.thaumcraft.Research.addResearch("RODBLOODWOODSTAFF", "FORBIDDEN", "victus 18, instrumentum 15, aqua 12, praecantatio 9, potentia 6, tenebrae 3", 7, -5, 3, <BloodArsenal:wand_cores:1>);
+mods.thaumcraft.Research.addResearch("RODBLOODWOODSTAFF", "FORBIDDEN", "victus 18, instrumentum 15, aqua 12, praecantatio 9, potentia 6, tenebrae 3", 7, -5 as int, 3, <BloodArsenal:wand_cores:1>);
 game.setLocalization("tc.research_name.RODBLOODWOODSTAFF", "Blood Infused Wood Staff Core");
 game.setLocalization("tc.research_text.RODBLOODWOODSTAFF", "Bringing Doom to the party");
 mods.thaumcraft.Research.addPrereq("RODBLOODWOODSTAFF", "ROD_blood_staff", false);
 mods.thaumcraft.Research.addPrereq("RODBLOODWOODSTAFF", "ROD_blood_wood", false);
 mods.thaumcraft.Research.setConcealed("RODBLOODWOODSTAFF", true);
 mods.thaumcraft.Research.setSpikey("RODBLOODWOODSTAFF", true);
-mods.thaumcraft.Research.addPage("RODBLOODWOODSTAFF", "tc.research_page.RODBLOODWOODSTAFF");
-game.setLocalization("tc.research_page.RODBLOODWOODSTAFF", "Even with your supremely regenerative wand and caps, you are still not yet satisfied. You know that when the Blood Rods are turned into Blood Staff Cores, they regenerate four times faster but holds half the amount of vis. Working with some dark magics and a Blood Staff Core, you can now create a living terror. This mighty staff regenerates 2 times faster than the Blood Staff but this is where the regenerative capabilities of Blood Infused Wood meet its limits: the wood itself seemingly tries to regenerate faster than it physically can. To compensate for this, it has to draw Life from the player every time it regenerates vis. And unlike the other blood wands, it doesn't care if you survive or not...");
-mods.thaumcraft.Infusion.addRecipe("RODBLOODWOODSTAFF", <ForbiddenMagic:WandCores:9>, 
+mods.thaumcraft.Research.addPage("RODBLOODWOODSTAFF", "blood_arsenal.research_page.ROD_blood_wood_staff.1");
+mods.thaumcraft.Infusion.addRecipe("RODBLOODWOODSTAFF", <ForbiddenMagic:WandCores:9>,
 [<BloodArsenal:wand_cores>, <BloodArsenal:blood_infused_glowstone_dust>, <BloodArsenal:amorphic_catalyst>, <BloodArsenal:blood_infused_wood>, <BloodArsenal:blood_infused_glowstone_dust>, <BloodArsenal:amorphic_catalyst>, <BloodArsenal:blood_infused_wood>, <BloodArsenal:wand_cores>, <BloodArsenal:blood_infused_wood>, <BloodArsenal:amorphic_catalyst>, <BloodArsenal:blood_infused_glowstone_dust>, <BloodArsenal:blood_infused_wood>, <BloodArsenal:amorphic_catalyst>, <BloodArsenal:blood_infused_glowstone_dust>],
 "victus 64, aqua 64, praecantatio 64, instrumentum 48, metallum 16, ignis 16, infernus 8, arbor 32", <BloodArsenal:wand_cores:1>, 12);
 mods.thaumcraft.Research.addInfusionPage("RODBLOODWOODSTAFF", <BloodArsenal:wand_cores:1>);
 // -
 mods.thaumcraft.Warp.addToResearch("RODBLOODWOODSTAFF", 7);
-
-// --- Blood Iron Toped Wooden Wand
-mods.thaumcraft.Arcane.addShaped("CAP_blood_iron", <Thaumcraft:WandCasting:5>.withTag({cap: "blood_iron", rod: "wood"}), "aer 20, terra 20, ignis 20, aqua 20, ordo 20, perditio 20", [
-[<TwilightForest:item.nagaScale>, <ore:screwAluminium>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwAluminium>, <Forestry:oakStick>, <ore:screwAluminium>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwAluminium>, <TwilightForest:item.nagaScale>]]);
-
-// --- Blood Iron Toped Wooden Scepter
-mods.thaumcraft.Arcane.addShaped("CAP_blood_iron", <Thaumcraft:WandCasting:7>.withTag({cap: "blood_iron", rod: "wood", sceptre: 1 as byte}), "aer 30, terra 30, ignis 30, aqua 30, ordo 30, perditio 30", [
-[<TwilightForest:item.nagaScale>,  <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwAluminium>, <Forestry:oakStick>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>,  <ore:screwAluminium>, <TwilightForest:item.nagaScale>]]);
-
-// --- Blood Iron Topped Greatwood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_greatwood", <Thaumcraft:WandCasting:18>.withTag({cap: "blood_iron", rod: "greatwood"}), "aer 45, terra 45, ignis 45, aqua 45, ordo 45, perditio 45", [
-[<dreamcraft:item.LichBone>, <ore:screwStainlessSteel>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwStainlessSteel>, <Thaumcraft:WandRod>, <ore:screwStainlessSteel>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwStainlessSteel>, <dreamcraft:item.LichBone>]]);
-
-// --- Blood Iron Topped Greatwood Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:22>.withTag({cap: "blood_iron", rod: "greatwood", sceptre: 1 as byte}), "aer 90, terra 90, ignis 90, aqua 90, ordo 90, perditio 90", [
-[<dreamcraft:item.LichBone>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwStainlessSteel>, <Thaumcraft:WandRod>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwStainlessSteel>, <dreamcraft:item.LichBone>]]);
-
-// --- Blood Iron Topped Greatwood Staff Wand
-mods.thaumcraft.Arcane.addShaped("ROD_greatwood_staff", <Thaumcraft:WandCasting:40>.withTag({cap: "blood_iron", rod: "greatwood_staff"}), "aer 110, terra 110, ignis 110, aqua 110, ordo 110, perditio 110", [
-[<TwilightForest:item.fieryBlood>, <ore:screwTitanium>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:50>, <ore:screwTitanium>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Gretwood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:60>.withTag({cap: "blood_iron", rod: "greatwood_staff", sceptre: 1 as byte}), "aer 120, terra 120, ignis 120, aqua 120, ordo 120, perditio 120", [
-[<TwilightForest:item.fieryBlood>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:50>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Reed Wand
-mods.thaumcraft.Arcane.addShaped("ROD_reed", <Thaumcraft:WandCasting:30>.withTag({aqua: 100, cap: "blood_iron", rod: "reed"}), "aer 90, terra 90, ignis 90, aqua 90, ordo 90, perditio 90", [
-[<TwilightForest:item.fieryBlood>, <ore:screwTitanium>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:5>, <ore:screwTitanium>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Reed Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:45>.withTag({cap: "blood_iron", rod: "reed", sceptre: 1 as byte}), "aer 115, terra 115, ignis 115, aqua 115, ordo 115, perditio 115", [
-[<TwilightForest:item.fieryBlood>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:5>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Reed Staff
-mods.thaumcraft.Arcane.addShaped("ROD_reed_staff", <Thaumcraft:WandCasting:70>.withTag({cap: "blood_iron", rod: "reed_staff"}), "aer 125, terra 125, ignis 125, aqua 125, ordo 125, perditio 125", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:55>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Reed Staff Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:105>.withTag({cap: "blood_iron", rod: "reed_staff", sceptre: 1 as byte}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:55>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Blazing Wand
-mods.thaumcraft.Arcane.addShaped("ROD_blaze", <Thaumcraft:WandCasting:30>.withTag({cap: "blood_iron", rod: "blaze"}), "aer 90, terra 90, ignis 90, aqua 90, ordo 90, perditio 90", [
-[<TwilightForest:item.fieryBlood>, <ore:screwTitanium>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:6>, <ore:screwTitanium>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Blaze Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:45>.withTag({cap: "blood_iron", rod: "blaze", sceptre: 1 as byte}), "aer 115, terra 115, ignis 115, aqua 115, ordo 115, perditio 115", [
-[<TwilightForest:item.fieryBlood>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:6>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Blaze Staff Wand
-mods.thaumcraft.Arcane.addShaped("ROD_blaze_staff", <Thaumcraft:WandCasting:70>.withTag({cap: "blood_iron", rod: "blaze_staff"}), "aer 125, terra 125, ignis 125, aqua 125, ordo 125, perditio 125", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:56>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Blaze Staff Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:105>.withTag({cap: "blood_iron", rod: "blaze_staff"}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:56>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Obsidian Wand
-mods.thaumcraft.Arcane.addShaped("ROD_obsidian", <Thaumcraft:WandCasting:30>.withTag({cap: "blood_iron", rod: "obsidian"}), "aer 90, terra 90, ignis 90, aqua 90, ordo 90, perditio 90", [
-[<TwilightForest:item.fieryBlood>, <ore:screwTitanium>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:1>, <ore:screwTitanium>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Obsidian Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:45>.withTag({cap: "blood_iron", rod: "obsidian", sceptre: 1 as byte}), "aer 115, terra 115, ignis 115, aqua 115, ordo 115, perditio 115", [
-[<TwilightForest:item.fieryBlood>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:1>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Obsidian Staff Wand
-mods.thaumcraft.Arcane.addShaped("ROD_obsidian_staff", <Thaumcraft:WandCasting:70>.withTag({cap: "blood_iron", rod: "obsidian_staff", sceptre: 1 as byte}), "aer 125, terra 125, ignis 125, aqua 125, ordo 125, perditio 125", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:51>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Obsidian Staff Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:105>.withTag({cap: "blood_iron", rod: "obsidian_staff"}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:51>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Icy Wand
-mods.thaumcraft.Arcane.addShaped("ROD_ice", <Thaumcraft:WandCasting:30>.withTag({cap: "blood_iron", rod: "ice"}), "aer 90, terra 90, ignis 90, aqua 90, ordo 90, perditio 90", [
-[<TwilightForest:item.fieryBlood>, <ore:screwTitanium>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:3>, <ore:screwTitanium>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Icy Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:45>.withTag({cap: "blood_iron", rod: "ice", sceptre: 1 as byte}), "aer 115, terra 115, ignis 115, aqua 115, ordo 115, perditio 115", [
-[<TwilightForest:item.fieryBlood>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:3>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Icy Staff Wand
-mods.thaumcraft.Arcane.addShaped("ROD_ice_staff", <Thaumcraft:WandCasting:70>.withTag({cap: "blood_iron", rod: "ice_staff"}), "aer 125, terra 125, ignis 125, aqua 125, ordo 125, perditio 125", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:53>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Icy Staff Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:105>.withTag({cap: "blood_iron", rod: "ice_staff", sceptre: 1 as byte}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:53>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Bone Wand
-mods.thaumcraft.Arcane.addShaped("ROD_bone", <Thaumcraft:WandCasting:30>.withTag({cap: "blood_iron", rod: "bone"}), "aer 90, terra 90, ignis 90, aqua 90, ordo 90, perditio 90", [
-[<TwilightForest:item.fieryBlood>, <ore:screwTitanium>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:7>, <ore:screwTitanium>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Bone Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:45>.withTag({cap: "blood_iron", rod: "bone", sceptre: 1 as byte}), "aer 115, terra 115, ignis 115, aqua 115, ordo 115, perditio 115", [
-[<TwilightForest:item.fieryBlood>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:7>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Bone Staff Wand
-mods.thaumcraft.Arcane.addShaped("ROD_bone_staff", <Thaumcraft:WandCasting:70>.withTag({cap: "blood_iron", rod: "bone_staff"}), "aer 125, terra 125, ignis 125, aqua 125, ordo 125, perditio 125", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:57>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Bone Staff Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:105>.withTag({cap: "blood_iron", rod: "bone_staff", sceptre: 1 as byte}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:57>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Quartz Wand
-mods.thaumcraft.Arcane.addShaped("ROD_quartz", <Thaumcraft:WandCasting:30>.withTag({cap: "blood_iron", rod: "quartz"}), "aer 90, terra 90, ignis 90, aqua 90, ordo 90, perditio 90", [
-[<TwilightForest:item.fieryBlood>, <ore:screwTitanium>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:4>, <ore:screwTitanium>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Quartz Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:45>.withTag({cap: "blood_iron", rod: "quartz", sceptre: 1 as byte}), "aer 115, terra 115, ignis 115, aqua 115, ordo 115, perditio 115", [
-[<TwilightForest:item.fieryBlood>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTitanium>, <Thaumcraft:WandRod:4>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTitanium>, <TwilightForest:item.fieryBlood>]]);
-
-// --- Blood Iron Topped Quartz Staff Wand
-mods.thaumcraft.Arcane.addShaped("ROD_quartz_staff", <Thaumcraft:WandCasting:70>.withTag({cap: "blood_iron", rod: "quartz_staff"}), "aer 125, terra 125, ignis 125, aqua 125, ordo 125, perditio 125", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:54>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Quartz Staff Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:105>.withTag({cap: "blood_iron", rod: "quartz_staff", sceptre: 1 as byte}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:54>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Silverwood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_silverwood", <Thaumcraft:WandCasting:45>.withTag({cap: "blood_iron", rod: "silverwood"}), "aer 120, terra 120, ignis 120, aqua 120, ordo 120, perditio 120", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:2>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Silverwood Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:67>.withTag({cap: "blood_iron", rod: "silverwood", sceptre: 1 as byte}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <Thaumcraft:WandRod:2>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Silverwood Staff Wand
-mods.thaumcraft.Arcane.addShaped("ROD_silverwood_staff", <Thaumcraft:WandCasting:120>.withTag({cap: "blood_iron", rod: "silverwood_staff"}), "aer 230, terra 230, ignis 230, aqua 230, ordo 230, perditio 230", [
-[<TwilightForest:item.carminite>, <ore:screwChrome>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwChrome>, <Thaumcraft:WandRod:52>, <ore:screwChrome>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Blood Iron Topped Silverwood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:180>.withTag({cap: "blood_iron", rod: "silverwood_staff", sceptre: 1 as byte}), "aer 250, terra 250, ignis 250, aqua 250, ordo 250, perditio 250", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwChrome>, <Thaumcraft:WandRod:52>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Blood Iron Topped Ichorclothstapped Silverwooden Wand
-mods.thaumcraft.Arcane.addShaped("CAP_thaumium", <Thaumcraft:WandCasting:50>.withTag({cap: "blood_iron", rod: "ICHORCLOTH"}), "aer 450, terra 450, ignis 450, aqua 450, ordo 450, perditio 450", [
-[<dreamcraft:item.SnowQueenBlood>, <ore:screwOsmium>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwOsmium>, <ThaumicTinkerer:kamiResource:5>, <ore:screwOsmium>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwOsmium>, <dreamcraft:item.SnowQueenBlood>]]);
-
-// --- Blood Iron Topped Ichorclothstapped Silverwooden Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:75>.withTag({cap: "blood_iron", rod: "ICHORCLOTH", sceptre: 1 as byte}), "aer 500, terra 500, ignis 500, aqua 500, ordo 500, perditio 500", [
-[<dreamcraft:item.SnowQueenBlood>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwOsmium>, <ThaumicTinkerer:kamiResource:5>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwOsmium>, <dreamcraft:item.SnowQueenBlood>]]);
-
-// --- Blood Iron Topped Primal Staff
-mods.thaumcraft.Arcane.addShaped("ROD_primal_staff", <Thaumcraft:WandCasting:160>.withTag({cap: "blood_iron", rod: "primal_staff"}), "aer 250, terra 250, ignis 250, aqua 250, ordo 250, perditio 250", [
-[<TwilightForest:item.carminite>, <ore:screwIridium>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwIridium>, <Thaumcraft:WandRod:100>, <ore:screwIridium>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwIridium>, <TwilightForest:item.carminite>]]);
-
-// --- Blood Iron Topped Primal Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:240>.withTag({cap: "blood_iron", rod: "primal_staff", sceptre: 1 as byte}), "aer 350, terra 350, ignis 350, aqua 350, ordo 350, perditio 350", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwIridium>, <Thaumcraft:WandRod:100>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwIridium>, <TwilightForest:item.carminite>]]);
-
-// --- Blood Iron Topped Blood Wood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_silverwood", <Thaumcraft:WandCasting:80>.withTag({cap: "blood_iron", rod: "blood_wood"}), "aer 120, terra 120, ignis 120, aqua 120, ordo 120, perditio 120", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Blood Wood Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:120>.withTag({cap: "blood_iron", rod: "blood_wood", sceptre: 1 as byte}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Blood Iron Topped Blood Wood Staff Wand
-mods.thaumcraft.Arcane.addShaped("ROD_silverwood_staff", <Thaumcraft:WandCasting:135>.withTag({cap: "blood_iron", rod: "blood_wood_staff"}), "aer 230, terra 230, ignis 230, aqua 230, ordo 230, perditio 230", [
-[<TwilightForest:item.carminite>, <ore:screwChrome>, <dreamcraft:item.WandCapBloodIron>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <ore:screwChrome>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Blood Iron Topped Blood Wood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("SCEPTRE", <Thaumcraft:WandCasting:202>.withTag({cap: "blood_iron", rod: "blood_wood_staff", sceptre: 1 as byte}), "aer 250, terra 250, ignis 250, aqua 250, ordo 250, perditio 250", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.WandCapBloodIron>, <Thaumcraft:ItemResource:15>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <dreamcraft:item.WandCapBloodIron>],
-[<dreamcraft:item.WandCapBloodIron>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Iron Capped Blood Wood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:16>.withTag({cap: "iron", rod: "blood_wood"}), "aer 100, terra 100, ignis 100, aqua 100, ordo 100, perditio 100", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.IronWandCap>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.IronWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Iron Capped Blood Wood Scepter
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:24>.withTag({cap: "iron", rod: "blood_wood", sceptre: 1 as byte}), "aer 120, terra 120, ignis 120, aqua 120, ordo 120, perditio 120", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.IronWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <dreamcraft:item.IronWandCap>],
-[<dreamcraft:item.IronWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Iron Capped Blood Wood Staff Wand
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:27>.withTag({cap: "iron", rod: "blood_wood_staff"}), "aer 200, terra 200, ignis 200, aqua 200, ordo 200, perditio 200", [
-[<TwilightForest:item.carminite>, <ore:screwChrome>, <dreamcraft:item.IronWandCap>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <ore:screwChrome>],
-[<dreamcraft:item.IronWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Iron Capped Blood Wood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:40>.withTag({cap: "iron", rod: "blood_wood_staff", sceptre: 1 as byte}), "aer 220, terra 220, ignis 220, aqua 220, ordo 220, perditio 220", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.IronWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <dreamcraft:item.IronWandCap>],
-[<dreamcraft:item.IronWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Copper Capped Blood Wood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:32>.withTag({cap: "copper", rod: "blood_wood"}), "aer 110, terra 110, ignis 110, aqua 110, ordo 110, perditio 110", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.CopperWandCap>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.CopperWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Copper Capped Blood Wood Scepter
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:48>.withTag({cap: "copper", rod: "blood_wood", sceptre: 1 as byte}), "aer 130, terra 130, ignis 130, aqua 130, ordo 130, perditio 130", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.CopperWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <dreamcraft:item.CopperWandCap>],
-[<dreamcraft:item.CopperWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Copper Capped Blood Wood Staff Wand
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:54>.withTag({cap: "copper", rod: "blood_wood_staff"}), "aer 210, terra 210, ignis 210, aqua 210, ordo 210, perditio 210", [
-[<TwilightForest:item.carminite>, <ore:screwChrome>, <dreamcraft:item.CopperWandCap>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <ore:screwChrome>],
-[<dreamcraft:item.CopperWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Copper Capped Blood Wood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:81>.withTag({cap: "copper", rod: "blood_wood_staff", sceptre: 1 as byte}), "aer 230, terra 230, ignis 230, aqua 230, ordo 230, perditio 230", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.CopperWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <dreamcraft:item.CopperWandCap>],
-[<dreamcraft:item.CopperWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Gold Banded Blood Wood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:48>.withTag({cap: "gold", rod: "blood_wood"}), "aer 120, terra 120, ignis 120, aqua 120, ordo 120, perditio 120", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.GoldWandCap>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.GoldWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Gold Banded Blood Wood Scepter
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:72>.withTag({cap: "gold", rod: "blood_wood", sceptre: 1 as byte}), "aer 140, terra 140, ignis 140, aqua 140, ordo 140, perditio 140", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.GoldWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <dreamcraft:item.GoldWandCap>],
-[<dreamcraft:item.GoldWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Gold Banded Blood Wood Staff Wand
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:81>.withTag({cap: "gold", rod: "blood_wood_staff"}), "aer 220, terra 220, ignis 220, aqua 220, ordo 220, perditio 220", [
-[<TwilightForest:item.carminite>, <ore:screwChrome>, <dreamcraft:item.GoldWandCap>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <ore:screwChrome>],
-[<dreamcraft:item.GoldWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Gold Banded Blood Wood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:121>.withTag({cap: "gold", rod: "blood_wood_staff", sceptre: 1 as byte}), "aer 240, terra 240, ignis 240, aqua 240, ordo 240, perditio 240", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.GoldWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <dreamcraft:item.GoldWandCap>],
-[<dreamcraft:item.GoldWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Silver Bossed Blood Wood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:64>.withTag({cap: "silver", rod: "blood_wood"}), "aer 130, terra 130, ignis 130, aqua 130, ordo 130, perditio 130", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.ChargedSilverWandCap>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.ChargedSilverWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Silver Bossed Blood Wood Scepter
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:96>.withTag({cap: "silver", rod: "blood_wood", sceptre: 1 as byte}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.ChargedSilverWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <dreamcraft:item.ChargedSilverWandCap>],
-[<dreamcraft:item.ChargedSilverWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Silver Bossed Blood Wood Staff Wand
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:108>.withTag({cap: "silver", rod: "blood_wood_staff"}), "aer 230, terra 230, ignis 230, aqua 230, ordo 230, perditio 230", [
-[<TwilightForest:item.carminite>, <ore:screwChrome>, <dreamcraft:item.ChargedSilverWandCap>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <ore:screwChrome>],
-[<dreamcraft:item.ChargedSilverWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Silver Bossed Blood Wood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:162>.withTag({cap: "silver", rod: "blood_wood_staff", sceptre: 1 as byte}), "aer 250, terra 250, ignis 250, aqua 250, ordo 250, perditio 250", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.ChargedSilverWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <dreamcraft:item.ChargedSilverWandCap>],
-[<dreamcraft:item.ChargedSilverWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Thaumium Bossed Blood Wood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:96>.withTag({cap: "thaumium", rod: "blood_wood"}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.ChargedThaumiumWandCap>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.ChargedThaumiumWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Thaumium Bossed Blood Wood Scepter
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:144>.withTag({cap: "thaumium", rod: "blood_wood", sceptre: 1 as byte}), "aer 180, terra 180, ignis 180, aqua 180, ordo 180, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.ChargedThaumiumWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <dreamcraft:item.ChargedThaumiumWandCap>],
-[<dreamcraft:item.ChargedThaumiumWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Thaumium Bossed Blood Wood Staff Wand
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:162>.withTag({cap: "thaumium", rod: "blood_wood_staff"}), "aer 250, terra 250, ignis 250, aqua 250, ordo 250, perditio 230", [
-[<TwilightForest:item.carminite>, <ore:screwChrome>, <dreamcraft:item.ChargedThaumiumWandCap>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <ore:screwChrome>],
-[<dreamcraft:item.ChargedThaumiumWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Thaumium Bossed Blood Wood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:243>.withTag({cap: "thaumium", rod: "blood_wood_staff", sceptre: 1 as byte}), "aer 280, terra 280, ignis 280, aqua 280, ordo 280, perditio 280", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.ChargedThaumiumWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <dreamcraft:item.ChargedThaumiumWandCap>],
-[<dreamcraft:item.ChargedThaumiumWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Mechanists Blood Wood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:96>.withTag({cap: "MECHANIST", rod: "blood_wood"}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.ChargedMechanistWandCap>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.ChargedMechanistWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Mechanists Blood Wood Scepter
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:144>.withTag({cap: "MECHANIST", rod: "blood_wood", sceptre: 1 as byte}), "aer 180, terra 180, ignis 180, aqua 180, ordo 180, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.ChargedMechanistWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <dreamcraft:item.ChargedMechanistWandCap>],
-[<dreamcraft:item.ChargedMechanistWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Mechanists Blood Wood Staff Wand
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:162>.withTag({cap: "MECHANIST", rod: "blood_wood_staff"}), "aer 250, terra 250, ignis 250, aqua 250, ordo 250, perditio 230", [
-[<TwilightForest:item.carminite>, <ore:screwChrome>, <dreamcraft:item.ChargedMechanistWandCap>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <ore:screwChrome>],
-[<dreamcraft:item.ChargedMechanistWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Mechanists Blood Wood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:243>.withTag({cap: "MECHANIST", rod: "blood_wood_staff", sceptre: 1 as byte}), "aer 280, terra 280, ignis 280, aqua 280, ordo 280, perditio 280", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.ChargedMechanistWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <dreamcraft:item.ChargedMechanistWandCap>],
-[<dreamcraft:item.ChargedMechanistWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Sorjournas Blood Wood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:96>.withTag({cap: "SOJOURNER", rod: "blood_wood"}), "aer 150, terra 150, ignis 150, aqua 150, ordo 150, perditio 150", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.ChargedSojournerWandCap>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.ChargedSojournerWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Sorjournas Blood Wood Scepter
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:144>.withTag({cap: "SOJOURNER", rod: "blood_wood", sceptre: 1 as byte}), "aer 180, terra 180, ignis 180, aqua 180, ordo 180, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.ChargedSojournerWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <dreamcraft:item.ChargedSojournerWandCap>],
-[<dreamcraft:item.ChargedSojournerWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Sorjournas Blood Wood Staff Wand
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:162>.withTag({cap: "SOJOURNER", rod: "blood_wood_staff"}), "aer 250, terra 250, ignis 250, aqua 250, ordo 250, perditio 230", [
-[<TwilightForest:item.carminite>, <ore:screwChrome>, <dreamcraft:item.ChargedSojournerWandCap>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <ore:screwChrome>],
-[<dreamcraft:item.ChargedSojournerWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Sorjournas Blood Wood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:243>.withTag({cap: "SOJOURNER", rod: "blood_wood_staff", sceptre: 1 as byte}), "aer 280, terra 280, ignis 280, aqua 280, ordo 280, perditio 280", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.ChargedSojournerWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <dreamcraft:item.ChargedSojournerWandCap>],
-[<dreamcraft:item.ChargedSojournerWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Void Aspected Blood Wood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:144>.withTag({cap: "void", rod: "blood_wood"}), "aer 200, terra 200, ignis 200, aqua 200, ordo 200, perditio 200", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.ChargedVoidWandCap>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.ChargedVoidWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Void Aspected Blood Wood Scepter
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:216>.withTag({cap: "void", rod: "blood_wood", sceptre: 1 as byte}), "aer 250, terra 250, ignis 250, aqua 250, ordo 250, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.ChargedVoidWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <dreamcraft:item.ChargedVoidWandCap>],
-[<dreamcraft:item.ChargedVoidWandCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Void Aspected Blood Wood Staff Wand
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:189>.withTag({cap: "void", rod: "blood_wood_staff"}), "aer 300, terra 300, ignis 300, aqua 300, ordo 300, perditio 300", [
-[<TwilightForest:item.carminite>, <ore:screwChrome>, <dreamcraft:item.ChargedVoidWandCap>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <ore:screwChrome>],
-[<dreamcraft:item.ChargedVoidWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Void Aspected Blood Wood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:283>.withTag({cap: "void", rod: "blood_wood_staff", sceptre: 1 as byte}), "aer 350, terra 350, ignis 350, aqua 350, ordo 350, perditio 350", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.ChargedVoidWandCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <dreamcraft:item.ChargedVoidWandCap>],
-[<dreamcraft:item.ChargedVoidWandCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Inchorium Ardorned Blood Wood Wand
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:160>.withTag({cap: "ICHOR", rod: "blood_wood"}), "aer 200, terra 200, ignis 200, aqua 200, ordo 200, perditio 200", [
-[<TwilightForest:item.fieryTears>, <ore:screwTungstenSteel>, <dreamcraft:item.IchoriumCap>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <ore:screwTungstenSteel>],
-[<dreamcraft:item.IchoriumCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Inchorium Ardorned Blood Wood Scepter
-mods.thaumcraft.Arcane.addShaped("ROD_blood_wood", <Thaumcraft:WandCasting:240>.withTag({cap: "ICHOR", rod: "blood_wood", sceptre: 1 as byte}), "aer 250, terra 250, ignis 250, aqua 250, ordo 250, perditio 150", [
-[<TwilightForest:item.fieryTears>, <dreamcraft:item.IchoriumCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwTungstenSteel>, <BloodArsenal:wand_cores>, <dreamcraft:item.IchoriumCap>],
-[<dreamcraft:item.IchoriumCap>, <ore:screwTungstenSteel>, <TwilightForest:item.fieryTears>]]);
-
-// --- Inchorium Ardorned Blood Wood Staff Wand
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:270>.withTag({cap: "ICHOR", rod: "blood_wood_staff"}), "aer 320, terra 320, ignis 320, aqua 320, ordo 320, perditio 320", [
-[<TwilightForest:item.carminite>, <ore:screwChrome>, <dreamcraft:item.IchoriumCap>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <ore:screwChrome>],
-[<dreamcraft:item.IchoriumCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
-
-// --- Inchorium Ardorned Blood Wood Staff Scepter
-mods.thaumcraft.Arcane.addShaped("RODBLOODWOODSTAFF", <Thaumcraft:WandCasting:404>.withTag({cap: "ICHOR", rod: "blood_wood_staff", sceptre: 1 as byte}), "aer 450, terra 450, ignis 450, aqua 450, ordo 450, perditio 450", [
-[<TwilightForest:item.carminite>, <dreamcraft:item.IchoriumCap>, <Thaumcraft:ItemResource:15>],
-[<ore:screwChrome>, <BloodArsenal:wand_cores:1>, <dreamcraft:item.IchoriumCap>],
-[<dreamcraft:item.IchoriumCap>, <ore:screwChrome>, <TwilightForest:item.carminite>]]);
 
 
 

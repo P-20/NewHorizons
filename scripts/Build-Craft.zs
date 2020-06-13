@@ -64,7 +64,7 @@ val EmeraldRod = <ore:stickEmerald>;
 val DiamondRod = <ore:stickDiamond>;
 val RedAlloyRod = <ore:stickRedAlloy>;
 val SStoneRod = <dreamcraft:item.SandStoneRod>;
-val CobbleRod = <dreamcraft:item.CobbleStoneRod>;
+val CobbleRod = <gregtech:gt.metaitem.01:23299>;
 val RedAlloySrew = <ore:screwRedAlloy>;
 
 val ClearPane = <TConstruct:GlassPane>;
@@ -354,7 +354,7 @@ recipes.remove(<BuildCraft|Builders:templateItem>);
 // --- Blueprint
 recipes.remove(<BuildCraft|Builders:blueprintItem>);
 
-// --- Restone Board
+// --- Redstone Board
 recipes.remove(<BuildCraft|Robotics:redstone_board>);
 
 
@@ -518,15 +518,15 @@ recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsvoid>, [
 
 // --- Void Fluid Pipe
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsvoid>, [
-[<ore:stickRubber>, ClearPane, <ore:stickRubber>],
+[<ore:stickAnyRubber>, ClearPane, <ore:stickAnyRubber>],
 [ClearPane, <ore:gemEnderPearl>, ClearPane],
-[<ore:stickRubber>, ClearPane, <ore:stickRubber>]]);
+[<ore:stickAnyRubber>, ClearPane, <ore:stickAnyRubber>]]);
 
 // --- Auto Workbench
 recipes.addShaped(AutoWorkB, [
-[<IC2:itemCasing:4>, <ore:gearGtSmallAnyIron>, <IC2:itemCasing:4>],
+[<ore:itemCasingAnyIron>, <ore:gearGtSmallAnyIron>, <ore:itemCasingAnyIron>],
 [<ore:gearGtSmallAnyIron>, <Forestry:factory2:2>, <ore:gearGtSmallAnyIron>],
-[<IC2:itemCasing:4>, <gregtech:gt.metaitem.01:32600>, <IC2:itemCasing:4>]]);
+[<ore:itemCasingAnyIron>, <gregtech:gt.metaitem.01:32600>, <ore:itemCasingAnyIron>]]);
 
 // --- Paint Brush
 recipes.addShapeless(<BuildCraft|Core:paintbrush>, [<OpenBlocks:paintBrush>]);
@@ -548,39 +548,79 @@ recipes.addShaped(Builder, [
 
 // --- Architect Table
 recipes.addShaped(ArchitectT, [
-[<gregtech:gt.metaitem.01:32652>, <ore:crystalRedstone>, <gregtech:gt.metaitem.01:32652>],
-[<ore:circuitElite>, <gregtech:gt.blockmachines:13>, <ore:circuitElite>],
-[<ore:gearGtSmallStainlessSteel>, <gregtech:gt.metaitem.01:32602>, <ore:gearGtSmallStainlessSteel>]]);
+[<gregtech:gt.metaitem.01:32652>, <BuildCraft|Builders:templateItem>, <gregtech:gt.metaitem.01:32652>],
+[<ore:circuitAdvanced>, <gregtech:gt.blockmachines:13>, <ore:circuitAdvanced>],
+[<ore:gearGtDiamond>, <gregtech:gt.metaitem.01:32602>, <ore:gearGtDiamond>]]);
 
 // --- Electronic Library
 recipes.addShaped(ElecectronicLib, [
-[<dreamcraft:item.StainlessSteelItemCasing>, <ore:crystalRedstone>, <dreamcraft:item.StainlessSteelItemCasing>],
+[<ore:itemCasingStainlessSteel>, <ore:crystalRedstone>, <ore:itemCasingStainlessSteel>],
 [<ore:circuitData>, <dreamcraft:item.Display>, <ore:circuitData>],
-[<dreamcraft:item.StainlessSteelItemCasing>, <ore:plateSteel>, <dreamcraft:item.StainlessSteelItemCasing>]]);
+[<ore:itemCasingStainlessSteel>, <ore:plateSteel>, <ore:itemCasingStainlessSteel>]]);
 
 // --- Flood Gate
 recipes.addShaped(FloodGate, [
-[<IC2:itemCasing:5>, <gregtech:gt.metaitem.01:32610>, <IC2:itemCasing:5>],
+[<ore:itemCasingSteel>, <gregtech:gt.metaitem.01:32610>, <ore:itemCasingSteel>],
 [<dreamcraft:item.SteelBars>, <BuildCraft|Factory:tankBlock>, <dreamcraft:item.SteelBars>],
-[<IC2:itemCasing:5>, <dreamcraft:item.SteelBars>, <IC2:itemCasing:5>]]);
+[<ore:itemCasingSteel>, <dreamcraft:item.SteelBars>, <ore:itemCasingSteel>]]);
 
 // --- Laser
 recipes.addShaped(Laser, [
 [<ore:screwStainlessSteel>, <ore:blockRedstone>, <ore:screwStainlessSteel>],
-[<ore:lensDiamond>, <ore:circuitMaster>, <ore:lensDiamond>],
-[<ore:plateObsidian>, <gregtech:gt.metaitem.01:32681>, <ore:plateObsidian>]]);
+[<ore:lensDiamond>, <ore:circuitAdvanced>, <ore:lensDiamond>],
+[<ore:plateDenseObsidian>, <gregtech:gt.metaitem.01:32682>, <ore:plateDenseObsidian>]]);
 
 // --- Assembly Table
 recipes.addShaped(<BuildCraft|Silicon:laserTableBlock>, [
-[<gregtech:gt.metaitem.01:32651>, <ore:blockRedstone>, <gregtech:gt.metaitem.01:32651>],
-[<ore:plateDiamond>, <ore:circuitMaster>, <ore:plateDiamond>],
-[<ore:plateObsidian>, <gregtech:gt.metaitem.01:32691>, <ore:plateObsidian>]]);
+[<gregtech:gt.metaitem.01:32652>, <ore:blockRedstone>, <gregtech:gt.metaitem.01:32652>],
+[<ore:plateDiamond>, <ore:circuitAdvanced>, <ore:plateDiamond>],
+[<ore:plateDenseObsidian>, <gregtech:gt.metaitem.01:32692>, <ore:plateDenseObsidian>]]);
 
 // --- Charging Table
 recipes.addShaped(<BuildCraft|Silicon:laserTableBlock:3>, [
-[<ore:plateObsidian>, <ore:blockRedstone>, <ore:plateObsidian>],
+[<ore:circuitAdvanced>, <ore:blockRedstone>, <ore:circuitAdvanced>],
 [<ore:chipsetRed>, <ore:crystalRedstone> ,<ore:chipsetRed>],
-[<ore:plateObsidian>, <ore:chipsetRed>, <ore:plateObsidian>]]);
+[<ore:plateDenseObsidian>, <ore:chipsetRed>, <ore:plateDenseObsidian>]]);
+
+// --- Integration Table
+recipes.addShaped(<BuildCraft|Silicon:laserTableBlock:2>, [
+[<gregtech:gt.metaitem.01:32652>, <ore:blockRedstone>, <gregtech:gt.metaitem.01:32652>],
+[<BuildCraft|Silicon:redstoneChipset:3>, <ore:circuitAdvanced>, <BuildCraft|Silicon:redstoneChipset:3>],
+[<ore:plateDenseObsidian>, <BuildCraft|Silicon:redstoneChipset>, <ore:plateDenseObsidian>]]);
+
+// --- Programming Table
+recipes.addShaped(<BuildCraft|Silicon:laserTableBlock:4>, [
+[<ore:circuitAdvanced>, <ore:blockRedstone>, <ore:circuitAdvanced>],
+[<BuildCraft|Silicon:redstoneChipset:6>, <gregtech:gt.metaitem.01:32652>, <BuildCraft|Silicon:redstoneChipset:6>],
+[<ore:plateDenseObsidian>, <BuildCraft|Silicon:redstoneChipset>, <ore:plateDenseObsidian>]]);
+
+// --- Zone Planner
+recipes.addShaped(ZonePlanner, [
+[<gregtech:gt.metaitem.01:32652>, <ore:circuitAdvanced>, <gregtech:gt.metaitem.01:32652>],
+[<ore:gearGtDiamond>, <minecraft:map>, <ore:gearGtDiamond>],
+[<BuildCraft|Silicon:redstoneChipset:7>, <gregtech:gt.metaitem.01:32602>, <BuildCraft|Silicon:redstoneChipset:7>]]);
+
+// --- Robot
+recipes.addShaped(Robot, [
+[<ore:plateStainlessSteel>, <ore:plateStainlessSteel>, <ore:plateStainlessSteel>],
+[<BuildCraft|Silicon:redstoneChipset:3>, <BuildCraft|Silicon:redstoneCrystal>, <BuildCraft|Silicon:redstoneChipset:3>],
+[<ore:circuitAdvanced>, <ore:plateStainlessSteel>, <ore:circuitAdvanced>]]);
+
+// --- Requester
+recipes.addShaped(Requester, [
+[<ore:plateStainlessSteel>, <gregtech:gt.metaitem.01:32642>, <ore:plateStainlessSteel>],
+[<ore:gearGtSteel>, <ore:chestSteel>, <ore:gearGtSteel>],
+[<ore:plateStainlessSteel>, <gregtech:gt.metaitem.01:32692>, <ore:plateStainlessSteel>]]);
+
+// --- Wrench
+recipes.addShaped(<BuildCraft|Core:wrenchItem>, [
+[null, <ore:ingotStainlessSteel>, null],
+[ <ore:ingotStainlessSteel>,  <ore:ingotStainlessSteel>,  <ore:ingotStainlessSteel>],
+[ <ore:ingotStainlessSteel>, <ore:craftingToolHardHammer>,  <ore:ingotStainlessSteel>]]);
+
+
+
+
 
 
 
@@ -613,6 +653,48 @@ Assembler.addRecipe(<BuildCraft|Builders:blueprintItem>, <minecraft:paper>, <min
 Assembler.addRecipe(<BuildCraft|Factory:tankBlock>, <Railcraft:glass>, <gregtech:gt.metaitem.01:28032> * 2, 100, 8);
 // -
 Assembler.addRecipe(<BuildCraft|Factory:tankBlock>, <ExtraUtilities:decorativeBlock2:5>, <gregtech:gt.metaitem.01:28032> * 2, 100, 8);
+
+// --- Redstone Board
+Assembler.addRecipe(<BuildCraft|Robotics:redstone_board>, <minecraft:paper> * 8, <gregtech:gt.integrated_circuit:8> * 0, <liquid:molten.redstone> * 144, 200, 480);
+
+// --- Docking Station
+Assembler.addRecipe(DockingStation, <BuildCraft|Silicon:redstoneChipset:2>, <gregtech:gt.metaitem.01:17306> * 4, 300, 480);
+
+// --- Map Location
+Assembler.addRecipe(<BuildCraft|Core:mapLocation>, <minecraft:paper> * 8, <gregtech:gt.metaitem.02:32425>, 200, 480);
+// -
+Assembler.addRecipe(<BuildCraft|Core:mapLocation>, <minecraft:paper> * 8, <minecraft:dye:11>, 200, 480);
+// -
+Assembler.addRecipe(<BuildCraft|Core:mapLocation>, <minecraft:paper> * 8, <Botany:pigment:78>, 200, 480);
+// -
+Assembler.addRecipe(<BuildCraft|Core:mapLocation>, <minecraft:paper> * 8, <ExtraBees:misc:20>, 200, 480);
+
+// --- Gate Copier
+Assembler.addRecipe(GateCopier, <BuildCraft|Core:wrenchItem>, <BuildCraft|Silicon:redstoneChipset>, 100, 480);
+
+// --- Wooden Transport Pipe
+Assembler.addRecipe(<BuildCraft|Transport:item.buildcraftPipe.pipeitemswood> * 16, <ProjRed|Transportation:projectred.transportation.pipe> * 16, <gregtech:gt.metaitem.01:32632>, 400, 480);
+
+// --- Iron Transport Pipe
+Assembler.addRecipe(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsiron> * 16, <ProjRed|Transportation:projectred.transportation.pipe> * 16, <ProjRed|Transportation:projectred.transportation.pipe:1>, 400, 480);
+
+// --- Golden Transport Pipe
+Assembler.addRecipe(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsgold> * 16, <ProjRed|Transportation:projectred.transportation.pipe> * 16, <gregtech:gt.metaitem.01:32602>, 400, 480);
+
+// --- Diamond Transport Pipe
+Assembler.addRecipe(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdiamond> * 8, <ProjRed|Transportation:projectred.transportation.pipe> * 8, <ProjRed|Transportation:projectred.transportation.pipe:4>, 400, 480);
+
+// --- Obsidian Transport Pipe
+Assembler.addRecipe(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsobsidian> * 16, <ProjRed|Transportation:projectred.transportation.pipe> * 16, <gregtech:gt.metaitem.01:32652>, 400, 480);
+
+// --- Emerald Transport Pipe
+Assembler.addRecipe(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemerald> * 8, <ProjRed|Transportation:projectred.transportation.pipe> * 8, <IC2:itemPartCircuitAdv>, 400, 480);
+// -
+Assembler.addRecipe(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemerald> * 8, <ProjRed|Transportation:projectred.transportation.pipe> * 8, <gregtech:gt.metaitem.01:32703>, 400, 480);
+// -
+Assembler.addRecipe(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemerald> * 8, <ProjRed|Transportation:projectred.transportation.pipe> * 8, <gregtech:gt.metaitem.03:32082>, 400, 480);
+
+
 
 
 
@@ -679,3 +761,6 @@ NEI.overrideName(PipeDiamondKinesis, "Diamond-Covered Kinesis Pipe");
 
 // --- Emerald-Covered Kinesis Pipe
 NEI.overrideName(PipeEmeraldKinesis, "Emerald-Covered Kinesis Pipe");
+
+// --- Redstone Crystal
+NEI.overrideName(<BuildCraft|Silicon:redstoneCrystal>, "Firestone Crystal");

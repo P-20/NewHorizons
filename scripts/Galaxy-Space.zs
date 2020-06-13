@@ -7,8 +7,7 @@
 import mods.gregtech.Assembler;
 
 import mods.ic2.Compressor;
-import mods.gregtech.ImplosionCompressor;
-import mods.ic2.Macerator;
+import mods.gregtech.Pulverizer;
 import mods.nei.NEI;
 
 
@@ -178,6 +177,12 @@ recipes.remove(<GalaxySpace:oxstoragemoduleT2>);
 // --- Methane Gas Canister
 recipes.remove(<GalacticraftMars:item.methaneCanisterPartial:1>);
 
+// --- Lander 2
+recipes.remove(<GalaxySpace:item.ModuleLander2>);
+
+// --- Lander 3
+recipes.remove(<GalaxySpace:item.ModuleLander3>);
+
 
 
 
@@ -209,22 +214,22 @@ recipes.addShaped(<GalaxySpace:item.lead_leg>, [
 [<ore:CompressedLead>, <ore:craftingToolHardHammer>, <ore:CompressedLead>]]);
 
 // --- Solar Flares
-recipes.addShaped(<GalaxySpace:item.SolarFlares:1>, [
-[<ore:compressedDesh>, <GalaxySpace:item.SolarFlares>, <ore:compressedDesh>],
-[<GalaxySpace:item.SolarFlares>, <ore:compressedTitanium>, <GalaxySpace:item.SolarFlares>],
-[<ore:compressedDesh>, <GalaxySpace:item.SolarFlares>, <ore:compressedDesh>]]);
+//recipes.addShaped(<GalaxySpace:item.SolarFlares:1>, [
+//[<ore:compressedDesh>, <GalaxySpace:item.SolarFlares>, <ore:compressedDesh>],
+//[<GalaxySpace:item.SolarFlares>, <ore:compressedTitanium>, <GalaxySpace:item.SolarFlares>],
+//[<ore:compressedDesh>, <GalaxySpace:item.SolarFlares>, <ore:compressedDesh>]]);
 
 // --- Part Solar Flares
-recipes.addShaped(<GalaxySpace:item.SolarFlares>, [
-[<ore:compressedIron>, <GalacticraftCore:item.steelPole>, <ore:compressedIron>],
-[<GalacticraftCore:item.steelPole>, <GalacticraftCore:item.basicItem:1>, <GalacticraftCore:item.steelPole>],
-[<GalacticraftCore:item.steelPole>, <ore:compressedSteel>, <GalacticraftCore:item.steelPole>]]);
+//recipes.addShaped(<GalaxySpace:item.SolarFlares>, [
+//[<ore:compressedIron>, <GalacticraftCore:item.steelPole>, <ore:compressedIron>],
+//[<GalacticraftCore:item.steelPole>, <GalacticraftCore:item.basicItem:1>, <GalacticraftCore:item.steelPole>],
+//[<GalacticraftCore:item.steelPole>, <ore:compressedSteel>, <GalacticraftCore:item.steelPole>]]);
 
 // --- Solar Wind Panel
-recipes.addShaped(<GalaxySpace:solarwindpanel>, [
-[<ore:compressedTitanium>, <GalaxySpace:item.SolarFlares>, <ore:compressedTitanium>],
-[<GalacticraftCore:tile.aluminumWire:1>, <GalacticraftCore:item.steelPole>, <GalacticraftCore:tile.aluminumWire:1>],
-[<gregtech:gt.metaitem.01:32600>, <ore:waferAdvanced>, <gregtech:gt.metaitem.01:32690>]]);
+//recipes.addShaped(<GalaxySpace:solarwindpanel>, [
+//[<ore:compressedTitanium>, <GalaxySpace:item.SolarFlares>, <ore:compressedTitanium>],
+//[<GalacticraftCore:tile.aluminumWire:1>, <GalacticraftCore:item.steelPole>, <GalacticraftCore:tile.aluminumWire:1>],
+//[<gregtech:gt.metaitem.01:32600>, <ore:waferAdvanced>, <gregtech:gt.metaitem.01:32690>]]);
 
 // --- Cobaltum Boots
 recipes.addShaped(<GalaxySpace:item.cobaltum_boots>, [
@@ -291,12 +296,6 @@ recipes.addShaped(<dreamcraft:item.RawSDHCAlloy>, [
 [<ore:screwStainlessSteel>, <ore:craftingToolScrewdriver>, <ore:screwStainlessSteel>],
 [<GalaxySpace:item.CompressedDualBronze>, <GalaxySpace:item.CompressedCoal>, <GalaxySpace:item.CompressedDualAluminium>],
 [<ore:screwStainlessSteel>, <ore:craftingToolHardHammer>, <ore:screwStainlessSteel>]]);
-
-// --- Thermal Cloth Tier 2
-recipes.addShaped(<GalaxySpace:item.ThermalClothT2>, [
-[<ore:foilTitanium>, <dreamcraft:item.TungstenString>, <ore:foilTitanium>],
-[<dreamcraft:item.TungstenString>, <GalacticraftMars:item.itemBasicAsteroids:7>, <dreamcraft:item.TungstenString>],
-[<ore:foilTitanium>, <dreamcraft:item.TungstenString>, <ore:foilTitanium>]]);
 
 // --- Decorate Lead
 recipes.addShaped(<GalaxySpace:metalsblock>, [
@@ -365,10 +364,10 @@ recipes.addShaped(<GalaxySpace:machineframes>, [
 [<GalaxySpace:item.CompressedPlates:5>, <dreamcraft:item.WaferTier3>, <GalaxySpace:item.CompressedPlates:5>]]);
 
 // --- Hybride Solar Panel
-recipes.addShaped(<GalaxySpace:solarPanel>, [
-[<GalaxySpace:item.CompressedPlates:2>, <GalacticraftCore:item.basicItem:1>, <GalaxySpace:item.CompressedPlates:2>],
-[<GalacticraftCore:tile.aluminumWire:1>, <GalaxySpace:machineframes>, <GalacticraftCore:tile.aluminumWire:1>],
-[<gregtech:gt.metaitem.01:32601>, <dreamcraft:item.WaferTier3>, <gregtech:gt.metaitem.01:32691>]]);
+//recipes.addShaped(<GalaxySpace:solarPanel>, [
+//[<GalaxySpace:item.CompressedPlates:2>, <GalacticraftCore:item.basicItem:1>, <GalaxySpace:item.CompressedPlates:2>],
+//[<GalacticraftCore:tile.aluminumWire:1>, <GalaxySpace:machineframes>, <GalacticraftCore:tile.aluminumWire:1>],
+//[<gregtech:gt.metaitem.01:32601>, <dreamcraft:item.WaferTier3>, <gregtech:gt.metaitem.01:32691>]]);
 
 // --- Advanced Energy Cluster
 recipes.addShaped(<GalaxySpace:storagemoduleT3>, [
@@ -382,245 +381,87 @@ recipes.addShaped(<GalaxySpace:oxstoragemoduleT2>, [
 [<GalacticraftCore:tile.oxygenPipe>, <GalaxySpace:machineframes>, <GalacticraftCore:tile.oxygenPipe>],
 [<GalacticraftCore:tile.machine2:8>, <dreamcraft:item.WaferTier3>, <GalacticraftCore:tile.machine2:8>]]);
 
+// --- Lander 2
+recipes.addShaped(<GalaxySpace:item.ModuleLander2>, [
+[<ore:foilGold>, <GalacticraftCore:item.parachute:*>, <ore:foilGold>],
+[<GalacticraftCore:item.canvas>, <GalaxySpace:item.ModuleLander>, <GalacticraftCore:item.canvas>],
+[<ore:foilGold>, <GalacticraftCore:item.canvas>, <ore:foilGold>]]);
+
+// --- Lander 3
+recipes.addShaped(<GalaxySpace:item.ModuleLander3>, [
+[<GalacticraftMars:item.null:5>, <GalacticraftMars:item.null:5>, <GalacticraftMars:item.null:5>],
+[<GalacticraftCore:item.steelPole>, <GalaxySpace:item.ModuleLander2>, <GalacticraftCore:item.steelPole>],
+[<GalacticraftMars:item.null:5>, <GalacticraftMars:item.null:5>, <GalacticraftMars:item.null:5>]]);
+
 // --- Rocket Tier 4
 mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier4Rocket>,[
 [<dreamcraft:item.SchematicsTier4>, null, null, null, <GalacticraftMars:item.heavyNoseCone>, null, null, null, null],
 [null, null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
+[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <GalaxySpace:item.ModuleLander3>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
 [null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
 [null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <dreamcraft:item.HeavyDutyPlateTier4>, null, <dreamcraft:item.HeavyDutyPlateTier4>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
 [null, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine:1>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine:1>, null]]);
-
-// --- Rocket Tier 4 Cargo 1
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier4Rocket:1>,[
-[<dreamcraft:item.SchematicsTier4>, null, null, null, <GalacticraftMars:item.heavyNoseCone>, null, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <dreamcraft:item.HeavyDutyPlateTier4>, <ore:chestCopper>, <dreamcraft:item.HeavyDutyPlateTier4>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine:1>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine:1>, null]]);
-
-// --- Rocket Tier 4 Cargo 2
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier4Rocket:2>,[
-[<dreamcraft:item.SchematicsTier4>, null, null, null, <GalacticraftMars:item.heavyNoseCone>, null, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <dreamcraft:item.HeavyDutyPlateTier4>, <ore:chestIron>, <dreamcraft:item.HeavyDutyPlateTier4>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine:1>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine:1>, null]]);
-
-// --- Rocket Tier 4 Cargo 3
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier4Rocket:3>,[
-[<dreamcraft:item.SchematicsTier4>, null, null, null, <GalacticraftMars:item.heavyNoseCone>, null, null, null, null],
-[null, null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, null, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier4>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, null, <GalacticraftMars:item.itemBasicAsteroids:2>, <dreamcraft:item.HeavyDutyPlateTier4>, <ore:chestGold>, <dreamcraft:item.HeavyDutyPlateTier4>, <GalacticraftMars:item.itemBasicAsteroids:2>, null, null],
-[null, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine:1>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftMars:item.itemBasicAsteroids>, <GalacticraftMars:item.itemBasicAsteroids:1>, <GalacticraftCore:item.engine:1>, <GalacticraftCore:item.engine:1>, null]]);
+// -
+recipes.addShapeless(<GalaxySpace:item.Tier4Rocket>, [<GalaxySpace:item.Tier4Rocket:*>]);
 
 // --- Rocket Tier 5
 mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier5Rocket>,[
 [<dreamcraft:item.SchematicsTier5>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier3>, null, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
+[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <GalaxySpace:item.ModuleLander3>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
 [null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null],
 [null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
 [null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.Tier2Booster>, null]]);
-
-// --- Rocket Tier 5 Cargo 1
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier5Rocket:1>,[
-[<dreamcraft:item.SchematicsTier5>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier3>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, <ore:chestCopper>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.Tier2Booster>, null]]);
-
-// --- Rocket Tier 5 Cargo 2
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier5Rocket:2>,[
-[<dreamcraft:item.SchematicsTier5>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier3>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, <ore:chestIron>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.Tier2Booster>, null]]);
-
-// --- Rocket Tier 5 Cargo 3
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier5Rocket:3>,[
-[<dreamcraft:item.SchematicsTier5>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier3>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.MediumFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, null, null, null],
-[null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, <ore:chestGold>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyPlateTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.Tier2Booster>, null]]);
+// -
+recipes.addShapeless(<GalaxySpace:item.Tier5Rocket>, [<GalaxySpace:item.Tier5Rocket:*>]);
 
 // --- Rocket Tier 6
 mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier6Rocket>,[
 [<dreamcraft:item.SchematicsTier6>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier3>, null, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
+[null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <GalaxySpace:item.ModuleLander3>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
 [null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null],
 [null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
 [null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, null, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
 [null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.Tier2Booster>, null]]);
-
-// --- Rocket Tier 6 Cargo 1
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier6Rocket:1>,[
-[<dreamcraft:item.SchematicsTier6>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier3>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
-[null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, <ore:chestCopper>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.Tier2Booster>, null]]);
-
-// --- Rocket Tier 6 Cargo 2
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier6Rocket:2>,[
-[<dreamcraft:item.SchematicsTier6>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier3>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
-[null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, <ore:chestIron>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.Tier2Booster>, null]]);
-
-// --- Rocket Tier 6 Cargo 3
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier6Rocket:3>,[
-[<dreamcraft:item.SchematicsTier6>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier3>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier5>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, null, null, null],
-[null, null, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, null, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.HeavyDutyPlateTier6>, <ore:chestGold>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier3>, <dreamcraft:item.Tier2Booster>, null],
-[null, <dreamcraft:item.Tier2Booster>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.HeavyDutyRocketEngineTier3>, <dreamcraft:item.Tier2Booster>, null]]);
+// -
+recipes.addShapeless(<GalaxySpace:item.Tier6Rocket>, [<GalaxySpace:item.Tier6Rocket:*>]);
 
 // --- Rocket Tier 7
 mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier7Rocket>,[
 [<dreamcraft:item.SchematicsTier7>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier4>, null, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier7>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier7>, null, null, null],
+[null, null, null, <dreamcraft:item.HeavyDutyPlateTier7>, <GalaxySpace:item.ModuleLander3>, <dreamcraft:item.HeavyDutyPlateTier7>, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, null, null, null],
 [null, null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.Tier3Booster>, null, null],
 [null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
 [null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
 [null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, null, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
 [null, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, null]]);
-
-// --- Rocket Tier 7 Cargo 1
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier7Rocket:1>,[
-[<dreamcraft:item.SchematicsTier7>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier4>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier7>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier7>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, null, null, null],
-[null, null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.Tier3Booster>, null, null],
-[null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
-[null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
-[null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <ore:chestCopper>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
-[null, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, null]]);
-
-// --- Rocket Tier 7 Cargo 2
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier7Rocket:2>,[
-[<dreamcraft:item.SchematicsTier7>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier4>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier7>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier7>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, null, null, null],
-[null, null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.Tier3Booster>, null, null],
-[null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
-[null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
-[null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <ore:chestIron>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
-[null, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, null]]);
-
-// --- Rocket Tier 7 Cargo 3
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier7Rocket:3>,[
-[<dreamcraft:item.SchematicsTier7>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier4>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier7>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier7>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, null, null, null],
-[null, null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.LargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.Tier3Booster>, null, null],
-[null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
-[null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
-[null, <dreamcraft:item.Tier3Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <ore:chestGold>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier3Booster>, null],
-[null, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyPlateTier6>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, null]]);
+// -
+recipes.addShapeless(<GalaxySpace:item.Tier7Rocket>, [<GalaxySpace:item.Tier7Rocket:*>]);
 
 // --- Rocket Tier 8
 mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier8Rocket>,[
 [<dreamcraft:item.SchematicsTier8>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier4>, null, null, null, null],
 [null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier8>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier8>, null, null, null],
+[null, null, null, <dreamcraft:item.HeavyDutyPlateTier8>, <GalaxySpace:item.ModuleLander3>, <dreamcraft:item.HeavyDutyPlateTier8>, null, null, null],
 [null, null, <dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.Tier4Booster>, null, null],
 [null, <dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>, null],
 [<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
 [<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
 [<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, null, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
 [null, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, null]]);
-
-// --- Rocket Tier 8 Cargo 1
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier8Rocket:1>,[
-[<dreamcraft:item.SchematicsTier8>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier4>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier8>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier8>, null, null, null],
-[null, null, <dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.Tier4Booster>, null, null],
-[null, <dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>, null],
-[<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
-[<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
-[<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <ore:chestCopper>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
-[null, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, null]]);
-
-// --- Rocket Tier 8 Cargo 2
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier8Rocket:2>,[
-[<dreamcraft:item.SchematicsTier8>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier4>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier8>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier8>, null, null, null],
-[null, null, <dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.Tier4Booster>, null, null],
-[null, <dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>, null],
-[<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
-[<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
-[<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <ore:chestIron>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
-[null, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, null]]);
-
-// --- Rocket Tier 8 Cargo 3
-mods.avaritia.ExtremeCrafting.addShaped(<GalaxySpace:item.Tier8Rocket:3>,[
-[<dreamcraft:item.SchematicsTier8>, null, null, null, <dreamcraft:item.HeavyDutyNoseConeTier4>, null, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier7>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, null, null, null],
-[null, null, null, <dreamcraft:item.HeavyDutyPlateTier8>, <GalaxySpace:item.ModuleLander2>, <dreamcraft:item.HeavyDutyPlateTier8>, null, null, null],
-[null, null, <dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.Tier4Booster>, null, null],
-[null, <dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>, null],
-[<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
-[<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.ExtraLargeFuelCanister>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
-[<dreamcraft:item.Tier4Booster>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <ore:chestGold>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyPlateTier8>, <dreamcraft:item.HeavyDutyRocketFinsTier4>, <dreamcraft:item.Tier4Booster>],
-[null, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, <dreamcraft:item.HeavyDutyRocketEngineTier4>, null]]);
+// -
+recipes.addShapeless(<GalaxySpace:item.Tier8Rocket>, [<GalaxySpace:item.Tier8Rocket:*>]);
 
 // --- Space Suit Helmet
 recipes.addShaped(<GalaxySpace:item.spacesuit_helmet>, [
@@ -656,29 +497,75 @@ recipes.addShaped(<GalaxySpace:item.spacesuit_boots>, [
 // --- Lead Battery
 Assembler.addRecipe(<GalaxySpace:item.LeadBattery:100>.withTag({electricity: 0.0 as float}), <GalacticraftCore:item.battery:*>, <gregtech:gt.integrated_circuit:1>, <liquid:molten.lead> * 6000, 100, 120);
 
+// --- Thermal Cloth Tier 2
+Assembler.addRecipe(<GalaxySpace:item.ThermalClothT2>, [<GalacticraftMars:item.itemBasicAsteroids:7>, <gregtech:gt.metaitem.01:29028> * 8, <dreamcraft:item.TungstenString> * 8, <gregtech:gt.integrated_circuit:1> * 0], <liquid:molten.polybenzimidazole> * 576, 600, 1024);
+
 // --- Thermal Helmet Tier 2
-Assembler.addRecipe(<GalaxySpace:item.ThermalPaddingT2>, <GalaxySpace:item.ThermalClothT2> * 5, <gregtech:gt.integrated_circuit:5> * 0, 1500, 1920);
+Assembler.addRecipe(<GalaxySpace:item.ThermalPaddingT2>, [<GalaxySpace:item.ThermalClothT2> * 5, <dreamcraft:item.TungstenString> * 5, <gregtech:gt.integrated_circuit:5> * 0], <liquid:molten.polybenzimidazole> * 1440, 1500, 1920);
+// -
+Assembler.addRecipe(<GalaxySpace:item.ThermalClothT2> * 5, <GalaxySpace:item.ThermalPaddingT2>, <gregtech:gt.integrated_circuit:1> * 0, 360, 1024);
 
 // --- Thermal Chestplate Tier 2
-Assembler.addRecipe(<GalaxySpace:item.ThermalPaddingT2:1>, <GalaxySpace:item.ThermalClothT2> * 8, <gregtech:gt.integrated_circuit:8> * 0, 2400, 1920);
+Assembler.addRecipe(<GalaxySpace:item.ThermalPaddingT2:1>, [<GalaxySpace:item.ThermalClothT2> * 8, <dreamcraft:item.TungstenString> * 8, <gregtech:gt.integrated_circuit:8> * 0], <liquid:molten.polybenzimidazole> * 2304, 2400, 1920);
+// -
+Assembler.addRecipe(<GalaxySpace:item.ThermalClothT2> * 8, <GalaxySpace:item.ThermalPaddingT2:1>, <gregtech:gt.integrated_circuit:1> * 0, 600, 1024);
 
 // --- Thermal Leggings Tier 2
-Assembler.addRecipe(<GalaxySpace:item.ThermalPaddingT2:2>, <GalaxySpace:item.ThermalClothT2> * 7, <gregtech:gt.integrated_circuit:7> * 0, 2100, 1920);
+Assembler.addRecipe(<GalaxySpace:item.ThermalPaddingT2:2>, [<GalaxySpace:item.ThermalClothT2> * 7, <dreamcraft:item.TungstenString> * 7, <gregtech:gt.integrated_circuit:7> * 0], <liquid:molten.polybenzimidazole> * 2016, 2100, 1920);
+// -
+Assembler.addRecipe(<GalaxySpace:item.ThermalClothT2> * 7, <GalaxySpace:item.ThermalPaddingT2:2>, <gregtech:gt.integrated_circuit:1> * 0, 520, 1024);
 
 // --- Thermal Boots Tier 2
-Assembler.addRecipe(<GalaxySpace:item.ThermalPaddingT2:3>, <GalaxySpace:item.ThermalClothT2> * 4, <gregtech:gt.integrated_circuit:4> * 0, 1200, 1920);
+Assembler.addRecipe(<GalaxySpace:item.ThermalPaddingT2:3>, [<GalaxySpace:item.ThermalClothT2> * 4, <dreamcraft:item.TungstenString> * 4, <gregtech:gt.integrated_circuit:4> * 0], <liquid:molten.polybenzimidazole> * 1152, 1200, 1920);
+// -
+Assembler.addRecipe(<GalaxySpace:item.ThermalClothT2> * 4, <GalaxySpace:item.ThermalPaddingT2:3>, <gregtech:gt.integrated_circuit:1> * 0, 300, 1024);
 
 // --- Future Glass
 Assembler.addRecipe(<GalaxySpace:futureglass>, <minecraft:glass>, <gregtech:gt.metaitem.01:23884> * 8, 200, 480);
 
 // --- Space Suit Jetpack
-Assembler.addRecipe(<GalaxySpace:item.spacesuit_jetplate>.withTag({electricity: 0.0 as float}), <GalaxySpace:item.spacesuit_plate>, <IC2:itemArmorJetpackElectric:26>, <liquid:molten.duralumin> * 1440, 600, 1920);
+Assembler.addRecipe(<GalaxySpace:item.spacesuit_jetplate>.withTag({electricity: 0.0 as float}), <GalaxySpace:item.spacesuit_plate>, <IC2:itemArmorJetpackElectric:1>, <liquid:molten.duralumin> * 1440, 600, 1920);
 
 // --- Space Suit Gravity Boots
 Assembler.addRecipe(<GalaxySpace:item.spacesuit_gravityboots>, <GalaxySpace:item.spacesuit_boots>, <GalaxySpace:item.CompressedPlates:4> * 2, <liquid:molten.duralumin> * 1440, 600, 1920);
 
 // --- Space Suit Sensor Glasses
 Assembler.addRecipe(<GalaxySpace:item.spacesuit_helmetglasses>, <GalaxySpace:item.spacesuit_helmet>, <GalacticraftCore:item.sensorGlasses>, <liquid:molten.duralumin> * 1440, 600, 1920);
+
+// --- Rocket Tier 4 with Chest
+Assembler.addRecipe(<GalaxySpace:item.Tier4Rocket:1>, <GalaxySpace:item.Tier4Rocket>, <ore:chestCopper>, 100, 4096);
+// -
+Assembler.addRecipe(<GalaxySpace:item.Tier4Rocket:2>, <GalaxySpace:item.Tier4Rocket>, <ore:chestIron>, 100, 4096);
+// -
+Assembler.addRecipe(<GalaxySpace:item.Tier4Rocket:3>, <GalaxySpace:item.Tier4Rocket>, <ore:chestGold>, 100, 4096);
+
+// --- Rocket Tier 5 with Chest
+Assembler.addRecipe(<GalaxySpace:item.Tier5Rocket:1>, <GalaxySpace:item.Tier5Rocket>, <ore:chestCopper>, 100, 7680);
+// -
+Assembler.addRecipe(<GalaxySpace:item.Tier5Rocket:2>, <GalaxySpace:item.Tier5Rocket>, <ore:chestIron>, 100, 7680);
+// -
+Assembler.addRecipe(<GalaxySpace:item.Tier5Rocket:3>, <GalaxySpace:item.Tier5Rocket>, <ore:chestGold>, 100, 7680);
+
+// --- Rocket Tier 6 with Chest
+Assembler.addRecipe(<GalaxySpace:item.Tier6Rocket:1>, <GalaxySpace:item.Tier6Rocket>, <ore:chestCopper>, 100, 16384);
+// -
+Assembler.addRecipe(<GalaxySpace:item.Tier6Rocket:2>, <GalaxySpace:item.Tier6Rocket>, <ore:chestIron>, 100, 16384);
+// -
+Assembler.addRecipe(<GalaxySpace:item.Tier6Rocket:3>, <GalaxySpace:item.Tier6Rocket>, <ore:chestGold>, 100, 16384);
+
+// --- Rocket Tier 7 with Chest
+Assembler.addRecipe(<GalaxySpace:item.Tier7Rocket:1>, <GalaxySpace:item.Tier7Rocket>, <ore:chestCopper>, 100, 30720);
+// -
+Assembler.addRecipe(<GalaxySpace:item.Tier7Rocket:2>, <GalaxySpace:item.Tier7Rocket>, <ore:chestIron>, 100, 30720);
+// -
+Assembler.addRecipe(<GalaxySpace:item.Tier7Rocket:3>, <GalaxySpace:item.Tier7Rocket>, <ore:chestGold>, 100, 30720);
+
+// --- Rocket Tier 8 with Chest
+Assembler.addRecipe(<GalaxySpace:item.Tier8Rocket:1>, <GalaxySpace:item.Tier8Rocket>, <ore:chestCopper>, 100, 65536);
+// -
+Assembler.addRecipe(<GalaxySpace:item.Tier8Rocket:2>, <GalaxySpace:item.Tier8Rocket>, <ore:chestIron>, 100, 65536);
+// -
+Assembler.addRecipe(<GalaxySpace:item.Tier8Rocket:3>, <GalaxySpace:item.Tier8Rocket>, <ore:chestGold>, 100, 65536);
 
 
 
@@ -707,48 +594,24 @@ Compressor.addRecipe(<GalaxySpace:plutoglowstone>, <GalaxySpace:item.GlowstoneDu
 
 
 
-// --- Impulsion Compressor Recipes
-
-
-
-
-// --- Heavy Duty Plats Tier 4
-ImplosionCompressor.addRecipe([<dreamcraft:item.HeavyDutyPlateTier4>, <gregtech:gt.metaitem.01:30> * 2], <dreamcraft:item.HeavyDutyAlloyIngotT4>, 32);
-
-// --- Heavy Duty Plats Tier 5
-ImplosionCompressor.addRecipe([<dreamcraft:item.HeavyDutyPlateTier5>, <gregtech:gt.metaitem.01:84> * 4], <dreamcraft:item.HeavyDutyAlloyIngotT5>, 36);
-
-// --- Heavy Duty Plats Tier 6
-ImplosionCompressor.addRecipe([<dreamcraft:item.HeavyDutyPlateTier6>, <gregtech:gt.metaitem.01:83> * 6], <dreamcraft:item.HeavyDutyAlloyIngotT6>, 40);
-
-// --- Heavy Duty Plats Tier 7
-ImplosionCompressor.addRecipe([<dreamcraft:item.HeavyDutyPlateTier7>, <gregtech:gt.metaitem.01:317> * 9], <dreamcraft:item.HeavyDutyAlloyIngotT7>, 44);
-
-// --- Heavy Duty Plats Tier 8
-ImplosionCompressor.addRecipe([<dreamcraft:item.HeavyDutyPlateTier8>, <gregtech:gt.metaitem.01:327> * 12], <dreamcraft:item.HeavyDutyAlloyIngotT8>, 48);
-
-
-
-
-
-// --- Macerator Recipes ---
+// --- Pulverizer Recipes ---
 
 
 
 // --- Ceres Glowstone Dust
-Macerator.addRecipe(<GalaxySpace:item.GlowstoneDusts> * 4, <GalaxySpace:ceresglowstone>);
+Pulverizer.addRecipe([<GalaxySpace:item.GlowstoneDusts> * 4], <GalaxySpace:ceresglowstone>, [10000], 300, 2);
 
 // --- IO Glowstone Dust
-Macerator.addRecipe(<GalaxySpace:item.GlowstoneDusts:1> * 4, <GalaxySpace:ioglowstone>);
+Pulverizer.addRecipe([<GalaxySpace:item.GlowstoneDusts:1> * 4], <GalaxySpace:ioglowstone>, [10000], 300, 2);
 
 // --- Enceladus Glowstone Dust
-Macerator.addRecipe(<GalaxySpace:item.GlowstoneDusts:2> * 4, <GalaxySpace:enceladusglowstone>);
+Pulverizer.addRecipe([<GalaxySpace:item.GlowstoneDusts:2> * 4], <GalaxySpace:enceladusglowstone>, [10000], 300, 2);
 
 // --- Proteus Glowstone Dust
-Macerator.addRecipe(<GalaxySpace:item.GlowstoneDusts:3> * 4, <GalaxySpace:proteusglowstone>);
+Pulverizer.addRecipe([<GalaxySpace:item.GlowstoneDusts:3> * 4], <GalaxySpace:proteusglowstone>, [10000], 300, 2);
 
 // --- Pluto Glowstone Dust
-Macerator.addRecipe(<GalaxySpace:item.GlowstoneDusts:4> * 4, <GalaxySpace:plutoglowstone>);
+Pulverizer.addRecipe([<GalaxySpace:item.GlowstoneDusts:4> * 4], <GalaxySpace:plutoglowstone>, [10000], 300, 2);
 
 
 

@@ -72,7 +72,7 @@ val TannedLeather = <Backpack:tannedLeather>;
 val BoundLeather = <Backpack:boundLeather>;
 val WovenCloth = <ore:materialCloth>;
 val String = <minecraft:string>;
-val Leather = <minecraft:leather>;
+val Leather = <ore:itemLeather>;
 val HLeather = <harvestcraft:hardenedleatherItem>;
 val Paintbrush = <ExtraUtilities:paintbrush>;
 val SteelRing = <ore:ringSteel>;
@@ -250,11 +250,11 @@ recipes.addShaped(CyanMediumB, [
 
 // --- Medium Light Gray Backpack
 recipes.addShapeless(LightGrayMediumB,
-[MediumB, <ore:dyeLightGray>, Paintbrush]);
+[MediumB, <ore:dyeLightBlue>, Paintbrush]);
 // -
 recipes.addShaped(LightGrayMediumB, [
 [SSteelRing, TannedLeather, SSteelRing],
-[TannedLeather, LightBlueSmallB, TannedLeather],
+[TannedLeather, LightGraySmallB, TannedLeather],
 [SSteelRing, TannedLeather, SSteelRing]]);
 
 // --- Medium Gray Backpack

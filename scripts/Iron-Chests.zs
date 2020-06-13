@@ -32,11 +32,11 @@ val Steel2GoldUp = <IronChest:silverGoldUpgrade>;
 val Wood2CopperUp = <IronChest:woodCopperUpgrade>;
 val Wood2IronUp = <IronChest:woodIronUpgrade>;
 
-val CopperPlate = <Railcraft:part.plate:3>;
+val CopperPlate = <gregtech:gt.metaitem.01:17035>;
 val DoubleCopperPlate = <gregtech:gt.metaitem.01:18035>;
-val IronPlate = <Railcraft:part.plate>;
+val IronPlate = <gregtech:gt.metaitem.01:17032>;
 val DoubleIronPlate = <gregtech:gt.metaitem.01:18032>;
-val SteelPlate = <Railcraft:part.plate:1>;
+val SteelPlate = <gregtech:gt.metaitem.01:17305>;
 val DoubleSteelPlate = <gregtech:gt.metaitem.01:18305>;
 val GoldPlate = <gregtech:gt.metaitem.01:17086>;
 val DoubleGoldPlate = <gregtech:gt.metaitem.01:18086>;
@@ -210,49 +210,49 @@ Assembler.addRecipe(DirtChest, Chest, Dirt * 8, 80, 1);
 Assembler.addRecipe(CopperChest, Chest, DoubleCopperPlate * 3, 100, 8);
 
 // --- Upgrade Wood to Copper
-Assembler.addRecipe(Wood2CopperUp, WPlate, DoubleCopperPlate * 3, 200, 16);
+Assembler.addRecipe(Wood2CopperUp, [WPlate, DoubleCopperPlate * 3, <gregtech:gt.integrated_circuit:2> * 0], null, 200, 16);
 
 // --- Iron Chest
 Assembler.addRecipe(IronChest, Chest, DoubleIronPlate * 3, 150, 16);
 
 // --- Upgrade Wood to Iron
-Assembler.addRecipe(Wood2IronUp, WPlate, DoubleIronPlate * 3, 300, 30);
+Assembler.addRecipe(Wood2IronUp, [WPlate, DoubleIronPlate * 3, <gregtech:gt.integrated_circuit:2> * 0], null, 300, 30);
 
 // --- Upgrade Copper to Iron
-Assembler.addRecipe(Copper2IronUp, CopperPlate, DoubleIronPlate, 300, 30);
+Assembler.addRecipe(Copper2IronUp, [CopperPlate, DoubleIronPlate, <gregtech:gt.integrated_circuit:2> * 0], null, 300, 30);
 
 // --- Steel Chest
 Assembler.addRecipe(SteelChest, Chest, DoubleSteelPlate * 3, 200, 30);
 
 // --- Upgrade Copper to Steel
-Assembler.addRecipe(Copper2SteelUp, CopperPlate, DoubleSteelPlate, 400, 30);
+Assembler.addRecipe(Copper2SteelUp, [CopperPlate, DoubleSteelPlate, <gregtech:gt.integrated_circuit:2> * 0], null, 400, 30);
 
 // --- Gold Chest
 Assembler.addRecipe(GoldChest, Chest, DoubleGoldPlate * 3, 250, 64);
 
 // --- Upgrade Iron to Gold
-Assembler.addRecipe(Iron2GoldUp, IronPlate, DoubleGoldPlate, 500, 64);
+Assembler.addRecipe(Iron2GoldUp, [IronPlate, DoubleGoldPlate, <gregtech:gt.integrated_circuit:2> * 0], null, 500, 64);
 
 // --- Upgrade Steel to Gold
-Assembler.addRecipe(Steel2GoldUp, SteelPlate, DoubleGoldPlate, 500, 64);
+Assembler.addRecipe(Steel2GoldUp, [SteelPlate, DoubleGoldPlate, <gregtech:gt.integrated_circuit:2> * 0], null, 500, 64);
 
 // --- Diamond Chest
 Assembler.addRecipe(DiamondChest, Chest, DiamondPlate * 4, 300, 120);
 
 // --- Upgrade Gold to Diamond
-Assembler.addRecipe(Gold2DiamondUp, GoldPlate, DiamondPlate * 2, 600, 120);
+Assembler.addRecipe(Gold2DiamondUp, [GoldPlate, DiamondPlate * 2, <gregtech:gt.integrated_circuit:2> * 0], null, 600, 120);
 
 // --- Crystal Chest
 Assembler.addRecipe(CrystalChest, DiamondChest, GlassPlate * 4, 350, 256);
 
 // --- Upgrade Diamond to Crystal
-Assembler.addRecipe(Diamond2CrystalUp, DiamondPlate, GlassPlate * 2, 700, 256);
+Assembler.addRecipe(Diamond2CrystalUp, [DiamondPlate, GlassPlate * 2, <gregtech:gt.integrated_circuit:2> * 0], null, 700, 256);
 
 // --- Obsidian Chest
 Assembler.addRecipe(ObsidianChest, DiamondChest, DenseObsidianPlate * 3, 400, 256);
 
 // --- Upgrade Diamond to Obsidian
-Assembler.addRecipe(Diamond2ObsidianUp, DiamondPlate, DenseObsidianPlate, 800, 256);
+Assembler.addRecipe(Diamond2ObsidianUp, [DiamondPlate, DenseObsidianPlate, <gregtech:gt.integrated_circuit:2> * 0], null, 800, 256);
 
 
 

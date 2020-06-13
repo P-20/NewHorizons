@@ -4,6 +4,9 @@
 
 // --- Imports --- 
 
+import minetweaker.item.IIngredient;
+import minetweaker.item.IItemStack;
+
 import mods.gregtech.AlloySmelter;
 import mods.gregtech.ArcFurnace;
 import mods.gregtech.Assembler;
@@ -12,15 +15,12 @@ import mods.gregtech.BlastFurnace;
 import mods.gregtech.Centrifuge;
 import mods.gregtech.ChemicalReactor;
 import mods.gregtech.Extruder;
-import mods.gregtech.Fermenter;
 import mods.gregtech.FluidExtractor;
 import mods.gregtech.FluidCanner;
 import mods.gregtech.ForgeHammer;
 import mods.gregtech.FormingPress;
 import mods.ic2.Canner;
-import mods.ic2.Compressor;
 import mods.ic2.Extractor;
-import mods.ic2.Macerator;
 import mods.gregtech.PlasmaArcFurnace;
 import mods.gregtech.PlateBender;
 import mods.gregtech.PrecisionLaser;
@@ -52,10 +52,11 @@ val HeatProofCase = <gregtech:gt.blockcasings:11>;
 val Stick = <ore:stickWood>;
 val Flint = <minecraft:flint>;
 
-var plateIron = <Railcraft:part.plate>;
+var plateIron = <gregtech:gt.metaitem.01:17032>;
 var plateWroughtIron = <gregtech:gt.metaitem.01:17304>;
 var plateAluminium = <gregtech:gt.metaitem.01:17019>;
 var shutterModule = <gregtech:gt.metaitem.01:32749>;
+val comb = <ore:beeComb>;
 
 
 
@@ -92,146 +93,8 @@ recipes.removeShapeless(<gregtech:gt.metaitem.01:2881>);
 // --- Netherstar Dust
 recipes.removeShapeless(<gregtech:gt.metaitem.01:2506>);
 
-// --- GT Swords
-recipes.remove(<gregtech:gt.metatool.01>);
-
-// --- GT Pickaxes
-recipes.remove(<gregtech:gt.metatool.01:2>);
-
 // --- GT Shovels
-recipes.remove(<gregtech:gt.metatool.01:4>);
-
-// --- GT Axes
-recipes.remove(<gregtech:gt.metatool.01:6>);
-
-// --- GT Hoes
-recipes.remove(<gregtech:gt.metatool.01:8>);
-
-// --- Empty Shape
-recipes.remove(<gregtech:gt.metaitem.01:32300>);
-
-// --- Plate Mold
-recipes.remove(<gregtech:gt.metaitem.01:32301>);
-
-// --- Casing Mold
-recipes.remove(<gregtech:gt.metaitem.01:32302>);
-
-// --- Gear Mold
-recipes.remove(<gregtech:gt.metaitem.01:32303>);
-
-// --- Coinage Mold
-recipes.remove(<gregtech:gt.metaitem.01:32304>);
-
-// --- Bottle Mold
-recipes.remove(<gregtech:gt.metaitem.01:32305>);
-
-// --- Ingot Mold
-recipes.remove(<gregtech:gt.metaitem.01:32306>);
-
-// --- Ball Mold
-recipes.remove(<gregtech:gt.metaitem.01:32307>);
-
-// --- Block Mold
-recipes.remove(<gregtech:gt.metaitem.01:32308>);
-
-// --- Nuggets Mold
-recipes.remove(<gregtech:gt.metaitem.01:32309>);
-
-// --- Buns Mold
-recipes.remove(<gregtech:gt.metaitem.01:32310>);
-
-// --- Bread Mold
-recipes.remove(<gregtech:gt.metaitem.01:32311>);
-
-// --- Baguette Mold
-recipes.remove(<gregtech:gt.metaitem.01:32312>);
-
-// --- Cylinder Mold
-recipes.remove(<gregtech:gt.metaitem.01:32313>);
-
-// --- Anvil Mold
-recipes.remove(<gregtech:gt.metaitem.01:32314>);
-
-// --- Name Mold
-recipes.remove(<gregtech:gt.metaitem.01:32315>);
-
-// --- Head Mold
-recipes.remove(<gregtech:gt.metaitem.01:32316>);
-
-// --- Small Gear Mold
-recipes.remove(<gregtech:gt.metaitem.01:32317>);
-
-// --- Extruder Shape Plate
-recipes.remove(<gregtech:gt.metaitem.01:32350>);
-
-// --- Extruder Shape Rod
-recipes.remove(<gregtech:gt.metaitem.01:32351>);
-
-// --- Extruder Shape Bolt
-recipes.remove(<gregtech:gt.metaitem.01:32352>);
-
-// --- Extruder Shape Cell
-recipes.remove(<gregtech:gt.metaitem.01:32353>);
-
-// --- Extruder Shape Ring
-recipes.remove(<gregtech:gt.metaitem.01:32354>);
-
-// --- Extruder Shape Ingot
-recipes.remove(<gregtech:gt.metaitem.01:32355>);
-
-// --- Extruder Shape Wire
-recipes.remove(<gregtech:gt.metaitem.01:32356>);
-
-// --- Extruder Shape Casing
-recipes.remove(<gregtech:gt.metaitem.01:32357>);
-
-// --- Extruder Shape Tiny Pipe
-recipes.remove(<gregtech:gt.metaitem.01:32358>);
-
-// --- Extruder Shape Small Pipe
-recipes.remove(<gregtech:gt.metaitem.01:32359>);
-
-// --- Extruder Shape Normal Pipe
-recipes.remove(<gregtech:gt.metaitem.01:32360>);
-
-// --- Extruder Shape Lage Pipe
-recipes.remove(<gregtech:gt.metaitem.01:32361>);
-
-// --- Extruder Shape Huge Pipe
-recipes.remove(<gregtech:gt.metaitem.01:32362>);
-
-// --- Extruder Shape Block
-recipes.remove(<gregtech:gt.metaitem.01:32363>);
-
-// --- Extruder Shape Sword Blade
-recipes.remove(<gregtech:gt.metaitem.01:32364>);
-
-// --- Extruder Shape Pickaxe Head
-recipes.remove(<gregtech:gt.metaitem.01:32365>);
-
-// --- Extruder Shape Shove Head
-recipes.remove(<gregtech:gt.metaitem.01:32366>);
-
-// --- Extruder Shape Axe Head
-recipes.remove(<gregtech:gt.metaitem.01:32367>);
-
-// --- Extruder Shape Hoe Head
-recipes.remove(<gregtech:gt.metaitem.01:32368>);
-
-// --- Extruder Shape Hammer Head
-recipes.remove(<gregtech:gt.metaitem.01:32369>);
-
-// --- Extruder Shape File Head
-recipes.remove(<gregtech:gt.metaitem.01:32370>);
-
-// --- Extruder Shape Saw Blade
-recipes.remove(<gregtech:gt.metaitem.01:32371>);
-
-// --- Extruder Shape Gear
-recipes.remove(<gregtech:gt.metaitem.01:32372>);
-
-// --- Extruder Shape Bottle
-recipes.remove(<gregtech:gt.metaitem.01:32373>);
+recipes.removeShapeless(<gregtech:gt.metatool.01:4>);
 
 // --- Eridium Neutron Reflector
 recipes.remove(<gregtech:gt.neutronreflector>);
@@ -274,36 +137,6 @@ recipes.remove(<IC2:itemRTGPellet>);
 
 // --- Saltpeter
 recipes.removeShapeless(<gregtech:gt.metaitem.01:2836>);
-
-// --- Solar Panel 1EU
-recipes.remove(<gregtech:gt.metaitem.01:32750>);
-
-// --- Solar Panel 8EU
-recipes.remove(<gregtech:gt.metaitem.01:32751>);
-
-// --- Solar Panel 32EU
-recipes.remove(<gregtech:gt.metaitem.01:32752>);
-
-// --- Solar Panel 128 EU
-recipes.remove(<gregtech:gt.metaitem.01:32753>);
-
-// --- Solar Panel 512 EU
-recipes.remove(<gregtech:gt.metaitem.01:32754>);
-
-// --- Solar Panel 2048 EU
-recipes.remove(<gregtech:gt.metaitem.01:32755>);
-
-// --- Solar Panel 8192 EU
-recipes.remove(<gregtech:gt.metaitem.01:32756>);
-
-// --- Solar Panel 32768 EU
-recipes.remove(<gregtech:gt.metaitem.01:32757>);
-
-// --- Solar Panel 131072 EU
-recipes.remove(<gregtech:gt.metaitem.01:32758>);
-
-// --- Solar Panel 524288 EU
-recipes.remove(<gregtech:gt.metaitem.01:32759>);
 
 // --- Apatite
 recipes.removeShaped(<gregtech:gt.metaitem.01:8530>, [
@@ -477,9 +310,9 @@ recipes.removeShapeless(<ore:dustNiter>);
 recipes.removeShapeless(<ore:gemNiter>);
 
 // --- Phosphorus Dust
-recipes.removeShapeless(<ore:dustPhosphorus>);
+recipes.removeShapeless(<ore:dustTricalciumPhosphate>);
 // -
-recipes.removeShapeless(<ore:gemPhosphorus>);
+recipes.removeShapeless(<ore:gemTricalciumPhosphate>);
 
 // --- Lignite Coal Dust
 recipes.removeShapeless(<ore:dustLignite>);
@@ -521,85 +354,117 @@ recipes.removeShapeless(<ore:dustInfusedWater>);
 // -
 recipes.removeShapeless(<ore:gemInfusedWater>);
 
+// --- Lead Nuggets
+recipes.remove(<ore:nuggetLead>);
 
+// --- Silver Nuggets
+recipes.remove(<ore:nuggetSilver>);
+
+// --- Tin Nuggets
+recipes.remove(<ore:nuggetTin>);
+
+// --- Copper Nuggets
+recipes.remove(<ore:nuggetCopper>);
+
+// --- Steel Nuggets
+recipes.remove(<ore:nuggetSteel>);
+
+// --- Steel Pulsating Iron
+recipes.remove(<ore:nuggetPulsatingIron>);
+
+// --- Steel Vibrant Alloy
+recipes.remove(<ore:nuggetVibrantAlloy>);
+
+// --- Steel Draconium
+recipes.remove(<ore:nuggetDraconium>);
+
+// --- Steel Draconium Awakened
+recipes.remove(<ore:nuggetDraconiumAwakened>);
+
+// --- Thauminite
+recipes.remove(<thaumicbases:resource>);
+
+// --- Coal Dust
+recipes.removeShapeless(<ore:dustCoal> * 9, [<ore:blockCoal>]);
+
+// --- Charcoal
+recipes.removeShapeless(<minecraft:coal:1> * 9, [<gregtech:gt.blockgem3:4>]);
+
+// --- Charcoal Dust
+recipes.removeShapeless(<gregtech:gt.metaitem.01:2536> * 9, [<gregtech:gt.blockgem3:4>]);
+
+// --- Teleporter
+recipes.remove(<gregtech:gt.blockmachines:1145>);
+
+// --- Niobtitaninum Dust handcraft
+recipes.removeShapeless(<gregtech:gt.metaitem.01:1360>);
+
+// --- Tungstencarbide Dust handcraft
+recipes.removeShapeless(<gregtech:gt.metaitem.01:1370>);
 
 
 
 // --- Add Recipes ---
 
+// --- Teleporter
+recipes.addShaped(<gregtech:gt.blockmachines:1145>,[
+[<dreamcraft:item.NanoCircuit>,<SGCraft:ic2PowerUnit>,<dreamcraft:item.NanoCircuit>],
+[<SGCraft:ic2Capacitor>,<SGCraft:stargateBase>,<SGCraft:ic2Capacitor>],
+[<SGCraft:ic2Capacitor>,<SGCraft:ocInterface>,<SGCraft:ic2Capacitor>]]);
 
 
 // --- Diamond Sword Blade
 recipes.addShaped(<gregtech:gt.metaitem.02:500>, [
 [null, <gregtech:gt.metaitem.01:17500>, null],
-[<gregtech:gt.metatool.01:18>, <gregtech:gt.metaitem.01:17500>, <gregtech:gt.metatool.01:12>],
+[<ore:craftingToolFile>, <gregtech:gt.metaitem.01:17500>, <ore:craftingToolHardHammer>],
 [null, null, null]]);
 
 // --- Diamond Pickaxe Head
 recipes.addShaped(<gregtech:gt.metaitem.02:1500>, [
 [<gregtech:gt.metaitem.01:17500>, <ore:gemDiamond>, <ore:gemDiamond>],
-[<gregtech:gt.metatool.01:18>, null, <gregtech:gt.metatool.01:12>],
+[<ore:craftingToolFile>, null, <ore:craftingToolHardHammer>],
 [null, null, null]]);
 
 // --- Diamond Shovel Head
 recipes.addShaped(<gregtech:gt.metaitem.02:2500>, [
-[<gregtech:gt.metatool.01:18>, <gregtech:gt.metaitem.01:17500>, <gregtech:gt.metatool.01:12>],
+[<ore:craftingToolFile>, <gregtech:gt.metaitem.01:17500>, <ore:craftingToolHardHammer>],
 [null, null, null],
 [null, null, null]]);
 
 // --- Diamond Axe Head
 recipes.addShaped(<gregtech:gt.metaitem.02:3500>, [
-[<gregtech:gt.metaitem.01:17500>, <ore:gemDiamond>, <gregtech:gt.metatool.01:12>],
+[<gregtech:gt.metaitem.01:17500>, <ore:gemDiamond>, <ore:craftingToolHardHammer>],
 [<gregtech:gt.metaitem.01:17500>, null, null],
-[<gregtech:gt.metatool.01:18>, null, null]]);
+[<ore:craftingToolFile>, null, null]]);
 
 // --- Diamond Hoe Head
 recipes.addShaped(<gregtech:gt.metaitem.02:4500>, [
-[<gregtech:gt.metaitem.01:17500>, <ore:gemDiamond>, <gregtech:gt.metatool.01:12>],
-[<gregtech:gt.metatool.01:18>, null, null],
+[<gregtech:gt.metaitem.01:17500>, <ore:gemDiamond>, <ore:craftingToolHardHammer>],
+[<ore:craftingToolFile>, null, null],
 [null, null, null]]);
 
 // --- Wood Ring
 recipes.addShaped(<gregtech:gt.metaitem.01:28809>, [
-[<gregtech:gt.metatool.01:34>, null, null],
+[<ore:craftingToolKnife>, null, null],
 [null, <gregtech:gt.metaitem.01:17809>, null]]);
 
 // --- Glass Dust
-recipes.addShapeless(<gregtech:gt.metaitem.01:2890>, [<gregtech:gt.metatool.01:24>, <TConstruct:GlassBlock>]);
-recipes.addShapeless(<gregtech:gt.metaitem.01:1890>, [<gregtech:gt.metatool.01:24>, <TConstruct:GlassPane>]);
+recipes.addShapeless(<gregtech:gt.metaitem.01:2890>, [<ore:craftingToolMortar>, <TConstruct:GlassBlock>]);
+recipes.addShapeless(<gregtech:gt.metaitem.01:1890>, [<ore:craftingToolMortar>, <TConstruct:GlassPane>]);
 
-// --- Flient Sword
-recipes.addShaped(<gregtech:gt.metatool.01>.withTag({ench: [{lvl: 1 as short, id: 20 as short}], "GT.ToolStats": {PrimaryMaterial: "Flint", MaxDamage: 6400 as long, SecondaryMaterial: "Wood"}}), [
-[null, Flint, null],
-[null, Flint, null],
-[null, Stick, null]]);
+// --- Mince Meat
+recipes.addShapeless(<gregtech:gt.metaitem.01:2892>, [<ore:craftingToolMortar>, <ore:listAllmeatraw>]);
+recipes.addShapeless(<gregtech:gt.metaitem.01:2892>, [<ore:craftingToolMortar>, <ore:listAllfishraw>]);
 
-// --- Flint Pickaxe
-recipes.addShaped(<gregtech:gt.metatool.01:2>.withTag({"GT.ToolStats": {PrimaryMaterial: "Flint", MaxDamage: 6400 as long, SecondaryMaterial: "Wood"}}), [
-[Flint, Flint, Flint],
-[null, Stick, null],
-[null, Stick, null]]);
-
-// --- Flint Shovel
-recipes.addShaped(<gregtech:gt.metatool.01:4>.withTag({"GT.ToolStats": {PrimaryMaterial: "Flint", MaxDamage: 6400 as long, SecondaryMaterial: "Wood"}}), [
-[null, Flint, null],
-[null, Stick, null],
-[null, Stick, null]]);
-
-// --- Flint Axe
-recipes.addShaped(<gregtech:gt.metatool.01:6>.withTag({ench: [{lvl: 1 as short, id: 20 as short}], "GT.ToolStats": {PrimaryMaterial: "Flint", MaxDamage: 6400 as long, SecondaryMaterial: "Wood"}}), [
-[Flint, Flint, null],
-[Flint, Stick, null],
-[null, Stick, null]]);
-
-// --- Flint Hoe
-recipes.addShaped(<gregtech:gt.metatool.01:8>.withTag({"GT.ToolStats": {PrimaryMaterial: "Flint", MaxDamage: 6400 as long, SecondaryMaterial: "Wood"}}), [
-[Flint, Flint, null],
-[null, Stick, null],
-[null, Stick, null]]);
+// --- Cooked Mince Meat
+recipes.addShapeless(<gregtech:gt.metaitem.01:2893>, [<ore:craftingToolMortar>, <ore:listAllmeatcooked>]);
+recipes.addShapeless(<gregtech:gt.metaitem.01:2893>, [<ore:craftingToolMortar>, <ore:listAllfishcooked>]);
 
 // --- Wood Pulp
 recipes.addShapeless(<gregtech:gt.metaitem.01:2809> * 2, [<ore:craftingToolMortar>, <ore:logWood>]);
+
+// --- Brick Dust
+recipes.addShapeless(<gregtech:gt.metaitem.01:1625>, [<ore:craftingToolMortar>, <minecraft:brick>]);
 
 // --- Long Plastic Rood
 recipes.addShaped(<gregtech:gt.metaitem.02:22874>, [[<ore:stickPlastic>, <ore:craftingToolHardHammer>, <ore:stickPlastic>]]);
@@ -611,6 +476,14 @@ recipes.addShaped(<gregtech:gt.metaitem.01:2881>, [
 // -
 recipes.addShaped(<gregtech:gt.metaitem.01:2881>, [
 [<ore:cropWheat>, null, null],
+[<ore:craftingToolMortar>, null, null]]);
+// -
+recipes.addShaped(<gregtech:gt.metaitem.01:2881>, [
+[<ore:cropRye>, null, null],
+[<ore:craftingToolMortar>, null, null]]);
+// -
+recipes.addShaped(<gregtech:gt.metaitem.01:2881>, [
+[<ore:cropOats>, null, null],
 [<ore:craftingToolMortar>, null, null]]);
 
 // --- Salt Dust
@@ -679,9 +552,9 @@ recipes.addShaped(<gregtech:gt.metaitem.01:34>, [
 
 // --- Motor Machine Casing
 recipes.addShaped(<gregtech:gt.blockcasings2:11>, [
-[<dreamcraft:item.StainlessSteelItemCasing>, <ore:circuitAdvanced>, <dreamcraft:item.StainlessSteelItemCasing>],
+[<ore:itemCasingStainlessSteel>, <ore:circuitAdvanced>, <ore:itemCasingStainlessSteel>],
 [<gregtech:gt.metaitem.01:32602>, <gregtech:gt.blockcasings2>, <gregtech:gt.metaitem.01:32602>],
-[<dreamcraft:item.StainlessSteelItemCasing>, <ore:circuitAdvanced>, <dreamcraft:item.StainlessSteelItemCasing>]]);
+[<ore:itemCasingStainlessSteel>, <ore:circuitAdvanced>, <ore:itemCasingStainlessSteel>]]);
 
 // --- Solar Panel
 recipes.addShapeless(<gregtech:gt.metaitem.01:32750>, [<ProjRed|Expansion:projectred.expansion.solar_panel>]);
@@ -710,101 +583,113 @@ recipes.addShaped(<gregtech:gt.metaitem.02:22532>, [[<ore:stickEnderPearl>, <ore
 // --- Long Endereye Rod
 recipes.addShaped(<gregtech:gt.metaitem.02:22533>, [[<ore:stickEnderEye>, <ore:craftingToolHardHammer>, <ore:stickEnderEye>]]);
 
-// --- Solar Panel 1EU
-recipes.addShaped(<gregtech:gt.metaitem.01:32750>, [
-[<ore:plateSilicon>, <TConstruct:GlassPane>, <ore:plateSilicon>],
-[<ore:circuitBasic>, <IC2:itemPartCarbonPlate>, <ore:circuitBasic>],
-[<ore:wireGt01RedAlloy>, <dreamcraft:item.AluminiumIronPlate>, <ore:wireGt01RedAlloy>]]);
+// --- Solar Panel HV 32 EU
+mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32752>, [
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, <ore:wireGt01SuperconductorMV>, <dreamcraft:item.IrradiantReinforcedAluminiumPlate>, <ore:wireGt01SuperconductorMV>, null, null, null],
+[null, null, null, <gregtech:gt.metaitem.03:32034>, <ore:platePolytetrafluoroethylene>, <gregtech:gt.metaitem.03:32034>, null, null, null],
+[null, null, null, <ore:circuitAdvanced>, <gregtech:gt.metaitem.01:32751>, <ore:circuitAdvanced>, null, null, null],
+[null, null, null, <gregtech:gt.metaitem.03:32034>, <ore:platePolytetrafluoroethylene>, <gregtech:gt.metaitem.03:32034>, null, null, null],
+[null, null, null, <ore:wireGt01SuperconductorMV>, <dreamcraft:item.IrradiantReinforcedAluminiumPlate>, <ore:wireGt01SuperconductorMV>, null, null, null],
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null, null, null]]);
 
-// --- Solar Panel 8EU
-recipes.addShaped(<gregtech:gt.metaitem.01:32751>, [
-[<ore:plateSilicon>, <gregtech:gt.metaitem.01:32750>, <ore:plateSilicon>],
-[<ore:circuitGood>, <IC2:itemPartCarbonPlate>, <ore:circuitGood>],
-[<ore:wireGt01Tin>, <dreamcraft:item.ReinforcedAluminiumIronPlate>, <ore:wireGt01Tin>]]);
+// --- Solar Panel HV 128 EU
+mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32753>, [
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, <gregtech:gt.metaitem.03:32063>, null, null, null, null],
+[null, null, null, <ore:wireGt01SuperconductorHV>, <dreamcraft:item.IrradiantReinforcedTitaniumPlate>, <ore:wireGt01SuperconductorHV>, null, null, null],
+[null, null, null, <gregtech:gt.metaitem.03:32034>, <ore:plateEpoxid>, <gregtech:gt.metaitem.03:32034>, null, null, null],
+[null, null, null, <ore:circuitData>, <gregtech:gt.metaitem.01:32752>, <ore:circuitData>, null, null, null],
+[null, null, null, <gregtech:gt.metaitem.03:32034>, <ore:plateEpoxid>, <gregtech:gt.metaitem.03:32034>, null, null, null],
+[null, null, null, <ore:wireGt01SuperconductorHV>, <dreamcraft:item.IrradiantReinforcedTitaniumPlate>, <ore:wireGt01SuperconductorHV>, null, null, null],
+[null, null, null, null, <gregtech:gt.metaitem.03:32063>, null, null, null, null],
+[null, null, null, null, null, null, null, null, null]]);
 
-// --- Solar Panel 32EU
-recipes.addShaped(<gregtech:gt.metaitem.01:32752>, [
-[<ore:plateSilicon>, <gregtech:gt.metaitem.01:32751>, <ore:plateSilicon>],
-[<ore:circuitAdvanced>, <IC2:itemPartCarbonPlate>, <ore:circuitAdvanced>],
-[<ore:wireGt01Cobalt>, <dreamcraft:item.IrradiantReinforcedAluminiumPlate>, <ore:wireGt01Cobalt>]]);
-
-// --- Solar Panel 128 EU
-recipes.addShaped(<gregtech:gt.metaitem.01:32753>, [
-[<ore:plateDoubleSilicon>, <gregtech:gt.metaitem.01:32752>, <ore:plateDoubleSilicon>],
-[<ore:circuitElite>, <IC2:itemPartCarbonPlate>, <ore:circuitElite>],
-[<ore:wireGt01AnnealedCopper>, <dreamcraft:item.IrradiantReinforcedTitaniumPlate>, <ore:wireGt01AnnealedCopper>]]);
-
-// --- Solar Panel 512 EU
+// --- Solar Panel HV 512 EU
 mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32754>, [
 [null, null, null, null, null, null, null, null, null],
-[null, null, null, null, null, null, null, null, null],
-[null, null, null, <ore:wireGt01Kanthal>, <dreamcraft:item.IrradiantReinforcedTungstenPlate>, <ore:wireGt01Kanthal>, null, null, null],
-[null, null, null, <ore:plateDoubleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDoubleSilicon>, null, null, null],
-[null, null, null, <ore:circuitMaster>, <gregtech:gt.metaitem.01:32753>, <ore:circuitMaster>, null, null, null],
-[null, null, null, <ore:plateDoubleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDoubleSilicon>, null, null, null],
-[null, null, null, <ore:wireGt01Kanthal>, <dreamcraft:item.IrradiantReinforcedTungstenPlate>, <ore:wireGt01Kanthal>, null, null, null],
-[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, <gregtech:gt.metaitem.03:32065>, null, null, null, null],
+[null, null, null, <ore:wireGt01SuperconductorEV>, <dreamcraft:item.IrradiantReinforcedTungstenPlate>, <ore:wireGt01SuperconductorEV>, null, null, null],
+[null, null, null, <gregtech:gt.metaitem.03:32034>, <ore:plateIndiumGalliumPhosphide>, <gregtech:gt.metaitem.03:32034>, null, null, null],
+[null, null, <ore:circuitElite>, <ore:circuitElite>, <gregtech:gt.metaitem.01:32753>, <ore:circuitElite>,  <ore:circuitElite>, null, null],
+[null, null, null, <gregtech:gt.metaitem.03:32034>, <ore:plateIndiumGalliumPhosphide>, <gregtech:gt.metaitem.03:32034>, null, null, null],
+[null, null, null, <ore:wireGt01SuperconductorEV>, <dreamcraft:item.IrradiantReinforcedTungstenPlate>, <ore:wireGt01SuperconductorEV>, null, null, null],
+[null, null, null, null, <gregtech:gt.metaitem.03:32065>, null, null, null, null],
 [null, null, null, null, null, null, null, null, null]]);
 
-// --- Solar Panel 2048 EU
+// --- Solar Panel EV 2048 EU
 mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32755>, [
 [null, null, null, null, null, null, null, null, null],
-[null, null, null, null, null, null, null, null, null],
-[null, null, <ore:wireGt01TungstenSteel>, <ore:plateTripleSilicon>, <dreamcraft:item.IrradiantReinforcedTungstenSteelPlate>, <ore:plateTripleSilicon>, <ore:wireGt01TungstenSteel>, null, null],
-[null, null, null, <ore:plateTripleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateTripleSilicon>, null, null, null],
-[null, null, <ore:wireGt01TungstenSteel>, <dreamcraft:item.HighEnergyFlowCircuit>, <gregtech:gt.metaitem.01:32754>, <dreamcraft:item.HighEnergyFlowCircuit>, <ore:wireGt01TungstenSteel>, null, null],
-[null, null, null, <ore:plateTripleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateTripleSilicon>, null, null, null],
-[null, null, <ore:wireGt01TungstenSteel>, <ore:plateTripleSilicon>, <dreamcraft:item.IrradiantReinforcedTungstenSteelPlate>, <ore:plateTripleSilicon>, <ore:wireGt01TungstenSteel>, null, null],
-[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, <gregtech:gt.metaitem.03:32051>, null, null, null, null],
+[null, null, <ore:wireGt01SuperconductorIV>, <ore:plateTripleSilicon>, <dreamcraft:item.IrradiantReinforcedTungstenSteelPlate>, <ore:plateTripleSilicon>, <ore:wireGt01SuperconductorIV>, null, null],
+[null, null, null, <gregtech:gt.metaitem.03:32035>, <ore:platePolybenzimidazole>, <gregtech:gt.metaitem.03:32035>, null, null, null],
+[null, <ore:wireGt01SuperconductorIV>, <ore:circuitMaster>, <ore:circuitMaster>, <gregtech:gt.metaitem.01:32754>, <ore:circuitMaster>, <ore:circuitMaster>, <ore:wireGt01SuperconductorIV>, null],
+[null, null, null, <gregtech:gt.metaitem.03:32035>, <ore:platePolybenzimidazole>, <gregtech:gt.metaitem.03:32035>, null, null, null],
+[null, null, <ore:wireGt01SuperconductorIV>, <ore:plateTripleSilicon>, <dreamcraft:item.IrradiantReinforcedTungstenSteelPlate>, <ore:plateTripleSilicon>, <ore:wireGt01SuperconductorIV>, null, null],
+[null, null, null, null, <gregtech:gt.metaitem.03:32051>, null, null, null, null],
 [null, null, null, null, null, null, null, null, null]]);
 
-// --- Solar Panel 8192 EU
+// --- Solar Panel IV 8192 EU
 mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32756>, [
 [null, null, null, null, null, null, null, null, null],
-[null, null, null, null, null, null, null, null, null],
-[null, null, <ore:wireGt01HSSG>, <ore:plateQuadrupleSilicon>, <dreamcraft:item.IrradiantReinforcedChromePlate>, <ore:plateQuadrupleSilicon>, <ore:wireGt01HSSG>, null, null],
-[null, null, <IC2:itemPartCarbonPlate>, <ore:plateQuadrupleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateQuadrupleSilicon>, <IC2:itemPartCarbonPlate>, null, null],
-[null, null, <ore:wireGt01HSSG>, <dreamcraft:item.NanoCircuit>, <gregtech:gt.metaitem.01:32755>, <dreamcraft:item.NanoCircuit>, <ore:wireGt01HSSG>, null, null],
-[null, null, <IC2:itemPartCarbonPlate>, <ore:plateQuadrupleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateQuadrupleSilicon>, <IC2:itemPartCarbonPlate>, null, null],
-[null, null, <ore:wireGt01HSSG>, <ore:plateQuadrupleSilicon>, <dreamcraft:item.IrradiantReinforcedChromePlate>, <ore:plateQuadrupleSilicon>, <ore:wireGt01HSSG>, null, null],
-[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, <gregtech:gt.metaitem.03:32053>, null, null, null, null],
+[null, null, <ore:wireGt01SuperconductorLuV>, <gregtech:gt.metaitem.03:32034>, <dreamcraft:item.IrradiantReinforcedChromePlate>, <gregtech:gt.metaitem.03:32034>, <ore:wireGt01SuperconductorLuV>, null, null],
+[null, null, <ore:plateQuadrupleSilicon>, <gregtech:gt.metaitem.03:32035>, <ore:plateDoublePolybenzimidazole>, <gregtech:gt.metaitem.03:32035>, <ore:plateQuadrupleSilicon>, null, null],
+[null, <ore:wireGt01SuperconductorLuV>, <ore:circuitUltimate>, <ore:circuitUltimate>, <gregtech:gt.metaitem.01:32755>, <ore:circuitUltimate>, <ore:circuitUltimate>, <ore:wireGt01SuperconductorLuV>, null],
+[null, null, <ore:plateQuadrupleSilicon>, <gregtech:gt.metaitem.03:32035>, <ore:plateDoublePolybenzimidazole>, <gregtech:gt.metaitem.03:32035>, <ore:plateQuadrupleSilicon>, null, null],
+[null, null, <ore:wireGt01SuperconductorLuV>, <gregtech:gt.metaitem.03:32034>, <dreamcraft:item.IrradiantReinforcedChromePlate>, <gregtech:gt.metaitem.03:32034>, <ore:wireGt01SuperconductorLuV>, null, null],
+[null, null, null, null, <gregtech:gt.metaitem.03:32053>, null, null, null, null],
 [null, null, null, null, null, null, null, null, null]]);
 
-// --- Solar Panel 32768 EU
+// --- Solar Panel LuV 32768 EU
 mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32757>, [
-[null, null, null, null, null, null, null, null, null],
-[null, null, null, <ore:wireGt01Naquadah>, <dreamcraft:item.PikoCircuit>, <ore:wireGt01Naquadah>, null, null, null],
-[null, null, <ore:wireGt01Naquadah>, <ore:plateQuintupleSilicon>, <AdvancedSolarPanel:asp_crafting_items:8>, <ore:plateQuintupleSilicon>, <ore:wireGt01Naquadah>, null, null],
-[null, null, <IC2:itemPartCarbonPlate>, <ore:plateQuintupleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateQuintupleSilicon>, <IC2:itemPartCarbonPlate>, null, null],
-[null, null, <ore:wireGt01Naquadah>, <dreamcraft:item.PikoCircuit>, <gregtech:gt.metaitem.01:32756>, <dreamcraft:item.PikoCircuit>, <ore:wireGt01Naquadah>, null, null],
-[null, null, <IC2:itemPartCarbonPlate>, <ore:plateQuintupleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateQuintupleSilicon>, <IC2:itemPartCarbonPlate>, null, null],
-[null, null, <ore:wireGt01Naquadah>, <ore:plateQuintupleSilicon>, <AdvancedSolarPanel:asp_crafting_items:8>, <ore:plateQuintupleSilicon>, <ore:wireGt01Naquadah>, null, null],
-[null, null, null, <ore:wireGt01Naquadah>, <dreamcraft:item.PikoCircuit>, <ore:wireGt01Naquadah>, null, null, null],
-[null, null, null, null, null, null, null, null, null]]);
+[null, null, null, null, <gregtech:gt.metaitem.03:32059>, null, null, null, null],
+[null, null, null, <ore:wireGt02SuperconductorZPM>, <ore:circuitInfinite>, <ore:wireGt02SuperconductorZPM>, null, null, null],
+[null, null, <ore:wireGt02SuperconductorZPM>, <gregtech:gt.metaitem.03:32035>, <AdvancedSolarPanel:asp_crafting_items:8>, <gregtech:gt.metaitem.03:32035>, <ore:wireGt02SuperconductorZPM>, null, null],
+[null, null, <ore:plateQuintupleSilicon>, <gregtech:gt.metaitem.03:32151>, <gregtech:gt.metaitem.01:32756>, <gregtech:gt.metaitem.03:32151>, <ore:plateQuintupleSilicon>, null, null],
+[null, <supersolarpanel:solarsplitter>, <ore:circuitInfinite>, <ore:circuitInfinite>, <ore:plateTriplePolybenzimidazole>, <ore:circuitInfinite>, <ore:circuitInfinite>, <supersolarpanel:solarsplitter>, null],
+[null, null, <ore:plateQuintupleSilicon>, <gregtech:gt.metaitem.03:32151>, <gregtech:gt.metaitem.01:32756>, <gregtech:gt.metaitem.03:32151>, <ore:plateQuintupleSilicon>, null, null],
+[null, null, <ore:wireGt02SuperconductorZPM>, <gregtech:gt.metaitem.03:32035>, <AdvancedSolarPanel:asp_crafting_items:8>, <gregtech:gt.metaitem.03:32035>, <ore:wireGt02SuperconductorZPM>, null, null],
+[null, null, null, <ore:wireGt02SuperconductorZPM>, <ore:circuitInfinite>, <ore:wireGt02SuperconductorZPM>, null, null, null],
+[null, null, null, null, <gregtech:gt.metaitem.03:32059>, null, null, null, null]]);
 
-// --- Solar Panel 131072 EU
+// --- Solar Panel ZPM 131072 EU
 mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32758>, [
-[null, null, null, <ore:wireGt01Superconductor>, <ore:plateDenseSilicon>, <ore:wireGt01Superconductor>, null, null, null],
-[null, null, null, <ore:wireGt01Superconductor>, <dreamcraft:item.QuantumCircuit>, <ore:wireGt01Superconductor>, null, null, null],
-[null, null, <ore:wireGt01Superconductor>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <ore:plateDenseSilicon>, <ore:wireGt01Superconductor>, null, null],
-[null, null, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, null, null],
-[null, <ore:wireGt01Superconductor>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <dreamcraft:item.QuantumCircuit>, <gregtech:gt.metaitem.01:32757>, <dreamcraft:item.QuantumCircuit>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <ore:wireGt01Superconductor>, null],
-[null, null, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, null, null],
-[null, null, <ore:wireGt01Superconductor>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <ore:plateDenseSilicon>, <ore:wireGt01Superconductor>, null, null],
-[null, null, null, <ore:wireGt01Superconductor>, <dreamcraft:item.QuantumCircuit>, <ore:wireGt01Superconductor>, null, null, null],
-[null, null, null, <ore:wireGt01Superconductor>, <ore:plateDenseSilicon>, <ore:wireGt01Superconductor>, null, null, null]]);
+[null, null, null, <ore:wireGt04SuperconductorUV>, <gregtech:gt.metaitem.03:32048>, <ore:wireGt04SuperconductorUV>, null, null, null],
+[null, null, <gregtech:gt.metaitem.03:32161>, <ore:wireGt04SuperconductorUV>, <ore:circuitBio>, <ore:wireGt04SuperconductorUV>, <gregtech:gt.metaitem.03:32161>, null, null],
+[null, null, <ore:wireGt04SuperconductorUV>, <gregtech:gt.metaitem.03:32151>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <gregtech:gt.metaitem.03:32151>, <ore:wireGt04SuperconductorUV>, null, null],
+[null, null, <IC2:itemPartCarbonPlate>, <gregtech:gt.metaitem.03:32153>, <gregtech:gt.metaitem.01:32757>, <gregtech:gt.metaitem.03:32153>, <IC2:itemPartCarbonPlate>, null, null],
+[<supersolarpanel:enderquantumcomponent>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <ore:circuitBio>, <ore:circuitBio>, <ore:plateQuadruplePolybenzimidazole>, <ore:circuitBio>, <ore:circuitBio>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <supersolarpanel:enderquantumcomponent>],
+[null, null, <IC2:itemPartCarbonPlate>, <gregtech:gt.metaitem.03:32153>, <gregtech:gt.metaitem.01:32757>, <gregtech:gt.metaitem.03:32153>, <IC2:itemPartCarbonPlate>, null, null],
+[null, null, <ore:wireGt04SuperconductorUV>, <gregtech:gt.metaitem.03:32151>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>,<gregtech:gt.metaitem.03:32151>, <ore:wireGt04SuperconductorUV>, null, null],
+[null, null, <gregtech:gt.metaitem.03:32161>, <ore:wireGt04SuperconductorUV>, <ore:circuitBio>, <ore:wireGt04SuperconductorUV>, <gregtech:gt.metaitem.03:32161>, null, null],
+[null, null, null, <ore:wireGt04SuperconductorUV>, <gregtech:gt.metaitem.03:32048>, <ore:wireGt04SuperconductorUV>, null, null, null]]);
 
-// --- Solar Panel 524288 EU
+// --- Solar Panel UV 524288 EU
 mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32759>, [
-[null, null, <ore:itemSuperconductor>, <ore:plateDenseSilicon>, <ore:plateDenseSilicon>, <ore:plateDenseSilicon>, <ore:itemSuperconductor>, null, null],
-[null, null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <AdvancedSolarPanel:asp_crafting_items:13>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null, null],
-[null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null],
-[null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null],
-[null, <ore:itemSuperconductor>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <AdvancedSolarPanel:asp_crafting_items:13>, <gregtech:gt.metaitem.01:32758>, <AdvancedSolarPanel:asp_crafting_items:13>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <ore:itemSuperconductor>, null],
-[null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null],
-[null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null],
-[null, null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <AdvancedSolarPanel:asp_crafting_items:13>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null, null],
-[null, null, <ore:itemSuperconductor>, <ore:plateDenseSilicon>, <ore:plateDenseSilicon>, <ore:plateDenseSilicon>, <ore:itemSuperconductor>, null, null]]);
+[null, null, <ore:wireGt08Superconductor>, <ore:plateDenseSilicon>, <gregtech:gt.metaitem.03:32068>, <ore:plateDenseSilicon>, <ore:wireGt08Superconductor>, null, null],
+[null, <gregtech:gt.metaitem.03:32163>, <ore:wireGt08Superconductor>, <gregtech:gt.metaitem.03:32153>, <ore:circuitNano>,<gregtech:gt.metaitem.03:32153>, <ore:wireGt08Superconductor>, <gregtech:gt.metaitem.03:32163>, null],
+[null, <ore:wireGt08Superconductor>, <dreamcraft:item.PicoWafer>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <ore:plateDenseSilicon>, <dreamcraft:item.PicoWafer>, <ore:wireGt08Superconductor>, null],
+[null, <ore:wireGt08Superconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <gregtech:gt.metaitem.01:32758>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:wireGt08Superconductor>, null],
+[<ore:wireGt08Superconductor>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <ore:circuitNano>, <ore:circuitNano>, <ore:plateDensePolybenzimidazole>, <ore:circuitNano>, <ore:circuitNano>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <ore:wireGt08Superconductor>],
+[null, <ore:wireGt08Superconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <gregtech:gt.metaitem.01:32758>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:wireGt08Superconductor>, null],
+[null, <ore:wireGt08Superconductor>, <dreamcraft:item.PicoWafer>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <ore:plateDenseSilicon>, <dreamcraft:item.PicoWafer>, <ore:wireGt08Superconductor>, null],
+[null, <gregtech:gt.metaitem.03:32163>, <ore:wireGt08Superconductor>, <gregtech:gt.metaitem.03:32153>, <ore:circuitNano>, <gregtech:gt.metaitem.03:32153>, <ore:wireGt08Superconductor>, <gregtech:gt.metaitem.03:32163>, null],
+[null, null, <ore:wireGt08Superconductor>, <ore:plateDenseSilicon>, <gregtech:gt.metaitem.03:32068>, <ore:plateDenseSilicon>, <ore:wireGt08Superconductor>, null, null]]);
+
+// --- Solar Panel UHV 2097152 EU
+//mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.03:32130>, [
+//[<gregtech:gt.metaitem.03:32165>, <dreamcraft:item.NanoCircuit>, <ore:wireGt16Superconductor>, <ore:plateDenseSilicon>, <gregtech:gt.metaitem.03:32068>, <ore:plateDenseSilicon>, <ore:wireGt16Superconductor>, <dreamcraft:item.NanoCircuit>, <gregtech:gt.metaitem.03:32165>],
+//[<gregtech:gt.metaitem.03:32165>, <dreamcraft:item.NanoCircuit>, <ore:wireGt16Superconductor>, <gregtech:gt.metaitem.03:32153>, <AdvancedSolarPanel:asp_crafting_items:13>,<gregtech:gt.metaitem.03:32153>, <ore:wireGt16Superconductor>, <dreamcraft:item.NanoCircuit>, <gregtech:gt.metaitem.03:32165>],
+//[null, <ore:wireGt16Superconductor>, <gregtech:gt.metaitem.03:32151>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedBedrockiumPlate>, <ore:plateDenseSilicon>, <gregtech:gt.metaitem.03:32151>, <ore:wireGt16Superconductor>, null],
+//[null, <ore:wireGt16Superconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDensePolybenzimidazole>, <ore:plateDensePolybenzimidazole>, <ore:plateDensePolybenzimidazole>, <IC2:itemPartCarbonPlate>, <ore:wireGt16Superconductor>, null],
+//[<ore:wireGt16Superconductor>, <dreamcraft:item.IrradiantReinforcedBedrockiumPlate>, <AdvancedSolarPanel:asp_crafting_items:13>, <AdvancedSolarPanel:asp_crafting_items:13>, <gregtech:gt.metaitem.01:32759>, <AdvancedSolarPanel:asp_crafting_items:13>, <AdvancedSolarPanel:asp_crafting_items:13>, <dreamcraft:item.IrradiantReinforcedBedrockiumPlate>, <ore:wireGt16Superconductor>],
+//[null, <ore:wireGt16Superconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDensePolybenzimidazole>, <ore:plateDensePolybenzimidazole>, <ore:plateDensePolybenzimidazole>, <IC2:itemPartCarbonPlate>, <ore:wireGt16Superconductor>, null],
+//[null, <ore:wireGt16Superconductor>, <gregtech:gt.metaitem.03:32151>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedBedrockiumPlate>, <ore:plateDenseSilicon>, <gregtech:gt.metaitem.03:32151>, <ore:wireGt16Superconductor>, null],
+//[<gregtech:gt.metaitem.03:32165>, <dreamcraft:item.NanoCircuit>, <ore:wireGt16Superconductor>, <gregtech:gt.metaitem.03:32153>, <AdvancedSolarPanel:asp_crafting_items:13>, <gregtech:gt.metaitem.03:32153>, <ore:wireGt16Superconductor>, <dreamcraft:item.NanoCircuit>, <gregtech:gt.metaitem.03:32165>],
+//[<gregtech:gt.metaitem.03:32165>, <dreamcraft:item.NanoCircuit>, <ore:wireGt16Superconductor>, <ore:plateDenseSilicon>, <gregtech:gt.metaitem.03:32068>, <ore:plateDenseSilicon>, <ore:wireGt16Superconductor>, <dreamcraft:item.NanoCircuit>, <gregtech:gt.metaitem.03:32165>]]);
 
 // --- Frames
 recipes.addShapeless(<gregtech:gt.blockmachines:4905> * 2, [<MCFrames:mcframes.frame>]);
@@ -820,9 +705,9 @@ recipes.addShapeless(<gregtech:gt.metaitem.01:2322> * 2, [<gregtech:gt.metaitem.
 
 // --- Pump Machinen Casing
 recipes.addShaped(<gregtech:gt.blockcasings2:10>, [
-[<dreamcraft:item.StainlessSteelItemCasing>, <ore:circuitAdvanced>, <dreamcraft:item.StainlessSteelItemCasing>],
+[<ore:itemCasingStainlessSteel>, <ore:circuitAdvanced>, <ore:itemCasingStainlessSteel>],
 [<gregtech:gt.metaitem.01:32612>, <gregtech:gt.blockcasings2>, <gregtech:gt.metaitem.01:32612>],
-[<dreamcraft:item.StainlessSteelItemCasing>, <ore:circuitAdvanced>, <dreamcraft:item.StainlessSteelItemCasing>]]);
+[<ore:itemCasingStainlessSteel>, <ore:circuitAdvanced>, <ore:itemCasingStainlessSteel>]]);
 
 // --- Small Black Granit Gear
 recipes.addShaped(<gregtech:gt.metaitem.02:20849>, [
@@ -836,9 +721,9 @@ recipes.addShaped(<gregtech:gt.metaitem.02:20850>, [
 
 // --- Processor Machine Casing
 recipes.addShaped(<gregtech:gt.blockcasings2:6>, [
-[<dreamcraft:item.StainlessSteelItemCasing>, <ore:circuitElite>, <dreamcraft:item.StainlessSteelItemCasing>],
-[<ore:circuitMaster>, <gregtech:gt.blockcasings2>, <ore:circuitMaster>],
-[<dreamcraft:item.StainlessSteelItemCasing>, <ore:circuitElite>, <dreamcraft:item.StainlessSteelItemCasing>]]);
+[<ore:itemCasingStainlessSteel>, <ore:circuitElite>, <ore:itemCasingStainlessSteel>],
+[<ore:circuitElite>, <gregtech:gt.blockcasings2>, <ore:circuitElite>],
+[<ore:itemCasingStainlessSteel>, <ore:circuitElite>, <ore:itemCasingStainlessSteel>]]);
 
 // --- Obsidian Plates
 recipes.addShaped(<gregtech:gt.metaitem.01:17804>, [
@@ -933,6 +818,8 @@ Assembler.addRecipe(<gregtech:gt.Double_Thoriumcell>, <gregtech:gt.Thoriumcell> 
 
 // --- Quad Thorium Fuel Rod
 Assembler.addRecipe(<gregtech:gt.Quad_Thoriumcell>, <gregtech:gt.Double_Thoriumcell> * 2, <gregtech:gt.metaitem.01:23305> * 4, 200, 30);
+// -
+Assembler.addRecipe(<gregtech:gt.Quad_Thoriumcell>, <gregtech:gt.Thoriumcell> * 4, <gregtech:gt.metaitem.02:22305> * 6, 300, 30);
 
 // --- RTG Pellets
 Assembler.addRecipe(<IC2:itemRTGPellet>, <gregtech:gt.metaitem.01:22032> * 6, <IC2:itemPlutonium> * 3, <liquid:ic2coolant> * 1000, 1200, 120);
@@ -963,6 +850,9 @@ AlloySmelter.addRecipe(<gregtech:gt.metaitem.01:11300> * 4, <gregtech:gt.metaite
 
 // --- Thauminite Ingot
 AlloySmelter.addRecipe(<thaumicbases:resource:1> , <thaumicbases:resource> * 9, <gregtech:gt.metaitem.01:32306> * 0, 200, 16);
+
+// --- Thauminite Nugget
+AlloySmelter.addRecipe(<thaumicbases:resource> * 9, <thaumicbases:resource:1> , <gregtech:gt.metaitem.01:32309> * 0, 200, 16);
 
 // --- Glass
 AlloySmelter.addRecipe(<minecraft:glass>, <gregtech:gt.metaitem.01:2890>, <gregtech:gt.metaitem.01:32308> * 0, 200, 16);
@@ -1033,6 +923,10 @@ Canner.addBottleRecipe(<gregtech:gt.Thoriumcell>, <IC2:itemFuelRod>, <gregtech:g
 // --- Flint Dust
 Centrifuge.addRecipe([<gregtech:gt.metaitem.01:2802> * 8],  null, <minecraft:gravel> * 16, null, null, [10000], 50, 1920);
 
+// --- Re-add Cadmium Centrifuge recipe
+Centrifuge.addRecipe([<gregtech:gt.metaitem.01:1067>, <gregtech:gt.metaitem.01:1045>, <gregtech:gt.metaitem.01:1064>, <gregtech:gt.metaitem.01:1065>, <gregtech:gt.metaitem.01:1055>, <gregtech:gt.metaitem.01:1062>], null, <gregtech:gt.metaitem.01:2891>, null, null, [2500, 2500, 2500, 2500, 2500, 2500], 64, 20);
+        
+
 
 
 
@@ -1040,34 +934,8 @@ Centrifuge.addRecipe([<gregtech:gt.metaitem.01:2802> * 8],  null, <minecraft:gra
 
 
 
-// --- Nitrogen Dioxide
-ChemicalReactor.addRecipe(<IC2:itemCellEmpty>, <liquid:nitrogendioxide> * 3000, <gregtech:gt.metaitem.01:30012>, null, <liquid:oxygen> * 2000, 1200, 30);
-
 // --- Saltpeter
-ChemicalReactor.addRecipe(<gregtech:gt.metaitem.01:2836> * 5, <liquid:steam> * 16000, <dreamcraft:item.PotassiumHydroxideDust> * 3, null, <liquid:nitricacid> * 5000, 10, 30);
-
-
-
-
-// --- Compressor Recipes ---
-
-// --- Wrought Iron Ingot
-Compressor.addRecipe(<gregtech:gt.metaitem.01:11304>, <gregtech:gt.metaitem.01:9304> * 9);
-
-// --- Certus Quartz Plate
-Compressor.addRecipe(<dreamcraft:item.ChargedCertusQuartzPlate>, <dreamcraft:item.ChargedCertusQuartzDust>);
-
-// --- Nether Quartz Plate
-Compressor.addRecipe(<gregtech:gt.metaitem.01:17522>, <gregtech:gt.metaitem.01:2522>);
-
-// --- Quartzite Plate
-Compressor.addRecipe(<gregtech:gt.metaitem.01:17523>, <gregtech:gt.metaitem.01:2523>);
-
-// --- Lazurite Plate
-Compressor.addRecipe(<gregtech:gt.metaitem.01:17524>, <gregtech:gt.metaitem.01:2524>);
-
-// --- Sodalite Plate
-Compressor.addRecipe(<gregtech:gt.metaitem.01:17525>, <gregtech:gt.metaitem.01:2525>);
+ChemicalReactor.addRecipe(<gregtech:gt.metaitem.01:2836> * 5, <liquid:steam> * 16000, <dreamcraft:item.PotassiumHydroxideDust> * 3, <gregtech:gt.integrated_circuit:1> * 0, <liquid:nitricacid> * 5000, 10, 30);
 
 
 
@@ -1083,22 +951,89 @@ Extractor.addRecipe(<gregtech:gt.metaitem.01:2896> * 2, <TConstruct:strangeFood>
 
 // --- Extruder Recipes ---
 
+// --- Ardite Tool Rod
+Extruder.addRecipe(<TConstruct:toolRod:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:1> * 0, 606, 120);
+
+// --- Ardite Pickaxe Head
+Extruder.addRecipe(<TConstruct:pickaxeHead:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:2> * 0, 1213, 120);
+
+// --- Ardite Shovel Head
+Extruder.addRecipe(<TConstruct:shovelHead:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:3> * 0, 1213, 120);
+
+// --- Ardite Axe Head
+Extruder.addRecipe(<TConstruct:hatchetHead:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:4> * 0, 1213, 120);
+
+// --- Ardite Sword Blade
+Extruder.addRecipe(<TConstruct:swordBlade:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:5> * 0, 1213, 120);
+
+// --- Ardite Wide Guard
+Extruder.addRecipe(<TConstruct:wideGuard:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:6> * 0, 606, 120);
+
+// --- Ardite Hand Guard
+Extruder.addRecipe(<TConstruct:handGuard:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:7> * 0, 606, 120);
+
+// --- Ardite Crossbar
+Extruder.addRecipe(<TConstruct:crossbar:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:8> * 0, 606, 120);
+
+// --- Ardite Binding
+Extruder.addRecipe(<TConstruct:binding:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:9> * 0, 606, 120);
+
+// --- Ardite Pan
+Extruder.addRecipe(<TConstruct:frypanHead:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:10> * 0, 1213, 120);
+
+// --- Ardite Sign Head
+Extruder.addRecipe(<TConstruct:signHead:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:11> * 0, 1213, 120);
+
+// --- Ardite Knife Blade
+Extruder.addRecipe(<TConstruct:knifeBlade:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:12> * 0, 606, 120);
+
+// --- Ardite Chisel Head
+Extruder.addRecipe(<TConstruct:chiselHead:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:13> * 0, 606, 120);
+
+// --- Ardite Tough Rod
+Extruder.addRecipe(<TConstruct:toughRod:11>, <gregtech:gt.metaitem.01:11382> * 3, <TConstruct:metalPattern:14> * 0, 3639, 120);
+
+// --- Ardite Tough Binding
+Extruder.addRecipe(<TConstruct:toughBinding:11>, <gregtech:gt.metaitem.01:11382> * 3, <TConstruct:metalPattern:15> * 0, 3639, 120);
+
+// --- Ardite Large Plate
+Extruder.addRecipe(<TConstruct:heavyPlate:11>, <gregtech:gt.metaitem.01:11382> * 8, <TConstruct:metalPattern:16> * 0, 9704, 120);
+
+// --- Ardite Broad Axe Head
+Extruder.addRecipe(<TConstruct:broadAxeHead:11>, <gregtech:gt.metaitem.01:11382> * 8, <TConstruct:metalPattern:17> * 0, 9704, 120);
+
+// --- Ardite Scythe Head
+Extruder.addRecipe(<TConstruct:scytheBlade:11>, <gregtech:gt.metaitem.01:11382> * 8, <TConstruct:metalPattern:18> * 0, 9704, 120);
+
+// --- Ardite Excavator Head
+Extruder.addRecipe(<TConstruct:excavatorHead:11>, <gregtech:gt.metaitem.01:11382> * 8, <TConstruct:metalPattern:19> * 0, 9704, 120);
+
+// --- Ardite Large Sword Blade
+Extruder.addRecipe(<TConstruct:largeSwordBlade:11>, <gregtech:gt.metaitem.01:11382> * 8, <TConstruct:metalPattern:20> * 0, 9704, 120);
+
+// --- Ardite Hammer Head
+Extruder.addRecipe(<TConstruct:hammerHead:11>, <gregtech:gt.metaitem.01:11382> * 8, <TConstruct:metalPattern:21> * 0, 9704, 120);
+
+// --- Ardite Full Guard
+Extruder.addRecipe(<TConstruct:fullGuard:11>, <gregtech:gt.metaitem.01:11382> * 3, <TConstruct:metalPattern:22> * 0, 3639, 120);
+
+// --- Ardite Arrowhead
+Extruder.addRecipe(<TConstruct:arrowhead:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:metalPattern:25> * 0, 1213, 120);
+
+// --- Ardite Shuriken
+Extruder.addRecipe(<TConstruct:ShurikenPart:11>, <gregtech:gt.metaitem.01:11382>, <TConstruct:Cast> * 0, 606, 120);
+
+// --- Ardite Crossbow Limb
+Extruder.addRecipe(<TConstruct:CrossbowLimbPart:11>, <gregtech:gt.metaitem.01:11382> * 4, <TConstruct:Cast:1> * 0, 4852, 120);
+
+// --- Ardite Crossbow Body
+Extruder.addRecipe(<TConstruct:CrossbowBodyPart:11>, <gregtech:gt.metaitem.01:11382> * 5, <TConstruct:Cast:2> * 0, 6065, 120);
+
+// --- Ardite Bow Limb
+Extruder.addRecipe(<TConstruct:BowLimbPart:11>, <gregtech:gt.metaitem.01:11382> * 2, <TConstruct:Cast:3> * 0, 1820, 120);
 
 // --- Obsidian Plates
 Extruder.addRecipe(<gregtech:gt.metaitem.01:17804>, <TConstruct:materials:18>, <gregtech:gt.metaitem.01:32350> * 0, 20, 64);
-
-
-
-
-// --- Fermenter Recipes ---
-
-
-
-
-// --- Honey Forestry and BOP
-Fermenter.addRecipe(<liquid:honey> * 1000, <liquid:for.honey> * 1000, 20, false);
-// -
-Fermenter.addRecipe(<liquid:for.honey> * 1000, <liquid:honey> * 1000, 20, false);
 
 
 
@@ -1169,60 +1104,11 @@ ForgeHammer.addRecipe(<gregtech:gt.metaitem.01:1890>, <gregtech:gt.metaitem.02:2
 
 
 
+
 // --- Forming Press Recipes
 
 
 
-// --- Mold Plate
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32301>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32301> * 0, 200, 256);
-
-// --- Mold Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32302>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32302> * 0, 200, 256);
-
-// --- Gear Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32303>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32303> * 0, 200, 256);
-
-// --- Coinage Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32304>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32304> * 0, 200, 256);
-
-// --- Bottle Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32305>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32305> * 0, 200, 256);
-
-// --- Ingot Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32306>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32306> * 0, 200, 256);
-
-// --- Ball Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32307>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32307> * 0, 200, 256);
-
-// --- Block Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32308>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32308> * 0, 200, 256);
-
-// --- Nuggets Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32309>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32309> * 0, 200, 256);
-
-// --- Buns Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32310>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32310> * 0, 200, 256);
-
-// --- Bread Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32311>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32311> * 0, 200, 256);
-
-// --- Baguette Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32312>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32312> * 0, 200, 256);
-
-// --- Cylinder Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32313>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32313> * 0, 200, 256);
-
-// --- Anvil Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32314>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32314> * 0, 200, 256);
-
-// --- Name Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32315>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32315> * 0, 200, 256);
-
-// --- Arrow Head Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32316>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32316> * 0, 200, 256);
-
-// --- Small Gear Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32317>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32317> * 0, 200, 256);
 
 // --- Helm Mold
 FormingPress.addRecipe(<dreamcraft:item.MoldHelmet>, <gregtech:gt.metaitem.01:32300>, <dreamcraft:item.MoldHelmet> * 0, 200, 256);
@@ -1236,109 +1122,44 @@ FormingPress.addRecipe(<dreamcraft:item.MoldLeggings>, <gregtech:gt.metaitem.01:
 // --- Boots Mold
 FormingPress.addRecipe(<dreamcraft:item.MoldBoots>, <gregtech:gt.metaitem.01:32300>, <dreamcraft:item.MoldBoots> * 0, 200, 256);
 
-// --- Extruder Shape Plate
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32350>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32350> * 0, 200, 256);
-
-// --- Extruder Shape Rod
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32351>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32351> * 0, 200, 256);
-
-// --- Extruder Shape Bolt
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32352>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32352> * 0, 200, 256);
-
-// --- Extruder Shape Ring
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32353>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32353> * 0, 200, 256);
-
-// --- Extruder Shape Cell
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32354>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32354> * 0, 200, 256);
-
-// --- Extruder Shape Ingot
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32355>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32355> * 0, 200, 256);
-
-// --- Extruder Shape Wire
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32356>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32356> * 0, 200, 256);
-
-// --- Extruder Shape Casing
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32357>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32357> * 0, 200, 256);
-
-// --- Extruder Shape Tiny Pipe
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32358>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32358> * 0, 200, 256);
-
-// --- Extruder Shape Small Pipe
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32359>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32359> * 0, 200, 256);
-
-// --- Extruder Shape Normal Pipe
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32360>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32360> * 0, 200, 256);
-
-// --- Extruder Shape Lage Pipe
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32361>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32361> * 0, 200, 256);
-
-// --- Extruder Shape Huge Pipe
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32362>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32362> * 0, 200, 256);
-
-// --- Extruder Shape Block
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32363>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32363> * 0, 200, 256);
-
-// --- Extruder Shape Sword Blade
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32364>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32364> * 0, 200, 256);
-
-// --- Extruder Shape Pickaxe Head
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32365>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32365> * 0, 200, 256);
-
-// --- Extruder Shape Shovel Head
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32366>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32366> * 0, 200, 256);
-
-// --- Extruder Shape Axe Head
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32367>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32367> * 0, 200, 256);
-
-// --- Extruder Shape Hoe Head
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32368>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32368> * 0, 200, 256);
-
-// --- Extruder Shape Hammer Head
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32369>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32369> * 0, 200, 256);
-
-// --- Extruder Shape File Head
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32370>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32370> * 0, 200, 256);
-
-// --- Extruder Shape Saw Blade
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32371>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32371> * 0, 200, 256);
-
-// --- Extruder Shape Gear
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32372>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32372> * 0, 200, 256);
-
-// --- Extruder Shape Bottle
-FormingPress.addRecipe(<gregtech:gt.metaitem.01:32373>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32373> * 0, 200, 256);
-
 // --- Extruder Shape Boat
 FormingPress.addRecipe(<dreamcraft:item.ExtruderShapeBoat>, <gregtech:gt.metaitem.01:32300>, <dreamcraft:item.ExtruderShapeBoat> * 0, 200, 256);
 
+// --- Blank Coin
+FormingPress.addRecipe(<dreamcraft:item.CoinBlank>, <gregtech:gt.metaitem.01:17086>, <gregtech:gt.metaitem.01:32304> * 0, 200, 30);
 
 
 
-
-// --- Macerator Recipes --- 
+// --- Pulverizer Recipes --- 
 
 
 // --- Flour
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2881>, <Natura:barleyFood>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2881>], <Natura:barleyFood>, [10000], 300, 2);
 
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2881>, <BiomesOPlenty:plants:6>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2881>], <harvestcraft:barleyItem>, [10000], 300, 2);
 
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2881>, <harvestcraft:barleyItem>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2881>], <BiomesOPlenty:plants:6>, [10000], 300, 2);
+
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2881>], <harvestcraft:ryeItem>, [10000], 300, 2);
+
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2881>], <harvestcraft:oatsItem>, [10000], 300, 2);
 
 // --- Minced Meat
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2892> * 9, <Thaumcraft:blockTaint:2>);
-
-// --- Glass Dust
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2890>, <TConstruct:GlassBlock>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2892> * 9], <Thaumcraft:blockTaint:2>, [10000], 300, 2);
 // -
-Macerator.addRecipe(<gregtech:gt.metaitem.01:1890>, <TConstruct:GlassPane>);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2892>], <harvestcraft:walleyerawItem>, [10000], 400, 2);
+
 
 // --- Glass Dust
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2890>, <BloodArsenal:glass_shard> * 2);
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2890>], <TConstruct:GlassBlock>, [10000], 300, 2);
+// -
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:1890>], <TConstruct:GlassPane>, [10000], 300, 2);
+
+// --- Glass Dust
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2890>], <BloodArsenal:glass_shard> * 2, [10000], 300, 2);
 
 // --- Grounded Casseterite
-Macerator.addRecipe(<gregtech:gt.metaitem.01:5937> * 4, <gregtech:gt.blockores:937>);
-
+Pulverizer.addRecipe([<gregtech:gt.metaitem.01:5937> * 4], <gregtech:gt.blockores:937>, [10000], 300, 2);
 
 
 
@@ -1369,9 +1190,6 @@ PlateBender.addRecipe(<gregtech:gt.metaitem.02:24874>, <gregtech:gt.metaitem.02:
 
 // --- Small Titanium Spring
 PlateBender.addRecipe(<gregtech:gt.metaitem.02:23028>, <gregtech:gt.metaitem.01:23028>, 200, 8);
-
-// --- Empty Shape Plate
-PlateBender.addRecipe(<gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:20305>, 200, 120);
 
 // --- Obsidian Plates
 PlateBender.addRecipe(<gregtech:gt.metaitem.01:17804>, <TConstruct:materials:18>, 400, 24);
@@ -1436,6 +1254,45 @@ mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32316>, <liquid:
 
 // --- Small Gear Mold
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32317>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormSmallGear>, true, 100);
+
+// --- Stick Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32318>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormStick>, true, 100);
+
+// --- Bolt Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32319>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormBolt>, true, 100);
+
+// --- Round Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32320>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormRound>, true, 100);
+
+// --- Screw Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32321>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormScrew>, true, 100);
+
+// --- Ring Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32322>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormRing>, true, 100);
+
+// --- Long Stick Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32323>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormStickLong>, true, 100);
+
+// --- Turbine Blade Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32325>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormTurbineBlade>, true, 100);
+
+// --- Rotor Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32324>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormRotor>, true, 100);
+
+// --- Turbine Blade Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32326>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormPipeTiny>, true, 100);
+
+// --- Turbine Blade Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32327>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormPipeSmall>, true, 100);
+
+// --- Turbine Blade Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32328>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormPipeMedium>, true, 100);
+
+// --- Turbine Blade Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32329>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormPipeLarge>, true, 100);
+
+// --- Turbine Blade Mold
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32330>, <liquid:steel.molten> * 576, <dreamcraft:item.MoldFormPipeHuge>, true, 100);
 
 // --- Extruder Shape Plate
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32350>, <liquid:steel.molten> * 576, <dreamcraft:item.ShapePlate>, true, 100);
@@ -1508,3 +1365,435 @@ mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32372>, <liquid:
 
 // --- Extruder Shape Bottle
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32373>, <liquid:steel.molten> * 576, <dreamcraft:item.ShapeBottle>, true, 100);
+
+// --- Extruder Shape Rotor
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32374>, <liquid:steel.molten> * 576, <dreamcraft:item.ShapeRotor>, true, 100);
+
+// --- Extruder Turbine Blade
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32376>, <liquid:steel.molten> * 576, <dreamcraft:item.ShapeTurbineBlade>, true, 100);
+
+// --- Extruder Small Gear
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32375>, <liquid:steel.molten> * 576, <dreamcraft:item.ShapeSmallGear>, true, 100);
+
+
+
+
+
+// --- Circuit Tooltips for Tiers ---
+
+
+// --- ULV Tier
+<gregtech:gt.metaitem.01:32700>.addTooltip(format.red("ULV-tier"));
+<gregtech:gt.metaitem.03:32075>.addTooltip(format.gold("ULV-tier"));
+<bartworks:gt.bwMetaGeneratedItem0:4>.addTooltip(format.lightPurple("ULV-tier"));
+
+// --- LV Tier
+<IC2:itemPartCircuit>.addTooltip(format.red("LV-tier"));
+<gregtech:gt.metaitem.01:32701>.addTooltip(format.gold("LV-tier"));
+<gregtech:gt.metaitem.03:32078>.addTooltip(format.yellow("LV-tier"));
+<bartworks:gt.bwMetaGeneratedItem0:5>.addTooltip(format.lightPurple("LV-tier"));
+
+// --- MV Tier
+<gregtech:gt.metaitem.01:32702>.addTooltip(format.red("MV-tier"));
+<gregtech:gt.metaitem.03:32079>.addTooltip(format.gold("MV-tier"));
+<gregtech:gt.metaitem.03:32080>.addTooltip(format.yellow("MV-tier"));
+<bartworks:gt.bwMetaGeneratedItem0:6>.addTooltip(format.lightPurple("MV-tier"));
+
+// --- HV Tier
+<IC2:itemPartCircuitAdv>.addTooltip(format.gold("HV-tier"));
+<gregtech:gt.metaitem.01:32703>.addTooltip(format.yellow("HV-tier"));
+<gregtech:gt.metaitem.03:32082>.addTooltip(format.green("HV-tier"));
+<bartworks:gt.bwMetaGeneratedItem0:7>.addTooltip(format.lightPurple("HV-tier"));
+
+// --- EV Tier
+<gregtech:gt.metaitem.01:32704>.addTooltip(format.yellow("EV-tier"));
+<gregtech:gt.metaitem.03:32083>.addTooltip(format.green("EV-tier"));
+<gregtech:gt.metaitem.03:32085>.addTooltip(format.aqua("EV-tier"));
+<bartworks:gt.bwMetaGeneratedItem0:8>.addTooltip(format.lightPurple("EV-tier"));
+
+// --- IV Tier
+<gregtech:gt.metaitem.01:32705>.addTooltip(format.yellow("IV-tier"));
+<gregtech:gt.metaitem.03:32084>.addTooltip(format.green("IV-tier"));
+<gregtech:gt.metaitem.03:32086>.addTooltip(format.aqua("IV-tier"));
+<gregtech:gt.metaitem.03:32089>.addTooltip(format.blue("IV-tier"));
+<bartworks:gt.bwMetaGeneratedItem0:9>.addTooltip(format.lightPurple("IV-tier"));
+
+// --- LuV Tier
+<gregtech:gt.metaitem.01:32706>.addTooltip(format.green("LuV-tier"));
+<gregtech:gt.metaitem.03:32087>.addTooltip(format.aqua("LuV-tier"));
+<gregtech:gt.metaitem.03:32096>.addTooltip(format.blue("LuV-tier"));
+<gregtech:gt.metaitem.03:32092>.addTooltip(format.darkPurple("LuV-tier"));
+<bartworks:gt.bwMetaGeneratedItem0:10>.addTooltip(format.lightPurple("LuV-tier"));
+
+// --- ZPM Tier
+<gregtech:gt.metaitem.03:32088>.addTooltip(format.aqua("ZPM-tier"));
+<gregtech:gt.metaitem.03:32090>.addTooltip(format.blue("ZPM-tier"));
+<gregtech:gt.metaitem.03:32093>.addTooltip(format.darkPurple("ZPM-tier"));
+<gregtech:gt.metaitem.03:32097>.addTooltip(format.green("ZPM-tier"));
+<bartworks:gt.bwMetaGeneratedItem0:11>.addTooltip(format.lightPurple("ZPM-tier"));
+
+// --- UV Tier
+<gregtech:gt.metaitem.03:32091>.addTooltip(format.blue("UV-tier"));
+<gregtech:gt.metaitem.03:32094>.addTooltip(format.darkPurple("UV-tier"));
+<gregtech:gt.metaitem.03:32098>.addTooltip(format.aqua("UV-tier"));
+<bartworks:gt.bwMetaGeneratedItem0:12>.addTooltip(format.lightPurple("UV-tier"));
+
+// --- UHV Tier
+<gregtech:gt.metaitem.03:32095>.addTooltip(format.darkPurple("UHV-tier"));
+<gregtech:gt.metaitem.03:32099>.addTooltip(format.green("UHV-tier"));
+<bartworks:gt.bwMetaGeneratedItem0:13>.addTooltip(format.lightPurple("UHV-tier"));
+
+// --- UEV Tier
+<gregtech:gt.metaitem.03:32120>.addTooltip(format.green("UEV-tier"));
+
+
+// --- Batteries Tooltips for Tiers ---
+
+
+// --- LV Tier
+<gregtech:gt.metaitem.01:32510>.addTooltip(format.red("LV-tier"));
+<gregtech:gt.metaitem.01:32511>.addTooltip(format.gold("LV-tier"));
+<gregtech:gt.metaitem.01:32517>.addTooltip(format.yellow("LV-tier"));
+<gregtech:gt.metaitem.01:32518>.addTooltip(format.darkRed("LV-tier"));
+<gregtech:gt.metaitem.01:32519>.addTooltip(format.green("LV-tier"));
+
+// --- MV Tier
+<gregtech:gt.metaitem.01:32520>.addTooltip(format.red("MV-tier"));
+<gregtech:gt.metaitem.01:32521>.addTooltip(format.gold("MV-tier"));
+<gregtech:gt.metaitem.01:32527>.addTooltip(format.yellow("MV-tier"));
+<gregtech:gt.metaitem.01:32528>.addTooltip(format.darkRed("MV-tier"));
+<gregtech:gt.metaitem.01:32529>.addTooltip(format.green("MV-tier"));
+
+// --- HV Tier
+<gregtech:gt.metaitem.01:32530>.addTooltip(format.red("HV-tier"));
+<gregtech:gt.metaitem.01:32531>.addTooltip(format.gold("HV-tier"));
+<gregtech:gt.metaitem.01:32537>.addTooltip(format.yellow("HV-tier"));
+<gregtech:gt.metaitem.01:32538>.addTooltip(format.darkRed("HV-tier"));
+<gregtech:gt.metaitem.01:32539>.addTooltip(format.green("HV-tier"));
+<IC2:itemBatCrystal:*>.addTooltip(format.darkBlue("HV-tier"));
+
+// --- EV Tier
+<gregtech:gt.metaitem.01:32540>.addTooltip(format.green("EV-tier"));
+<IC2:itemBatLamaCrystal:*>.addTooltip(format.darkBlue("EV-tier"));
+
+// --- IV Tier
+<gregtech:gt.metaitem.01:32545>.addTooltip(format.green("IV-tier"));
+<gregtech:gt.metaitem.01:32597>.addTooltip(format.gold("IV-tier"));
+
+// --- LuV Tier
+<gregtech:gt.metaitem.01:32550>.addTooltip(format.green("LuV-tier"));
+<gregtech:gt.metaitem.01:32599>.addTooltip(format.gold("LuV-tier"));
+
+// --- ZPM Tier
+<gregtech:gt.metaitem.01:32555>.addTooltip(format.green("ZPM-tier"));
+<gregtech:gt.metaitem.01:32736>.addTooltip(format.gold("ZPM-tier"));
+<gregtech:gt.metaitem.01:32598>.addTooltip(format.red("ZPM-tier"));
+
+// --- UV Tier
+<gregtech:gt.metaitem.01:32560>.addTooltip(format.green("UV-tier"));
+<gregtech:gt.metaitem.01:32737>.addTooltip(format.gold("UV-tier"));
+<gregtech:gt.metaitem.01:32605>.addTooltip(format.red("UV-tier"));
+
+// --- UHV Tier
+<gregtech:gt.metaitem.01:32570>.addTooltip(format.green("UHV-tier"));
+
+// --- UEV Tier
+<gregtech:gt.metaitem.01:32575>.addTooltip(format.green("UEV-tier"));
+
+// --- UIV Tier
+<gregtech:gt.metaitem.01:32580>.addTooltip(format.green("UIV-tier"));
+
+// --- UMV Tier
+<gregtech:gt.metaitem.01:32585>.addTooltip(format.green("UMV-tier"));
+<gregtech:gt.metaitem.01:32609>.addTooltip(format.gold("UMV-tier"));
+
+// --- UXV Tier
+<gregtech:gt.metaitem.01:32590>.addTooltip(format.green("UXV-tier"));
+
+
+
+// --- Seismic Prospector Tooltips ---
+
+
+//--- Seismic Prospector LV
+<gregtech:gt.blockmachines:1156>.addTooltip("Work Area 16 Blocks Radius = 4 Chunks");
+
+//--- Seismic Prospector MV
+<gregtech:gt.blockmachines:2100>.addTooltip("Work Area 32 Blocks Radius = 16 Chunks");
+
+//--- Seismic Prospector HV
+<gregtech:gt.blockmachines:2101>.addTooltip("Work Area 48 Blocks Radius = 36 Chunks");
+
+//--- Seismic Prospector EV
+<gregtech:gt.blockmachines:1173>.addTooltip("Work Area 128 Blocks Radius = 256 Chunks");
+
+
+
+
+// --- Ordict Combs ---
+
+
+
+comb.add(<gregtech:gt.comb>);
+oreDict.combLv.add(<gregtech:gt.comb>);
+comb.add(<gregtech:gt.comb:1>);
+oreDict.combLv.add(<gregtech:gt.comb:1>);
+comb.add(<gregtech:gt.comb:2>);
+oreDict.combLv.add(<gregtech:gt.comb:2>);
+comb.add(<gregtech:gt.comb:3>);
+oreDict.combLv.add(<gregtech:gt.comb:3>);
+comb.add(<gregtech:gt.comb:4>);
+oreDict.combLv.add(<gregtech:gt.comb:4>);
+comb.add(<gregtech:gt.comb:5>);
+oreDict.combLv.add(<gregtech:gt.comb:5>);
+comb.add(<gregtech:gt.comb:6>);
+oreDict.combHv.add(<gregtech:gt.comb:6>);
+comb.add(<gregtech:gt.comb:7>);
+oreDict.combHv.add(<gregtech:gt.comb:7>);
+comb.add(<gregtech:gt.comb:8>);
+oreDict.combHv.add(<gregtech:gt.comb:8>);
+comb.add(<gregtech:gt.comb:9>);
+oreDict.combHv.add(<gregtech:gt.comb:9>);
+comb.add(<gregtech:gt.comb:10>);
+oreDict.combHv.add(<gregtech:gt.comb:10>);
+comb.add(<gregtech:gt.comb:11>);
+oreDict.combLv.add(<gregtech:gt.comb:11>);
+comb.add(<gregtech:gt.comb:12>);
+oreDict.combLv.add(<gregtech:gt.comb:12>);
+comb.add(<gregtech:gt.comb:13>);
+oreDict.combMv.add(<gregtech:gt.comb:13>);
+comb.add(<gregtech:gt.comb:14>);
+oreDict.combHv.add(<gregtech:gt.comb:14>);
+comb.add(<gregtech:gt.comb:15>);
+oreDict.combHv.add(<gregtech:gt.comb:15>);
+comb.add(<gregtech:gt.comb:16>);
+oreDict.combLv.add(<gregtech:gt.comb:16>);
+comb.add(<gregtech:gt.comb:17>);
+oreDict.combMv.add(<gregtech:gt.comb:17>);
+comb.add(<gregtech:gt.comb:18>);
+oreDict.combHv.add(<gregtech:gt.comb:18>);
+comb.add(<gregtech:gt.comb:19>);
+oreDict.combHv.add(<gregtech:gt.comb:19>);
+comb.add(<gregtech:gt.comb:20>);
+oreDict.combHv.add(<gregtech:gt.comb:20>);
+comb.add(<gregtech:gt.comb:21>);
+oreDict.combMv.add(<gregtech:gt.comb:21>);
+comb.add(<gregtech:gt.comb:22>);
+oreDict.combLv.add(<gregtech:gt.comb:22>);
+comb.add(<gregtech:gt.comb:23>);
+oreDict.combLv.add(<gregtech:gt.comb:23>);
+comb.add(<gregtech:gt.comb:24>);
+oreDict.combLv.add(<gregtech:gt.comb:24>);
+comb.add(<gregtech:gt.comb:25>);
+oreDict.combMv.add(<gregtech:gt.comb:25>);
+comb.add(<gregtech:gt.comb:26>);
+oreDict.combLv.add(<gregtech:gt.comb:26>);
+comb.add(<gregtech:gt.comb:27>);
+oreDict.combHv.add(<gregtech:gt.comb:27>);
+comb.add(<gregtech:gt.comb:28>);
+oreDict.combHv.add(<gregtech:gt.comb:28>);
+comb.add(<gregtech:gt.comb:29>);
+oreDict.combHv.add(<gregtech:gt.comb:29>);
+comb.add(<gregtech:gt.comb:30>);
+oreDict.combHv.add(<gregtech:gt.comb:30>);
+comb.add(<gregtech:gt.comb:31>);
+oreDict.combHv.add(<gregtech:gt.comb:31>);
+comb.add(<gregtech:gt.comb:32>);
+oreDict.combEv.add(<gregtech:gt.comb:32>);
+comb.add(<gregtech:gt.comb:33>);
+oreDict.combLv.add(<gregtech:gt.comb:33>);
+comb.add(<gregtech:gt.comb:34>);
+oreDict.combLv.add(<gregtech:gt.comb:34>);
+comb.add(<gregtech:gt.comb:35>);
+oreDict.combLv.add(<gregtech:gt.comb:35>);
+comb.add(<gregtech:gt.comb:36>);
+oreDict.combLv.add(<gregtech:gt.comb:36>);
+comb.add(<gregtech:gt.comb:37>);
+oreDict.combLv.add(<gregtech:gt.comb:37>);
+comb.add(<gregtech:gt.comb:38>);
+oreDict.combLv.add(<gregtech:gt.comb:38>);
+comb.add(<gregtech:gt.comb:39>);
+oreDict.combLv.add(<gregtech:gt.comb:39>);
+comb.add(<gregtech:gt.comb:40>);
+oreDict.combLv.add(<gregtech:gt.comb:40>);
+comb.add(<gregtech:gt.comb:41>);
+oreDict.combLv.add(<gregtech:gt.comb:41>);
+comb.add(<gregtech:gt.comb:42>);
+oreDict.combLv.add(<gregtech:gt.comb:42>);
+comb.add(<gregtech:gt.comb:43>);
+oreDict.combLv.add(<gregtech:gt.comb:43>);
+comb.add(<gregtech:gt.comb:44>);
+oreDict.combLv.add(<gregtech:gt.comb:44>);
+comb.add(<gregtech:gt.comb:45>);
+oreDict.combLv.add(<gregtech:gt.comb:45>);
+comb.add(<gregtech:gt.comb:46>);
+oreDict.combLv.add(<gregtech:gt.comb:46>);
+comb.add(<gregtech:gt.comb:47>);
+oreDict.combLv.add(<gregtech:gt.comb:47>);
+comb.add(<gregtech:gt.comb:48>);
+oreDict.combLv.add(<gregtech:gt.comb:48>);
+comb.add(<gregtech:gt.comb:49>);
+oreDict.combLv.add(<gregtech:gt.comb:49>);
+comb.add(<gregtech:gt.comb:50>);
+oreDict.combLv.add(<gregtech:gt.comb:50>);
+comb.add(<gregtech:gt.comb:51>);
+oreDict.combLv.add(<gregtech:gt.comb:51>);
+comb.add(<gregtech:gt.comb:52>);
+oreDict.combLv.add(<gregtech:gt.comb:52>);
+comb.add(<gregtech:gt.comb:53>);
+oreDict.combLv.add(<gregtech:gt.comb:53>);
+comb.add(<gregtech:gt.comb:54>);
+oreDict.combLv.add(<gregtech:gt.comb:54>);
+comb.add(<gregtech:gt.comb:55>);
+oreDict.combLv.add(<gregtech:gt.comb:55>);
+comb.add(<gregtech:gt.comb:56>);
+oreDict.combLv.add(<gregtech:gt.comb:56>);
+comb.add(<gregtech:gt.comb:57>);
+oreDict.combLv.add(<gregtech:gt.comb:57>);
+comb.add(<gregtech:gt.comb:58>);
+oreDict.combLv.add(<gregtech:gt.comb:58>);
+comb.add(<gregtech:gt.comb:59>);
+oreDict.combLv.add(<gregtech:gt.comb:59>);
+comb.add(<gregtech:gt.comb:60>);
+oreDict.combLv.add(<gregtech:gt.comb:60>);
+comb.add(<gregtech:gt.comb:61>);
+oreDict.combLv.add(<gregtech:gt.comb:61>);
+comb.add(<gregtech:gt.comb:62>);
+oreDict.combLv.add(<gregtech:gt.comb:62>);
+comb.add(<gregtech:gt.comb:63>);
+oreDict.combLv.add(<gregtech:gt.comb:63>);
+comb.add(<gregtech:gt.comb:64>);
+oreDict.combLv.add(<gregtech:gt.comb:64>);
+comb.add(<gregtech:gt.comb:65>);
+oreDict.combLv.add(<gregtech:gt.comb:65>);
+comb.add(<gregtech:gt.comb:66>);
+oreDict.combIv.add(<gregtech:gt.comb:66>);
+comb.add(<gregtech:gt.comb:67>);
+oreDict.combHv.add(<gregtech:gt.comb:67>);
+comb.add(<gregtech:gt.comb:68>);
+oreDict.combIv.add(<gregtech:gt.comb:68>);
+comb.add(<gregtech:gt.comb:69>);
+oreDict.combHv.add(<gregtech:gt.comb:69>);
+comb.add(<gregtech:gt.comb:70>);
+oreDict.combIv.add(<gregtech:gt.comb:70>);
+comb.add(<gregtech:gt.comb:71>);
+oreDict.combLv.add(<gregtech:gt.comb:71>);
+comb.add(<gregtech:gt.comb:72>);
+oreDict.combIv.add(<gregtech:gt.comb:72>);
+comb.add(<gregtech:gt.comb:73>);
+oreDict.combMv.add(<gregtech:gt.comb:73>);
+comb.add(<gregtech:gt.comb:74>);
+oreDict.combMv.add(<gregtech:gt.comb:74>);
+comb.add(<gregtech:gt.comb:75>);
+oreDict.combHv.add(<gregtech:gt.comb:75>);
+comb.add(<gregtech:gt.comb:76>);
+oreDict.combLv.add(<gregtech:gt.comb:76>);
+comb.add(<gregtech:gt.comb:77>);
+oreDict.combIv.add(<gregtech:gt.comb:77>);
+comb.add(<gregtech:gt.comb:78>);
+oreDict.combIv.add(<gregtech:gt.comb:78>);
+comb.add(<gregtech:gt.comb:79>);
+oreDict.combIv.add(<gregtech:gt.comb:79>);
+comb.add(<gregtech:gt.comb:80>);
+oreDict.combIv.add(<gregtech:gt.comb:80>);
+comb.add(<gregtech:gt.comb:81>);
+oreDict.combLv.add(<gregtech:gt.comb:81>);
+comb.add(<gregtech:gt.comb:82>);
+oreDict.combEv.add(<gregtech:gt.comb:82>);
+comb.add(<gregtech:gt.comb:83>);
+oreDict.combIv.add(<gregtech:gt.comb:83>);
+comb.add(<gregtech:gt.comb:84>);
+oreDict.combLuv.add(<gregtech:gt.comb:84>);
+comb.add(<gregtech:gt.comb:85>);
+oreDict.combZPM.add(<gregtech:gt.comb:85>);
+comb.add(<gregtech:gt.comb:86>);
+oreDict.combMv.add(<gregtech:gt.comb:86>);
+comb.add(<gregtech:gt.comb:87>);
+oreDict.combHv.add(<gregtech:gt.comb:87>);
+comb.add(<gregtech:gt.comb:88>);
+oreDict.combHv.add(<gregtech:gt.comb:88>);
+comb.add(<gregtech:gt.comb:89>);
+oreDict.combEv.add(<gregtech:gt.comb:89>);
+comb.add(<gregtech:gt.comb:90>);
+oreDict.combEv.add(<gregtech:gt.comb:90>);
+comb.add(<gregtech:gt.comb:91>);
+oreDict.combHv.add(<gregtech:gt.comb:91>);
+comb.add(<gregtech:gt.comb:92>);
+oreDict.combEv.add(<gregtech:gt.comb:92>);
+comb.add(<gregtech:gt.comb:93>);
+oreDict.combIv.add(<gregtech:gt.comb:93>);
+comb.add(<gregtech:gt.comb:94>);
+oreDict.combIv.add(<gregtech:gt.comb:94>);
+comb.add(<gregtech:gt.comb:95>);
+oreDict.combIv.add(<gregtech:gt.comb:95>);
+comb.add(<gregtech:gt.comb:96>);
+oreDict.combIv.add(<gregtech:gt.comb:96>);
+comb.add(<gregtech:gt.comb:97>);
+oreDict.combIv.add(<gregtech:gt.comb:97>);
+comb.add(<gregtech:gt.comb:98>);
+oreDict.combIv.add(<gregtech:gt.comb:98>);
+comb.add(<gregtech:gt.comb:99>);
+oreDict.combLuv.add(<gregtech:gt.comb:99>);
+comb.add(<gregtech:gt.comb:100>);
+oreDict.combLuv.add(<gregtech:gt.comb:100>);
+comb.add(<gregtech:gt.comb:101>);
+oreDict.combZPM.add(<gregtech:gt.comb:101>);
+comb.add(<gregtech:gt.comb:102>);
+oreDict.combEv.add(<gregtech:gt.comb:102>);
+comb.add(<gregtech:gt.comb:103>);
+oreDict.combEv.add(<gregtech:gt.comb:103>);
+comb.add(<gregtech:gt.comb:104>);
+oreDict.combMv.add(<gregtech:gt.comb:104>);
+comb.add(<gregtech:gt.comb:105>);
+oreDict.combMv.add(<gregtech:gt.comb:105>);
+comb.add(<gregtech:gt.comb:106>);
+oreDict.combMv.add(<gregtech:gt.comb:106>);
+comb.add(<gregtech:gt.comb:107>);
+oreDict.combIv.add(<gregtech:gt.comb:107>);
+comb.add(<gregtech:gt.comb:108>);
+oreDict.combIv.add(<gregtech:gt.comb:108>);
+comb.add(<gregtech:gt.comb:109>);
+oreDict.combIv.add(<gregtech:gt.comb:109>);
+comb.add(<gregtech:gt.comb:110>);
+oreDict.combLuv.add(<gregtech:gt.comb:110>);
+comb.add(<gregtech:gt.comb:111>);
+oreDict.combLuv.add(<gregtech:gt.comb:111>);
+comb.add(<gregtech:gt.comb:112>);
+oreDict.combLuv.add(<gregtech:gt.comb:112>);
+comb.add(<gregtech:gt.comb:113>);
+oreDict.combZPM.add(<gregtech:gt.comb:113>);
+comb.add(<gregtech:gt.comb:114>);
+oreDict.combZPM.add(<gregtech:gt.comb:114>);
+comb.add(<gregtech:gt.comb:115>);
+oreDict.combZPM.add(<gregtech:gt.comb:115>);
+comb.add(<gregtech:gt.comb:116>);
+oreDict.combZPM.add(<gregtech:gt.comb:116>);
+comb.add(<gregtech:gt.comb:117>);
+oreDict.combUv.add(<gregtech:gt.comb:117>);
+comb.add(<gregtech:gt.comb:118>);
+oreDict.combUhv.add(<gregtech:gt.comb:118>);
+comb.add(<gregtech:gt.comb:119>);
+oreDict.combUev.add(<gregtech:gt.comb:119>);
+
+// --- Dyes conversion
+
+for GT_Dye, oreDye in {
+  <gregtech:gt.metaitem.02:32414> : <ore:dyeBlack>,
+  <gregtech:gt.metaitem.02:32415> : <ore:dyeRed>,
+  <gregtech:gt.metaitem.02:32416> : <ore:dyeGreen>,
+  <gregtech:gt.metaitem.02:32417> : <ore:dyeBrown>,
+  <gregtech:gt.metaitem.02:32418> : <ore:dyeBlue>,
+  <gregtech:gt.metaitem.02:32419> : <ore:dyePurple>,
+  <gregtech:gt.metaitem.02:32420> : <ore:dyeCyan>,
+  <gregtech:gt.metaitem.02:32421> : <ore:dyeLightGray>,
+  <gregtech:gt.metaitem.02:32422> : <ore:dyeGray>,
+  <gregtech:gt.metaitem.02:32423> : <ore:dyePink>,
+  <gregtech:gt.metaitem.02:32424> : <ore:dyeLime>,
+  <gregtech:gt.metaitem.02:32425> : <ore:dyeYellow>,
+  <gregtech:gt.metaitem.02:32426> : <ore:dyeLightBlue>,
+  <gregtech:gt.metaitem.02:32427> : <ore:dyeMagenta>,
+  <gregtech:gt.metaitem.02:32428> : <ore:dyeOrange>,
+  <gregtech:gt.metaitem.02:32429> : <ore:dyeWhite>
+} as IIngredient[IItemStack] {
+  recipes.addShapeless(GT_Dye, [oreDye]);
+}

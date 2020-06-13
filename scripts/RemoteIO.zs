@@ -23,7 +23,7 @@ val Skylight = <RIO:skylight>;
 val IWorkbench = <RIO:intelligentWorkbench>;
 val Location = <RIO:item.chip.location>;
 
-val Ichorium = <ThaumicTinkerer:kamiResource:2>;
+val Ichorium = <gregtech:gt.metaitem.01:11978>;
 
 val HSLAPlate = <ore:plateHSLA>;
 val RedAlloyRod = <ore:stickRedAlloy>;
@@ -32,7 +32,7 @@ val GlowstoneGlass = <ExtraUtilities:decorativeBlock2:7>;
 val ObsidianPlate = <ore:plateObsidian>;
 val IVFieldGen = <gregtech:gt.metaitem.01:32674>;
 val NeutroniumScrew = <ore:screwNeutronium>;
-val EFlow = <gregtech:gt.metaitem.01:32706>;
+val EFlow = <gregtech:gt.metaitem.01:32705>;
 val DataOrb = <ore:circuitUltimate>;
 val NeutroniumGear = <ore:gearNeutronium>;
 val KanthalPlate = <ore:plateKanthal>;
@@ -129,8 +129,10 @@ recipes.remove(<RIO:item.linker>);
 // --- Remote Interface
 recipes.addShaped(RemoteInterface * 2, [
 [InsaneRegulator, EVSensor, InsaneRegulator],
-[DataCi, TungstenCable, DataCi],
+[<ore:circuitElite>, TungstenCable, <ore:circuitElite>],
 [InsaneRegulator, EVEmitter, InsaneRegulator]]);
+// -
+recipes.addShapeless(<RIO:tile.remote_interface>, [<RandomThings:playerinterface>]);
 
 // --- Water Reservoir
 recipes.addShaped(Reservoir, [
@@ -175,15 +177,15 @@ recipes.addShaped(<RIO:item.linker>, [
 
 // --- Remote Accessor
 recipes.addShaped(<RIO:item.remoteAccessor>, [
-[<dreamcraft:item.TungstenSteelItemCasing>, <RIO:tile.remote_interface>, <dreamcraft:item.TungstenSteelItemCasing>],
+[<ore:itemCasingTungstenSteel>, <RIO:tile.remote_interface>, <ore:itemCasingTungstenSteel>],
 [<RIO:item.linker>, <RIO:item.chip.location>, <RIO:item.linker>],
 [<ore:screwTungstenSteel>, <RIO:item.wireless_transmitter>, <ore:screwTungstenSteel>]]);
 
 // --- PDA
 recipes.addShaped(<RIO:item.pda>, [
-[<ore:screwIron>, <dreamcraft:item.AluminiumItemCasing>, <ore:screwIron>],
+[<ore:screwIron>, <ore:itemCasingAluminium>, <ore:screwIron>],
 [<ore:circuitBasic>, <dreamcraft:item.Display>, <ore:circuitBasic>],
-[<dreamcraft:item.AluminiumItemCasing>, <gregtech:gt.metaitem.01:32518>.withTag({"GT.ItemCharge": 100000 as long}), <dreamcraft:item.AluminiumItemCasing>]]);
+[<ore:itemCasingAluminium>, <gregtech:gt.metaitem.01:32518>.withTag({"GT.ItemCharge": 100000 as long}), <ore:itemCasingAluminium>]]);
 
 
 
@@ -199,7 +201,30 @@ Assembler.addRecipe(Remote, <WR-CBE|Logic:wirelessLogic>, <WR-CBE|Logic:wireless
 Assembler.addRecipe(BlankPlate, <TConstruct:blankPattern:1>, <gregtech:gt.metaitem.01:17316>, <liquid:molten.redstone> * 100, 200, 480);
 
 // --- Location Chip
-Assembler.addRecipe(Location, DataCi * 2, EFlow * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.01:32704> * 2, <gregtech:gt.metaitem.01:32705> * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.01:32704> * 2, <gregtech:gt.metaitem.03:32084> * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.01:32704> * 2, <gregtech:gt.metaitem.03:32086> * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.01:32704> * 2, <gregtech:gt.metaitem.03:32089> * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.03:32083> * 2, <gregtech:gt.metaitem.01:32705> * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.03:32083> * 2, <gregtech:gt.metaitem.03:32084> * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.03:32083> * 2, <gregtech:gt.metaitem.03:32086> * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.03:32083> * 2, <gregtech:gt.metaitem.03:32089> * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.03:32085> * 2, <gregtech:gt.metaitem.01:32705> * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.03:32085> * 2, <gregtech:gt.metaitem.03:32084> * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.03:32085> * 2, <gregtech:gt.metaitem.03:32086> * 2, <liquid:ender> * 1000, 600, 480);
+// -
+Assembler.addRecipe(Location, <gregtech:gt.metaitem.03:32085> * 2, <gregtech:gt.metaitem.03:32089> * 2, <liquid:ender> * 1000, 600, 480);
 
 // --- Item Transfer Chip
 Assembler.addRecipe(<RIO:item.chip.transfer>, <dreamcraft:item.BlankPlatedChip>, <EnderStorage:enderChest>, 200, 480);
