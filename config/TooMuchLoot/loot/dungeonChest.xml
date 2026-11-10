@@ -57,7 +57,6 @@
     <loot item="TConstruct:heartCanister" damage="1" weight="5" count_min="1" count_max="1"/>
     <loot item="OpenComputers:item" damage="4" weight="5" count_min="1" count_max="1"/>
     <loot item="EMT:TaintedMjolnir" damage="0" weight="25" count_min="0" count_max="1"/>
-    <loot item="EMT:BaseBaubles" damage="0" weight="15" count_min="0" count_max="1"/>
     <loot item="openmodularturrets:disposeItemTurret" damage="0" weight="15" count_min="1" count_max="2"/>
     <loot item="openmodularturrets:baseTierWood" damage="0" weight="15" count_min="1" count_max="1"/>
     <loot item="openmodularturrets:leverBlock" damage="0" weight="15" count_min="1" count_max="1"/>
@@ -120,7 +119,7 @@
     <loot item="gregtech:gt.metaitem.01" damage="8528" weight="40" count_min="1" count_max="6"/>
     <loot item="gregtech:gt.metaitem.01" damage="2067" weight="40" count_min="1" count_max="6"/>
     <loot item="gregtech:gt.metaitem.01" damage="2030" weight="40" count_min="1" count_max="3"/>
-	<loot item="gregtech:gt.metaitem.01" damage="11035" weight="9" count_min="2" count_max="6"/>
+	<loot item="gregtech:gt.metaitem.01" damage="11035" weight="90" count_min="2" count_max="6"/>
 	<loot item="gregtech:gt.metaitem.01" damage="11057" weight="80" count_min="8" count_max="16"/>
 	<loot item="gregtech:gt.metaitem.01" damage="11018" weight="100" count_min="1" count_max="4"/>
 	<loot item="gregtech:gt.metaitem.01" damage="11019" weight="10" count_min="1" count_max="1"/>
